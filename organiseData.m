@@ -4,7 +4,9 @@ clear; close all; clc
 % Load Data
 % 1st col Meter_ID, 2nd col Day_Time_Code, 3rd col kWh/30min
 fprintf('Loading data...\n');
+cd ..\'CER Data'\Data\; % Windows Folders
 data1 = load('File1.txt');
+cd ..\..\code\; % Windows Folders
 fprintf('Done loading!\n');
 
 fprintf('Sorting data...\n');
