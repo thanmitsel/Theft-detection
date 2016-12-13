@@ -5,8 +5,10 @@ clear; close all; clc
 % 1st col Meter_ID, 2nd col Day_Time_Code, 3rd col kWh/30min
 fprintf('Loading data...\n');
 cd ..\'CER Data'\Data\; % Windows Folders
+cd '../CER Data/Data/'; % Linux Dirs
 data1 = load('File1.txt');
 cd ..\..\code\; % Windows Folders
+cd '../../code/; % Linux Dirs
 fprintf('Done loading!\n');
 
 fprintf('Sorting data...\n');
@@ -42,7 +44,7 @@ end
 
 plotConsumpion(t_m);
 barGraph(t_m);
-bar3Graph(t_m);
+bar3Graph(t_m); % Matlab only
 
 
 
