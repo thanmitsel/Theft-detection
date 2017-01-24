@@ -26,15 +26,19 @@ oneID=ID(r_cons,:);
 [d]=convertDays3D(onehh);
 plotConsumption(d);
 
+% Features 
 [maxi,maxT,mini,minT,suma,av,stdev...
-,mintoav,mintomax,night,skew,kurt,varia]=extractFeatures(H);
+, lfactor, mintoav,mintomax,night,skew,kurt,varia, features]=extractFeatures(H);
 
+ % Test type 1 Fraud
 [f_data,y, F_data, Y]=type1Fraud(H);
 plotFraudvsNormal(h,f_data);
 oneDayFraudvsNormal(H, F_data, Y);
 
+% Test type 2 Fraud
 [f_data,y, F_data,Y] = type2Fraud(H);
 oneDayFraudvsNormal(H, F_data, Y);
 
+% Test type 3 Fraud
 [f_data,y, F_data,Y] = type3Fraud(H);
 oneDayFraudvsNormal(H, F_data, Y);
