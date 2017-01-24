@@ -2,11 +2,11 @@
 clear; close all; clc
 
 % Load Data
-% cd ..\'CER Data'\Data\; %windows
-cd '../CER Data/Data/'; % Linux
+ cd ..\'CER Data'\Data\; %windows
+%cd '../CER Data/Data/'; % Linux
 data=load('File1.txt');
-cd '../../code/'; % Linux
-% cd ..\..\code\; % windows
+%cd '../../code/'; % Linux
+ cd ..\..\code\; % windows
 
 % Sorting file
 [sData] = sortID(data);
@@ -31,14 +31,14 @@ plotConsumption(d);
 , lfactor, mintoav,mintomax,night,skew,kurt,varia, features]=extractFeatures(H);
 
  % Test type 1 Fraud
-[f_data,y, F_data, Y]=type1Fraud(H);
+[f_data, y, F_data, Y]=type1Fraud(H);
 plotFraudvsNormal(h,f_data);
 oneDayFraudvsNormal(H, F_data, Y);
 
 % Test type 2 Fraud
-[f_data,y, F_data,Y] = type2Fraud(H);
+[f_data, y, F_data,Y] = type2Fraud(H);
 oneDayFraudvsNormal(H, F_data, Y);
 
 % Test type 3 Fraud
-[f_data,y, F_data,Y] = type3Fraud(H);
+[f_data, y, F_data,Y] = type3Fraud(H);
 oneDayFraudvsNormal(H, F_data, Y);

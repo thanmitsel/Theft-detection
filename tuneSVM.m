@@ -130,4 +130,4 @@ end
 opts = psoptimset ('TolMesh',TolMesh,'SearchMethod',searchm,'UseParallel',parall);
 [searchmin, minobjfn] = patternsearch(minfn, z,[],[],[],[],LB,UB,opts);
 C = exp(searchmin(1,1)); rbf_sigma = exp(searchmin(2,1));
-endfunction
+end

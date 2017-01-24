@@ -3,5 +3,3 @@ function [sdata] = sortID(data)
 sdata = sortrows(data,2);
 % sort matrix according to first column (meter_id)
 sdata = sortrows(sdata,1);
-
-    
