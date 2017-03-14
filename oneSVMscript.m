@@ -29,4 +29,3 @@ prediction= svmpredict(Yval,Xval,model);
 
 % Create confusion Matrix
 [precision, recall, accuracy, F1score] = confusionMatrix (Yval, prediction);
-
