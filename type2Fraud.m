@@ -3,7 +3,8 @@ function [f_data,y, F_data,Y] = type2Fraud (data)
 % with different intensity on days
 F_data=data;
 Y=zeros(size(data,1),1);
-[dstart, fraudDays] = initFraudperMatrix(data);
+[fraudDays] = initFraudperMatrix(data);
+% dstart=fraudDays(1);
 for i=1:length(fraudDays)
   [tstart, duration, intensity] = initFraudperRow (data);
   F_data(fraudDays(i),tstart:(tstart+duration))=...

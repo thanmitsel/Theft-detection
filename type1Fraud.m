@@ -4,7 +4,8 @@ function [f_data,y, F_data,Y]=type1Fraud(data)
 % and keeps the stealing method unchanged for a whole days
 F_data=data;
 Y=zeros(size(data,1),1);
-[dstart, fraudDays] = initFraudperMatrix(data);
+[fraudDays] = initFraudperMatrix(data);
+% dstart=fraudDays(1);
 [tstart, duration, intensity] = initFraudperRow(data);
 for i=1:length(fraudDays)
     F_data(fraudDays(i),:)=intensity*data(fraudDays(i),:);

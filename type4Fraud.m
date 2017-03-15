@@ -1,6 +1,7 @@
 function [factor] = type4Fraud (data)
 % factor is the average of the intensity per fraud duration on day
-[dstart, fraudDays] = initFraudperMatrix(data);
+[fraudDays] = initFraudperMatrix(data);
+% dstart=fraudDays(1);
 for i=1:length(fraudDays)
   factor(i,1)=0;
   [tstart, duration, intensity] = initFraudperRow(data); %intensity not needed

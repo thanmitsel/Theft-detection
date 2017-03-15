@@ -95,7 +95,10 @@ switch searchpts
     case 'random'
         z = randn(2,1);
     case 'specified'
-        z = [boxcon; sigma]; % user specified C and sigma
+        %z = [boxcon; sigma]; % user specified C and sigma
+        boxcon=0.001;         % oct edited
+        sigma=0.0001;         % oct edited
+        z = [boxcon; sigma];  % oct edited
 end
 % Obtain objective function to minimize based on kernel
 switch kernel
