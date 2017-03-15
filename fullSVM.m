@@ -36,7 +36,7 @@ X_test= permute(Xtest3D,[1 3 2]);
 X_test= reshape(X_test,[],size(Xtest3D,2),1);
 Y_test=Ytest2D(:);
 
-[C_opt, sigma_opt,minobjfn] = tuneSVM(X_full, Y_full,'kernel','rbf','numFolds',5);
+%[C_opt, sigma_opt,minobjfn] = tuneSVM(X_full, Y_full,'kernel','rbf','numFolds',5);
 %min=100;
 %for i=1:10
     %[C_tuned, rbf_sigma,minobjfn] = tuneSVM(X_full, Y_full,'kernel','rbf','numFolds',5);
@@ -46,12 +46,13 @@ Y_test=Ytest2D(:);
         %sigma_opt=rbf_sigma;
     %end
 %end
-gamma_opt=1/(2*sigma_opt^2);
+%gamma_opt=1/(2*sigma_opt^2);
 
+[C, gamma]=findSVMparams(X_train, Y_train, X_test, Y_test);
 % Get best fitted arguments
-arguments=['-t ' num2str(2) ' -g ' num2str(gamma_opt) ' -c ' num2str(C_opt)]; 
+arguments=['-t ' num2str(2) ' -g ' num2str(gamma) ' -c ' num2str(C)]; 
 model=svmtrain(Y_train,X_train,arguments);
 prediction= svmpredict(Y_test,X_test,model);
 
 % Create confusion Matrix
-[precision, recall, accuracy, F1score] = confusionMatrix (Yval, prediction);
+[precision, recall, accuracy, F1score] = confusionMatrix (Y_test, prediction);
