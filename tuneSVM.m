@@ -34,6 +34,7 @@ function [C, rbf_sigma,minobjfn] = tuneSVM(Data, Label, varargin)
 % 'random'. 'specified' - the specified C,sigma values will be used to
 % start the search. 'random' - random points will be used for start of
 % search. 
+% To specify go on line 85, 86 and edit boxcon and sigma
 %
 % 'LowerBound'- LowerBound value for constrained optimization of SVM
 % parameters. Default: -5.
@@ -95,10 +96,7 @@ switch searchpts
     case 'random'
         z = randn(2,1);
     case 'specified'
-        %z = [boxcon; sigma]; % user specified C and sigma
-        boxcon=0.001;         % oct edited
-        sigma=0.0001;         % oct edited
-        z = [boxcon; sigma];  % oct edited
+        z = [boxcon; sigma]; % user specified C and sigma
 end
 % Obtain objective function to minimize based on kernel
 switch kernel
