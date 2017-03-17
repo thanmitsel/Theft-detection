@@ -1,4 +1,4 @@
-function [normalized]=normalizeFeatures(X)
+function [normalized, minval, maxval]=normalizeFeatures(X)
 % can work on 3D Matrix
 ena=ones(size(X));
 minarray=ones(size(X));

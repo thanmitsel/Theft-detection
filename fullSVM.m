@@ -26,7 +26,7 @@ for i=1:size(H,3)
     Y2D(:,i)=Y2D(:,(i-1));
     end
 end
-fprintf('Fraud Data and features created.\n');
+fprintf('\nFraud Data and features created.\n');
 fprintf('Program paused. Press enter to continue.\n');
 pause;
 %% Normalize
@@ -43,7 +43,7 @@ Y_full=Y2D(:);
 nlay  = size(H,3);
 Xn   = permute(reshape(Xn_full',[col,row/nlay,nlay]),[2,1,3]);
 
-fprintf('Data Normalized.\n');
+fprintf('\nData Normalized.\n');
 fprintf('Program paused. Press enter to continue.\n');
 pause;
 %% Create training and testing set
@@ -70,7 +70,7 @@ X_test= permute(Xtest3D,[1 3 2]);
 X_test= reshape(X_test,[],size(Xtest3D,2),1);
 Y_test=Ytest2D(:);
 
-fprintf('Segmented Training and Testing.\n');
+fprintf('\nSegmented Training and Testing.\n');
 fprintf('Program paused. Press enter to continue.\n');
 pause;
 

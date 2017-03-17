@@ -10,26 +10,27 @@ P=size(X,1);
 % Details for Fraud
 [kWh_count, time_count, kWh_rate, time_rate] = frauDetails(H, F_data);
 
-% Normalize befo
-[Xn]=normalizeFeatures(X);
-
 % Cross-Validation
 [trainidx, testidx]=crossValind(P,0.3);
 % Train set
-Xtrain= Xn(trainidx,:);
+Xtrain= X(trainidx,:);
 Ytrain= Y(trainidx);
+% Normalize Training Set 
+[Xtn, minval, maxval]=normalizeFeatures(Xtrain);
 % Test set 
-Xval=Xn(testidx,:);
+Xval=X(testidx,:);
 Yval=Y(testidx);
+% Normalize Test set based to these values
+[Xvn]=normalizeTest(Xval, minval, maxval);
 
 
 % Iteratively seek parameters
-[C, gamma]=findSVMparams(Xtrain, Ytrain, Xval, Yval);
+[C, gamma]=findSVMparams(Xtn, Ytrain, Xvn, Yval);
 
 % Get best fitted arguments
 arguments=['-t ' num2str(2) ' -g ' num2str(gamma) ' -c ' num2str(C)]; 
-model=svmtrain(Ytrain,Xtrain,arguments);
-prediction= svmpredict(Yval,Xval,model);
+model=svmtrain(Ytrain,Xtn,arguments);
+prediction= svmpredict(Yval,Xvn,model);
 
 % Create confusion Matrix
 [precision, recall, accuracy, F1score] = confusionMatrix (Yval, prediction);
