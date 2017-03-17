@@ -33,5 +33,5 @@ prediction= svmpredict(Yval,Xval,model);
 
 % Create confusion Matrix
 [precision, recall, accuracy, F1score] = confusionMatrix (Yval, prediction);
-fprintf('\n| Precision %4.2f | Recall %4.2f | Accuracy %4.2f | F1score %4.2f |\n',precision,recall,accuracy,F1score);
-fprintf('| Actual %d Days | Predicted Right %d Days | kWh Rate %4.2fper | Time Rate %4.2fper |\n',sum(Yval==1),sum(prediction==1&Yval==prediction),kWh_rate,time_rate);
+fprintf('\n| Precision=%4.2f | Recall=%4.2f | Accuracy=%4.2f | F1score=%4.2f |\n',precision,recall,accuracy,F1score);
+fprintf('| Actual %d | Predicted Right %d | kWh Rate %4.2f | Time Rate %4.2f |\n',sum(Yval==1),sum(prediction==1&&Yval==prediction),kWh_rate,time_rate);
