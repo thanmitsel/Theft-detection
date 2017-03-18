@@ -31,21 +31,21 @@ fprintf('Program paused. Press enter to continue.\n');
 pause;
 %% Normalize
 % Unroll 3D and 2D
-X_full= permute(X,[1 3 2]);
-X_full= reshape(X_full,[],size(X,2),1);
-Y_full=Y2D(:);
+%X_full= permute(X,[1 3 2]);
+%X_full= reshape(X_full,[],size(X,2),1);
+%Y_full=Y2D(:);
 
 % Normalize
-[Xn_full]=normalizeFeatures(X_full);
+%[Xn_full]=normalizeFeatures(X_full);
 
 % Reshape to 3D
-[row,col] = size(Xn_full);
-nlay  = size(H,3);
-Xn   = permute(reshape(Xn_full',[col,row/nlay,nlay]),[2,1,3]);
+%[row,col] = size(Xn_full);
+%nlay  = size(H,3);
+%Xn   = permute(reshape(Xn_full',[col,row/nlay,nlay]),[2,1,3]);
 
-fprintf('\nData Normalized.\n');
-fprintf('Program paused. Press enter to continue.\n');
-pause;
+%fprintf('\nData Normalized.\n');
+%fprintf('Program paused. Press enter to continue.\n');
+%pause;
 %% Create training and testing set
 % Choose from every consumer sample
 N=size(X,1); % No. of observations
@@ -65,9 +65,11 @@ for i=1:size(H,3)
 end
 X_train= permute(Xtrain3D,[1 3 2]);
 X_train= reshape(X_train,[],size(Xtrain3D,2),1);
+[Xtrain, minval, maxval]=normalizeFeatures(X_train); % Normalize Training Set
 Y_train=Ytrain2D(:);
 X_test= permute(Xtest3D,[1 3 2]);
-X_test= reshape(X_test,[],size(Xtest3D,2),1);
+X_test= reshape(X_test,[],size(Xtest3D,2),1); % Normalize Test set based to these values
+[X_test]=normalizeTest(X_test, minval, maxval);
 Y_test=Ytest2D(:);
 
 fprintf('\nSegmented Training and Testing.\n');
