@@ -11,22 +11,24 @@ pause;
 %% Parameter fitting
 % "Optimized" 
 %[C_opt, sigma_opt,minobjfn] = tuneSVM(X_full, Y_full,'kernel','rbf','numFolds',5);
-min=100;
-for i=1:10
-    [C_tuned, rbf_sigma,minobjfn] = tuneSVM(X_full, Y_full,'kernel','rbf','numFolds',5);
-    if min > minobjfn
-        min=minobjfn;
-        C=C_tuned;
-        sigma_opt=rbf_sigma;
-    end
-end
-gamma=1/(2*sigma_opt^2);
+%min=100;
+%for i=1:10
+%    [C_tuned, rbf_sigma,minobjfn] = tuneSVM(X_full, Y_full,'kernel','rbf','numFolds',5);
+%    if min > minobjfn
+%        min=minobjfn;
+%        C=C_tuned;
+%        sigma_opt=rbf_sigma;
+%    end
+%end
+%gamma=1/(2*sigma_opt^2);
+
 % fast iterative
-%[C, gamma]=findSVMparams(X_train, Y_train, X_test, Y_test);
+[C, gamma]=findSVMparams(X_train, Y_train, X_test, Y_test);
 
 % naive grid search
-%[X_full, Y_full]=unrollto2D(X,Y2D);
-%[C, gamma]=naiveGridSearch(X_full,Y_full);
+% no normalization for input
+% K=5; % no of folds
+% [C, gamma]=naiveGridSearch(X,Y2D,K);
 
 % Get best fitted arguments
 arguments=['-t ' num2str(2) ' -g ' num2str(gamma) ' -c ' num2str(C)]; 
