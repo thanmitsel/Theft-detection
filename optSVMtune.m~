@@ -3,7 +3,7 @@
 
 min=100;
 for i=1:10
-    [C_tuned, rbf_sigma,minobjfn] = tuneSVM(Xtn, Ytrain,'kernel','rbf','numFolds',5);
+    [C_tuned, rbf_sigma,minobjfn] = tuneSVM(Xtrain, Ytrain,'kernel','rbf','numFolds',5);
     if min > minobjfn
         min=minobjfn;
         C_opt=C_tuned;

@@ -1,3 +1,6 @@
+%% Preprocesing, Formating Data for one consumer.
+% In this script we get consumer data and add fraud values to their data.
+
 % Initialization
 clear; close all; clc
 
@@ -28,10 +31,6 @@ oneID=ID(r_cons,:);
 [d]=convertDays3D(onehh);
 plotConsumption(d);
 
-% Features 
-[maxi,maxT,mini,minT,suma,av,stdev...
-, lfactor, mintoav,mintomax,night,skew,kurt,varia, features]=extractFeatures(H);
-
  % Test type 1 Fraud
 [f_data, y, F_data, Y]=type1Fraud(H);
 plotFraudvsNormal(h,f_data);
@@ -44,3 +43,10 @@ oneDayFraudvsNormal(H, F_data, Y);
 % Test type 3 Fraud
 [f_data, y, F_data,Y] = type3Fraud(H);
 oneDayFraudvsNormal(H, F_data, Y);
+
+% Details for Fraud
+[kWh_count, time_count, kWh_rate, time_rate] = frauDetails(H, F_data);
+
+% Features 
+[maxi,maxT,mini,minT,suma,av,stdev...
+, lfactor, mintoav,mintomax,night,skew,kurt,varia, X]=extractFeatures(F_data);
