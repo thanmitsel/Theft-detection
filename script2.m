@@ -20,7 +20,7 @@ cd ../../Thesis/; %Matlab Linux
 % and vector with their IDs
 [hh, ID]=pickConsumers(sData);
 
-% pick some z vector
+% pick some z vector 
 z=10;
 r_cons=randi(size(hh,1),z,1);
 somehh=hh(r_cons,:);
@@ -30,16 +30,17 @@ someID=ID(r_cons,:);
 [h, H]=convertHours3D(somehh);
 
 % Create Fraud data
-F_data3D=zeros(size(H));
+F_data3D=H;
 Y2D=zeros(size(H,1),size(H,3));
 one_H=zeros(size(H(:,:,1)));
-fraud_rate=0.5;
-[normal_idx, fraud_idx] = crossvalind('HoldOut', N, P);
-for i=1:size(H,3)
-    one_H=H(:,:,i);
+fraud_rate=0.35; % Percentage of consumers who fraud
+[normal_idx, fraud_idx] = crossvalind('HoldOut', size(H,3), fraud_rate); % Keep in mind crossval floors the rate
+thiefs=find(fraud_idx==1);
+for i=1:size(thiefs,1)
+    one_H=H(:,:,thiefs(i));
     [f_data, y, F_data,Y] = type3Fraud(one_H);
-    F_data3D(:,:,i)=F_data;
-    Y2D(:,i)=Y;
+    F_data3D(:,:,thiefs(i))=F_data;
+    Y2D(:,thiefs(i))=Y;
 end
 
 % Details 
