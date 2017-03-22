@@ -10,7 +10,7 @@ clear; close all; clc
 %cd '../CER Data/Data/'; % Linux
 data=load('File1.txt');
 %cd '../../code/'; % Linux
-cd ../../code/; %Matlab Linux
+cd ../../Thesis/; %Matlab Linux
 %cd ..\..\code\; % windows
 
 % Sorting file
@@ -33,6 +33,8 @@ someID=ID(r_cons,:);
 F_data3D=zeros(size(H));
 Y2D=zeros(size(H,1),size(H,3));
 one_H=zeros(size(H(:,:,1)));
+fraud_rate=0.5;
+[normal_idx, fraud_idx] = crossvalind('HoldOut', N, P);
 for i=1:size(H,3)
     one_H=H(:,:,i);
     [f_data, y, F_data,Y] = type3Fraud(one_H);

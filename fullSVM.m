@@ -9,27 +9,33 @@ fprintf('Program paused. Press enter to continue.\n');
 pause;
 
 %% Parameter fitting
-% "Optimized" 
-%[C_opt, sigma_opt,minobjfn] = tuneSVM(X_full, Y_full,'kernel','rbf','numFolds',5);
-%min=100;
-%for i=1:10
-%    [C_tuned, rbf_sigma,minobjfn] = tuneSVM(X_full, Y_full,'kernel','rbf','numFolds',5);
-%    if min > minobjfn
-%        min=minobjfn;
-%        C=C_tuned;
-%        sigma_opt=rbf_sigma;
-%    end
-%end
-%gamma=1/(2*sigma_opt^2);
+fprintf('Choose method for parameter search and press Enter.\n');
+promt='1. Optimized\n2. Fast\n3. Naive Grid Search\n';
+x = input(prompt);
+fprintf('You pressed: %d', x) ;
 
-% fast iterative
-[C, gamma]=findSVMparams(X_train, Y_train, X_test, Y_test);
-
-% naive grid search
-% no normalization for input
-% K=5; % no of folds
-% [C, gamma]=naiveGridSearch(X,Y2D,K);
-
+if w==1
+    % "Optimized" 
+    [C_opt, sigma_opt,minobjfn] = tuneSVM(X_full, Y_full,'kernel','rbf','numFolds',5);
+    min=100;
+    for i=1:10
+        [C_tuned, rbf_sigma,minobjfn] = tuneSVM(X_full, Y_full,'kernel','rbf','numFolds',5);
+        if min > minobjfn
+            min=minobjfn;
+            C=C_tuned;
+            sigma_opt=rbf_sigma;
+        end
+    end
+    gamma=1/(2*sigma_opt^2);
+elseif w==2
+    % fast iterative
+    [C, gamma]=findSVMparams(X_train, Y_train, X_test, Y_test);
+elseif w==3
+    % naive grid search
+    % no normalization for input
+     K=5; % no of folds
+     [C, gamma]=naiveGridSearch(X,Y2D,K);
+end
 % Get best fitted arguments
 arguments=['-t ' num2str(2) ' -g ' num2str(gamma) ' -c ' num2str(C)]; 
 
