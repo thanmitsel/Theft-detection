@@ -54,15 +54,12 @@ pred_ID=(sum(pred_table==1)>20)'; % fraud if more than 20 days
 [precision, recall, in_recall, accuracy, F1score] = confusionMatrix (Y_test, prediction);
 [precision_t, recall_t, in_recall_t, accuracy_t, F1score_t] = confusionMatrix (class_ID, pred_ID);
 
-fprintf(' There are %d consumres with corrupted features!\n',count);
-fprintf('kWh Rate %4.2fper | Time Rate %4.2fper |',kWh_rate,time_rate);
-
 fprintf('\nClassification for IDs\n');
 fprintf('| Precision %4.2f | Recall %4.2f | Accuracy %4.2f | F1score %4.2f |\n',precision_t,recall_t,accuracy_t,F1score_t);
 fprintf('| Actual Fraud %d IDs | Predicted Fraud Right %d IDs | Predicted Fraud Wrong %d IDs |\n',sum(class_ID==1),sum(pred_ID==1&pred_ID==class_ID),sum(pred_ID==1&class_ID~=pred_ID));
-fprintf(' DR  FPR Accuracy\n%4.2f %4.2f %4.2f \n',recall_t,in_recall_t,accuracy_t);
-
+fprintf(' DR  FPR Accuracy\n%4.2f %4.2f %4.2f ',recall_t,in_recall_t,accuracy_t);
 fprintf('\nClassification for Days\n');
 fprintf('| Precision %4.2f | Recall %4.2f | Accuracy %4.2f | F1score %4.2f |\n',precision,recall,accuracy,F1score);
-fprintf('| Actual %d Days | Predicted Right %d Days | Predicted Fraud Wrong %d Days |\n',sum(Y_test==1),sum(prediction==1&Y_test==prediction));
-fprintf(' DR  FPR Accuracy\n%4.2f %4.2f %4.2f \n',recall,in_recall,accuracy);
+fprintf('| Actual %d Days | Predicted Right %d Days | kWh Rate %4.2fper | Time Rate %4.2fper |\n',sum(Y_test==1),sum(prediction==1&Y_test==prediction),kWh_rate,time_rate);
+fprintf('| Actual %d Days | Predicted Right %d Days | Predicted Fraud Wrong %d Days |\n',sum(Y_test==1),sum(prediction==1&Y_test==prediction),sum(prediction==1&Y_test~=prediction));
+fprintf(' There are %d consumres with corrupted features!\n',count);
