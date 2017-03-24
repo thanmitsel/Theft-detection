@@ -21,7 +21,7 @@ cd ../../Thesis/; %Matlab Linux
 [hh, ID]=pickConsumers(sData);
 
 % pick some z vector 
-z=20;
+z=10;
 r_cons=randi(size(hh,1),z,1);
 somehh=hh(r_cons,:);
 someID=ID(r_cons,:);
@@ -52,7 +52,7 @@ end
 % Feature extraction
 % 14 Features 
 X=zeros(size(H,1),14,size(H,3));
-count=0;
+count=0; % counts the errored data
 for i=1:size(H,3)
 [maxi,maxT,mini,minT,suma,av,stdev...
         , lfactor, mintoav,mintomax,night,skew,kurt,varia, features]=extractFeatures(F_data3D(:,:,i));
