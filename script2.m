@@ -28,7 +28,7 @@ someID=ID(r_cons,:);
 
 % Convertions
 [h, H]=convertHours3D(somehh);
-
+%% Fraud Initialization
 % Create Fraud data
 F_data3D=H;
 Y2D=zeros(size(H,1),size(H,3));
@@ -48,7 +48,6 @@ end
 
 %% Feature extraction
 % Here we use SVM for many consumers
-% This script needs script2
 
 % Feature extraction
 % 14 Features 

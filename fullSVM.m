@@ -1,10 +1,10 @@
 %% Create training and testing set
 % Choose from every consumer sample
-
+thresh=20; % if more days than the threshold then fraud
 P=0.3; % Percent of Test
 [X_train, Y_train, X_test, Y_test, X_full, Y_full]=pickTrainTest(X, Y2D, P);
 Y_table=vec2mat(Y_test, floor(P*size(X,1)))';
-class_ID=(sum(Y_table==1)>20)'; % fraud if more than 20 days 
+class_ID=(sum(Y_table==1)>thresh)'; % fraud if more than 20 days 
 
 fprintf('\nSegmented Training and Testing.\n');
 fprintf('Program paused. Press enter to continue.\n');
@@ -14,7 +14,7 @@ pause;
 fprintf('Choose method for parameter search and press Enter.\n');
 prompt='\n0. Optimized\n1. Fully Optimized\n2. Fast\n3. Naive Grid Search\n';
 x = input(prompt);
-fprintf('You pressed: %d', x) ;
+fprintf('You pressed: %d\n', x) ;
 nloop=2; % no of repeating the process of parameter search
 if x==0
     % "Optimized" 
@@ -43,7 +43,7 @@ elseif w==3
 end
 % Get best fitted arguments
 arguments=['-t ' num2str(2) ' -g ' num2str(gamma) ' -c ' num2str(C)]; 
-
+%% SVM test and confusion matrices
 % Test SVM
 model=svmtrain(Y_train,X_train,arguments);
 prediction= svmpredict(Y_test,X_test,model);
@@ -53,14 +53,17 @@ pred_ID=(sum(pred_table==1)>20)'; % fraud if more than 20 days
 % Create confusion Matrix
 [precision, recall, in_recall, accuracy, F1score] = confusionMatrix (Y_test, prediction);
 [precision_t, recall_t, in_recall_t, accuracy_t, F1score_t] = confusionMatrix (class_ID, pred_ID);
+rouf_id=find(pred_ID==1);
+roufianos=someID(rouf_id);
 
-fprintf(' There are %d consumres with corrupted features!\n',count);
-fprintf('kWh Rate %4.2fper | Time Rate %4.2fper |',kWh_rate,time_rate);
+fprintf('\nThere are %d consumres with corrupted features!\n',count);
+fprintf('kWh Rate %4.2fper | Time Rate %4.2fper |\n',kWh_rate,time_rate);
 
 fprintf('\nClassification for IDs\n');
 fprintf('| Precision %4.2f | Recall %4.2f | Accuracy %4.2f | F1score %4.2f |\n',precision_t,recall_t,accuracy_t,F1score_t);
 fprintf('| Actual Fraud %d IDs | Predicted Fraud Right %d IDs | Predicted Fraud Wrong %d IDs |\n',sum(class_ID==1),sum(pred_ID==1&pred_ID==class_ID),sum(pred_ID==1&class_ID~=pred_ID));
 fprintf(' DR  FPR Accuracy\n%4.2f %4.2f %4.2f \n',recall_t,in_recall_t,accuracy_t);
+disp(roufianos);
 
 fprintf('\nClassification for Days\n');
 fprintf('| Precision %4.2f | Recall %4.2f | Accuracy %4.2f | F1score %4.2f |\n',precision,recall,accuracy,F1score);
