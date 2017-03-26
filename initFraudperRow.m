@@ -1,6 +1,5 @@
-function [tstart, duration, intensity] = initFraudperRow (data)
+function [tstart, duration] = initFraudperRow (data)
 % NOTE when tstart is 24 duration must be manually set to 1
-intensity=1-betarnd(6,3);
 duration=randi(24);
 tstart=randi(24);
 while (tstart+duration>size(data,2))
