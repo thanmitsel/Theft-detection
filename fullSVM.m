@@ -1,11 +1,12 @@
 %% Create training and testing set
 % Choose from every consumer sample
-thresh=20; % if more days than the threshold then fraud
+ndays=20; % if more days than the threshold then fraud
 P=0.3; % Percent of Test
-[X_train, Y_train, X_test, Y_test, X_full, Y_full]=pickTrainTest(X, Y2D, P);
+normalization=1;
+[X_train, Y_train, X_test, Y_test, X_full, Y_full]=pickTrainTest(X, Y2D, P, normalization);
 Intr=sum(Y_full)/size(Y_full,1);% Probability of Intrusion based on Days
 Y_table=vec2mat(Y_test, floor(P*size(X,1)))';
-class_ID=(sum(Y_table==1)>thresh)'; % fraud if more than 20 days
+class_ID=(sum(Y_table==1)>ndays)'; % fraud if more than 20 days
 
 fprintf('\nSegmented Training and Testing.\n');
 fprintf('Program paused. Press enter to continue.\n');
@@ -48,8 +49,9 @@ arguments=['-t ' num2str(2) ' -g ' num2str(gamma) ' -c ' num2str(C)];
 % Test SVM
 model=svmtrain(Y_train,X_train,arguments);
 prediction= svmpredict(Y_test,X_test,model);
+
 pred_table=vec2mat(prediction, floor(P*size(X,1)))';
-pred_ID=(sum(pred_table==1)>thresh)'; % fraud if more than 20 days
+pred_ID=(sum(pred_table==1)>ndays)'; % fraud if more than 20 days
 
 % Create confusion Matrix
 % Detection Rate is Recall, False Positive Rate is Inverse recall 
@@ -63,7 +65,7 @@ rouf_id=find(pred_ID==1);
 roufianos=someID(rouf_id); % Keeps all the ID that contain intrusion
 
 %% Printing Segment
-fprintf('\nThere are %d consumres with corrupted features!\n',count);
+fprintf('\nThere are %d consumers with corrupted features!\n',count);
 fprintf('kWh Rate %4.2fper | Time Rate %4.2fper |\n',kWh_rate,time_rate);
 
 fprintf('\nClassification for IDs\n');

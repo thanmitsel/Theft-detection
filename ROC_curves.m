@@ -6,7 +6,7 @@ clear; close all; clc
 
 intensity=[20 50 80];
 %thresh=[10 20 50 70 100 120 150 170 180 200];
-thresh=[10 20 30 40 50 60 70 80 90 100];
+thresh=[10 20 30 40 50 60 70 80 90 100]; % ndays
 fraud_rate=0.9; % Percentage of consumers who fraud
 
 DR_days=zeros(length(thresh), length(intensity));
@@ -35,7 +35,7 @@ cd ../../Thesis/; %Matlab Linux
 [hh, ID]=pickConsumers(sData);
 
 % pick some z vector 
-z=300;
+z=50; % Needs to be 300>
 r_cons=randi(size(hh,1),z,1);
 somehh=hh(r_cons,:);
 someID=ID(r_cons,:);
@@ -83,7 +83,8 @@ for id_i=1:length(intensity)
             % Choose from every consumer sample
             
             P=0.3; % Percent of Test
-            [X_train, Y_train, X_test, Y_test, X_full, Y_full]=pickTrainTest(X, Y2D, P);
+            normalization=1;
+            [X_train, Y_train, X_test, Y_test, X_full, Y_full]=pickTrainTest(X, Y2D, P, normalization);
             Intr=sum(Y_full)/size(Y_full,1);% Probability of Intrusion based on Days
             Y_table=vec2mat(Y_test, floor(P*size(X,1)))';
             class_ID=(sum(Y_table==1)>thresh(id_th))'; % fraud if more than threshold fraud
@@ -110,3 +111,5 @@ for id_i=1:length(intensity)
             roufianos=someID(rouf_id); % Keeps all the ID that contain intrusion
     end
 end
+
+plotCurves(FPR_IDs,DR_IDs);
