@@ -35,7 +35,7 @@ cd ../../Thesis/; %Matlab Linux
 [hh, ID]=pickConsumers(sData);
 
 % pick some z vector 
-z=50; % Needs to be 300>
+z=400; % Needs to be 300>
 r_cons=randi(size(hh,1),z,1);
 somehh=hh(r_cons,:);
 someID=ID(r_cons,:);

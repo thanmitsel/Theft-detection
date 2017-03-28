@@ -14,7 +14,7 @@ pause;
 
 %% Parameter fitting
 fprintf('Choose method for parameter search and press Enter.\n');
-prompt='\n0. Optimized\n1. Fully Optimized\n2. Fast\n3. Naive Grid Search\n4. No search\n';
+prompt='\n0. Optimized\n1. Fully Optimized\n2. Fast\n3. Naive Grid Search\n';
 x = input(prompt);
 fprintf('You pressed: %d\n', x) ;
 
@@ -35,21 +35,22 @@ elseif x==1
         end
     end
     gamma=1/(2*sigma_opt^2);
-elseif x==2
+elseif w==2
     % fast iterative
     [C, gamma]=findSVMparams(X_train, Y_train, X_test, Y_test);
-elseif x==3
+elseif w==3
     % naive grid search
     % no normalization for input
      K=5; % no of folds
      [C, gamma]=naiveGridSearch(X,Y2D,K);
-elseif x==4
-    gamma=0.01;
-    C=10;
+elseif w==4
+    arguments=['-t ' num2str(2) ' -g ' num2str(0.01) ' -c ' num2str(10)];
 end
 
 % Get best fitted arguments
-arguments=['-t ' num2str(2) ' -g ' num2str(gamma) ' -c ' num2str(C)];
+if w~=4
+    arguments=['-t ' num2str(2) ' -g ' num2str(gamma) ' -c ' num2str(C)];
+end
 %% SVM test and confusion matrices
 % Test SVM
 model=svmtrain(Y_train,X_train,arguments);
@@ -77,8 +78,8 @@ fprintf('\nClassification for IDs\n');
 fprintf('| Precision %4.2f | Recall %4.2f | Accuracy %4.2f | F1score %4.2f |\n',precision_t,recall_t,accuracy_t,F1score_t);
 fprintf('| Actual Fraud %d IDs | Predicted Fraud Right %d IDs | Predicted Fraud Wrong %d IDs |\n',sum(class_ID==1),sum(pred_ID==1&pred_ID==class_ID),sum(pred_ID==1&class_ID~=pred_ID));
 fprintf(' DR  FPR BDR Accuracy\n%4.2f %4.2f % 4.2f %4.2f \n',recall_t,in_recall_t,BDR_t, accuracy_t);
-% fprintf('Black List\n')
-% disp(roufianos);
+fprintf('Black List\n')
+disp(roufianos);
 
 fprintf('\nClassification for Days\n');
 fprintf('| Precision %4.2f | Recall %4.2f | Accuracy %4.2f | F1score %4.2f |\n',precision,recall,accuracy,F1score);
