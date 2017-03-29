@@ -25,7 +25,7 @@ if plot_progress
 end
 
 % Initialize values
-[m n] = size(X);
+[m, n] = size(X);
 K = size(initial_centroids, 1);
 centroids = initial_centroids;
 previous_centroids = centroids;

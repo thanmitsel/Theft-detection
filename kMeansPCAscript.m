@@ -8,7 +8,7 @@
 if (size(H,3)>1)
     [X, Y]=unrollto2D(X,Y2D);
 end
-K = 3; 
+K = 3;
 max_iters = 10;
 initial_centroids = kMeansInitCentroids(X, K);
 [centroids, idx] = runkMeans(X, initial_centroids, max_iters);

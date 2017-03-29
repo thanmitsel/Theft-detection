@@ -1,6 +1,6 @@
 %% Create training and testing set
 % Choose from every consumer sample
-ndays=20; % if more days than the threshold then fraud
+ndays=10; % if more days than the threshold then fraud
 P=0.3; % Percent of Test
 normalization=1;
 [X_train, Y_train, X_test, Y_test, X_full, Y_full]=pickTrainTest(X, Y2D, P, normalization);
@@ -49,7 +49,7 @@ elseif x==4
 end
 
 % Get best fitted arguments
-arguments=['-t ' num2str(2) ' -g ' num2str(gamma) ' -c ' num2str(C)];
+arguments=['-t ' num2str(2) ' -h ' num2str(0) ' -g ' num2str(gamma) ' -c ' num2str(C)];
 %% SVM test and confusion matrices
 % Test SVM
 model=svmtrain(Y_train,X_train,arguments);

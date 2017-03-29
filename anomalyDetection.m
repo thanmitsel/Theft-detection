@@ -31,7 +31,7 @@ someID=ID(r_cons,:);
 F_data3D=H;
 Y2D=zeros(size(H,1),size(H,3));
 one_H=zeros(size(H(:,:,1)));
-fraud_rate=0.35; % Percentage of consumers who fraud
+fraud_rate=0.05; % Percentage of consumers who fraud
 [normal_idx, fraud_idx] = crossvalind('HoldOut', size(H,3), fraud_rate); % Keep in mind crossval floors the rate
 thiefs=find(fraud_idx==1);
 for i=1:size(thiefs,1)
@@ -51,13 +51,14 @@ fprintf('Choose input data for anomaly detection.\n');
 prompt='\n0. Raw Data per hour\n1. Features (#14)\n';
 x = input(prompt);
 fprintf('You pressed: %d\n', x) ;
+count=0; % counts the errored data
 if x==0
     X=F_data3D;
 elseif x==1
     % Feature extraction
     % 14 Features 
     X=zeros(size(H,1),14,size(H,3));
-    count=0; % counts the errored data
+    
     for i=1:size(H,3)
     [maxi,maxT,mini,minT,suma,av,stdev...
             , lfactor, mintoav,mintomax,night,skew,kurt,varia, features]=extractFeatures(F_data3D(:,:,i));
@@ -72,9 +73,6 @@ elseif x==1
     end
 end
 fprintf('\nFraud Data and features created.\n');
-fprintf('Program paused. Press enter to continue.\n');
-pause;
-
 %% Create training and testing set
 % Choose from every consumer sample
 % No normarlization neededs
@@ -85,11 +83,9 @@ normalization=0;
 [X_train, Y_train, X_test, Y_test, X_full, Y_full]=pickTrainTest(X, Y2D, P, normalization);
 Intr=sum(Y_full)/size(Y_full,1);% Probability of Intrusion based on Days
 Y_table=vec2mat(Y_test, floor(P*size(X,1)))';
-class_ID=(sum(Y_table==1)>ndays)'; % fraud if more than 20 days
+class_ID=(sum(Y_table==1)>ndays)'; % fraud if more than ndays days
 
 fprintf('\nSegmented Training and Testing.\n');
-fprintf('Program paused. Press enter to continue.\n');
-pause;
 
 %% Apply anomalyDetection
 % Estimate mu sigma2
@@ -121,7 +117,6 @@ fprintf('\nBest epsilon found using cross-validation: %e\n', epsilon);
 fprintf('Best F1 on Cross Validation Set:  %f\n', F1);
 fprintf('Based on best F1\nDR=%4.2f FPR=%4.2f on Cross Validation Set\n', recall, in_recall);
 fprintf('# Outliers found: %d\n', sum(p < epsilon));
-pause;
 
 %% Printing Segment
 fprintf('\nThere are %d consumers with corrupted features!\n',count);
