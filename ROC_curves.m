@@ -33,7 +33,7 @@ cd ../../Thesis/; %Matlab Linux
 [hh, ID]=pickConsumers(sData);
 
 % pick some z vector 
-z=100; % Needs to be 300>
+z=300; % Needs to be 300>
 r_cons=randi(size(hh,1),z,1);
 somehh=hh(r_cons,:);
 someID=ID(r_cons,:);
@@ -102,10 +102,9 @@ for id_i=1:length(intensity)
             [precision_t, recall_t, in_recall_t, accuracy_t, F1score_t] = confusionMatrix (class_ID, pred_ID);
             DR_IDs(id_th, id_i)=recall_t;
             FPR_IDs(id_th,id_i)=in_recall_t;
-            
             rouf_id=find(pred_ID==1);
             roufianos=someID(rouf_id); % Keeps all the ID that contain intrusion
     end
 end
 
-plotCurves(FPR_IDs,DR_IDs);
+plotCurves(FPR_IDs,DR_IDs,z,fraud_rate,thresh);
