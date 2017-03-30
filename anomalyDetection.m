@@ -31,7 +31,9 @@ someID=ID(r_cons,:);
 F_data3D=H;
 Y2D=zeros(size(H,1),size(H,3));
 one_H=zeros(size(H(:,:,1)));
-fraud_rate=0.05; % Percentage of consumers who fraud
+
+% fraud_rate=0.05; % Percentage of consumers who fraud
+fraud_rate=0.35; % Percentage of consumers who fraud
 [normal_idx, fraud_idx] = crossvalind('HoldOut', size(H,3), fraud_rate); % Keep in mind crossval floors the rate
 thiefs=find(fraud_idx==1);
 for i=1:size(thiefs,1)
@@ -77,7 +79,8 @@ fprintf('\nFraud Data and features created.\n');
 % Choose from every consumer sample
 % No normarlization neededs
 
-ndays=20; % if more days than the threshold then fraud
+% ndays=20; % if more days than the threshold then fraud
+ndays=50;
 P=0.3; % Percent of Test
 normalization=0;
 [X_train, Y_train, X_test, Y_test, X_full, Y_full]=pickTrainTest(X, Y2D, P, normalization);

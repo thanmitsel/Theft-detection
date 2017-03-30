@@ -6,7 +6,7 @@ normalization=1;
 [X_train, Y_train, X_test, Y_test, X_full, Y_full]=pickTrainTest(X, Y2D, P, normalization);
 Intr=sum(Y_full)/size(Y_full,1);% Probability of Intrusion based on Days
 Y_table=vec2mat(Y_test, floor(P*size(X,1)))';
-class_ID=(sum(Y_table==1)>ndays)'; % fraud if more than 20 days
+class_ID=(sum(Y_table==1)>ndays)'; % fraud if more than "ndays" days
 
 fprintf('\nSegmented Training and Testing.\n');
 fprintf('Program paused. Press enter to continue.\n');
@@ -56,7 +56,7 @@ model=svmtrain(Y_train,X_train,arguments);
 prediction= svmpredict(Y_test,X_test,model);
 
 pred_table=vec2mat(prediction, floor(P*size(X,1)))';
-pred_ID=(sum(pred_table==1)>ndays)'; % fraud if more than 20 days
+pred_ID=(sum(pred_table==1)>ndays)'; % fraud if more than "ndays" days
 
 % Create confusion Matrix
 % Detection Rate is Recall, False Positive Rate is Inverse recall 

@@ -33,6 +33,7 @@ someID=ID(r_cons,:);
 F_data3D=H;
 Y2D=zeros(size(H,1),size(H,3));
 one_H=zeros(size(H(:,:,1)));
+
 fraud_rate=0.35; % Percentage of consumers who fraud
 [normal_idx, fraud_idx] = crossvalind('HoldOut', size(H,3), fraud_rate); % Keep in mind crossval floors the rate
 thiefs=find(fraud_idx==1);
