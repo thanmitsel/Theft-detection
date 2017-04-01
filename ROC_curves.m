@@ -5,11 +5,12 @@ clear; close all; clc
 % 10 points on every curve, threshold
 
 intensity=[0.20 0.50 0.80];
-%thresh=[10 20 50 70 100 120 150 170 180 200];
-thresh=[10 20 30 40 50 60 70 80 90 100]; % ndays
+thresh=0:2:100; 
+% thresh=0:2:40; %ndays for 0.35 fraud rate
+% thresh=[10 20 30 40 50 60 70 80 90 100]; % ndays for 0.9 fraud rate
 
 % Needs to be high or low intensity attacks are not recognised
-fraud_rate=0.9; % Percentage of consumers who fraud 
+fraud_rate=0.5; % Percentage of consumers who fraud 
 
 DR_days=zeros(length(thresh), length(intensity));
 FPR_days=zeros(length(thresh), length(intensity));
@@ -21,7 +22,7 @@ FPR_IDs=zeros(length(thresh), length(intensity));
 
 
 % Load Data
- cd ../CER' Data'/Data/; %Matlab Linux
+cd ../CER' Data'/Data/; %Matlab Linux
 data=load('File1.txt');
 cd ../../Thesis/; %Matlab Linux
 
@@ -33,7 +34,7 @@ cd ../../Thesis/; %Matlab Linux
 [hh, ID]=pickConsumers(sData);
 
 % pick some z vector 
-z=300; % Needs to be 300>
+z=600; % Needs to be 300>
 r_cons=randi(size(hh,1),z,1);
 somehh=hh(r_cons,:);
 someID=ID(r_cons,:);
@@ -74,31 +75,32 @@ for id_i=1:length(intensity)
          end
     end
     fprintf('\nFraud Data and features created.\n');
+    %% Create training and testing set
+    % Choose from every consumer sample
+          
+    P=0.3; % Percent of Test
+    normalization=1;
+    [X_train, Y_train, X_test, Y_test, X_full, Y_full]=pickTrainTest(X, Y2D, P, normalization);
+    Intr=sum(Y_full)/size(Y_full,1);% Probability of Intrusion based on Days
+    Y_table=vec2mat(Y_test, floor(P*size(X,1)))';
+    fprintf('\nSegmented Training and Testing.\n');
+    % Get best fitted arguments
+    arguments=['-t ' num2str(2) ' -h ' num2str(0) ' -g ' num2str(0.1) ' -c ' num2str(10)]; 
+    %% SVM test and confusion matrices
+    % Test SVM
+    model=svmtrain(Y_train,X_train,arguments);
+    prediction= svmpredict(Y_test,X_test,model);
+    pred_table=vec2mat(prediction, floor(P*size(X,1)))';
+    % Create confusion Matrix   
+    % Detection Rate is Recall, False Positive Rate is Inverse recall 
+    [precision, recall, in_recall, accuracy, F1score] = confusionMatrix (Y_test, prediction);
     for id_th=1:length(thresh)        
-            %% Create training and testing set
-            % Choose from every consumer sample
-            
-            P=0.3; % Percent of Test
-            normalization=1;
-            [X_train, Y_train, X_test, Y_test, X_full, Y_full]=pickTrainTest(X, Y2D, P, normalization);
-            Intr=sum(Y_full)/size(Y_full,1);% Probability of Intrusion based on Days
-            Y_table=vec2mat(Y_test, floor(P*size(X,1)))';
+        %% Apply Different Thresholds
             class_ID=(sum(Y_table==1)>thresh(id_th))'; % fraud if more than threshold fraud
-
-            fprintf('\nSegmented Training and Testing.\n');
-            % Get best fitted arguments
-            arguments=['-t ' num2str(2) ' -h ' num2str(0) ' -g ' num2str(0.1) ' -c ' num2str(10)]; 
-            %% SVM test and confusion matrices
-            % Test SVM
-            model=svmtrain(Y_train,X_train,arguments);
-            prediction= svmpredict(Y_test,X_test,model);
-            pred_table=vec2mat(prediction, floor(P*size(X,1)))';
+         
+            
             pred_ID=(sum(pred_table==1)>thresh(id_th))'; % fraud if more than threshold
 
-            % Create confusion Matrix
-            % Detection Rate is Recall, False Positive Rate is Inverse recall 
-            [precision, recall, in_recall, accuracy, F1score] = confusionMatrix (Y_test, prediction);
-            
             [precision_t, recall_t, in_recall_t, accuracy_t, F1score_t] = confusionMatrix (class_ID, pred_ID);
             DR_IDs(id_th, id_i)=recall_t;
             FPR_IDs(id_th,id_i)=in_recall_t;

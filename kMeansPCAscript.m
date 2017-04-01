@@ -42,7 +42,7 @@ Z = projectData(X_norm, U, 2);
 figure;
 plotDataPoints(Z(sel, :), idx(sel), K);
 title('2D plot of features, using PCA for dimensionality reduction');
-figure;
+
 plotClass(Z(sel,:),Y(sel));
 title('Classified examples');
 fprintf('Program paused. Press enter to continue.\n');

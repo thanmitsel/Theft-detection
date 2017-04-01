@@ -5,13 +5,9 @@
 clear; close all; clc
 
 % Load Data
- %cd ..\'CER Data'\Data\; %windows
- cd ../CER' Data'/Data/; %Matlab Linux
-%cd '../CER Data/Data/'; % Linux
+cd ../CER' Data'/Data/; %Matlab Linux
 data=load('File1.txt');
-%cd '../../code/'; % Linux
-cd ../../code/; %Matlab Linux
-%cd ..\..\code\; % windows
+cd ../../Thesis/; %Matlab Linux
 
 % Sorting file
 [sData] = sortID(data);
@@ -50,3 +46,5 @@ oneDayFraudvsNormal(H, F_data, Y);
 % Features 
 [maxi,maxT,mini,minT,suma,av,stdev...
 , lfactor, mintoav,mintomax,night,skew,kurt,varia, X]=extractFeatures(F_data);
+
+Intr=sum(Y)/size(Y,1);% Probability of Intrusion based on Days
