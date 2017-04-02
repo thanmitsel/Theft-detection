@@ -21,13 +21,14 @@ cd ../../Thesis/; %Matlab Linux
 [hh, ID]=pickConsumers(sData);
 
 % pick some z vector 
-z=300;
+z=600;
 r_cons=randi(size(hh,1),z,1);
 somehh=hh(r_cons,:);
 someID=ID(r_cons,:);
 
 % Convertions
 [h, H]=convertHours3D(somehh);
+[d]=convertDays3D(hh);
 %% Fraud Initialization
 % Create Fraud data
 F_data3D=H;
@@ -49,6 +50,12 @@ end
 
 %% Feature extraction
 % Here we use SVM for many consumers
+
+% No Feature extraction for cons x Days Data
+% Needs threshold
+
+[days]=convertDays3D(F_data3D); % if more days than the threshold then fraud
+
 
 % Feature extraction
 % 14 Features 
