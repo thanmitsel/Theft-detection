@@ -11,7 +11,7 @@ end
 K = 3;
 max_iters = 10;
 initial_centroids = kMeansInitCentroids(X, K);
-[centroids, idx] = runkMeans(X, initial_centroids, max_iters);
+[cost, centroids, idx] = runkMeans(X, initial_centroids, max_iters);
 
 %  Sample 1000 random indexes (since working with all the data is
 %  too expensive. If you have a fast computer, you may increase this.

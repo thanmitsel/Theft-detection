@@ -8,3 +8,11 @@ data2=load('File2.txt');
 data3=load('File3.txt');
 data=[data1;data2;data3];
 cd ../../Thesis/; %Matlab Linux
+
+
+% Sorting file
+[sData] = sortID(data);
+
+% Create matrix of consumersxhh 
+% and vector with their IDs
+[hh, ID]=pickConsumers(sData);

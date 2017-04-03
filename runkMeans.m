@@ -1,4 +1,4 @@
-function [centroids, idx] = runkMeans(X, initial_centroids, ...
+function [cost, centroids, idx] = runkMeans(X, initial_centroids, ...
                                       max_iters, plot_progress)
 %RUNKMEANS runs the K-Means algorithm on data matrix X, where each row of X
 %is a single example
@@ -41,8 +41,7 @@ for i=1:max_iters
     end
     
     % For each example in X, assign it to the closest centroid
-    idx = findClosestCentroids(X, centroids);
-    
+    [value, idx] = findClosestCentroids(X, centroids);
     % Optionally, plot progress here
     if plot_progress
         plotProgresskMeans(X, centroids, previous_centroids, idx, K, i);
@@ -54,7 +53,7 @@ for i=1:max_iters
     % Given the memberships, compute new centroids
     centroids = computeCentroids(X, idx, K);
 end
-
+cost=sum(value);
 % Hold off if we are plotting progress
 if plot_progress
     hold off;

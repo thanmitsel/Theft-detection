@@ -89,30 +89,64 @@ normalization=1;
 Intr=sum(Y_full)/size(Y_full,1);% Probability of Intrusion based on Days
 
 fprintf('\nSegmented Training and Testing.\n');
+%% ===  KMeans & PCA ===
+%  One useful application of PCA is to use it to visualize high-dimensional
+%  data. In the last K-Means exercise you ran K-Means on 3-dimensional 
+%  pixel colors of an image. We first visualize this output in 3D, and then
+%  apply PCA to obtain a visualization in 2D.
 
-%% SVM test and confusion matrices
-% Test SVM
-arguments=['-t ' num2str(0)]; % use linear kernel
-model=svmtrain(Y_train,X_train,arguments);
-prediction= svmpredict(Y_test,X_test,model);
+clusters = 1:20;
+cost_v=zeros(length(clusters),1);
+min_cost=zeros(10,1); % Carefull the size dependes on multiple initializations
 
-pred_ID=prediction;
+max_iters = 10;
+for i=1:length(clusters)
+    K=i;
+    initial_centroids = kMeansInitCentroids(X_full, K);
+    [cost, centroids, idx] = runkMeans(X_full, initial_centroids, max_iters);
+    if i>1 && cost_v(i)<cost_v(i-1) % meybe we got stuck at bad local optima
+        for j=1:10
+            initial_centroids = kMeansInitCentroids(X_full, K);
+            [cost, centroids, idx] = runkMeans(X_full, initial_centroids, max_iters);
+            min_cost(j,1)=cost;
+        end
+        cost=min(min_cost);
+    end
+    cost_v(i,1)=cost;
+end
+[value, index]=min(cost_v);
+K=clusters(index);
 
-% Create confusion Matrix
-% Detection Rate is Recall, False Positive Rate is Inverse recall 
-[precision, recall, in_recall, accuracy, F1score] = confusionMatrix (Y_test, prediction);
-BDR=Intr*recall/(Intr*recall+(1-Intr)*in_recall) ; % Bayesian Detection Rate for days
+%  Sample 1000 random indexes (since working with all the data is
+%  too expensive. If you have a fast computer, you may increase this.
+% sel = floor(rand(1000, 1) * size(X_full, 1)) + 1;
 
-rouf_id=find(pred_ID==1);
-roufianos=someID(rouf_id); % Keeps all the ID that contain intrusion
+%  Setup Color Palette
+palette = hsv(K);
+colors = palette(idx(:), :);
 
-%% Printing Segment
-fprintf('kWh Rate %4.2fper | Time Rate %4.2fper |\n',kWh_rate,time_rate);
+%  Visualize the data and centroid memberships in 3D
+%figure;
+%scatter3(X(sel, 1), X(sel, 2), X(sel, 3), 10, colors);
+%title('Pixel dataset plotted in 3D. Color shows centroid memberships');
+%fprintf('Program paused. Press enter to continue.\n');
+%pause;
 
-% fprintf('Black List\n')
-% disp(roufianos);
+%% ===  PCA for Visualization ===
+% Use PCA to project this cloud to 2D for visualization
+% Subtract the mean to use PCA
+[X_norm, mu, sigma] = normalizeMinus_Plus(X_full);
 
-fprintf('\nClassification for Consumers\n');
-fprintf('| Precision %4.2f | Recall %4.2f | Accuracy %4.2f | F1score %4.2f |\n',precision,recall,accuracy,F1score);
-fprintf('| Actual Fraud %d IDs | Predicted Fraud Right %d IDs | Predicted Fraud Wrong %d IDs |\n',sum(Y_test==1),sum(prediction==1&Y_test==prediction),sum(prediction==1&Y_test~=prediction));
-fprintf(' DR  FPR  BDR  Accuracy\n%4.2f %4.2f %4.2f %4.2f \n',recall,in_recall,BDR,accuracy);
+% PCA and project the data to 2D
+[U, S] = pca(X_norm);
+Z = projectData(X_norm, U, 2);
+
+% Plot in 2D
+figure;
+plotDataPoints(Z(:, :), idx(:), K);
+title('2D plot of features, using PCA for dimensionality reduction');
+
+plotClass(Z(sel,:),Y(sel));
+title('Classified examples');
+fprintf('Program paused. Press enter to continue.\n');
+pause;
