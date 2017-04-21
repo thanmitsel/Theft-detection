@@ -1,24 +1,8 @@
 %% Preprocesing, Formating Data for many consumers
 % In this script we get consumer data and add fraud values to their data.
 
-% Initialization
-clear; close all; clc
-
-% Load Data
-
-cd ../CER' Data'/Data/; % Matlab Linux
-data=load('File1.txt');
-cd ../../Thesis/; %Matlab Linux
-
-% Sorting file
-[sData] = sortID(data);
-
-% Create matrix of consumersxhh 
-% and vector with their IDs
-[hh, ID]=pickConsumers(sData);
-
 % pick some z vector 
-z=300;
+z=2000;
 r_cons=randi(size(hh,1),z,1);
 somehh=hh(r_cons,:);
 someID=ID(r_cons,:);

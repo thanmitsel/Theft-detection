@@ -92,10 +92,23 @@ fprintf('\nSegmented Training and Testing.\n');
 
 %% SVM test and confusion matrices
 % Test SVM
-arguments=['-t ' num2str(0)]; % use linear kernel
-model=svmtrain(Y_train,X_train,arguments);
-prediction= svmpredict(Y_test,X_test,model);
+prompt='Select:\n0.libSVM(linear Kernel)\n1.libLinear\n';
+x=input(prompt);
+[Y_train, X_train]=get_sparse(Y_train, X_train);
+[Y_test, X_test]=get_sparse(Y_test, X_test);
 
+vfolds=5;
+if x==0
+    % arguments=['-t ' num2str(0) ' -v ' num2str(vfolds)]; % use linear kernel
+    arguments=['-t ' num2str(0)]; % use linear kernel 
+    model=svmtrain(Y_train,X_train,arguments);
+    prediction= svmpredict(Y_test,X_test,model);
+elseif x==1   
+    %arguments=['-s ' num2str(0) ' -v ' num2str(vfolds)]; % not v-validation mode
+    arguments=['-s ' num2str(1)]; % L2-Regularized L2-loss support vector classification (dual)
+    model=train(Y_train,X_train, arguments);
+    prediction= predict(Y_test,X_test,model);
+end
 pred_ID=prediction;
 
 % Create confusion Matrix
