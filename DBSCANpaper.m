@@ -118,15 +118,15 @@ title('Classified examples');
 %% Run DBSCAN Clustering Algorithm
 
 epsilon=0.5;
-ep_v=0.1:0.1:5;
+ep_v=[2^(-10) 2^(-10) 2^(-9) 2^(-8) 2^(-7) 2^(-6) 2^(-5) 2^(-4) 2^(-3)];
 pts_v=10:50;
-min=100000;
+max=0;
 for j=1:length(pts_v)
     for i=1:length(ep_v)
         [IDX_t, isnoise_t]=DBSCAN(Z,ep_v(i),pts_v(j));
-        error=mean(double(isnoise_t==Y_full));
-        if error<min
-            min=error;
+        [F1_temp]=getF1score(isnoise,Y_full);
+        if F1_temp>max
+            max=F1_temp;
             MinPts=pts_v(j);
             epsilon=ep_v(i);
             IDX=IDX_t;
