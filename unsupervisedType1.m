@@ -38,13 +38,14 @@ count=0; % counts the errored data
     
 % Feature extraction
 ndays=1;
-per_dif=0.6;
-[X_1]=ConsumerFeatures(F_data3D,per_dif); %includes ONLY 3 features
+av_per_dif=0.6;
+std_per_dif=0.6;
+[X_1]=ConsumerFeatures(F_data3D, av_per_dif, std_per_dif); %includes ONLY 3 features
 X_2=mean(X_1,1);
-X_2=permute(X_2, [3 2 1]); %
+X_2=permute(X_2, [3 2 1]);
 [X_3]=NeighborFeatures(X_2);
 Y1D=(sum(Y2D)>ndays)';
-X=X_3(:,3:end);
+X=X_3(:,1:end);
 Y=Y1D;
 
 fprintf('\nFraud Data and features created.\n');
