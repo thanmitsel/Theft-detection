@@ -34,7 +34,6 @@ end
 
 %% Feature extraction
 % Here we use SVM for many consumers
-count=0; % counts the errored data
     
 % Feature extraction
 ndays=1;
@@ -43,7 +42,12 @@ std_per_dif=0.6;
 [X_1]=ConsumerFeatures(F_data3D, av_per_dif, std_per_dif); %includes ONLY 3 features
 X_2=mean(X_1,1);
 X_2=permute(X_2, [3 2 1]);
-[X_3]=NeighborFeatures(X_2);
+
+% Obtain features related to neighbors
+K=3;
+av_threshold=0.6;
+std_threshold=0.6;
+[X_3]=NeighborFeatures(X_1, X_2, K, av_threshold, std_threshold);
 Y1D=(sum(Y2D)>ndays)';
 X=X_3(:,1:end);
 Y=Y1D;
