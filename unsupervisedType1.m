@@ -1,17 +1,17 @@
-% pick some z vector 
-z=1000;
-r_cons=randi(size(hh,1),z,1);
-somehh=hh(r_cons,:);
-someID=ID(r_cons,:);
+    % pick some z vector 
+    z=1000;
+    r_cons=randi(size(hh,1),z,1);
+    somehh=hh(r_cons,:);
+    someID=ID(r_cons,:);
 
-% Convertions
-[h, H]=convertHours3D(somehh);
+    % Convertions
+    [h, H]=convertHours3D(somehh);
 
-%% Fraud Initialization
-% Create Fraud data
-F_data3D=H;
-Y2D=zeros(size(H,1),size(H,3));
-one_H=zeros(size(H(:,:,1)));
+    %% Fraud Initialization
+    % Create Fraud data
+    F_data3D=H;
+    Y2D=zeros(size(H,1),size(H,3));
+    one_H=zeros(size(H(:,:,1)));
 
 % fraud_rate=0.05; % Percentage of consumers who fraud
 fraud_rate=0.1; % Percentage of consumers who fraud
@@ -49,7 +49,7 @@ av_threshold=0.6;
 std_threshold=0.6;
 [X_3]=NeighborFeatures(X_1, X_2, K, av_threshold, std_threshold);
 Y1D=(sum(Y2D)>ndays)';
-X=X_3(:,1:end);
+X=X_3(:,1:(end));
 Y=Y1D;
 
 fprintf('\nFraud Data and features created.\n');
