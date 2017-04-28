@@ -1,4 +1,4 @@
-function [X_1]=ConsumerFeatures(data, av_per_dif, std_per_dif)
+function [X_1]=ConsumerFeatures(data, av_per_dif, std_per_dif, symmetric_av, symmetric_std)
 % gets 3 features for consumers
 month_av_data=zeros(12,30,size(data,3));
 month_std_data=zeros(12,30,size(data,3));
@@ -8,6 +8,8 @@ m_av=zeros(12,1,size(data,3));
 m_std=zeros(12,1,size(data,3));
 max_av_difference3D=zeros(size(data,1),1,size(data,3));
 max_std_difference3D=zeros(size(data,1),1,size(data,3));
+symmetric_av_difference3D=zeros(size(data,1),1,size(data,3));
+symmetric_std_difference3D=zeros(size(data,1),1,size(data,3));
 
 average3D=mean(data,2); % 1st Feature average consumption
 standard_dev3D=std(data,0,2); % 2nd Feature std of consumption
@@ -46,5 +48,33 @@ for i=1:size(data,3)
         end
     end
     max_std_difference3D(:,1,i)=repmat(max_std, size(standard_dev3D,1),1);
+    
+    % 5th feature
+    max_sym_av=0;
+    temp_sym_av_table=reshape(average3D(1:360,1,i), [90, 4]);
+    temp_sym_av_table_t=temp_sym_av_table';
+    temp_sym_av_vector=mean(temp_sym_av_table_t,2);
+    for j=1:size(temp_sym_av_vector)/2
+        if (temp_sym_av_vector(j,1)-temp_sym_av_vector(end+1-j,1))/temp_sym_av_vector(j,1)>symmetric_av
+            if max_sym_av<(temp_sym_av_vector(j,1)-temp_sym_av_vector(end+1-j,1))/temp_sym_av_vector(j,1)
+                max_sym_av=temp_sym_av_vector(j,1)-temp_sym_av_vector(end+1-j,1);
+            end
+        end
+    end
+    symmetric_av_difference3D(:,1,i)=repmat(max_sym_av,size(average3D,1),1);
+    
+    %6th feature
+    max_sym_std=0;
+    temp_sym_std_table=reshape(standard_dev3D(1:360,1,i), [90, 4]);
+    temp_sym_std_table_t=temp_sym_std_table';
+    temp_sym_std_vector=mean(temp_sym_std_table_t,2);
+    for j=1:size(temp_sym_std_vector)/2
+        if (temp_sym_std_vector(j,1)-temp_sym_std_vector(end+1-j,1))/temp_sym_std_vector(j,1)>symmetric_std
+            if max_sym_std<(temp_sym_std_vector(j,1)-temp_sym_std_vector(end+1-j,1))/temp_sym_std_vector(j,1)
+                max_sym_std=temp_sym_std_vector(j,1)-temp_sym_std_vector(end+1-j,1);
+            end
+        end
+    end
+    symmetric_std_difference3D(:,1,i)=repmat(max_sym_std,size(standard_dev3D,1),1);
 end
-X_1=[average3D standard_dev3D max_av_difference3D max_std_difference3D];
+X_1=[average3D standard_dev3D max_av_difference3D max_std_difference3D symmetric_av_difference3D symmetric_std_difference3D];
