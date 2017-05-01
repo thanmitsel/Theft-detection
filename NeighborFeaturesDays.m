@@ -4,15 +4,15 @@ neighborhood_av=zeros(size(X_1,1),K);
 neighborhood_std=zeros(size(X_1,1),K);
 d_neighborhood_av=zeros(5,K);
 d_neighborhood_std=zeros(5,K);
-average_dif=zeros(size(X_2,1),1);
-std_dif=zeros(size(X_2,1),1);
 max_dif_av=zeros(size(X_2,1),1);
+max_dif_av3D=zeros(size(X_1,1),1,size(X_1,3));
 max_dif_std=zeros(size(X_2,1),1);
+max_dif_std3D=zeros(size(X_1,1),1,size(X_1,3));
 max_iters = 10;
 
-% 5 random initialazations
+
 cost=1000000000;
-for j=1:5
+for j=1:1
     initial_centroids = kMeansInitCentroids(X_2(:,1:2), K); 
     [temp_cost, temp_centroids, temp_idx] = runkMeans(X_2(:,1:2), initial_centroids, max_iters);
     if cost>temp_cost % Pick the lowest cost
@@ -22,11 +22,9 @@ for j=1:5
     end
 end 
 
-% Loop over consumers
+% Loop over Days*Consumers
 for i=1:size(X_2,1) 
     cluster=idx(i);
-    average_dif(i)=centroids(cluster,1)-X_2(i,1);
-    std_dif(i)=centroids(cluster,2)-X_2(i,2);
     neighborhood_av(:,cluster)=neighborhood_av(:,cluster)+X_1(:,1,i);
     neighborhood_std(:,cluster)=neighborhood_std(:,cluster)+X_1(:,2,i);
 end
@@ -51,12 +49,18 @@ for i=1:size(X_1,3)
     divided_av=mean(temp_av_t,2);
     if max((d_neighborhood_av(:,cluster)-divided_av)./d_neighborhood_av(:,cluster))>av_threshold    
         max_dif_av(i,1)=max(d_neighborhood_av(:,cluster)-divided_av);
+        max_dif_av3D(:,1,i)=repmat(max_dif_av(i,1),size(X_1,1),1);
     end
     temp_std_matrix=reshape(X_1(:,2,i), [73, 5]);
     temp_std_t=temp_std_matrix';
     divided_std=mean(temp_std_t,2);
     if max((d_neighborhood_std(:,cluster)-divided_std)./d_neighborhood_std(:,cluster))>std_threshold    
         max_dif_std(i,1)=max(d_neighborhood_std(:,cluster)-divided_std);
+        max_dif_std3D(:,1,i)=repmat(max_dif_std(i,1),size(X_1,1),1);
     end
 end
-X_3=[X_2 average_dif std_dif max_dif_av max_dif_std];
+Y=zeros(size(X_2,1),1);
+[max_dif_av2D,Y]=unrollto2D(max_dif_av3D,Y);
+[max_dif_std2D,Y]=unrollto2D(max_dif_std3D,Y);
+
+X_3=[max_dif_av2D max_dif_std2D];

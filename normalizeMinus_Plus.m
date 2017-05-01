@@ -5,6 +5,12 @@ function [X_norm, mu, sigma] = normalizeMinus_Plus(X)
 %   is 1. This is often a good preprocessing step to do when
 %   working with learning algorithms.
 
+%   Discard a features that have only zeros
+if mean(X)==0
+    idx=not(mean(X)==0);
+    X=X(:,idx);
+end
+
 mu = mean(X);
 X_norm = bsxfun(@minus, X, mu);
 
