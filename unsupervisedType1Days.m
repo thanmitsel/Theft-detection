@@ -76,19 +76,19 @@ elseif x==1
     plotClass(Z(:,:),Y(:));
     title('Classified examples');
 end
-fprintf('Program paused. Press enter to continue.\n');
 %% Create training and testing set
 % Choose from every consumer sample
 % No normarlization needed here
 
 [X3D]=reshapeto3D(Z,size(X_1,3));
+ndays=30;
 P=0.3; % Percent of Test
 normalization=0;
 [X_train, Y_train, X_test, Y_test, X_full, Y_full]=pickTrainTest(X3D, Y2D, P, normalization);
 Intr=sum(Y_full)/size(Y_full,1);% Probability of Intrusion based on Days
 
-Y_table=vec2mat(Y_test, floor(P*size(X,1)))';
-class_ID=(sum(Y_table==1)>1)'; % fraud if more than 1 days
+Y_table=vec2mat(Y_test, floor(P*size(X_1,1)))';
+class_ID=(sum(Y_table==1)>ndays)'; % fraud if more than 1 days
 
 fprintf('\nSegmented Training and Testing.\n');
 %% Apply anomalyDetection
@@ -105,8 +105,7 @@ pval = multivariateGaussian(X_test, mu, sigma2);
 [epsilon, F1] = selectThreshold(Y_test, pval);
 prediction=(pval<epsilon);
 
-ndays=1;
-pred_table=vec2mat(prediction, floor(P*size(X,1)))';
+pred_table=vec2mat(prediction, floor(P*size(X_1,1)))';
 pred_ID=(sum(pred_table==1)>ndays)'; % fraud if more than "ndays" days
 
 
