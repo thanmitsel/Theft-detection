@@ -47,16 +47,36 @@ for i=1:size(X_1,3)
     temp_av_matrix=reshape(X_1(:,1,i), [73, 5]);
     temp_av_t=temp_av_matrix';
     divided_av=mean(temp_av_t,2);
-    if max((d_neighborhood_av(:,cluster)-divided_av)./d_neighborhood_av(:,cluster))>av_threshold    
-        max_dif_av(i,1)=max(d_neighborhood_av(:,cluster)-divided_av);
-        max_dif_av3D(:,1,i)=repmat(max_dif_av(i,1),size(X_1,1),1);
+    if max((d_neighborhood_av(:,cluster)-divided_av)./d_neighborhood_av(:,cluster))>av_threshold   
+        [max_dif_av(i,1), max_dif_av_idx]=max(d_neighborhood_av(:,cluster)-divided_av);
+        if max_dif_av_idx>4
+            max_dif_av3D(:,1,i)=...
+                [max_dif_av3D(1:(292),1,i); repmat(max_dif_av(i,1),size(X_1(293:end,:,:),1),1)];    
+        elseif max_dif_av_idx<2
+            max_dif_av3D(:,1,i)=...
+                [repmat(max_dif_av(i,1),size(X_1(1:73,:,:),1),1); max_dif_av3D(74:end,1,i) ];
+        else
+            max_dif_av3D(:,1,i)=...
+                [max_dif_av3D(1:((max_dif_av_idx-1)*73),1,i);...
+                repmat(max_dif_av(i,1),73,1); max_dif_av3D(((max_dif_av_idx*73+1):end),1,i)];
+        end
     end
     temp_std_matrix=reshape(X_1(:,2,i), [73, 5]);
     temp_std_t=temp_std_matrix';
     divided_std=mean(temp_std_t,2);
     if max((d_neighborhood_std(:,cluster)-divided_std)./d_neighborhood_std(:,cluster))>std_threshold    
-        max_dif_std(i,1)=max(d_neighborhood_std(:,cluster)-divided_std);
-        max_dif_std3D(:,1,i)=repmat(max_dif_std(i,1),size(X_1,1),1);
+        [max_dif_std(i,1), max_dif_std_idx]=max(d_neighborhood_std(:,cluster)-divided_std);
+        if max_dif_std_idx>4
+            max_dif_std3D(:,1,i)=...
+                [max_dif_std3D(1:(292),1,i); repmat(max_dif_std(i,1),size(X_1(293:end,:,:),1),1)];
+        elseif max_dif_std_idx<2
+            max_dif_std3D(:,1,i)=...
+                [repmat(max_dif_std(i,1),size(X_1(1:73,:,:),1),1); max_dif_std3D(74:end,1,i) ];
+        else
+            max_dif_std3D(:,1,i)=...
+                [max_dif_std3D(1:((max_dif_std_idx-1)*73),1,i);...
+                repmat(max_dif_std(i,1),73,1); max_dif_std3D(((max_dif_std_idx*73+1):end),1,i)];
+        end
     end
 end
 Y=zeros(size(X_2,1),1);

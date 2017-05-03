@@ -40,7 +40,7 @@ av_per_dif=0.6;
 std_per_dif=0.6;
 symmetric_av=0.6;
 symmetric_std=0.6;
-[X_1]=ConsumerFeatures(F_data3D, av_per_dif, std_per_dif, symmetric_av, symmetric_std); %includes ONLY 3 features
+[X_1]=ConsumerFeaturesDays(F_data3D, av_per_dif, std_per_dif, symmetric_av, symmetric_std); %includes ONLY 3 features
 X_cons=mean(X_1,1);
 X_cons=permute(X_cons, [3 2 1]);
 [X_2,Y]=unrollto2D(X_1, Y2D);
@@ -71,17 +71,13 @@ elseif x==1
     % PCA and project the data to 2D
     [U, S] = pca(X_norm);
     Z = projectData(X_norm, U, 2);
-
-
-    plotClass(Z(:,:),Y(:));
-    title('Classified examples');
 end
 %% Create training and testing set
 % Choose from every consumer sample
 % No normarlization needed here
 
 [X3D]=reshapeto3D(Z,size(X_1,3));
-ndays=30;
+ndays=10;
 P=0.3; % Percent of Test
 normalization=0;
 [X_train, Y_train, X_test, Y_test, X_full, Y_full]=pickTrainTest(X3D, Y2D, P, normalization);
