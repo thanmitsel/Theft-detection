@@ -6,11 +6,10 @@ function [X_norm, mu, sigma] = normalizeMinus_Plus(X)
 %   working with learning algorithms.
 
 %   Discard a features that have only zeros
-if mean(X)==0
+if sum(mean(X)==0)~=0
     idx=not(mean(X)==0);
     X=X(:,idx);
 end
-
 mu = mean(X);
 X_norm = bsxfun(@minus, X, mu);
 

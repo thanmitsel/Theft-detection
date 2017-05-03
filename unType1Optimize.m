@@ -83,10 +83,6 @@ for i=0:0.2:1
                             % PCA and project the data to 2D
                             [U, S] = pca(X_norm);
                             Z = projectData(X_norm, U, 2);
-
-
-                            plotClass(Z(:,:),Y(:));
-                            title('Classified examples');
                         end
                         fprintf('Program paused. Press enter to continue.\n');
                         %% Create training and testing set
