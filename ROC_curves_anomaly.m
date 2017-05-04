@@ -1,4 +1,5 @@
-    % pick some z vector 
+%%  Semi-supervised script for ROC curves
+% pick some z vector 
     z=2000;
     r_cons=randi(size(hh,1),z,1);
     somehh=hh(r_cons,:);
@@ -6,7 +7,24 @@
 
     % Convertions
     [h, H]=convertHours3D(somehh);
+    %% vectors and matrices for ROC curves
+    % 3 curves, high medium and low intensity
+    % 10 points on every curve, threshold
 
+    intensity=[0.20 0.50 0.80];
+    thresh=0:10:100; 
+
+DR_days=zeros(length(thresh), length(intensity));
+FPR_days=zeros(length(thresh), length(intensity));
+DR_IDs=zeros(length(thresh), length(intensity));
+FPR_IDs=zeros(length(thresh), length(intensity));
+
+prompt=('Apply normalization?\n 0 w/o norm, 1 with norm\n');
+normalization=input(prompt);
+
+prompt=('Apply PCA?\n 0 w/o PCA, 1 with PCA\n');
+apply_pca=input(prompt);
+for id_i=1:length(intensity) 
     %% Fraud Initialization
     % Create Fraud data
     F_data3D=H;
@@ -14,17 +32,16 @@
     one_H=zeros(size(H(:,:,1)));
 
 % fraud_rate=0.05; % Percentage of consumers who fraud
-fraud_rate=0.05; % Percentage of consumers who fraud
+fraud_rate=0.1; % Percentage of consumers who fraud
 [normal_idx, fraud_idx] = crossvalind('HoldOut', size(H,3), fraud_rate); % Keep in mind crossval floors the rate
 thiefs=find(fraud_idx==1);
 for i=1:size(thiefs,1)    
-    intensity=1-betarnd(6,3); % beta distribution
     dstart=floor(normrnd(size(one_H,1)/2,size(one_H,1)/6.5)); % normal distribution
     while dstart<1 || dstart>(size(one_H,1)-1)
         dstart=floor(normrnd(size(one_H,1)/2,size(one_H,1)/6.5)); % normal distribution
     end
     one_H=H(:,:,thiefs(i));
-    [f_data, y, F_data,Y] = type1_2Fraud(one_H, intensity,dstart);
+    [f_data, y, F_data,Y] = type1_2Fraud(one_H, intensity(id_i),dstart);
     F_data3D(:,:,thiefs(i))=F_data;
     Y2D(:,thiefs(i))=Y;
 end
@@ -56,18 +73,16 @@ fprintf('\nFraud Data and features created.\n');
 %% ===  PCA for Visualization ===
 % Use PCA to project this cloud to 2D for visualization
 % Subtract the mean to use PCA
-prompt=('Apply normalization?\n 0 w/o norm, 1 with norm\n');
-x=input(prompt);
-if x==0
+
+if normalization==0
     X_norm=X;
-elseif x==1
+elseif normalization==1
     [X_norm, mu, sigma] = normalizeMinus_Plus(X);
 end
-prompt=('Apply PCA?\n 0 w/o PCA, 1 with PCA\n');
-x=input(prompt);
-if x==0
+
+if apply_pca==0
     Z=X_norm;
-elseif x==1
+elseif apply_pca==1
     % PCA and project the data to 2D
     [U, S] = pca(X_norm);
     Z = projectData(X_norm, U, 2);
@@ -84,7 +99,6 @@ normalization=0;
 Intr=sum(Y_full)/size(Y_full,1);% Probability of Intrusion based on Days
 
 Y_table=vec2mat(Y_test, floor(P*size(X_1,1)))';
-class_ID=(sum(Y_table==1)>ndays)'; % fraud if more than 1 days
 
 fprintf('\nSegmented Training and Testing.\n');
 %% Apply anomalyDetection
@@ -102,7 +116,9 @@ pval = multivariateGaussian(X_test, mu, sigma2);
 prediction=(pval<epsilon);
 
 pred_table=vec2mat(prediction, floor(P*size(X_1,1)))';
-pred_ID=(sum(pred_table==1)>ndays)'; % fraud if more than "ndays" days
+for id_th=1:length(thresh) 
+pred_ID=(sum(pred_table==1)>thresh(id_th))'; % fraud if more than "ndays" days
+class_ID=(sum(Y_table==1)>thresh(id_th))'; % h if more than 1 days
 
 
 % Create confusion Matrix
@@ -116,21 +132,8 @@ BDR_t=fraud_rate*recall_t/(fraud_rate*recall_t+ (1-fraud_rate)*in_recall_t); % B
 rouf_id=find(pred_ID==1);
 roufianos=someID(rouf_id); % Keeps all the ID that contain intrusion
 
-fprintf('\nBest epsilon found using cross-validation: %e\n', epsilon);
-fprintf('Best F1 on Cross Validation Set:  %f\n', F1);
-fprintf('Based on best F1\nDR=%4.2f FPR=%4.2f on Cross Validation Set\n', recall, in_recall);
-fprintf('# Outliers found: %d\n', sum(p < epsilon));
-
-%% Printing Segment
-fprintf('kWh Rate %4.2fper | Time Rate %4.2fper |\n',kWh_rate,time_rate);
-fprintf('\nClassification for IDs\n');
-fprintf('| Precision %4.2f | Recall %4.2f | Accuracy %4.2f | F1score %4.2f |\n',precision_t,recall_t,accuracy_t,F1score_t);
-fprintf('| Actual Fraud %d IDs | Predicted Fraud Right %d IDs | Predicted Fraud Wrong %d IDs |\n',sum(class_ID==1),sum(pred_ID==1&pred_ID==class_ID),sum(pred_ID==1&class_ID~=pred_ID));
-fprintf(' DR  FPR BDR Accuracy\n%4.2f %4.2f % 4.2f %4.2f \n',recall_t,in_recall_t,BDR_t, accuracy_t);
-% fprintf('Black List\n')
-% disp(roufianos);
-
-fprintf('\nClassification for Days\n');
-fprintf('| Precision %4.2f | Recall %4.2f | Accuracy %4.2f | F1score %4.2f |\n',precision,recall,accuracy,F1score);
-fprintf('| Actual Fraud %d Days | Predicted Fraud Right %d Days | Predicted Fraud Wrong %d Days |\n',sum(Y_test==1),sum(prediction==1&Y_test==prediction),sum(prediction==1&Y_test~=prediction));
-fprintf(' DR  FPR  BDR  Accuracy\n%4.2f %4.2f %4.2f %4.2f \n',recall,in_recall,BDR,accuracy);
+DR_IDs(id_th, id_i)=recall_t;
+FPR_IDs(id_th,id_i)=in_recall_t;
+end
+end
+plotCurves(FPR_IDs,DR_IDs,z,fraud_rate,thresh);
