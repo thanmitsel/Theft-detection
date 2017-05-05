@@ -38,17 +38,17 @@ apply_pca=input(prompt);
 %% Feature extraction
 % Here we use SVM for many consumers
 maxF1score=0;
-for i=0:0.2:1
+for i=0.4:0.1:0.8
     av_per_dif=i;
-    for j=0:0.2:1
+    for j=0.4:0.1:0.8
         std_per_dif=j;
-        for k=0:0.2:1
+        for k=0.4:0.1:0.8
             symmetric_av=k;
-            for l=0:0.2:1
+            for l=0.2:0.1:0.6
                 symmetric_std=l;
-                for w=0:0.2:1
+                for w=0.4:0.1:0.8
                     av_threshold=w;
-                    for z=0:0.2:1
+                    for z=0.4:0.1:0.8
                      std_threshold=z;   
                 
                         % Feature extraction

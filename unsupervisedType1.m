@@ -1,5 +1,5 @@
     % pick some z vector 
-    z=1000;
+    z=2000;
     r_cons=randi(size(hh,1),z,1);
     somehh=hh(r_cons,:);
     someID=ID(r_cons,:);
