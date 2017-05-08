@@ -60,9 +60,12 @@ if sophisticated==0
     [trend_coef]=get_Trend(X_1);
     X=[X_2 X_3(:,9:end) trend_coef];
 else
-    av_cut_per=0.6;
-    std_cut_per=0.6;
-   [X]=sophisticatedFeatures(F_data3D, av_per_dif, std_per_dif, av_cut_per, std_cut_per);
+    av_cut_per=0.4; % 0.8
+    std_cut_per=0.5;% 0.6
+    neigh_av_cut_per=0.1; % 0.6
+    neigh_std_cut_per=0.1;
+   [X]=sophisticatedFeatures(F_data3D, av_per_dif, std_per_dif, ...
+       av_cut_per, std_cut_per, neigh_av_cut_per, neigh_std_cut_per);
 end 
 fprintf('\nFraud Data and features created.\n');
 %% ===  PCA for Visualization ===

@@ -1,9 +1,12 @@
-function [features]=sophisticatedFeatures(data, av_per_dif, std_per_dif, av_cut_per, std_cut_per )
+function [features]=sophisticatedFeatures(data, av_per_dif, std_per_dif, av_cut_per, std_cut_per, neigh_av_cut_per, neigh_std_cut_per )
 
 max_av_difference3D=zeros(size(data,1),1,size(data,3));
 max_std_difference3D=zeros(size(data,1),1,size(data,3));
 av_cut_dif=zeros(size(data,3),1);
 std_cut_dif=zeros(size(data,3),1);
+neigh_av_cut_dif=zeros(size(data,3),1);
+neigh_std_cut_dif=zeros(size(data,3),1);
+
 average3D=mean(data,2); % 1st Feature average consumption
 standard_dev3D=std(data,0,2); % 2nd Feature std of consumption
 
@@ -73,10 +76,12 @@ end
 
 % Create daily consumptions based on clusters
 cluster_consumption=zeros(K,size(daily_consumption,2));
+cluster_std=zeros(K,size(daily_std,2));
 sum_clusters=zeros(K,1);
 
 for i=1:K
-    cluster_consumption(i,:)=mean(daily_consumption(idx==i,:),1);
+    cluster_consumption(i,:)=mean(daily_consumption(idx==i,:),1); % K x 365 days 
+    cluster_std(i,:)=mean(daily_std(idx==i,:),1);
     sum_clusters(i)=sum(idx==i);
 end
 
@@ -115,8 +120,15 @@ for i=1:size(daily_consumption,1) % loop consumers
     if (mean(before_cut_std)-mean(after_cut_std))/mean(before_cut_std) > std_cut_per
         std_cut_dif(i)=mean(before_cut)-mean(after_cut);   
     end
-    
+    neighbor_cut=cluster_consumption(cluster, cut:end);
+    if (mean(neighbor_cut)-mean(after_cut))/mean(neighbor_cut) > neigh_av_cut_per
+        neigh_av_cut_dif(i)=mean(neighbor_cut)-mean(after_cut);
+    end
+    neighbor_cut_std=cluster_std(cluster, cut:end);
+    if (mean(neighbor_cut_std)-mean(after_cut_std))/mean(neighbor_cut_std) > neigh_std_cut_per
+        neigh_std_cut_dif(i)=mean(neighbor_cut_std)-mean(after_cut_std);
+    end  
 end
 
 
-features=[basic_features av_cut_dif std_cut_dif];
+features=[basic_features av_cut_dif std_cut_dif neigh_av_cut_dif neigh_std_cut_dif];
