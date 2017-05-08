@@ -14,7 +14,7 @@
     one_H=zeros(size(H(:,:,1)));
 
 % fraud_rate=0.05; % Percentage of consumers who fraud
-fraud_rate=0.05; % Percentage of consumers who fraud
+fraud_rate=0.1; % Percentage of consumers who fraud
 [normal_idx, fraud_idx] = crossvalind('HoldOut', size(H,3), fraud_rate); % Keep in mind crossval floors the rate
 thiefs=find(fraud_idx==1);
 for i=1:size(thiefs,1)    
@@ -34,13 +34,14 @@ end
 
 %% Feature extraction
 % Here we use SVM for many consumers
-    
+prompt=('Get sparce vectors for features?\n 1. Yes 0. No\n');
+sparce=input(prompt);
 % Feature extraction
 av_per_dif=0.6;
 std_per_dif=0.6;
 symmetric_av=0.6;
 symmetric_std=0.6;
-[X_1]=ConsumerFeaturesDays(F_data3D, av_per_dif, std_per_dif, symmetric_av, symmetric_std); %includes ONLY 3 features
+[X_1]=ConsumerFeaturesDays(F_data3D, av_per_dif, std_per_dif, symmetric_av, symmetric_std, sparce); %includes ONLY 3 features
 X_cons=mean(X_1,1);
 X_cons=permute(X_cons, [3 2 1]);
 [X_2,Y]=unrollto2D(X_1, Y2D);
@@ -50,7 +51,7 @@ Y_cons=(sum(Y2D)>1)'; % if more than one hour consider fraud
 K=3;
 av_threshold=0.6;
 std_threshold=0.6;
-[X_neighborhood]=NeighborFeaturesDays(X_1, X_cons, K, av_threshold, std_threshold);
+[X_neighborhood]=NeighborFeaturesDays(X_1, X_cons, K, av_threshold, std_threshold, sparce);
 X=[X_2 X_neighborhood];
 fprintf('\nFraud Data and features created.\n');
 %% ===  PCA for Visualization ===

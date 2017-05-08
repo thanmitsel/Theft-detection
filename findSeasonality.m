@@ -91,7 +91,7 @@ for i=1:K
     hold off
 end
 % Indicates when the minimum consumption happened
-[min_consumption, min_day]=min(tH,[],1);
+[min_tH, min_tH_idx]=min(tH,[],1);
 %% Detrend  Original Series
 % Subtract the fitted quadratic line from the original data.
 xt=cluster_consumption -tH';
@@ -150,6 +150,7 @@ for i=1:K
     end
     %h3.XTickLabel = datestr(dates(1:12:T),10);
 end
+[min_st,min_st_idx]=min(st,[],1);
 
 %% Deseasonalize Original Series
 % Subtract the estimated seasonal component from the original series.

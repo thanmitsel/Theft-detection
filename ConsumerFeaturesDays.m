@@ -1,4 +1,4 @@
-function [X_1]=ConsumerFeaturesDays(data, av_per_dif, std_per_dif, symmetric_av, symmetric_std)
+function [X_1]=ConsumerFeaturesDays(data, av_per_dif, std_per_dif, symmetric_av, symmetric_std,sparce)
 % gets 3 features for consumers
 month_av_data=zeros(12,30,size(data,3));
 month_std_data=zeros(12,30,size(data,3));
@@ -32,8 +32,12 @@ for i=1:size(data,3)
         end
     end
     if max_av~=0
+        if sparce==1
         max_av_difference3D(:,1,i)=...
             [max_av_difference3D(1:(max_av_idx-1),1,i); repmat(max_av, size(average3D(max_av_idx:end,:,:),1),1)];
+        else
+           max_av_difference3D(:,1,i)=repmat(max_av, size(average3D,1),1); 
+        end
     end
     
     % 4th Feature std difference
@@ -53,8 +57,12 @@ for i=1:size(data,3)
         end
     end
     if max_std~=0
+        if sparce==1
         max_std_difference3D(:,1,i)=...
             [max_std_difference3D(1:(max_std_idx-1),1,i); repmat(max_std, size(standard_dev3D(max_std_idx:end,:,:),1),1)];
+        else
+            max_std_difference3D(:,1,i)=repmat(max_std, size(average3D,1),1); 
+        end
     end
     
     % 5th feature
@@ -71,13 +79,17 @@ for i=1:size(data,3)
         end
     end
     if max_sym_av~=0
-        if max_sym_av_idx<2
-        symmetric_av_difference3D(:,1,i)=...
-            [symmetric_av_difference3D(1:270,1,i); repmat(max_sym_av,size(average3D(271:end,:,:),1),1)];
-        else
+        if sparce==1
+            if max_sym_av_idx<2
             symmetric_av_difference3D(:,1,i)=...
-            [symmetric_av_difference3D(1:(180),1,i); ...
-            repmat(max_sym_av,size(average3D(181:270,:,:),1),1); symmetric_av_difference3D(271:end,1,i)];
+                [symmetric_av_difference3D(1:270,1,i); repmat(max_sym_av,size(average3D(271:end,:,:),1),1)];
+            else
+                symmetric_av_difference3D(:,1,i)=...
+                [symmetric_av_difference3D(1:(180),1,i); ...
+                repmat(max_sym_av,size(average3D(181:270,:,:),1),1); symmetric_av_difference3D(271:end,1,i)];
+            end
+        else
+            symmetric_av_difference3D(:,1,i)=repmat(max_sym_av, size(average3D,1),1); 
         end
     end
     
@@ -95,13 +107,17 @@ for i=1:size(data,3)
         end
     end
     if max_sym_std~=0
-        if max_sym_std_idx<2
-        symmetric_std_difference3D(:,1,i)=...
-            [symmetric_std_difference3D(1:(270),1,i); repmat(max_sym_std,size(average3D(271:end,:,:),1),1)];
-        else
+        if sparce==1
+            if max_sym_std_idx<2
             symmetric_std_difference3D(:,1,i)=...
-            [symmetric_std_difference3D(1:(180),1,i); ...
-            repmat(max_sym_std,size(average3D(181:270,:,:),1),1); symmetric_std_difference3D(271:end,1,i)];
+                [symmetric_std_difference3D(1:(270),1,i); repmat(max_sym_std,size(average3D(271:end,:,:),1),1)];
+            else
+                symmetric_std_difference3D(:,1,i)=...
+                [symmetric_std_difference3D(1:(180),1,i); ...
+                repmat(max_sym_std,size(average3D(181:270,:,:),1),1); symmetric_std_difference3D(271:end,1,i)];
+            end
+        else
+            symmetric_std_difference3D(:,1,i)=repmat(max_sym_std, size(average3D,1),1);
         end
     end
 end
