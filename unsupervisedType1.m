@@ -33,30 +33,37 @@ end
 [kWh_count, time_count, kWh_rate, time_rate] = frauDetails(H, F_data3D);
 
 %% Feature extraction
-% Here we use SVM for many consumers
-    
-% Feature extraction
+prompt=('Choose fast or sophisticated features\n 1. sofisticated 0. fast\n');
+sophisticated=input(prompt);
+
 ndays=1;
-av_per_dif=0.8;
-std_per_dif=0.6;
-symmetric_av=0.4;
-symmetric_std=0.5;
-[X_1]=ConsumerFeatures(F_data3D, av_per_dif, std_per_dif, symmetric_av, symmetric_std); %includes ONLY 3 features
-X_2=mean(X_1,1);
-X_2=permute(X_2, [3 2 1]);
-
-% Obtain features related to neighbors
-K=3;
-av_threshold=0.7;
-std_threshold=0.5;
-[X_3]=NeighborFeatures(X_1, X_2, K, av_threshold, std_threshold);
 Y1D=(sum(Y2D)>ndays)';
-%X=X_3(:,1:(end));
-
-[trend_coef]=get_Trend(X_1);
-X=[X_2 X_3(:,9:end) trend_coef];
 Y=Y1D;
 
+av_per_dif=0.8;
+std_per_dif=0.6;
+% Feature extraction
+
+if sophisticated==0
+    symmetric_av=0.4;
+    symmetric_std=0.5;
+    av_threshold=0.7;
+    std_threshold=0.5;
+    [X_1]=ConsumerFeatures(F_data3D, av_per_dif, std_per_dif, symmetric_av, symmetric_std); %includes ONLY 3 features
+    X_2=mean(X_1,1);
+    X_2=permute(X_2, [3 2 1]);
+
+    % Obtain features related to neighbors
+    K=3;
+    [X_3]=NeighborFeatures(X_1, X_2, K, av_threshold, std_threshold);
+    %X=X_3(:,1:(end));
+    [trend_coef]=get_Trend(X_1);
+    X=[X_2 X_3(:,9:end) trend_coef];
+else
+    av_cut_per=0.6;
+    std_cut_per=0.6;
+   [X]=sophisticatedFeatures(F_data3D, av_per_dif, std_per_dif, av_cut_per, std_cut_per);
+end 
 fprintf('\nFraud Data and features created.\n');
 %% ===  PCA for Visualization ===
 % Use PCA to project this cloud to 2D for visualization
