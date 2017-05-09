@@ -1,0 +1,10 @@
+function [p, epsilon, precision, recall, in_recall, accuracy, F1score, BDR]=MeanResults(result_table)
+meaned=mean(result_table,1);
+p=meaned(1,1);
+epsilon=meaned(1,2);
+precision=meaned(1,3);
+recall=meaned(1,4);
+in_recall=meaned(1,5);
+accuracy=meaned(1,6);
+F1score=meaned(1,7);
+BDR=meaned(1,8);
