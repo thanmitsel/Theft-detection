@@ -68,13 +68,14 @@ tH=zeros(size(cluster_consumption,2),K);
 T = size(cluster_consumption,2);
 t = (1:T)';
 X = [ones(T,1) t t.^2];
-
+figure
 for i=1:K
     y=cluster_consumption(i,:)';
     b = X\y;
     tH(:,i) = X*b;
 
-    figure
+    
+    subplot(2,2,i) % needs figure and hold off commented out
     plot(y/1000)
     h1 = gca;
     h1.XLim = [0,T];
@@ -88,8 +89,9 @@ for i=1:K
     
     h2 = plot(tH(:,i)/1000,'r','LineWidth',2);
     legend(h2,'Quadratic Trend Estimate')
-    hold off
+    
 end
+hold off
 % Indicates when the minimum consumption happened
 [min_tH, min_tH_idx]=min(tH,[],1);
 %% Detrend  Original Series
@@ -123,7 +125,9 @@ else
 end
 
 T_less=size(xt_less,2);
-
+if week~=1
+    figure
+end
 for i=1:K
     if week==1
         mo = repmat((1:7)',52,1); %day of week
@@ -135,7 +139,11 @@ for i=1:K
     bS = sX\xt_less(i,:)';
     st(:,i) = sX*bS;
 
-    figure
+    if week==1
+        figure
+    else
+        subplot(2,2,i)
+    end
     plot(st(:,i)/1000)
     str=sprintf('Cluster %d\nParametric Estimate of Seasonal Component (Indicators)',i);
     title(str);
@@ -149,6 +157,12 @@ for i=1:K
         h3.XTick = 1:30:T_less; %day of week
     end
     %h3.XTickLabel = datestr(dates(1:12:T),10);
+    if week==1
+        hold off
+    end
+end
+if week~=1
+    hold off
 end
 [min_st,min_st_idx]=min(st,[],1);
 
@@ -157,8 +171,10 @@ end
 % The quadratic trend is much clearer with the seasonal component removed.
     cluster_consumption_less=cluster_consumption(:,binary_remove);
     dt = cluster_consumption_less' - st;
+figure
 for i=1:K   
-    figure
+    
+    subplot(2,2,i)
     plot(dt(:,i)/1000)
     str=sprintf('Cluster %d\nConsumption (Deseasonalized)',i);
     title(str);
@@ -173,14 +189,16 @@ for i=1:K
     end
     %h4.XTickLabel = datestr(dates(1:12:T),10);
 end
+hold off
 %% Estimate Irregular Component
 % Subtract the trend and seasonal estimates from the original series. 
 % The remainder is an estimate of the irregular component.
 tH_less=tH(binary_remove,:);
 bt = cluster_consumption_less' - tH_less - st;
-
+figure
 for i=1:K
-    figure
+    
+    subplot(2,2,i)
     plot(bt(:,i)/1000)
     str=sprintf('Cluster %d\nIrregular Component',i);
     title(str);
@@ -195,3 +213,4 @@ for i=1:K
     end
     %h5.XTickLabel = datestr(dates(1:12:T),10);
 end
+hold off
