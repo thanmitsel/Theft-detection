@@ -79,12 +79,10 @@ for i=1:K
         end
     end   
 end
-sum_days_cluster=zeros(K,K_t);
+
 for i=1:K
     for j=1:K_t
         sum_days_cluster(i,j)=sum(idx_t(:,i)==j);
-        %[row, col]=find(idx_t(:,i)==j);    
     end
-    fprintf('Horizontal cluster %d with %d consumers, Days cluster \n',i,sum_cons_clusters(i));
+    fprintf('Cluster %d with %d',K,sum_cons_clusters(i),accuracy,F1score);
 end
-[value_max,idx_max]=max(sum_days_cluster,[],2);
