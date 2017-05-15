@@ -60,21 +60,19 @@ std_consumption=std(daily_consumption,0,2);
 daily_std3D=basic_features3D(:,2,:);
 daily_std=permute(daily_std3D,[3 1 2]);
 
-% K-Means
 K=4;
 max_iters=10;
 cluster_input=[average_consumption std_consumption];
-cost=1000000000;
-% 5 random initializations
-for j=1:5
-    initial_centroids = kMeansInitCentroids(cluster_input, K); 
-    [temp_cost, temp_centroids, temp_idx] = runkMeans(cluster_input, initial_centroids, max_iters);
-    if cost>temp_cost % Pick the lowest cost
-        cost=temp_cost;
-        centroids=temp_centroids;
-        idx=temp_idx;
-    end
-end 
+% Fuzzy C-Means
+[centers,U] = fcm(cluster_input,K);
+maxU=max(U);
+idx=zeros(size(daily_consumption,1),1);
+for i=1:K
+    temp_idx=U(i,:)==maxU;
+    idx(temp_idx,1)=i;
+end
+
+
 
 % Create daily consumptions based on clusters
 cluster_consumption=zeros(K,size(daily_consumption,2));

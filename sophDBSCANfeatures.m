@@ -1,4 +1,4 @@
-function [features]=sophisticatedFeatures(data, av_per_dif, std_per_dif, av_cut_per, std_cut_per, neigh_av_cut_per, neigh_std_cut_per )
+function [features,Y]=sophisticatedFeatures(data, Y, av_per_dif, std_per_dif, av_cut_per, std_cut_per, neigh_av_cut_per, neigh_std_cut_per )
 
 max_av_difference3D=zeros(size(data,1),1,size(data,3));
 max_std_difference3D=zeros(size(data,1),1,size(data,3));
@@ -56,25 +56,31 @@ basic_features=permute(temp_basic_feat, [3 2 1]); % cons x 4 features
 daily_consumption3D=sum(data,2);
 daily_consumption=permute(daily_consumption3D,[3 1 2]); % cons x 365 days
 average_consumption=mean(daily_consumption,2); % cons x 1 average of year
-std_consumption=std(daily_consumption,0,2);
 daily_std3D=basic_features3D(:,2,:);
 daily_std=permute(daily_std3D,[3 1 2]);
 
-% K-Means
-K=4;
-max_iters=10;
-cluster_input=[average_consumption std_consumption];
-cost=1000000000;
-% 5 random initializations
-for j=1:5
-    initial_centroids = kMeansInitCentroids(cluster_input, K); 
-    [temp_cost, temp_centroids, temp_idx] = runkMeans(cluster_input, initial_centroids, max_iters);
-    if cost>temp_cost % Pick the lowest cost
-        cost=temp_cost;
-        centroids=temp_centroids;
-        idx=temp_idx;
-    end
-end 
+% Make matrix a vector
+daily_consumption_vector=unique(reshape(daily_consumption,1,[]))';
+% DBSCAN
+epsilon=1;
+MinPts=10;
+[idx, isnoise]=DBSCAN(daily_consumption_vector,epsilon,MinPts);
+
+PlotClusterinResult(daily_consumption_vector, idx);
+title(['DBSCAN Clustering (\epsilon = ' num2str(epsilon) ', MinPts = ' num2str(MinPts) ')']);
+
+% get matrix of every cluster on 365 days
+idx2D=reshape(idx, size(daily_consumption,2),size(daily_consumption,1))';
+isnoise2D=reshape(isnoise, size(daily_consumption,2),size(daily_consumption,1))';
+% most frequent of every row
+idx=mode(idx2D,2);
+isnoise=mode(isnoise2D,2);
+
+% Change truth table and remove consumers
+Y=Y(not(isnoise));
+daily_consumption=daily_consumption(not(isnoise),:);
+
+K=max(idx);
 
 % Create daily consumptions based on clusters
 cluster_consumption=zeros(K,size(daily_consumption,2));
@@ -134,3 +140,4 @@ end
 
 
 features=[basic_features av_cut_dif std_cut_dif neigh_av_cut_dif neigh_std_cut_dif];
+

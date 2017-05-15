@@ -33,7 +33,7 @@ end
 [kWh_count, time_count, kWh_rate, time_rate] = frauDetails(H, F_data3D);
 
 %% Feature extraction
-prompt=('Choose fast or sophisticated features\n 1. sofisticated 0. fast\n');
+prompt=('Choose fast or sophisticated features\n0. fast 1. sofisticated (KMEANS) 2. sofisticated (DBSCAN) 3. sofisticated (Fuzzy)\n');
 sophisticated=input(prompt);
 
 ndays=1;
@@ -59,12 +59,26 @@ if sophisticated==0
     %X=X_3(:,1:(end));
     [trend_coef]=get_Trend(X_1);
     X=[X_2 X_3(:,9:end) trend_coef];
-else
+elseif sophisticated==1
     av_cut_per=0.1; % 0.8
     std_cut_per=0.1;% 0.6
     neigh_av_cut_per=0.1; % 0.6
     neigh_std_cut_per=0.1;
    [X]=sophisticatedFeatures(F_data3D, av_per_dif, std_per_dif, ...
+       av_cut_per, std_cut_per, neigh_av_cut_per, neigh_std_cut_per);
+elseif sophisticated==2
+    av_cut_per=0.1; % 0.8
+    std_cut_per=0.1;% 0.6
+    neigh_av_cut_per=0.1; % 0.6
+    neigh_std_cut_per=0.1;
+   [X,Y]=sophDBSCANfeatures(F_data3D, Y, av_per_dif, std_per_dif, ...
+       av_cut_per, std_cut_per, neigh_av_cut_per, neigh_std_cut_per);
+elseif sophisticated==3
+    av_cut_per=0.2; % 0.8
+    std_cut_per=0.2;% 0.6
+    neigh_av_cut_per=0.1; % 0.6
+    neigh_std_cut_per=0.1;
+   [X]=sophFuzzyFeatures(F_data3D, av_per_dif, std_per_dif, ...
        av_cut_per, std_cut_per, neigh_av_cut_per, neigh_std_cut_per);
 end 
 fprintf('\nFraud Data and features created.\n');
@@ -97,13 +111,13 @@ fprintf('Program paused. Press enter to continue.\n');
 % No normarlization needed here
 
 Intr=sum(Y)/size(Y,1);% Probability of Intrusion based on Days
-
+consumers=size(X,1);
 Kfolds=5;
-binary_test_table=zeros(z,Kfolds); % cons x Kfolds
-prediction_Kfolds=zeros(z/Kfolds,Kfolds);
+binary_test_table=zeros(consumers,Kfolds); % cons x Kfolds
+prediction_Kfolds=zeros(consumers/Kfolds,Kfolds);
 % p | ep | pr | rec | in | acc | F1 | BDR
 result_table=zeros(Kfolds, 8);
-Indices=crossvalind('Kfold', z, Kfolds);
+Indices=crossvalind('Kfold', consumers, Kfolds);
 for i=1:Kfolds
     test=(Indices==i); train= ~test;
     binary_test_table(:,i)=test;
@@ -147,7 +161,7 @@ fprintf('\nClassification for IDs\n');
 fprintf('| Precision %4.2f | Recall %4.2f | Accuracy %4.2f | F1score %4.2f |\n',precision,recall,accuracy,F1score);
 fprintf('| Actual Fraud %d IDs | Predicted Fraud Right %d IDs | Predicted Fraud Wrong %d IDs |\n',sum(Y(test)==1),sum(prediction==1&Y(test)==prediction),sum(prediction==1&Y(test)~=prediction));
 fprintf(' DR  FPR  BDR  Accuracy\n%4.2f %4.2f %4.2f %4.2f \n',recall,in_recall,BDR,accuracy);
-fprintf('Programm Paused, if u need FPR analysis press any key\n');
+fprintf('\nProgramm Paused, if u need FPR analysis press any key\nelse press Ctrl+C\n');
 pause;
 %% FPR Analysis
 daily_consumption3D=sum(F_data3D,2);
