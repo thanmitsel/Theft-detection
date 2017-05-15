@@ -33,7 +33,7 @@ end
 [kWh_count, time_count, kWh_rate, time_rate] = frauDetails(H, F_data3D);
 
 %% Feature extraction
-prompt=('Choose fast or sophisticated features\n0. fast 1. sofisticated (KMEANS) 2. sofisticated (DBSCAN) 3. sofisticated (Fuzzy)\n');
+prompt=('Choose fast or sophisticated features\n0. fast 1. sofisticated (KMEANS) 2. sofisticated (DBSCAN) 3. sofisticated (Fuzzy) 4. sofisticated (SOM)\n');
 sophisticated=input(prompt);
 
 ndays=1;
@@ -80,6 +80,13 @@ elseif sophisticated==3
     neigh_std_cut_per=0.1;
    [X]=sophFuzzyFeatures(F_data3D, av_per_dif, std_per_dif, ...
        av_cut_per, std_cut_per, neigh_av_cut_per, neigh_std_cut_per);
+elseif sophisticated==4
+    av_cut_per=0.2; % 0.8
+    std_cut_per=0.2;% 0.6
+    neigh_av_cut_per=0.1; % 0.6
+    neigh_std_cut_per=0.1;
+    [X]=sophSOMfeatures(F_data3D, av_per_dif, std_per_dif, ...
+       av_cut_per, std_cut_per, neigh_av_cut_per, neigh_std_cut_per);
 end 
 fprintf('\nFraud Data and features created.\n');
 %% ===  PCA for Visualization ===
@@ -119,27 +126,27 @@ prediction_Kfolds=zeros(consumers/Kfolds,Kfolds);
 result_table=zeros(Kfolds, 8);
 Indices=crossvalind('Kfold', consumers, Kfolds);
 for i=1:Kfolds
-    test=(Indices==i); train= ~test;
-    binary_test_table(:,i)=test;
+    test_idx=(Indices==i); train_idx= ~test_idx;
+    binary_test_table(:,i)=test_idx;
     
     fprintf('\nSegmented Training and Testing.\n');
     %% Apply anomalyDetection
     % Estimate mu sigma2
-    [mu, sigma2] = estimateGaussian(Z(train,:));
+    [mu, sigma2] = estimateGaussian(Z(train_idx,:));
 
     %  Training set 
-    p = multivariateGaussian(Z(train,:), mu, sigma2);
+    p = multivariateGaussian(Z(train_idx,:), mu, sigma2);
 
     %  Cross-validation set
-    pval = multivariateGaussian(Z(test,:), mu, sigma2);
+    pval = multivariateGaussian(Z(test_idx,:), mu, sigma2);
 
     %  Find the best threshold
-    [epsilon, F1] = selectThreshold(Y(test), pval);
+    [epsilon, F1] = selectThreshold(Y(test_idx), pval);
     prediction=(pval<epsilon);
     prediction_Kfolds(:,i)=prediction;
     % Create confusion Matrix
     % Detection Rate is Recall, False Positive Rate is Inverse recall 
-    [precision, recall, in_recall, accuracy, F1score] = confusionMatrix (Y(test), prediction);
+    [precision, recall, in_recall, accuracy, F1score] = confusionMatrix (Y(test_idx), prediction);
     BDR=Intr*recall/(Intr*recall+(1-Intr)*in_recall) ; % Bayesian Detection Rate for days
     result_table(i,:)=[ sum(p < epsilon) epsilon precision recall in_recall accuracy F1score BDR];
     
@@ -159,7 +166,7 @@ fprintf('# Outliers found: %d\n', outliers);
 fprintf('kWh Rate %4.2fper | Time Rate %4.2fper |\n',kWh_rate,time_rate);
 fprintf('\nClassification for IDs\n');
 fprintf('| Precision %4.2f | Recall %4.2f | Accuracy %4.2f | F1score %4.2f |\n',precision,recall,accuracy,F1score);
-fprintf('| Actual Fraud %d IDs | Predicted Fraud Right %d IDs | Predicted Fraud Wrong %d IDs |\n',sum(Y(test)==1),sum(prediction==1&Y(test)==prediction),sum(prediction==1&Y(test)~=prediction));
+fprintf('| Actual Fraud %d IDs | Predicted Fraud Right %d IDs | Predicted Fraud Wrong %d IDs |\n',sum(Y(test_idx)==1),sum(prediction==1&Y(test_idx)==prediction),sum(prediction==1&Y(test_idx)~=prediction));
 fprintf(' DR  FPR  BDR  Accuracy\n%4.2f %4.2f %4.2f %4.2f \n',recall,in_recall,BDR,accuracy);
 fprintf('\nProgramm Paused, if u need FPR analysis press any key\nelse press Ctrl+C\n');
 pause;
