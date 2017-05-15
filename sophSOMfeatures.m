@@ -115,17 +115,21 @@ for i=1:size(daily_consumption,1) % loop consumers
         before_cut=daily_consumption(i,(cut-1-after_cut_size):(cut-1));
         before_cut_std=daily_std(i,(cut-1-after_cut_size):(cut-1));
     end
+    % 5th feature
     if (mean(before_cut)-mean(after_cut))/mean(before_cut) > av_cut_per
         av_cut_dif(i)=mean(before_cut)-mean(after_cut);   
     end
+    % 6th feature
     if (mean(before_cut_std)-mean(after_cut_std))/mean(before_cut_std) > std_cut_per
-        std_cut_dif(i)=mean(before_cut)-mean(after_cut);   
+        std_cut_dif(i)=mean(before_cut_std)-mean(after_cut_std);   
     end
     neighbor_cut=cluster_consumption(cluster, cut:end);
+    % 7th feature
     if (mean(neighbor_cut)-mean(after_cut))/mean(neighbor_cut) > neigh_av_cut_per
         neigh_av_cut_dif(i)=mean(neighbor_cut)-mean(after_cut);
     end
     neighbor_cut_std=cluster_std(cluster, cut:end);
+    % 8th feature
     if (mean(neighbor_cut_std)-mean(after_cut_std))/mean(neighbor_cut_std) > neigh_std_cut_per
         neigh_std_cut_dif(i)=mean(neighbor_cut_std)-mean(after_cut_std);
     end  

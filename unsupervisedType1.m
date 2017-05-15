@@ -125,18 +125,26 @@ prediction_Kfolds=zeros(consumers/Kfolds,Kfolds);
 % p | ep | pr | rec | in | acc | F1 | BDR
 result_table=zeros(Kfolds, 8);
 Indices=crossvalind('Kfold', consumers, Kfolds);
+prompt=('Choose fit of Distribution\n0. percent of instances 1. all negative examples\n');
+fit_on=input(prompt);
 for i=1:Kfolds
     test_idx=(Indices==i); train_idx= ~test_idx;
     binary_test_table(:,i)=test_idx;
     
     fprintf('\nSegmented Training and Testing.\n');
     %% Apply anomalyDetection
-    % Estimate mu sigma2
-    [mu, sigma2] = estimateGaussian(Z(train_idx,:));
-
-    %  Training set 
-    p = multivariateGaussian(Z(train_idx,:), mu, sigma2);
-
+    if fit_on==0
+        % Estimate mu sigma2
+        [mu, sigma2] = estimateGaussian(Z(train_idx,:));
+        %  Training set percent of data
+        p = multivariateGaussian(Z(train_idx,:), mu, sigma2);
+    elseif fit_on==1
+        % Estimate mu sigma2
+        [mu, sigma2] = estimateGaussian(Z(Y==0,:));
+        %  Training set  all negative examples
+        p = multivariateGaussian(Z(Y==0,:), mu, sigma2);
+    end
+    
     %  Cross-validation set
     pval = multivariateGaussian(Z(test_idx,:), mu, sigma2);
 
