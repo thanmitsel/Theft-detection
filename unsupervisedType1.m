@@ -74,15 +74,15 @@ elseif sophisticated==2
    [X,Y]=sophDBSCANfeatures(F_data3D, Y, av_per_dif, std_per_dif, ...
        av_cut_per, std_cut_per, neigh_av_cut_per, neigh_std_cut_per);
 elseif sophisticated==3
-    av_cut_per=0.2; % 0.8
-    std_cut_per=0.2;% 0.6
+    av_cut_per=0.1; % 0.8
+    std_cut_per=0.1;% 0.6
     neigh_av_cut_per=0.1; % 0.6
     neigh_std_cut_per=0.1;
    [X]=sophFuzzyFeatures(F_data3D, av_per_dif, std_per_dif, ...
        av_cut_per, std_cut_per, neigh_av_cut_per, neigh_std_cut_per);
 elseif sophisticated==4
-    av_cut_per=0.2; % 0.8
-    std_cut_per=0.2;% 0.6
+    av_cut_per=0.1; % 0.8
+    std_cut_per=0.1;% 0.6
     neigh_av_cut_per=0.1; % 0.6
     neigh_std_cut_per=0.1;
     [X]=sophSOMfeatures(F_data3D, av_per_dif, std_per_dif, ...
