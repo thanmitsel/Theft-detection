@@ -33,7 +33,7 @@ end
 [kWh_count, time_count, kWh_rate, time_rate] = frauDetails(H, F_data3D);
 
 %% Feature extraction
-prompt=('Choose fast or sophisticated features\n0. fast 1. sofisticated (KMEANS) 2. sofisticated (DBSCAN) 3. sofisticated (Fuzzy) 4. sofisticated (SOM)\n');
+prompt=('Choose fast or sophisticated features\n0. fast 1. sofisticated (KMEANS) 2. mixed (KMEANS) 3. sofisticated (Fuzzy) 4. sofisticated (SOM)\n');
 sophisticated=input(prompt);
 
 ndays=1;
@@ -67,12 +67,14 @@ elseif sophisticated==1
    [X]=sophisticatedFeatures(F_data3D, av_per_dif, std_per_dif, ...
        av_cut_per, std_cut_per, neigh_av_cut_per, neigh_std_cut_per);
 elseif sophisticated==2
-    av_cut_per=0.1; % 0.8
-    std_cut_per=0.1;% 0.6
-    neigh_av_cut_per=0.1; % 0.6
-    neigh_std_cut_per=0.1;
-   [X,Y]=sophDBSCANfeatures(F_data3D, Y, av_per_dif, std_per_dif, ...
-       av_cut_per, std_cut_per, neigh_av_cut_per, neigh_std_cut_per);
+    av_per_dif=0.7;
+    std_per_dif=0.7;
+    symmetric_av=0.6; 
+    symmetric_std=0.6;
+    neigh_av_cut_per=0.2;
+    neigh_std_cut_per=0.2;
+   [X]=mixedFeatures(F_data3D, av_per_dif, std_per_dif, ...
+       symmetric_av, symmetric_std, neigh_av_cut_per, neigh_std_cut_per);
 elseif sophisticated==3
     av_cut_per=0.1; % 0.8
     std_cut_per=0.1;% 0.6
