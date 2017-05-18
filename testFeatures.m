@@ -67,8 +67,9 @@ elseif sophisticated==1
     std_cut_per=0.1;% 0.6
     neigh_av_cut_per=0.3; % 0.6
     neigh_std_cut_per=0.4;
+    per_time=0;
    [X]=sophisticatedFeatures(F_data3D, av_per_dif, std_per_dif, ...
-       av_cut_per, std_cut_per, neigh_av_cut_per, neigh_std_cut_per);
+       av_cut_per, std_cut_per, neigh_av_cut_per, neigh_std_cut_per, per_time);
 end
 %% 
 prompt=('Choose which feature u wanna test 3-8.\n');

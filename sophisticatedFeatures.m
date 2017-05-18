@@ -6,6 +6,7 @@ av_cut_dif=zeros(size(data,3),1);
 std_cut_dif=zeros(size(data,3),1);
 neigh_av_cut_dif=zeros(size(data,3),1);
 neigh_std_cut_dif=zeros(size(data,3),1);
+time_difference=zeros(size(data,3),1);
 
 average3D=mean(data,2); % 1st Feature average consumption
 standard_dev3D=std(data,0,2); % 2nd Feature std of consumption
@@ -142,6 +143,16 @@ for i=1:size(daily_consumption,1) % loop consumers
     if (mean(neighbor_cut_std)-mean(after_cut_std))/mean(neighbor_cut_std) > neigh_std_cut_per
         neigh_std_cut_dif(i)=mean(neighbor_cut_std)-mean(after_cut_std);
     end  
+    
+    % 9th feature (adds DR and FPR)
+    %y_temp=daily_consumption(i,:)';
+    %b_temp = X\y_temp;
+    %tH_temp = X*b_temp;
+    %[min_tH_temp, min_tH_idx_temp]=min(tH_temp);
+    %if abs(min_tH_idx(1, cluster)-min_tH_idx_temp)/min_tH_idx(1, cluster)> per_time
+    %    time_difference(i)=abs(min_tH_idx(1, cluster)-min_tH_idx_temp);
+    %end
+    
 end
 
 

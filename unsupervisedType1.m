@@ -96,12 +96,14 @@ fprintf('\nFraud Data and features created.\n');
 %% ===  PCA for Visualization ===
 % Use PCA to project this cloud to 2D for visualization
 % Subtract the mean to use PCA
-prompt=('Apply normalization?\n 0 w/o norm, 1 with norm\n');
+prompt=('Apply normalization?\n 0 w/o norm, 1 with norm [-1,1], 2 with norm [0,1]\n');
 x=input(prompt);
 if x==0
     X_norm=X;
 elseif x==1
     [X_norm, mu, sigma] = normalizeMinus_Plus(X);
+elseif x==2
+    [X_norm,~,~]=normalizeFeatures(X);
 end
 prompt=('Apply PCA?\n 0 w/o PCA, 1 with PCA\n');
 x=input(prompt);
@@ -179,7 +181,7 @@ fprintf('kWh Rate %4.2fper | Time Rate %4.2fper |\n',kWh_rate,time_rate);
 fprintf('\nClassification for IDs\n');
 fprintf('| Precision %4.2f | Recall %4.2f | Accuracy %4.2f | F1score %4.2f |\n',precision,recall,accuracy,F1score);
 fprintf('| Actual Fraud %d IDs | Predicted Fraud Right %d IDs | Predicted Fraud Wrong %d IDs |\n',sum(Y(test_idx)==1),sum(prediction==1&Y(test_idx)==prediction),sum(prediction==1&Y(test_idx)~=prediction));
-fprintf(' DR  FPR  BDR  Accuracy\n%4.2f %4.2f %4.2f %4.2f \n',recall,in_recall,BDR,accuracy);
+fprintf(' DR  FPR  BDR  Accuracy F1score\n%4.2f %4.2f %4.2f %4.2f %4.2f\n',recall,in_recall,BDR,accuracy, F1score);
 fprintf('\nProgramm Paused, if u need FPR analysis press any key\nelse press Ctrl+C\n');
 pause;
 %% FPR Analysis
