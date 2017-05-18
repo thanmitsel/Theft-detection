@@ -55,6 +55,7 @@ basic_features=permute(temp_basic_feat, [3 2 1]); % cons x 4 features
 % Sophisticated part
 daily_consumption3D=sum(data,2);
 daily_consumption=permute(daily_consumption3D,[3 1 2]); % cons x 365 days
+
 average_consumption=mean(daily_consumption,2); % cons x 1 average of year
 std_consumption=std(daily_consumption,0,2);
 daily_std3D=basic_features3D(:,2,:);
@@ -74,7 +75,14 @@ for j=1:5
         centroids=temp_centroids;
         idx=temp_idx;
     end
-end 
+end
+
+% Normalize consumptions
+[normalized_cons,~,~]=normalizeFeatures(daily_consumption');
+daily_consumption=normalized_cons';
+
+[normalized_std,~,~]=normalizeFeatures(daily_std');
+daily_std=normalized_std';
 
 % Create daily consumptions based on clusters
 cluster_consumption=zeros(K,size(daily_consumption,2));

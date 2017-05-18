@@ -60,10 +60,12 @@ if sophisticated==0
     [trend_coef]=get_Trend(X_1);
     X=[X_2 X_3(:,9:end) trend_coef];
 elseif sophisticated==1
-    av_cut_per=0.1; % 0.8
-    std_cut_per=0.1;% 0.6
-    neigh_av_cut_per=0.1; % 0.6
-    neigh_std_cut_per=0.1;
+    av_per_dif=0.7;
+    std_per_dif=0.7;
+    av_cut_per=0.1; % 0.7
+    std_cut_per=0.1;% 0.7
+    neigh_av_cut_per=0.3; % 0.1
+    neigh_std_cut_per=0.4; % 0.1
    [X]=sophisticatedFeatures(F_data3D, av_per_dif, std_per_dif, ...
        av_cut_per, std_cut_per, neigh_av_cut_per, neigh_std_cut_per);
 elseif sophisticated==2
@@ -71,8 +73,8 @@ elseif sophisticated==2
     std_per_dif=0.7;
     symmetric_av=0.6; 
     symmetric_std=0.6;
-    neigh_av_cut_per=0.2;
-    neigh_std_cut_per=0.2;
+    neigh_av_cut_per=0.3;
+    neigh_std_cut_per=0.4;
    [X]=mixedFeatures(F_data3D, av_per_dif, std_per_dif, ...
        symmetric_av, symmetric_std, neigh_av_cut_per, neigh_std_cut_per);
 elseif sophisticated==3

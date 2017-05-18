@@ -105,7 +105,15 @@ for j=1:5
         centroids=temp_centroids;
         idx=temp_idx;
     end
-end 
+end
+
+% Normalize consumptions
+[normalized_cons,~,~]=normalizeFeatures(daily_consumption');
+daily_consumption=normalized_cons';
+
+[normalized_std,~,~]=normalizeFeatures(daily_std');
+daily_std=normalized_std';
+
 
 % Create daily consumptions based on clusters
 cluster_consumption=zeros(K,size(daily_consumption,2));

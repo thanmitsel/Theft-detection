@@ -65,8 +65,8 @@ elseif sophisticated==1
     std_per_dif=0.7;
     av_cut_per=0.1; % 0.8
     std_cut_per=0.1;% 0.6
-    neigh_av_cut_per=0.2; % 0.6
-    neigh_std_cut_per=0.3;
+    neigh_av_cut_per=0.3; % 0.6
+    neigh_std_cut_per=0.4;
    [X]=sophisticatedFeatures(F_data3D, av_per_dif, std_per_dif, ...
        av_cut_per, std_cut_per, neigh_av_cut_per, neigh_std_cut_per);
 end
