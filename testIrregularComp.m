@@ -1,5 +1,4 @@
-%% Apply K-Means estimate parametric trend
-    % pick some z vector 
+%% Apply Parametric trend estimation to Frauds to check
     z=2000;
     r_cons=randi(size(hh,1),z,1);
     somehh=hh(r_cons,:);
@@ -29,39 +28,20 @@ for i=1:size(thiefs,1)
     F_data3D(:,:,thiefs(i))=F_data;
     Y2D(:,thiefs(i))=Y;
 end
-
+Y=(sum(Y2D)>0)';
 % Details 
 [kWh_count, time_count, kWh_rate, time_rate] = frauDetails(H, F_data3D);
 
 daily_consumption=sum(F_data3D,2);
 daily_consumption=permute(daily_consumption,[3 1 2]);
 average_consumption=mean(daily_consumption,2);
-
-%% K-Means will cluster consumers based on yearly average consumptions
-max_iters=10;
+%% Pick 4 Frauds
 K=4;
-
-cost=1000000000;
-% 5 random initializations
-for j=1:5
-    initial_centroids = kMeansInitCentroids(average_consumption, K); 
-    [temp_cost, temp_centroids, temp_idx] = runkMeans(average_consumption, initial_centroids, max_iters);
-    if cost>temp_cost % Pick the lowest cost
-        cost=temp_cost;
-        centroids=temp_centroids;
-        idx=temp_idx;
-    end
-end 
-
-%% Create daily consumptions based on clusters
-cluster_consumption=zeros(K,size(daily_consumption,2));
-sum_clusters=zeros(K,1);
-
+idx=find(Y==1);
 for i=1:K
-    cluster_consumption(i,:)=mean(daily_consumption(idx==i,:),1);
-    sum_clusters(i)=sum(idx==i);
+    cluster_consumption(i,:)=daily_consumption(idx(i),:);
+    sum_clusters(i)=1;
 end
-
 %% Fit quadratic trend
 % Fit the second degree polynomial to the observed series.
 tH=zeros(size(daily_consumption,2),K);

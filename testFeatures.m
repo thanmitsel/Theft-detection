@@ -11,6 +11,8 @@
 
     %% Fraud Initialization
     % Create Fraud data
+    prompt='Choose fixed fraud values (0) or random (1)\n';
+    random_values=input(prompt);
     F_data3D=H;
     Y2D=zeros(size(H,1),size(H,3));
     one_H=zeros(size(H(:,:,1)));
@@ -19,8 +21,13 @@ fraud_rate=0.5; % Percentage of consumers who fraud
 [normal_idx, fraud_idx] = crossvalind('HoldOut', size(H,3), fraud_rate); % Keep in mind crossval floors the rate
 thiefs=find(fraud_idx==1);
 for i=1:size(thiefs,1)    
-    intensity=0.2; % fixed intensity
-    dstart=182; % fixed day of staring fraud
+    if random_values==0
+        intensity=0.2; % fixed intensity
+        dstart=182; % fixed day of staring fraud
+    else
+        intensity=1-betarnd(6,3); % beta distribution
+        dstart=floor(normrnd(size(one_H,1)/2,size(one_H,1)/6.5)); % normal distribution
+    end
     while dstart<1 || dstart>(size(one_H,1)-1)
         dstart=floor(normrnd(size(one_H,1)/2,size(one_H,1)/6.5)); % normal distribution
     end
@@ -67,9 +74,8 @@ elseif sophisticated==1
     std_cut_per=0.1;% 0.6
     neigh_av_cut_per=0.3; % 0.6
     neigh_std_cut_per=0.4;
-    per_time=0;
    [X]=sophisticatedFeatures(F_data3D, av_per_dif, std_per_dif, ...
-       av_cut_per, std_cut_per, neigh_av_cut_per, neigh_std_cut_per, per_time);
+       av_cut_per, std_cut_per, neigh_av_cut_per, neigh_std_cut_per);
 end
 %% 
 prompt=('Choose which feature u wanna test 3-8.\n');
