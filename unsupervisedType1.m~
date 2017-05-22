@@ -107,9 +107,9 @@ elseif x==2
 end
 prompt=('Apply PCA?\n 0 w/o PCA, 1 with PCA\n');
 apply_pca=input(prompt);
-if apply_pca==0
+if appcly_pca==0
     Z=X_norm;
-elseif apply_pca==1
+elseif x==1
     % PCA and project the data to 2D
     [U, S] = pca(X_norm);
     Z = projectData(X_norm, U, 2);
@@ -168,15 +168,7 @@ for i=1:Kfolds
     rouf_id=find(prediction==1);
     roufianos=someID(rouf_id); % Keeps all the ID that contain intrusion
 end
-if apply_pca==1
-   plot(Z(:,1),Z(:,2), 'bx');
-   %axis([0 30 0 30]);
-   xlabel('Principal Component 1');
-   ylabel('Principal Component 2');
-   visualizeFit(Z, mu, sigma2);
-   xlabel('Principal Component 1');
-   ylabel('Principal Component 2');
-end
+if p
 
 
 [outliers, epsilon, precision, recall, in_recall, accuracy, F1score, BDR]=MeanResults(result_table);
