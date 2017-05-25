@@ -74,6 +74,12 @@ for i=1:K
     idx(logical(outputs(i,:)),1)=i;
 end
 
+% Normalize consumptions
+[normalized_cons,~,~]=normalizeFeatures(daily_consumption');
+daily_consumption=normalized_cons';
+
+[normalized_std,~,~]=normalizeFeatures(daily_std');
+daily_std=normalized_std';
 
 % Create daily consumptions based on clusters
 cluster_consumption=zeros(K,size(daily_consumption,2));

@@ -1,4 +1,4 @@
-function [features]=sophisticatedFeatures(data, av_per_dif, std_per_dif, av_cut_per, std_cut_per, neigh_av_cut_per, neigh_std_cut_per )
+function [features]=sophisticatedFeaturesEucl(data, av_per_dif, std_per_dif, av_cut_per, std_cut_per, neigh_av_cut_per, neigh_std_cut_per )
 
 max_av_difference3D=zeros(size(data,1),1,size(data,3));
 max_std_difference3D=zeros(size(data,1),1,size(data,3));
@@ -6,6 +6,7 @@ av_cut_dif=zeros(size(data,3),1);
 std_cut_dif=zeros(size(data,3),1);
 neigh_av_cut_dif=zeros(size(data,3),1);
 neigh_std_cut_dif=zeros(size(data,3),1);
+time_difference=zeros(size(data,3),1);
 
 average3D=mean(data,2); % 1st Feature average consumption
 standard_dev3D=std(data,0,2); % 2nd Feature std of consumption
@@ -55,21 +56,26 @@ basic_features=permute(temp_basic_feat, [3 2 1]); % cons x 4 features
 % Sophisticated part
 daily_consumption3D=sum(data,2);
 daily_consumption=permute(daily_consumption3D,[3 1 2]); % cons x 365 days
+
 average_consumption=mean(daily_consumption,2); % cons x 1 average of year
 std_consumption=std(daily_consumption,0,2);
 daily_std3D=basic_features3D(:,2,:);
 daily_std=permute(daily_std3D,[3 1 2]);
 
+% K-Means
 K=4;
 max_iters=10;
 cluster_input=[average_consumption std_consumption];
-% Fuzzy C-Means
-[centers,U] = fcm(cluster_input,K);
-maxU=max(U);
-idx=zeros(size(daily_consumption,1),1);
-for i=1:K
-    temp_idx=U(i,:)==maxU;
-    idx(temp_idx,1)=i;
+cost=1000000000;
+% 5 random initializations
+for j=1:5
+    initial_centroids = kMeansInitCentroids(cluster_input, K); 
+    [temp_cost, temp_centroids, temp_idx] = runkMeans(cluster_input, initial_centroids, max_iters);
+    if cost>temp_cost % Pick the lowest cost
+        cost=temp_cost;
+        centroids=temp_centroids;
+        idx=temp_idx;
+    end
 end
 
 % Normalize consumptions
@@ -78,7 +84,6 @@ daily_consumption=normalized_cons';
 
 [normalized_std,~,~]=normalizeFeatures(daily_std');
 daily_std=normalized_std';
-
 
 % Create daily consumptions based on clusters
 cluster_consumption=zeros(K,size(daily_consumption,2));
@@ -121,23 +126,33 @@ for i=1:size(daily_consumption,1) % loop consumers
         before_cut_std=daily_std(i,(cut-1-after_cut_size):(cut-1));
     end
     % 5th feature
-    if (mean(before_cut)-mean(after_cut))/mean(before_cut) > av_cut_per
-        av_cut_dif(i)=mean(before_cut)-mean(after_cut);   
+    if (norm(before_cut)-norm(after_cut))/norm(before_cut) > av_cut_per
+        av_cut_dif(i)=norm(before_cut)-norm(after_cut);   
     end
     % 6th feature
-    if (mean(before_cut_std)-mean(after_cut_std))/mean(before_cut_std) > std_cut_per
-        std_cut_dif(i)=mean(before_cut_std)-mean(after_cut_std);   
+    if (norm(before_cut_std)-norm(after_cut_std))/norm(before_cut_std) > std_cut_per
+        std_cut_dif(i)=norm(before_cut_std)-norm(after_cut_std);   
     end
     neighbor_cut=cluster_consumption(cluster, cut:end);
     % 7th feature
-    if (mean(neighbor_cut)-mean(after_cut))/mean(neighbor_cut) > neigh_av_cut_per
-        neigh_av_cut_dif(i)=mean(neighbor_cut)-mean(after_cut);
+    if (norm(neighbor_cut)-norm(after_cut))/norm(neighbor_cut) > neigh_av_cut_per
+        neigh_av_cut_dif(i)=norm(neighbor_cut)-norm(after_cut);
     end
-    neighbor_cut_std=cluster_std(cluster, cut:end);
     % 8th feature
-    if (mean(neighbor_cut_std)-mean(after_cut_std))/mean(neighbor_cut_std) > neigh_std_cut_per
-        neigh_std_cut_dif(i)=mean(neighbor_cut_std)-mean(after_cut_std);
+    neighbor_cut_std=cluster_std(cluster, cut:end);
+    if (norm(neighbor_cut_std)-norm(after_cut_std))/norm(neighbor_cut_std) > neigh_std_cut_per
+        neigh_std_cut_dif(i)=norm(neighbor_cut_std)-norm(after_cut_std);
     end  
+    
+    % 9th feature (adds DR and FPR)
+    %y_temp=daily_consumption(i,:)';
+    %b_temp = X\y_temp;
+    %tH_temp = X*b_temp;
+    %[min_tH_temp, min_tH_idx_temp]=min(tH_temp);
+    %if abs(min_tH_idx(1, cluster)-min_tH_idx_temp)/min_tH_idx(1, cluster)> per_time
+    %    time_difference(i)=abs(min_tH_idx(1, cluster)-min_tH_idx_temp);
+    %end
+    
 end
 
 

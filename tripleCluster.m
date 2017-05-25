@@ -62,17 +62,42 @@ for i=1:K
     sum_cons_clusters(i)=sum(idx==i);
 end
 
+%% Normalize
+[normalized_daily, minval, maxval]=normalizeFeatures(daily_consumption'); 
+
 %% K-Means on every member of cluster
-daily_consumption_transposed=daily_consumption';
-idx_table=zeros(size(daily_consumption_transposed));
-centroids_table=zeros(K_t, z);
 K_t=10;
+
+daily_consumption_transposed=normalized_daily; % days vs cons
+idx_table=zeros(size(daily_consumption_transposed));
+new_idx_table=zeros(size(idx_table)); % updated after sort
+
+centroids_table=zeros(K_t, z);
+new_centroids_table=zeros(size(centroids_table)); % new sorted
+
    
-for j=1:z    
-    initial_centroids = kMeansInitCentroids(daily_consumption_transposed(:,j), K_t);     
-    [temp_cost, centroids_table(:,j), idx_table(:,j)] = runkMeans(daily_consumption_transposed(:,j), initial_centroids, max_iters);          
+%for j=1:z    
+%    initial_centroids = kMeansInitCentroids(daily_consumption_transposed(:,j), K_t);     
+%    [temp_cost, centroids_table(:,j), idx_table(:,j)] = runkMeans(daily_consumption_transposed(:,j), initial_centroids, max_iters);          
+%end
+for j=1:z
+    cost=1000000000;
+    for z=1:random_init
+        initial_centroids = kMeansInitCentroids(daily_consumption_transposed(:,j), K_t); 
+        [temp_cost, temp_centroids, temp_idx] = runkMeans(daily_consumption_transposed(:,j), initial_centroids, max_iters);
+        if cost>temp_cost % Pick the lowest cost
+            cost=temp_cost;
+            centroids_table(:,j)=temp_centroids;
+            idx_table(:,j)=temp_idx;
+        end
+    end
 end
 
-for j=1:j
-    
+for i=1:z
+    new_centroids_table(:,i)=sort(centroids_table(:,i));
+    for j=1:size(new_centroids_table,1)
+        old_centroid_id=find(centroids_table(:,i)==new_centroids_table(j,i));
+        update_idx=idx_table(:,i)==old_centroid_id;
+        new_idx_table(update_idx,i)=j;
+    end
 end

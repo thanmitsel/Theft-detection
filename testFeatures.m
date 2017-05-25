@@ -40,7 +40,7 @@ end
 % Details 
 [kWh_count, time_count, kWh_rate, time_rate] = frauDetails(H, F_data3D);
 %% Feature extraction
-prompt=('Choose fast or sophisticated features\n0. fast 1. sofisticated (KMEANS)\n');
+prompt=('Choose fast or sophisticated features\n0. fast 1. sofisticated (KMEANS) 2. sofisticated (KMEANS) with norms \n');
 sophisticated=input(prompt);
 
 ndays=1;
@@ -76,6 +76,16 @@ elseif sophisticated==1
     neigh_std_cut_per=0.4;
    [X]=sophisticatedFeatures(F_data3D, av_per_dif, std_per_dif, ...
        av_cut_per, std_cut_per, neigh_av_cut_per, neigh_std_cut_per);
+   elseif sophisticated==2
+       av_per_dif=0.7;
+    std_per_dif=0.7;
+    av_cut_per=0.3; % 0.8
+    std_cut_per=0.1;% 0.6
+    neigh_av_cut_per=0.1; % 0.6
+    neigh_std_cut_per=0.1;
+   [X]=sophisticatedFeaturesEucl(F_data3D, av_per_dif, std_per_dif, ...
+       av_cut_per, std_cut_per, neigh_av_cut_per, neigh_std_cut_per);
+       
 end
 %% 
 prompt=('Choose which feature u wanna test 3-8.\n');
