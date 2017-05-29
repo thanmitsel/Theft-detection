@@ -144,6 +144,7 @@ for i=1:size(daily_consumption,1) % loop consumers
         neigh_std_cut_dif(i)=norm(neighbor_cut_std)-norm(after_cut_std);
     end  
     
+    %per_time=0.1;
     % 9th feature (adds DR and FPR)
     %y_temp=daily_consumption(i,:)';
     %b_temp = X\y_temp;

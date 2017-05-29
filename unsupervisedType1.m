@@ -102,18 +102,71 @@ elseif sophisticated==5
        av_cut_per, std_cut_per, neigh_av_cut_per, neigh_std_cut_per);
 end
 fprintf('\nFraud Data and features created.\n');
-%% ===  PCA for Visualization ===
-% Use PCA to project this cloud to 2D for visualization
-% Subtract the mean to use PCA
+%% ===  Pick Type of Consumers ===
+prompt=('Pick Consumers\n 0. ALL 1. Domestic 2. SME');
+pickTypeConsumers=input(prompt);
+if pickTypeConsumers~=0
+    % Sophisticated part
+    daily_consumption3D=sum(F_data3D,2);
+    daily_consumption=permute(daily_consumption3D,[3 1 2]); % cons x 365 days
+
+    average_consumption=mean(daily_consumption,2); % cons x 1 average of year
+    std_consumption=std(daily_consumption,0,2);
+
+    % K-Means
+    K_clusters=2;
+    max_iters=10;
+    cluster_input=[average_consumption std_consumption];
+    cost=1000000000;
+    % 5 random initializations
+    for j=1:5
+        initial_centroids = kMeansInitCentroids(cluster_input, K_clusters); 
+        [temp_cost, temp_centroids, temp_idx] = runkMeans(cluster_input, initial_centroids, max_iters);
+        if cost>temp_cost % Pick the lowest cost
+            cost=temp_cost;
+            centroids=temp_centroids;
+            idx=temp_idx;
+        end
+    end
+    X_part1=X(idx==1,:);
+    Y_part1=Y(idx==1,:);
+    X_part2=X(idx==2,:);
+    Y_part2=Y(idx==2,:);
+    if pickTypeConsumers==1
+       if size(X_part1,1)>size(X_part2,1)
+           X=X_part1;
+           Y=Y_part1;
+       else
+           X=X_part2;
+           Y=Y_part2;
+       end
+    elseif pickTypeConsumers==2
+        if size(X_part1,1)>size(X_part2,1)
+           X=X_part2;
+           Y=Y_part2;
+       else
+           X=X_part1;
+           Y=Y_part1;
+       end
+    end
+end
+
+
+
+%% ===  Normalization ===
 prompt=('Apply normalization?\n 0 w/o norm, 1 with norm [-1,1], 2 with norm [0,1]\n');
-x=input(prompt);
-if x==0
+apply_normalization=input(prompt);
+if apply_normalization==0
     X_norm=X;
-elseif x==1
+elseif apply_normalization==1
     [X_norm, mu, sigma] = normalizeMinus_Plus(X);
-elseif x==2
+elseif apply_normalization==2
     [X_norm,~,~]=normalizeFeatures(X);
 end
+
+%% == PCA for Visualization ==
+% Use PCA to project this cloud to 2D for visualization
+% Subtract the mean to use PCA
 prompt=('Apply PCA?\n 0 w/o PCA, 1 with PCA\n');
 apply_pca=input(prompt);
 if apply_pca==0
@@ -127,7 +180,7 @@ elseif apply_pca==1
     plotClass(Z(:,:),Y(:));
     title('Classified examples');
 end
-fprintf('Program paused. Press enter to continue.\n');
+
 %% Create training and testing set
 % Choose from every consumer sample
 % No normarlization needed here
@@ -178,11 +231,11 @@ for i=1:Kfolds
     roufianos=someID(rouf_id); % Keeps all the ID that contain intrusion
 end
 if apply_pca==1
-   plot(Z(:,1),Z(:,2), 'bx');
+   %plot(Z(:,1),Z(:,2), 'bx');
    %axis([0 30 0 30]);
-   xlabel('Principal Component 1');
-   ylabel('Principal Component 2');
-   visualizeFit(Z, mu, sigma2);
+   %xlabel('Principal Component 1');
+   %ylabel('Principal Component 2');
+   visualizeFit(Z, mu, sigma2, apply_normalization);
    xlabel('Principal Component 1');
    ylabel('Principal Component 2');
 end
