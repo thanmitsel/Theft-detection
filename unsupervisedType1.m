@@ -1,4 +1,6 @@
+    %% Semi-supervised algorithm
     % pick some z vector 
+    % Plus FPR analysis
     z=2000;
     r_cons=randi(size(hh,1),z,1);
     somehh=hh(r_cons,:);
