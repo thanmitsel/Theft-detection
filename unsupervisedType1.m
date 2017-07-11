@@ -105,7 +105,7 @@ elseif sophisticated==5
 end
 fprintf('\nFraud Data and features created.\n');
 %% ===  Pick Type of Consumers ===
-prompt=('Pick Consumers\n 0. ALL 1. Domestic 2. SME');
+prompt=('Pick Consumers\n 0. ALL 1. Domestic 2. SME\n');
 pickTypeConsumers=input(prompt);
 if pickTypeConsumers~=0
     % Sophisticated part
@@ -152,8 +152,6 @@ if pickTypeConsumers~=0
        end
     end
 end
-
-
 
 %% ===  Normalization ===
 prompt=('Apply normalization?\n 0 w/o norm, 1 with norm [-1,1], 2 with norm [0,1]\n');

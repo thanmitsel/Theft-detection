@@ -16,7 +16,7 @@
     one_H=zeros(size(H(:,:,1)));
 
 % fraud_rate=0.05; % Percentage of consumers who fraud
-fraud_rate=0.3; % Percentage of consumers who fraud
+fraud_rate=0.1; % Percentage of consumers who fraud
 [normal_idx, fraud_idx] = crossvalind('HoldOut', size(H,3), fraud_rate); % Keep in mind crossval floors the rate
 thiefs=find(fraud_idx==1);
 for i=1:size(thiefs,1)    
@@ -35,72 +35,37 @@ end
 [kWh_count, time_count, kWh_rate, time_rate] = frauDetails(H, F_data3D);
 
 %% Form Cluster
-prompt=('Pick Form Clustering\n 0. NOP 1. Large Cluster 2. Small Cluster');
-pickForm=input(prompt);
-
-if pickForm~=0
-    daily_consumption3D=sum(F_data3D,2);
-    daily_consumption=permute(daily_consumption3D,[3 1 2]); % cons x 365 days
-
-    daily_consumption_t=daily_consumption';
-
-    prompt=('Apply horizontal normalization?\n 0 w/o norm, 1 with norm [-1,1], 2 with norm [0,1]\n');
-    apply_normalization=input(prompt);
-    if apply_normalization==0
-        daily_norm_t=daily_consumption_t;
-    elseif apply_normalization==1
-        [daily_norm_t, mu, sigma] = normalizeMinus_Plus(daily_consumption_t);
-    elseif apply_normalization==2
-        [daily_norm_t,~,~]=normalizeFeatures(daily_consumption_t);
-    end
-
-    daily_norm=daily_norm_t';
-
-    % K-Means
-    K_clusters=2;
-    max_iters=10;    
-    cluster_input=daily_norm;    
-    cost=1000000000;      
-    % 5 random initializations    
-    for j=1:5    
-        initial_centroids = kMeansInitCentroids(cluster_input, K_clusters);         
-        [temp_cost, temp_centroids, temp_idx] = runkMeans(cluster_input, initial_centroids, max_iters);    
-        if cost>temp_cost % Pick the lowest cost    
-            cost=temp_cost;        
-            centroids=temp_centroids;        
-            idx=temp_idx;    
-        end        
-    end
-    X_part1=F_data3D(:, :, idx==1);
-    Y_part1=Y2D(:, idx==1);
-    X_part2=F_data3D(:, :, idx==2);
-    Y_part2=Y2D(:, idx==2);
-    if pickForm==1
-       if size(X_part1,3)>size(X_part2,3)
-           F_data3D=X_part1;
-           Y2D=Y_part1;
-       else
-           F_data3D=X_part2;
-           Y2D=Y_part2;
-       end
-    elseif pickForm==2
-        if size(X_part1,3)>size(X_part2,3)
-           F_data3D=X_part2;
-           Y2D=Y_part2;
-       else
-           F_data3D=X_part1;
-           Y2D=Y_part1;
-       end
-    end
+daily_consumption3D=sum(F_data3D,2);
+daily_consumption=permute(daily_consumption3D,[3 1 2]); % cons x 365 days    
+daily_consumption_t=daily_consumption';    
+prompt=('Apply horizontal normalization?\n 0 w/o norm, 1 with norm [-1,1], 2 with norm [0,1]\n');    
+apply_normalization=input(prompt);   
+if apply_normalization==0    
+    daily_norm_t=daily_consumption_t;   
+elseif apply_normalization==1    
+    [daily_norm_t, mu, sigma] = normalizeMinus_Plus(daily_consumption_t);    
+elseif apply_normalization==2    
+    [daily_norm_t,~,~]=normalizeFeatures(daily_consumption_t);    
 end
 
-% check if even so K-Folds won't break
-modFlag=mod(size(F_data3D,3),2);
-if modFlag~=0
-    F_data3D=F_data3D(:, :, 1:(end-modFlag));
-    Y2D=Y2D(:,1:(end-modFlag));
-end
+daily_norm=daily_norm_t';
 
+% K-Means
+    
+K_clusters=2;    
+max_iters=10;        
+cluster_input=daily_norm;        
+cost=1000000000;          
+% 5 random initializations        
+for j=1:5            
+    initial_centroids = kMeansInitCentroids(cluster_input, K_clusters);             
+    [temp_cost, temp_centroids, temp_idx] = runkMeans(cluster_input, initial_centroids, max_iters);        
+    if cost>temp_cost % Pick the lowest cost        
+        cost=temp_cost;                
+        centroids=temp_centroids;                
+        idx=temp_idx;            
+    end    
+end
 %% Feature extraction
 prompt=('Choose fast or sophisticated features\n0. fast 1. sofisticated (KMEANS) 2. mixed (KMEANS) 3. sofisticated (Fuzzy) 4. sofisticated (SOM)\n');
 sophisticated=input(prompt);
@@ -171,3 +136,47 @@ elseif sophisticated==5
        av_cut_per, std_cut_per, neigh_av_cut_per, neigh_std_cut_per);
 end
 fprintf('\nFraud Data and features created.\n');
+%% Segment Consumers based on Form    
+X_part1=X(idx==1, :);    
+Y_part1=Y(idx==1);    
+X_part2=X(idx==2, :);   
+Y_part2=Y(idx==2);    
+if size(X_part1,1)>size(X_part2,1)      
+    X_big=X_part1;
+    Y_big=Y_part1;
+    X_small=X_part2;
+    Y_small=Y_part2;  
+else 
+    X_big=X_part2;
+    Y_big=Y_part2;
+    X_small=X_part1;
+    Y_small=Y_part1; 
+end
+%%
+pred_big=zeros(size(Y_big));
+pred_small=ones(size(Y_small));
+
+tp=sum((pred_big==Y_big)&(pred_big==1)); % Predicted yes, actual yes
+tn=sum((pred_big==Y_big)&(pred_big==0)); % Predicted no , actual no 
+fp=sum((pred_big==1)&(Y_big==0)); % Predicted yes, actual no
+fn=sum((pred_big==0)&(Y_big==1)); % Predicted no, actual yes 
+
+tp=tp+sum((pred_small==Y_small)&(pred_small==1));
+tn=tn+sum((pred_small==Y_small)&(pred_small==0));
+fp=fp+sum((pred_small==1)&(Y_small==0));
+fn=fn+sum((pred_small==0)&(Y_small==1));
+
+precision=tp/(tp+fp)*100; 
+recall=tp/(tp+fn)*100; % True Positive Rate-Detection Rate
+in_recall=fp/(fp+tn)*100; % False Positive Rate
+accuracy=((tp+tn)/(tp+tn+fp+fn))*100;
+F1score=2*precision*recall/(precision+recall); % Already a percent value    
+BDR=fraud_rate*recall/(fraud_rate*recall+(1-fraud_rate)*in_recall) ; % Bayesian Detection Rate for days
+
+%% Printing Segment
+fprintf('kWh Rate %4.2fper | Time Rate %4.2fper |\n',kWh_rate,time_rate);
+fprintf('\nClassification for IDs\n');
+fprintf('| Precision %4.2f | Recall %4.2f | Accuracy %4.2f | F1score %4.2f |\n',precision,recall,accuracy,F1score);
+fprintf('| Actual Fraud %d IDs | Predicted Fraud Right %d IDs | Predicted Fraud Wrong %d IDs |\n',sum(Y==1), tp, fp);
+fprintf(' DR  FPR  BDR  Accuracy F1score\n%4.2f %4.2f %4.2f %4.2f %4.2f\n',recall,in_recall,BDR,accuracy, F1score);
+fprintf('\nProgramm Paused, if u need FPR analysis press any key\nelse press Ctrl+C\n');
