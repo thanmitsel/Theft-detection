@@ -16,7 +16,7 @@
     one_H=zeros(size(H(:,:,1)));
 
 % fraud_rate=0.05; % Percentage of consumers who fraud
-fraud_rate=0.1; % Percentage of consumers who fraud
+fraud_rate=0.3; % Percentage of consumers who fraud
 [normal_idx, fraud_idx] = crossvalind('HoldOut', size(H,3), fraud_rate); % Keep in mind crossval floors the rate
 thiefs=find(fraud_idx==1);
 for i=1:size(thiefs,1)    
@@ -67,7 +67,7 @@ for j=1:5
     end    
 end
 %% Feature extraction
-prompt=('Choose fast or sophisticated features\n0. fast 1. sofisticated (KMEANS) 2. mixed (KMEANS) 3. sofisticated (Fuzzy) 4. sofisticated (SOM)\n');
+prompt=('Choose fast or sophisticated features\n0. fast 1. sofisticated (KMEANS) 2. mixed (KMEANS) 3. sofisticated (Fuzzy) 4. sofisticated (SOM) 5. Euclidian\n');
 sophisticated=input(prompt);
 
 ndays=1;
@@ -152,10 +152,17 @@ else
     X_small=X_part1;
     Y_small=Y_part1; 
 end
-%%
+%% Prediction
 pred_big=zeros(size(Y_big));
-pred_small=ones(size(Y_small));
+%binary_table=X_big(:,3:end)~=0;
+%pred_big=sum(binary_table,2)>=3;
 
+pred_small=ones(size(Y_small));
+binary_table=X_small(:,3:end)~=0;
+binary_vector=sum(binary_table,2)<3;
+%binary_vector=sum(X_small(:,3:end),2)==0;
+pred_small(binary_vector)=0;
+%% Results
 tp=sum((pred_big==Y_big)&(pred_big==1)); % Predicted yes, actual yes
 tn=sum((pred_big==Y_big)&(pred_big==0)); % Predicted no , actual no 
 fp=sum((pred_big==1)&(Y_big==0)); % Predicted yes, actual no

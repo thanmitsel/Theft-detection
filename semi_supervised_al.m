@@ -16,7 +16,7 @@
     one_H=zeros(size(H(:,:,1)));
 
 % fraud_rate=0.05; % Percentage of consumers who fraud
-fraud_rate=0.3; % Percentage of consumers who fraud
+fraud_rate=0.1; % Percentage of consumers who fraud
 [normal_idx, fraud_idx] = crossvalind('HoldOut', size(H,3), fraud_rate); % Keep in mind crossval floors the rate
 thiefs=find(fraud_idx==1);
 for i=1:size(thiefs,1)    
@@ -33,76 +33,40 @@ end
 
 % Details 
 [kWh_count, time_count, kWh_rate, time_rate] = frauDetails(H, F_data3D);
-
 %% Form Cluster
-prompt=('Pick Form Clustering\n 0. NOP 1. Large Cluster 2. Small Cluster');
-pickForm=input(prompt);
-
-if pickForm~=0
-    daily_consumption3D=sum(F_data3D,2);
-    daily_consumption=permute(daily_consumption3D,[3 1 2]); % cons x 365 days
-
-    daily_consumption_t=daily_consumption';
-
-    prompt=('Apply horizontal normalization?\n 0 w/o norm, 1 with norm [-1,1], 2 with norm [0,1]\n');
-    apply_normalization=input(prompt);
-    if apply_normalization==0
-        daily_norm_t=daily_consumption_t;
-    elseif apply_normalization==1
-        [daily_norm_t, mu, sigma] = normalizeMinus_Plus(daily_consumption_t);
-    elseif apply_normalization==2
-        [daily_norm_t,~,~]=normalizeFeatures(daily_consumption_t);
-    end
-
-    daily_norm=daily_norm_t';
-
-    % K-Means
-    K_clusters=2;
-    max_iters=10;    
-    cluster_input=daily_norm;    
-    cost=1000000000;      
-    % 5 random initializations    
-    for j=1:5    
-        initial_centroids = kMeansInitCentroids(cluster_input, K_clusters);         
-        [temp_cost, temp_centroids, temp_idx] = runkMeans(cluster_input, initial_centroids, max_iters);    
-        if cost>temp_cost % Pick the lowest cost    
-            cost=temp_cost;        
-            centroids=temp_centroids;        
-            idx=temp_idx;    
-        end        
-    end
-    X_part1=F_data3D(:, :, idx==1);
-    Y_part1=Y2D(:, idx==1);
-    X_part2=F_data3D(:, :, idx==2);
-    Y_part2=Y2D(:, idx==2);
-    if pickForm==1
-       if size(X_part1,3)>size(X_part2,3)
-           F_data3D=X_part1;
-           Y2D=Y_part1;
-       else
-           F_data3D=X_part2;
-           Y2D=Y_part2;
-       end
-    elseif pickForm==2
-        if size(X_part1,3)>size(X_part2,3)
-           F_data3D=X_part2;
-           Y2D=Y_part2;
-       else
-           F_data3D=X_part1;
-           Y2D=Y_part1;
-       end
-    end
+daily_consumption3D=sum(F_data3D,2);
+daily_consumption=permute(daily_consumption3D,[3 1 2]); % cons x 365 days    
+daily_consumption_t=daily_consumption';    
+prompt=('Apply horizontal normalization?\n 0 w/o norm, 1 with norm [-1,1], 2 with norm [0,1]\n');    
+apply_normalization=input(prompt);   
+if apply_normalization==0    
+    daily_norm_t=daily_consumption_t;   
+elseif apply_normalization==1    
+    [daily_norm_t, mu, sigma] = normalizeMinus_Plus(daily_consumption_t);    
+elseif apply_normalization==2    
+    [daily_norm_t,~,~]=normalizeFeatures(daily_consumption_t);    
 end
 
-% check if even so K-Folds won't break
-modFlag=mod(size(F_data3D,3),2);
-if modFlag~=0
-    F_data3D=F_data3D(:, :, 1:(end-modFlag));
-    Y2D=Y2D(:,1:(end-modFlag));
-end
+daily_norm=daily_norm_t';
 
+% K-Means
+    
+K_clusters=2;    
+max_iters=10;        
+cluster_input=daily_norm;        
+cost=1000000000;          
+% 5 random initializations        
+for j=1:5            
+    initial_centroids = kMeansInitCentroids(cluster_input, K_clusters);             
+    [temp_cost, temp_centroids, temp_idx] = runkMeans(cluster_input, initial_centroids, max_iters);        
+    if cost>temp_cost % Pick the lowest cost        
+        cost=temp_cost;                
+        centroids=temp_centroids;                
+        idx=temp_idx;            
+    end    
+end
 %% Feature extraction
-prompt=('Choose fast or sophisticated features\n0. fast 1. sofisticated (KMEANS) 2. mixed (KMEANS) 3. sofisticated (Fuzzy) 4. sofisticated (SOM)\n');
+prompt=('Choose fast or sophisticated features\n0. fast 1. sofisticated (KMEANS) 2. mixed (KMEANS) 3. sofisticated (Fuzzy) 4. sofisticated (SOM) 5. Euclidean\n');
 sophisticated=input(prompt);
 
 ndays=1;
@@ -171,6 +135,19 @@ elseif sophisticated==5
        av_cut_per, std_cut_per, neigh_av_cut_per, neigh_std_cut_per);
 end
 fprintf('\nFraud Data and features created.\n');
+%% Fast cluster prediction
+cluster_pred=zeros(size(Y2D,2),1);
+if sum(idx==1)>sum(idx==2) % Cluster 1 is greater (negative results)
+    cluster_pred(idx==2,1)=1;
+    binary_table=X(idx==2,3:end)~=0;
+    binary_vector=sum(binary_table,2)<3;
+    cluster_pred(idx==2,1)=not(binary_vector);
+else % Cluster 2 is greater (negative results)
+    cluster_pred(idx==1,1)=1;
+    binary_table=X(idx==1,3:end)~=0;
+    binary_vector=sum(binary_table,2)<3;
+    cluster_pred(idx==1,1)=not(binary_vector);
+end
 %% ===  Normalization ===
 prompt=('Apply normalization?\n 0 w/o norm, 1 with norm [-1,1], 2 with norm [0,1]\n');
 apply_normalization=input(prompt);
@@ -205,7 +182,7 @@ end
 
 Intr=sum(Y)/size(Y,1);% Probability of Intrusion based on Days
 consumers=size(X,1);
-Kfolds=2;
+Kfolds=5;
 binary_test_table=zeros(consumers,Kfolds); % cons x Kfolds
 prediction_Kfolds=zeros(consumers/Kfolds,Kfolds);
 % p | ep | pr | rec | in | acc | F1 | BDR
@@ -215,8 +192,7 @@ prompt=('Choose fit of Distribution\n0. percent of instances 1. all negative exa
 fit_on=input(prompt);
 for i=1:Kfolds
     test_idx=(Indices==i); train_idx= ~test_idx;
-    binary_test_table(:,i)=test_idx;
-    
+    binary_test_table(:,i)=test_idx; 
     fprintf('\nSegmented Training and Testing.\n');
     %% Apply anomalyDetection
     if fit_on==0
@@ -239,6 +215,11 @@ for i=1:Kfolds
     [epsilon, F1] = selectThreshold(Y(test_idx), pval);
     prediction=(pval<epsilon);
     prediction_Kfolds(:,i)=prediction;
+    
+    % Operations between two predictions
+    cluster_pred_test=cluster_pred(test_idx,1);
+    prediction=or(cluster_pred_test, prediction);
+    
     % Create confusion Matrix
     % Detection Rate is Recall, False Positive Rate is Inverse recall 
     [precision, recall, in_recall, accuracy, F1score] = confusionMatrix (Y(test_idx), prediction);
@@ -271,4 +252,4 @@ fprintf('kWh Rate %4.2fper | Time Rate %4.2fper |\n',kWh_rate,time_rate);
 fprintf('\nClassification for IDs\n');
 fprintf('| Precision %4.2f | Recall %4.2f | Accuracy %4.2f | F1score %4.2f |\n',precision,recall,accuracy,F1score);
 fprintf('| Actual Fraud %d IDs | Predicted Fraud Right %d IDs | Predicted Fraud Wrong %d IDs |\n',sum(Y(test_idx)==1),sum(prediction==1&Y(test_idx)==prediction),sum(prediction==1&Y(test_idx)~=prediction));
-fprintf(' DR  FPR  BDR  Accuracy F1score\n%4.2f %4.2f %4.2f %4.2f %4.2f\n',recall,in_recall,BDR,accuracy, F1score);
+fprintf(' DR  FPR  BDR  Accuracy F1score\n%4.2f %4.2f %4.2f %4.2f %4.2f\n',recall,in_recall,BDR,accuracy, F1score);  
