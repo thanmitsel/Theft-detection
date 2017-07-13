@@ -58,28 +58,27 @@ elseif x==2
     [kWh_count, time_count, kWh_rate, time_rate] = frauDetails(HH, F_data3D);
 end
 
-%% Feature extraction
+fprintf('\nFraud Simulation done.\n');
+%% Load time series
 % Here we use SVM for many consumers
 
-% No Feature extraction for cons x Days Data
-% Needs threshold 
+% No Feature extraction for cons x (time division)
+% Needs threshold
+ndays=0;
 if x==0
     [Xn]=convertDays3D(F_data3D); % if more days than the threshold then fraud
     ndays=0;
-    Yn=(sum(Y2D)>ndays)';
 elseif x==1
     Xn=f_data2D;
     ndays=0;
-    Yn=(sum(Y2D)>ndays)';
 elseif x==2
     Xn=f_data2D;
-    ndays=0;
-    Yn=(sum(Y2D)>ndays)';
+    ndays=0;    
 end
+Yn=(sum(Y2D)>ndays)';
     
     
-    
-fprintf('\nFraud Data and features created.\n');
+fprintf('\nLoading of time series done.\n');
 %% Create training and testing set
 % Choose from every consumer sample
 
@@ -128,4 +127,10 @@ fprintf('kWh Rate %4.2fper | Time Rate %4.2fper |\n',kWh_rate,time_rate);
 fprintf('\nClassification for Consumers\n');
 fprintf('| Precision %4.2f | Recall %4.2f | Accuracy %4.2f | F1score %4.2f |\n',precision,recall,accuracy,F1score);
 fprintf('| Actual Fraud %d IDs | Predicted Fraud Right %d IDs | Predicted Fraud Wrong %d IDs |\n',sum(Y_test==1),sum(prediction==1&Y_test==prediction),sum(prediction==1&Y_test~=prediction));
-fprintf(' DR  FPR  BDR  Accuracy\n%4.2f %4.2f %4.2f %4.2f \n',recall,in_recall,BDR,accuracy);
+fprintf(' DR   FPR  BDR Accuracy F1score\n%4.2f %4.2f %4.2f %4.2f   %4.2f \n',recall,in_recall,BDR,accuracy,F1score);
+
+prompt='\n-Delete train data?\n0.KEEP/n1.DELETE\n';
+delete_data=input(prompt);
+if delete_data==1
+    delete libSVM.train;
+end
