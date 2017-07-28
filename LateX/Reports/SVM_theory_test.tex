@@ -1,0 +1,105 @@
+\documentclass[a4paper, 11pt]{article}
+\usepackage{comment} % enables the use of multi-line comments (\ifx \fi) 
+\usepackage{fullpage} % changes the margin
+
+\usepackage{tabu} % for nice arrays	
+% For confusion matrix %
+\usepackage{array}
+\usepackage{multirow}
+% For better math
+\usepackage{amsmath}
+
+\newcommand\MyBox[2]{
+  \fbox{\lower0.75cm
+     \vbox to 1.7cm{\vfil
+      \hbox to 1.7cm{\hfil\parbox{1.4cm}{#1\\#2}\hfil}
+      \vfil}%
+   }%
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{graphicx} % For img insert
+\newcommand{\ts}{\textsuperscript} %For numering 1st 2nd
+%% Greek Format %%
+%\usepackage[cm-default]{fontspec}
+%\setromanfont{FreeSerif}
+%\setsansfont{FreeSans}
+%\setmonofont{FreeMono}
+\usepackage{xltxtra}
+\usepackage{xgreek}
+\setmainfont[Mapping=tex-text]{GFS Didot}
+%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+%Header-Make sure you update this information!!!!
+\noindent
+\large\textbf{Θεωρία και Δοκιμή SVM} \hfill \textbf{Αθανάσιος Μητσέλος} \\
+\normalsize ΣΗΜΜΥ \hfill Ημερομηνία Ανάθεσης: 06/12/16  \\
+ΕΜΠ\hfill Τρέχουσα Ημερομηνία: 16/07/17 \\
+
+\section{Εισαγωγή στη γραμμική ταξινόμηση}
+Στα προβλήματα γραμμικού διαχωρισμού, η λογιστική παλινδρόμηση (logistic regression) και η γραμμική μηχανή υποστήριξης διανυσμάτων (linear SVM) είναι τα δύο πιο ευρέως διαδεδομένα μοντέλα. Μπορούμε να εκτιμήσουμε την παράμετρο του μοντέλου, αναπαριστώντας την ως \textbf{w}, λύνοντας το άνευ περιορισμών πρόβλημα βελτιστοποίησης\begin{center}
+$min_\textbf{w}f(\textbf{w})$. (1)
+\end{center}
+Οι υπάρχοντες άνευ περιορισμών μέθοδοι ελαχιστοποίησης μπορούν να εφαρμοστούν επιτυχώς, παρόλο που απαιτούνται κάποιες διορθώσεις για να αντιμετωπιστούν προβλήματα με μεγάλο όγκο δεδομένα. Γενικώς, αυτές οι μέθοδοι παράγουν μια ακολουθία $\{\textbf{w}^k\}^\infty_{k=0}$, η οποία συγκλίνει στην βέλτιστη λύση. Στην k επανάληψη, ευρίσκεται ο φθίνουσας κατεύθυνσης παράγοντας $s^k$, από το $\textbf{w}^k$ της k επανάληψης. Εν συνεχεία αποφασίζεται το μέγεθος του βήματος $a_k>0$ με απώτερο σκοπό την εύρεση του παράγοντα $\textbf{w}^{k+1}$ της επόμενης επανάληψης:
+\begin{center}
+$\textbf{w}^{k+1}=\textbf{w}^k+a_k s^k$. (2)
+\end{center} 
+Η εύρεση των σημαντικών αυτών παραμέτρων, η κατεύθυνση $s^k$ και η επιλογή του μεγέθους του βήματος $a_k$, έχουν ήδη μελετηθεί εκτενώς στη βιβλιογραφία. Για παράδειγμα, η μέθοδος της πλέον απότομης μετάβασης (gradient descent) και η μέθοδος του Newton είναι ευρέως χρησιμοποιούμενες τεχνικές για την εύρεση του $s^k$. Για την απόφαση του μεγέθους $a_k$, έχουμε τις μεθόδους της αναζήτησης γραμμής (line search) και τη μέθοδο του εύρους εμπιστοσύνης (trust region).
+\section{Η μέθοδος Newton και η επιλογή βήματος}
+Δεδομένου ενός σετ εκπαίδευσης $(\textbf{x}_i, y_i)$, $i=1,...,l$, όπου $\textbf{x}_i\in\Re^n$ είναι ένα χαρακτηριστικό διάνυσμα και $y_i=\pm1$ είναι οι ετικέτες, ένας γραμμικός ταξινομητής βρίσκει ένα διάνυσμα βαρών $\textbf{w}\in\Re^n$ επιλύοντας το ακόλουθο πρόβλημα:
+\begin{center}
+$min_\textbf{w}f(\textbf{w})\equiv\frac{1}{2}\textbf{w}^T\textbf{w}+C\sum_{i=1}^{l}\xi(y_i\textbf{w}^T x_i)$, (3)
+\end{center}
+όπου $\textbf{w}^T\textbf{w}/2$ είναι ο όρος κανονικοποίησης, $\xi(y_i\textbf{w}^T x_i)$ είναι η συνάρτηση απωλειών (loss function) και $C>0$ είναι η παράμετρος κανονικοποίησης. Θεωρούμε τις συναρτήσεις στη λογιστική παλινδρόμηση και στην L2:
+\begin{center}
+$\xi_{LR}(y\textbf{w}^T\textbf{x})=log(1 + exp(-y\textbf{w}^T\textbf{x}))$ (4)\\
+$\xi_{L2}(y\textbf{w}^T\textbf{x})=(max(0, 1 - y\textbf{w}^T\textbf{x}))^2$ (5)
+\end{center}
+Η μέθοδος Newton επιλύει το πρόβλημα βελτιστοποίησης εφαρμόζοντας επαναληπτικά κανόνες ανανέωσης όπως στη σχέση (2). Σε κάθε επανάληψη, αποκτάται μια Newton κατεύθυνση $s^k$ ελαχιστοποιώντας την τετραγωνική εκτίμηση
+\begin{center}
+$f(\textbf{w}^k + s)-f(\textbf{w}^k)\approx q_k(s) \equiv \nabla f(\textbf{w}^k)^Ts+\frac{1}{2}s^T\nabla^2f(\textbf{w}^k)s$ (6)
+\end{center}
+όπου $\nabla f(\textbf{w}^k)$ και $\nabla^2f(\textbf{w}^k)$ είναι η κλίση και ο Hessian, αντιστοίχως. Εδώ πρέπει να επισημανθεί πως η συνάρτηση L2 δεν είναι διπλά διαφορίσιμη, αλλά μπορούμε να θεωρήσουμε το γενικευμένο Hessian\cite{finite}. Με τον όρο κανονικοποίησης $\textbf{w}^T\textbf{w}/2$ και την καμπυλότητα των αντικειμενικών συναρτήσεων (4)-(5), ο Hessian πίνακας είναι θετικά ορισμένος, έτσι ώστε να καθορίζεται το $s^k$ λύνοντας το ακόλουθο γραμμικό σύστημα
+\begin{center}
+$\nabla^2f(\textbf{w}^k)s=-\nabla f(\textbf{w}^k)$. (7)
+\end{center}
+Σημειώνεται πως η κλίση και ο Hessian του f(w) είναι αντιστοίχως
+\begin{center}
+$\nabla f(\textbf{w})=\textbf{w}+C\sum_{i=1}^l\xi'(y_i\textbf{w}^T\textbf{x}_i)y_ix_i, \nabla^2f(\textbf{w})=I+CX^TDX$, (8)
+\end{center}
+όπου $D$ είναι ο διαγώνιος πίνακας με
+\begin{center}
+$D_{ii}=\xi''(y_i\textbf{w}^T\textbf{x}_i)$, (9) 
+\end{center}
+$Ι$ είναι ο ταυτοτικός πίνακας και $X = [x_1, ...,x_l]^T$ είναι ο πίνακας δεδομένων.
+Η ακριβής λύση της (7) είναι πολύ ακριβή υπολογιστικά για μεγάλα όγκο δεδομένων, έτσι χρησιμοποιείται ευρέως η παρούσα απλουστευμένη μέθοδος Newton για τη λύση της (7). Τυπικά χρησιμοποιείται μια επαναληπτική μέθοδος όπως η μέθοδος των συζυγή παραγώγων (conjugate gradient)\cite{m_comp,CG}. Η μέθοδος CG περιλαμβάνει μια ακολουθία γινομένου Hessian διανυσμάτων, αλλά για μεγάλο αριθμό χαρακτηριστικών, ο όρος $\nabla^2f(\textbf{w}^k)\in\Re^{nxn}$ είναι πολύ μεγάλος για να αποθηκευτεί. Παλαιότερες προσεγγίσεις \cite{m_finite, Trust_region} έχουν δείξει πως η ιδιαίτερη δομή της (8) επιτρέπει τον υπολογισμό γινομένων των Hessian διανυσμάτων χωρίς απόλυτο ορισμό του Hessian πίνακα:
+\begin{center}
+$\nabla^2f(\textbf{w})s = (I+CX^TDX)s = s + CX^T(D(Xs))$. (10)
+\end{center}
+
+\section*{Συνημμένα}
+\ifx
+Lab Notes, HelloWorld.ic, FooBar.ic,
+\ref{exFPR1}.
+\fi %comment me out
+
+
+\begin{thebibliography}{9}
+\ifx
+\bibitem{Flueck}  Flueck, Alexander J. 2005. \emph{ECE 100}[online]. Chicago: Illinois Institute of Technology, Electrical and Computer Engineering Department, 2005 [cited 30
+August 2005]. Available from World Wide Web: (http://www.ece.iit.edu/~flueck/ece100).
+
+\bibitem{Anomaly} V. Chandola, A. Banerjee, V. Kumar, 2009. \emph{Anomaly Detection: A Survey}, University of Minnesota. September, p. 6, 8.
+\fi
+
+\bibitem{finite} O. L. Mangasarian. \emph{A finite method for classification}. Optim. Methods Soft., 17(5):913-929,2002
+\bibitem{m_comp} G. H. Golub and C. F. Van Loan. \emph{Matrix Computations}. The Johns Hopkins
+University Press, third edition, 1996.
+\bibitem{CG} M. R. Hestenes and E. Stiefel. \emph{Methods of conjugate gradients for solving linear
+systems}. Journal of Research of the National Bureau of Standards, 49:409–436, 1952.
+\bibitem{m_finite} S. S. Keerthi and D. DeCoste. \emph{A modified finite Newton method for fast solution
+of large scale linear SVMs}. JMLR, 6:341–361, 2005.
+\bibitem{Trust_region} C.-J. Lin, R. C. Weng, and S. S. Keerthi. \emph{Trust region Newton method for large-scale logistic regression}. JMLR, 9:627–650, 2008.
+
+\end{thebibliography}
+\end{document}

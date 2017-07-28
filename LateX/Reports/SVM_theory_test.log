@@ -1,9 +1,9 @@
-This is XeTeX, Version 3.14159265-2.6-0.99996 (TeX Live 2016/W32TeX) (preloaded format=xelatex 2017.3.16)  15 JUL 2017 20:26
+This is XeTeX, Version 3.14159265-2.6-0.99996 (TeX Live 2016/W32TeX) (preloaded format=xelatex 2017.3.16)  17 JUL 2017 17:08
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**./Parametric_trend_estimation.tex
-(./Parametric_trend_estimation.tex
+**./SVM_theory_test.tex
+(./SVM_theory_test.tex
 LaTeX2e <2017/01/01> patch level 3
 Babel <3.9r> and hyphenation patterns for 83 language(s) loaded.
 (c:/texlive/2016/texmf-dist/tex/latex/base/article.cls
@@ -79,12 +79,70 @@ Package: multirow 2016/11/25 v2.2 Span multiple rows of a table
 \multirow@dima=\skip48
 \bigstrutjot=\dimen116
 )
+(c:/texlive/2016/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2016/11/05 v2.16a AMS math features
+\@mathmargin=\skip49
+
+For additional information on amsmath, use the `?' option.
+(c:/texlive/2016/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2000/06/29 v2.01 AMS text
+
+(c:/texlive/2016/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks17
+\ex@=\dimen117
+))
+(c:/texlive/2016/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen118
+)
+(c:/texlive/2016/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 2016/03/08 v2.02 operator names
+)
+\inf@bad=\count95
+LaTeX Info: Redefining \frac on input line 213.
+\uproot@=\count96
+\leftroot@=\count97
+LaTeX Info: Redefining \overline on input line 375.
+\classnum@=\count98
+\DOTSCASE@=\count99
+LaTeX Info: Redefining \ldots on input line 472.
+LaTeX Info: Redefining \dots on input line 475.
+LaTeX Info: Redefining \cdots on input line 596.
+\Mathstrutbox@=\box31
+\strutbox@=\box32
+\big@size=\dimen119
+LaTeX Font Info:    Redeclaring font encoding OML on input line 712.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 713.
+\macc@depth=\count100
+\c@MaxMatrixCols=\count101
+\dotsspace@=\muskip10
+\c@parentequation=\count102
+\dspbrk@lvl=\count103
+\tag@help=\toks18
+\row@=\count104
+\column@=\count105
+\maxfields@=\count106
+\andhelp@=\toks19
+\eqnshift@=\dimen120
+\alignsep@=\dimen121
+\tagshift@=\dimen122
+\tagwidth@=\dimen123
+\totwidth@=\dimen124
+\lineht@=\dimen125
+\@envbody=\toks20
+\multlinegap=\skip50
+\multlinetaggap=\skip51
+\mathdisplay@stack=\toks21
+LaTeX Info: Redefining \[ on input line 2817.
+LaTeX Info: Redefining \] on input line 2818.
+)
 (c:/texlive/2016/texmf-dist/tex/latex/graphics/graphicx.sty
 Package: graphicx 2014/10/28 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
 
 (c:/texlive/2016/texmf-dist/tex/latex/graphics/keyval.sty
 Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
-\KV@toks@=\toks17
+\KV@toks@=\toks22
 )
 (c:/texlive/2016/texmf-dist/tex/latex/graphics/graphics.sty
 Package: graphics 2016/10/09 v1.0u Standard LaTeX Graphics (DPC,SPQR)
@@ -101,8 +159,8 @@ Package graphics Info: Driver file: xetex.def on input line 99.
 File: xetex.def 2016/07/11 v4.10 LaTeX color/graphics driver for XeTeX (L3/RRM/
 JK)
 ))
-\Gin@req@height=\dimen117
-\Gin@req@width=\dimen118
+\Gin@req@height=\dimen126
+\Gin@req@width=\dimen127
 )
 (c:/texlive/2016/texmf-dist/tex/latex/xltxtra/xltxtra.sty
 Package: xltxtra 2016/01/21 v0.6 Improvements for the "XeLaTeX" format
@@ -128,144 +186,144 @@ L3 Module: l3tl 2017/02/20 v6967 L3 Token lists
 L3 Module: l3str 2017/02/20 v6967 L3 Strings
 L3 Module: l3seq 2017/02/20 v6967 L3 Sequences and stacks
 L3 Module: l3int 2017/02/18 v6949 L3 Integers
-\c_max_int=\count95
-\l_tmpa_int=\count96
-\l_tmpb_int=\count97
-\g_tmpa_int=\count98
-\g_tmpb_int=\count99
+\c_max_int=\count107
+\l_tmpa_int=\count108
+\l_tmpb_int=\count109
+\g_tmpa_int=\count110
+\g_tmpb_int=\count111
 L3 Module: l3flag 2017/02/20 v6969 L3 Flags
 L3 Module: l3quark 2017/02/17 v6947 L3 Quarks
 L3 Module: l3prg 2017/02/12 v6906 L3 Control structures
-\g__prg_map_int=\count100
+\g__prg_map_int=\count112
 L3 Module: l3clist 2017/02/20 v6967 L3 Comma separated lists
 L3 Module: l3token 2017/02/20 v6967 L3 Experimental token manipulation
 L3 Module: l3prop 2017/02/12 v6906 L3 Property lists
 L3 Module: l3msg 2017/02/20 v6966 L3 Messages
 L3 Module: l3file 2017/02/20 v6964 L3 File and I/O operations
-\c_log_iow=\count101
-\l_iow_line_count_int=\count102
-\l__iow_line_target_int=\count103
-\l__iow_one_indent_int=\count104
-\l__iow_indent_int=\count105
+\c_log_iow=\count113
+\l_iow_line_count_int=\count114
+\l__iow_line_target_int=\count115
+\l__iow_one_indent_int=\count116
+\l__iow_indent_int=\count117
 L3 Module: l3skip 2017/02/20 v6968 L3 Dimensions and skips
-\c_zero_dim=\dimen119
-\c_max_dim=\dimen120
-\l_tmpa_dim=\dimen121
-\l_tmpb_dim=\dimen122
-\g_tmpa_dim=\dimen123
-\g_tmpb_dim=\dimen124
-\c_zero_skip=\skip49
-\c_max_skip=\skip50
-\l_tmpa_skip=\skip51
-\l_tmpb_skip=\skip52
-\g_tmpa_skip=\skip53
-\g_tmpb_skip=\skip54
-\c_zero_muskip=\muskip10
-\c_max_muskip=\muskip11
-\l_tmpa_muskip=\muskip12
-\l_tmpb_muskip=\muskip13
-\g_tmpa_muskip=\muskip14
-\g_tmpb_muskip=\muskip15
+\c_zero_dim=\dimen128
+\c_max_dim=\dimen129
+\l_tmpa_dim=\dimen130
+\l_tmpb_dim=\dimen131
+\g_tmpa_dim=\dimen132
+\g_tmpb_dim=\dimen133
+\c_zero_skip=\skip52
+\c_max_skip=\skip53
+\l_tmpa_skip=\skip54
+\l_tmpb_skip=\skip55
+\g_tmpa_skip=\skip56
+\g_tmpb_skip=\skip57
+\c_zero_muskip=\muskip11
+\c_max_muskip=\muskip12
+\l_tmpa_muskip=\muskip13
+\l_tmpb_muskip=\muskip14
+\g_tmpa_muskip=\muskip15
+\g_tmpb_muskip=\muskip16
 L3 Module: l3keys 2017/02/12 v6906 L3 Key-value interfaces
-\l_keys_choice_int=\count106
+\l_keys_choice_int=\count118
 L3 Module: l3fp 2017/03/11 v6987 L3 Floating points
-\c__fp_leading_shift_int=\count107
-\c__fp_middle_shift_int=\count108
-\c__fp_trailing_shift_int=\count109
-\c__fp_big_leading_shift_int=\count110
-\c__fp_big_middle_shift_int=\count111
-\c__fp_big_trailing_shift_int=\count112
-\c__fp_Bigg_leading_shift_int=\count113
-\c__fp_Bigg_middle_shift_int=\count114
-\c__fp_Bigg_trailing_shift_int=\count115
+\c__fp_leading_shift_int=\count119
+\c__fp_middle_shift_int=\count120
+\c__fp_trailing_shift_int=\count121
+\c__fp_big_leading_shift_int=\count122
+\c__fp_big_middle_shift_int=\count123
+\c__fp_big_trailing_shift_int=\count124
+\c__fp_Bigg_leading_shift_int=\count125
+\c__fp_Bigg_middle_shift_int=\count126
+\c__fp_Bigg_trailing_shift_int=\count127
 L3 Module: l3sort 2017/02/20 v6967 L3 Sorting functions
-\l__sort_length_int=\count116
-\l__sort_min_int=\count117
-\l__sort_top_int=\count118
-\l__sort_max_int=\count119
-\l__sort_true_max_int=\count120
-\l__sort_block_int=\count121
-\l__sort_begin_int=\count122
-\l__sort_end_int=\count123
-\l__sort_A_int=\count124
-\l__sort_B_int=\count125
-\l__sort_C_int=\count126
+\l__sort_length_int=\count128
+\l__sort_min_int=\count129
+\l__sort_top_int=\count130
+\l__sort_max_int=\count131
+\l__sort_true_max_int=\count132
+\l__sort_block_int=\count133
+\l__sort_begin_int=\count134
+\l__sort_end_int=\count135
+\l__sort_A_int=\count136
+\l__sort_B_int=\count137
+\l__sort_C_int=\count138
 L3 Module: l3box 2017/02/17 v6943 L3 Experimental boxes
-\c_empty_box=\box31
-\l_tmpa_box=\box32
-\l_tmpb_box=\box33
-\g_tmpa_box=\box34
-\g_tmpb_box=\box35
+\c_empty_box=\box33
+\l_tmpa_box=\box34
+\l_tmpb_box=\box35
+\g_tmpa_box=\box36
+\g_tmpb_box=\box37
 L3 Module: l3coffins 2017/02/12 v6906 L3 Coffin code layer
-\l__coffin_internal_box=\box36
-\l__coffin_internal_dim=\dimen125
-\l__coffin_offset_x_dim=\dimen126
-\l__coffin_offset_y_dim=\dimen127
-\l__coffin_x_dim=\dimen128
-\l__coffin_y_dim=\dimen129
-\l__coffin_x_prime_dim=\dimen130
-\l__coffin_y_prime_dim=\dimen131
-\c_empty_coffin=\box37
-\l__coffin_aligned_coffin=\box38
-\l__coffin_aligned_internal_coffin=\box39
-\l_tmpa_coffin=\box40
-\l_tmpb_coffin=\box41
-\l__coffin_display_coffin=\box42
-\l__coffin_display_coord_coffin=\box43
-\l__coffin_display_pole_coffin=\box44
-\l__coffin_display_offset_dim=\dimen132
-\l__coffin_display_x_dim=\dimen133
-\l__coffin_display_y_dim=\dimen134
+\l__coffin_internal_box=\box38
+\l__coffin_internal_dim=\dimen134
+\l__coffin_offset_x_dim=\dimen135
+\l__coffin_offset_y_dim=\dimen136
+\l__coffin_x_dim=\dimen137
+\l__coffin_y_dim=\dimen138
+\l__coffin_x_prime_dim=\dimen139
+\l__coffin_y_prime_dim=\dimen140
+\c_empty_coffin=\box39
+\l__coffin_aligned_coffin=\box40
+\l__coffin_aligned_internal_coffin=\box41
+\l_tmpa_coffin=\box42
+\l_tmpb_coffin=\box43
+\l__coffin_display_coffin=\box44
+\l__coffin_display_coord_coffin=\box45
+\l__coffin_display_pole_coffin=\box46
+\l__coffin_display_offset_dim=\dimen141
+\l__coffin_display_x_dim=\dimen142
+\l__coffin_display_y_dim=\dimen143
 L3 Module: l3color 2016/12/28 v6805 L3 Experimental color support
 L3 Module: l3sys 2017/02/22 v6976 L3 Experimental system/runtime functions
 L3 Module: l3deprecation 2017/02/20 v6966 L3 Deprecation errors
 L3 Module: l3candidates 2017/02/20 v6967 L3 Experimental additions to l3kernel
-\l__box_top_dim=\dimen135
-\l__box_bottom_dim=\dimen136
-\l__box_left_dim=\dimen137
-\l__box_right_dim=\dimen138
-\l__box_top_new_dim=\dimen139
-\l__box_bottom_new_dim=\dimen140
-\l__box_left_new_dim=\dimen141
-\l__box_right_new_dim=\dimen142
-\l__box_internal_box=\box45
-\l__coffin_bounding_shift_dim=\dimen143
-\l__coffin_left_corner_dim=\dimen144
-\l__coffin_right_corner_dim=\dimen145
-\l__coffin_bottom_corner_dim=\dimen146
-\l__coffin_top_corner_dim=\dimen147
-\l__coffin_scaled_total_height_dim=\dimen148
-\l__coffin_scaled_width_dim=\dimen149
+\l__box_top_dim=\dimen144
+\l__box_bottom_dim=\dimen145
+\l__box_left_dim=\dimen146
+\l__box_right_dim=\dimen147
+\l__box_top_new_dim=\dimen148
+\l__box_bottom_new_dim=\dimen149
+\l__box_left_new_dim=\dimen150
+\l__box_right_new_dim=\dimen151
+\l__box_internal_box=\box47
+\l__coffin_bounding_shift_dim=\dimen152
+\l__coffin_left_corner_dim=\dimen153
+\l__coffin_right_corner_dim=\dimen154
+\l__coffin_bottom_corner_dim=\dimen155
+\l__coffin_top_corner_dim=\dimen156
+\l__coffin_scaled_total_height_dim=\dimen157
+\l__coffin_scaled_width_dim=\dimen158
 L3 Module: l3luatex 2017/02/18 v6953 L3 Experimental LuaTeX-specific functions
 )
 (c:/texlive/2016/texmf-dist/tex/latex/l3kernel/l3xdvipdfmx.def
 File: l3xdvidpfmx.def 2017/02/18 v6953 L3 Experimental driver: xdvipdfmx
-\l__driver_tmp_box=\box46
+\l__driver_tmp_box=\box48
 ))
 (c:/texlive/2016/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
 Package: xparse 2017/03/11 v6988 L3 Experimental document command parser
-\l__xparse_current_arg_int=\count127
-\g__xparse_grabber_int=\count128
-\l__xparse_m_args_int=\count129
-\l__xparse_mandatory_args_int=\count130
-\l__xparse_v_nesting_int=\count131
+\l__xparse_current_arg_int=\count139
+\g__xparse_grabber_int=\count140
+\l__xparse_m_args_int=\count141
+\l__xparse_mandatory_args_int=\count142
+\l__xparse_v_nesting_int=\count143
 )
 Package: fontspec 2017/02/12 v2.6 Font selection for XeLaTeX and LuaLaTeX
 
 (c:/texlive/2016/texmf-dist/tex/latex/fontspec/fontspec-xetex.sty
 Package: fontspec-xetex 2017/02/12 v2.6 Font selection for XeLaTeX and LuaLaTeX
 
-\l__fontspec_script_int=\count132
-\l__fontspec_language_int=\count133
-\l__fontspec_strnum_int=\count134
-\l__fontspec_tmp_int=\count135
-\l__fontspec_em_int=\count136
-\l__fontspec_emdef_int=\count137
-\l__fontspec_strong_int=\count138
-\l__fontspec_strongdef_int=\count139
-\l__fontspec_tmpa_dim=\dimen150
-\l__fontspec_tmpb_dim=\dimen151
-\l__fontspec_tmpc_dim=\dimen152
+\l__fontspec_script_int=\count144
+\l__fontspec_language_int=\count145
+\l__fontspec_strnum_int=\count146
+\l__fontspec_tmp_int=\count147
+\l__fontspec_em_int=\count148
+\l__fontspec_emdef_int=\count149
+\l__fontspec_strong_int=\count150
+\l__fontspec_strongdef_int=\count151
+\l__fontspec_tmpa_dim=\dimen159
+\l__fontspec_tmpb_dim=\dimen160
+\l__fontspec_tmpc_dim=\dimen161
 \g__file_internal_ior=\read1
 
 (c:/texlive/2016/texmf-dist/tex/latex/base/fontenc.sty
@@ -483,28 +541,28 @@ ts
 . 
 . Defining command \textsupersubscript with sig. 'sO{l}mm' on line 143.
 .................................................
-\subsupersep=\dimen153
+\subsupersep=\dimen162
 )
 (c:/texlive/2016/texmf-dist/tex/latex/metalogo/metalogo.sty
 Package: metalogo 2010/05/29 v0.12 Extended TeX logo macros
-\xl@everylogo=\toks18
-\xl@@everylogo=\toks19
+\xl@everylogo=\toks23
+\xl@@everylogo=\toks24
 LaTeX Info: Redefining \TeX on input line 193.
 LaTeX Info: Redefining \LaTeX on input line 202.
 LaTeX Info: Redefining \LaTeXe on input line 219.
 )
-\l__xetex_show_hyphens_wrapping_box=\box47
-\l__xetex_show_hyphens_temp_box=\box48
-\l__xetex_show_hyphens_final_box=\box49
-\g__xetex_show_hyphens_word_box=\box50
+\l__xetex_show_hyphens_wrapping_box=\box49
+\l__xetex_show_hyphens_temp_box=\box50
+\l__xetex_show_hyphens_final_box=\box51
+\g__xetex_show_hyphens_word_box=\box52
 )
 (c:/texlive/2016/texmf-dist/tex/xelatex/xgreek/xgreek.sty
 File: xgreek.sty 2017/02/10 v3.0 Package `xgreek.sty'
 
 Package `xgreek' version 3.0 by Apostolos Syropoulos
-\@attic@num=\count140
+\@attic@num=\count152
 )
-\g__fontspec_family_GFSDidot_int=\count141
+\g__fontspec_family_GFSDidot_int=\count153
 .................................................
 . fontspec info: "defining-font"
 . 
@@ -527,25 +585,24 @@ Package `xgreek' version 3.0 by Apostolos Syropoulos
 . Didot/BI/OT:script=latn;language=DFLT;mapping=tex-text;"
 . - 'bold italic small caps'  (bx/itsc) with NFSS spec.: 
 .................................................
-LaTeX Info: Redefining \rmfamily on input line 27.
+LaTeX Info: Redefining \rmfamily on input line 29.
+ (./SVM_theory_test.aux)
+\openout1 = `SVM_theory_test.aux'.
 
-(./Parametric_trend_estimation.aux)
-\openout1 = `Parametric_trend_estimation.aux'.
-
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
 .................................................
 . fontspec info: "setup-math"
 . 
@@ -553,151 +610,82 @@ LaTeX Font Info:    ... okay on input line 30.
 .................................................
 \symlegacymaths=\mathgroup4
 LaTeX Font Info:    Overwriting symbol font `legacymaths' in version `bold'
-(Font)                  OT1/cmr/m/n --> OT1/cmr/bx/n on input line 30.
-LaTeX Font Info:    Redeclaring math accent \acute on input line 30.
-LaTeX Font Info:    Redeclaring math accent \grave on input line 30.
-LaTeX Font Info:    Redeclaring math accent \ddot on input line 30.
-LaTeX Font Info:    Redeclaring math accent \tilde on input line 30.
-LaTeX Font Info:    Redeclaring math accent \bar on input line 30.
-LaTeX Font Info:    Redeclaring math accent \breve on input line 30.
-LaTeX Font Info:    Redeclaring math accent \check on input line 30.
-LaTeX Font Info:    Redeclaring math accent \hat on input line 30.
-LaTeX Font Info:    Redeclaring math accent \dot on input line 30.
-LaTeX Font Info:    Redeclaring math accent \mathring on input line 30.
-LaTeX Font Info:    Redeclaring math symbol \colon on input line 30.
-LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 30.
-LaTeX Font Info:    Redeclaring math symbol \Delta on input line 30.
-LaTeX Font Info:    Redeclaring math symbol \Theta on input line 30.
-LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 30.
-LaTeX Font Info:    Redeclaring math symbol \Xi on input line 30.
-LaTeX Font Info:    Redeclaring math symbol \Pi on input line 30.
-LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 30.
-LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 30.
-LaTeX Font Info:    Redeclaring math symbol \Phi on input line 30.
-LaTeX Font Info:    Redeclaring math symbol \Psi on input line 30.
-LaTeX Font Info:    Redeclaring math symbol \Omega on input line 30.
-LaTeX Font Info:    Redeclaring math symbol \mathdollar on input line 30.
-LaTeX Font Info:    Redeclaring symbol font `operators' on input line 30.
+(Font)                  OT1/cmr/m/n --> OT1/cmr/bx/n on input line 32.
+LaTeX Font Info:    Redeclaring math accent \acute on input line 32.
+LaTeX Font Info:    Redeclaring math accent \grave on input line 32.
+LaTeX Font Info:    Redeclaring math accent \ddot on input line 32.
+LaTeX Font Info:    Redeclaring math accent \tilde on input line 32.
+LaTeX Font Info:    Redeclaring math accent \bar on input line 32.
+LaTeX Font Info:    Redeclaring math accent \breve on input line 32.
+LaTeX Font Info:    Redeclaring math accent \check on input line 32.
+LaTeX Font Info:    Redeclaring math accent \hat on input line 32.
+LaTeX Font Info:    Redeclaring math accent \dot on input line 32.
+LaTeX Font Info:    Redeclaring math accent \mathring on input line 32.
+LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 32.
+LaTeX Font Info:    Redeclaring math symbol \Delta on input line 32.
+LaTeX Font Info:    Redeclaring math symbol \Theta on input line 32.
+LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 32.
+LaTeX Font Info:    Redeclaring math symbol \Xi on input line 32.
+LaTeX Font Info:    Redeclaring math symbol \Pi on input line 32.
+LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 32.
+LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 32.
+LaTeX Font Info:    Redeclaring math symbol \Phi on input line 32.
+LaTeX Font Info:    Redeclaring math symbol \Psi on input line 32.
+LaTeX Font Info:    Redeclaring math symbol \Omega on input line 32.
+LaTeX Font Info:    Redeclaring math symbol \mathdollar on input line 32.
+LaTeX Font Info:    Redeclaring symbol font `operators' on input line 32.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `normal' on input line 30.
+(Font)              `operators' in the math version `normal' on input line 32.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  OT1/cmr/m/n --> TU/GFSDidot(0)/m/n on input line 30.
+(Font)                  OT1/cmr/m/n --> TU/GFSDidot(0)/m/n on input line 32.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `bold' on input line 30.
+(Font)              `operators' in the math version `bold' on input line 32.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  OT1/cmr/bx/n --> TU/GFSDidot(0)/m/n on input line 30.
+(Font)                  OT1/cmr/bx/n --> TU/GFSDidot(0)/m/n on input line 32.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
 (Font)                  TU/GFSDidot(0)/m/n --> TU/GFSDidot(0)/m/n on input line
- 30.
+ 32.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  OT1/cmr/m/it --> TU/GFSDidot(0)/m/it on input line 30.
+(Font)                  OT1/cmr/m/it --> TU/GFSDidot(0)/m/it on input line 32.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
-(Font)                  OT1/cmr/bx/n --> TU/GFSDidot(0)/bx/n on input line 30.
+(Font)                  OT1/cmr/bx/n --> TU/GFSDidot(0)/bx/n on input line 32.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  OT1/cmss/m/n --> TU/lmss/m/n on input line 30.
+(Font)                  OT1/cmss/m/n --> TU/lmss/m/n on input line 32.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  OT1/cmtt/m/n --> TU/lmtt/m/n on input line 30.
+(Font)                  OT1/cmtt/m/n --> TU/lmtt/m/n on input line 32.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
 (Font)                  TU/GFSDidot(0)/m/n --> TU/GFSDidot(0)/bx/n on input lin
-e 30.
+e 32.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  OT1/cmr/bx/it --> TU/GFSDidot(0)/bx/it on input line 30
+(Font)                  OT1/cmr/bx/it --> TU/GFSDidot(0)/bx/it on input line 32
 .
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/cmss/bx/n --> TU/lmss/bx/n on input line 30.
+(Font)                  OT1/cmss/bx/n --> TU/lmss/bx/n on input line 32.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/cmtt/m/n --> TU/lmtt/bx/n on input line 30.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <10.95> on input line 43.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 43.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 43.
-File: ../../plots/Trend_estimation/quadratic_Trend_ALL.png Graphic file (type Q
-Tm)
+(Font)                  OT1/cmtt/m/n --> TU/lmtt/bx/n on input line 32.
 
-<use  "../../plots/Trend_estimation/quadratic_Trend_ALL.png" >
-Overfull \hbox (59.1734pt too wide) in paragraph at lines 47--48
- [][] 
+Underfull \hbox (badness 10000) in paragraph at lines 34--38
+
+ []
+
+
+Overfull \hbox (0.64636pt too wide) in paragraph at lines 40--40
+[]\TU/GFSDidot(0)/m/n/10.95 Στα προβλήματα γραμμικού διαχωρισμού, η λογιστική π
+αλινδρόμηση (logistic regression)
  []
 
 [1
 
-] [2]
-File: ../../plots/Trend_estimation/seasonal_1.png Graphic file (type QTm)
- <use  "../../plots/Trend_estimation/seasonal_1.png" >
-Overfull \hbox (59.1734pt too wide) in paragraph at lines 77--78
- [][] 
- []
-
-File: ../../plots/Trend_estimation/seasonal_2.png Graphic file (type QTm)
-<use  "../../plots/Trend_estimation/seasonal_2.png" >
-Overfull \hbox (59.1734pt too wide) in paragraph at lines 82--83
- [][] 
- []
-
-File: ../../plots/Trend_estimation/seasonal_3.png Graphic file (type QTm)
-<use  "../../plots/Trend_estimation/seasonal_3.png" >
-Overfull \hbox (59.1734pt too wide) in paragraph at lines 87--88
- [][] 
- []
-
-File: ../../plots/Trend_estimation/seasonal_4.png Graphic file (type QTm)
-<use  "../../plots/Trend_estimation/seasonal_4.png" >
-Overfull \hbox (59.1734pt too wide) in paragraph at lines 92--93
- [][] 
- []
-
-[3]
-
-LaTeX Warning: Text page 4 contains only floats.
-
-[4]
-File: ../../plots/Trend_estimation/seasonal_month_ALL.png Graphic file (type QT
-m)
- <use  "../../plots/Trend_estimation/seasonal_month_ALL.png" >
-Overfull \hbox (59.1734pt too wide) in paragraph at lines 109--110
- [][] 
- []
-
-File: ../../plots/Trend_estimation/Deseasonalized_ALL.png Graphic file (type QT
-m)
-<use  "../../plots/Trend_estimation/Deseasonalized_ALL.png" >
-Overfull \hbox (59.1734pt too wide) in paragraph at lines 117--118
- [][] 
- []
-
-[5] [6]
-File: ../../plots/Trend_estimation/Deseasonalized_month_ALL.png Graphic file (t
-ype QTm)
- <use  "../../plots/Trend_estimation/Deseasonalized_month_ALL.png" >
-Overfull \hbox (59.1734pt too wide) in paragraph at lines 124--125
- [][] 
- []
-
-File: ../../plots/Trend_estimation/irregular_component_all.png Graphic file (ty
-pe QTm)
-<use  "../../plots/Trend_estimation/irregular_component_all.png" >
-Overfull \hbox (59.1734pt too wide) in paragraph at lines 132--133
- [][] 
- []
-
-[7]
-File: ../../plots/Trend_estimation/irregular_component_month_all.png Graphic fi
-le (type QTm)
- <use  "../../plots/Trend_estimation/irregular_component_month_all.png" >
-Overfull \hbox (59.1734pt too wide) in paragraph at lines 139--140
- [][] 
- []
-
-[8] [9] [10] (./Parametric_trend_estimation.aux) ) 
+]
+Missing character: There is no Ι in font cmmi10!
+ [2] (./SVM_theory_test.aux) ) 
 Here is how much of TeX's memory you used:
- 10756 strings out of 493068
- 234250 string characters out of 6138948
- 299771 words of memory out of 5000000
- 14617 multiletter control sequences out of 15000+600000
- 6499 words of font info for 38 fonts, out of 8000000 for 9000
+ 11343 strings out of 493068
+ 240547 string characters out of 6138948
+ 311372 words of memory out of 5000000
+ 15195 multiletter control sequences out of 15000+600000
+ 7205 words of font info for 45 fonts, out of 8000000 for 9000
  1347 hyphenation exceptions out of 8191
- 42i,7n,66p,10417b,234s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 42i,4n,66p,10405b,234s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on Parametric_trend_estimation.pdf (10 pages).
+Output written on SVM_theory_test.pdf (2 pages).

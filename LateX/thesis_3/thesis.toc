@@ -1,0 +1,24 @@
+\contentsline {chapter}{List of Figures}{viii}{section*.2}
+\contentsline {chapter}{List of Tables}{x}{section*.3}
+\contentsline {chapter}{List of Acronyms}{xiii}{chapter*.4}
+\contentsline {chapter}{\chapternumberline {1}Introduction}{1}{chapter.1}
+\contentsline {section}{\numberline {1.1}Todays' Security Threats}{3}{section.1.1}
+\contentsline {subsection}{\numberline {1.1.1}The Role of Intrusion Detection}{4}{subsection.1.1.1}
+\contentsline {section}{\numberline {1.2}Original Contributions}{8}{section.1.2}
+\contentsline {subsection}{\numberline {1.2.1}Host-based Anomaly Detection}{8}{subsection.1.2.1}
+\contentsline {subsection}{\numberline {1.2.2}Web-based Anomaly Detection}{9}{subsection.1.2.2}
+\contentsline {subsection}{\numberline {1.2.3}Alert Correlation}{10}{subsection.1.2.3}
+\contentsline {chapter}{\chapternumberline {2}A Chapter of Examples}{11}{chapter.2}
+\contentsline {section}{\numberline {2.1}A Table}{11}{section.2.1}
+\contentsline {section}{\numberline {2.2}Code}{11}{section.2.2}
+\contentsline {section}{\numberline {2.3}A Sideways Table}{12}{section.2.3}
+\contentsline {section}{\numberline {2.4}A Figure}{14}{section.2.4}
+\contentsline {section}{\numberline {2.5}Bulleted List}{14}{section.2.5}
+\contentsline {section}{\numberline {2.6}Numbered List}{14}{section.2.6}
+\contentsline {section}{\numberline {2.7}A Description}{14}{section.2.7}
+\contentsline {section}{\numberline {2.8}An Equation}{15}{section.2.8}
+\contentsline {section}{\numberline {2.9}A Theorem, Proposition \& Proof}{15}{section.2.9}
+\contentsline {section}{\numberline {2.10}Definition}{16}{section.2.10}
+\contentsline {section}{\numberline {2.11}A Remark}{16}{section.2.11}
+\contentsline {section}{\numberline {2.12}An Example}{16}{section.2.12}
+\contentsline {section}{\numberline {2.13}Note}{16}{section.2.13}

@@ -1,0 +1,5 @@
+\addvspace {10pt}
+\addvspace {10pt}
+\contentsline {figure}{\numberline {1.1}{\ignorespaces Illustration taken from\nobreakspace {}\citep {holz} and \copyright 2005 IEEE. Authorized license limited to University of California\xspace .}}{4}{figure.1.1}
+\addvspace {10pt}
+\contentsline {figure}{\numberline {2.1}{\ignorespaces \texttt {telnetd}: distribution of the number of other system calls among two \texttt {execve} system calls (i.e., distance between two consecutive \texttt {execve}).}}{14}{figure.2.1}
