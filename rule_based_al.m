@@ -1,4 +1,4 @@
-%% Full unsupervised algorithm with 
+%% Fully unsupervised algorithm with 
   %  form cluster
     % pick some z vector 
     z=2000;
@@ -50,21 +50,40 @@ end
 
 daily_norm=daily_norm_t';
 
-% K-Means
-    
+prompt=('Form Clustering.\n 0. K-Means 1. Fuzzy\n');
+form_cluster=input(prompt);
+     
 K_clusters=2;    
-max_iters=10;        
-cluster_input=daily_norm;        
-cost=1000000000;          
-% 5 random initializations        
-for j=1:5            
-    initial_centroids = kMeansInitCentroids(cluster_input, K_clusters);             
-    [temp_cost, temp_centroids, temp_idx] = runkMeans(cluster_input, initial_centroids, max_iters);        
-    if cost>temp_cost % Pick the lowest cost        
-        cost=temp_cost;                
-        centroids=temp_centroids;                
-        idx=temp_idx;            
-    end    
+max_iters=10;            
+cluster_input=daily_norm;
+if form_cluster==0
+    % K-Means   
+    cost=1000000000;          
+    % 5 random initializations        
+    for j=1:5            
+        initial_centroids = kMeansInitCentroids(cluster_input, K_clusters);             
+        [temp_cost, temp_centroids, temp_idx] = runkMeans(cluster_input, initial_centroids, max_iters);        
+        if cost>temp_cost % Pick the lowest cost        
+            cost=temp_cost;                
+            centroids=temp_centroids;                
+            idx=temp_idx;            
+        end    
+    end
+elseif form_cluster==1
+    divider=5;
+    smaller_cluster_input=zeros(size(daily_consumption,1),365/divider);
+    for w=1:365/divider
+        smaller_cluster_input(:,w)=sum(daily_consumption(:,(divider*w-4):divider*w),2);
+    end
+    % Fuzzy C-Means
+    options=[3 NaN NaN 0];
+    [~,U,objfnc] = fcm(cluster_input,K_clusters, options);
+    maxU=max(U);
+    idx=zeros(size(daily_consumption,1),1);
+    for i=1:K_clusters
+        temp_idx=U(i,:)==maxU;
+        idx(temp_idx,1)=i;
+    end
 end
 %% Feature extraction
 prompt=('Choose fast or sophisticated features\n0. fast 1. sofisticated (KMEANS) 2. mixed (KMEANS) 3. sofisticated (Fuzzy) 4. sofisticated (SOM) 5. Euclidian\n');
@@ -158,8 +177,8 @@ pred_big=zeros(size(Y_big));
 %pred_big=sum(binary_table,2)>=3;
 
 pred_small=ones(size(Y_small));
-binary_table=X_small(:,3:end)~=0;
-binary_vector=sum(binary_table,2)<3;
+binary_table=X_small(:,3:end)~=0; % how many features
+binary_vector=sum(binary_table,2)<3; % less than 3 features consider negative
 %binary_vector=sum(X_small(:,3:end),2)==0;
 pred_small(binary_vector)=0;
 %% Results
@@ -186,4 +205,50 @@ fprintf('\nClassification for IDs\n');
 fprintf('| Precision %4.2f | Recall %4.2f | Accuracy %4.2f | F1score %4.2f |\n',precision,recall,accuracy,F1score);
 fprintf('| Actual Fraud %d IDs | Predicted Fraud Right %d IDs | Predicted Fraud Wrong %d IDs |\n',sum(Y==1), tp, fp);
 fprintf(' DR  FPR  BDR  Accuracy F1score\n%4.2f %4.2f %4.2f %4.2f %4.2f\n',recall,in_recall,BDR,accuracy, F1score);
-fprintf('\nProgramm Paused, if u need FPR analysis press any key\nelse press Ctrl+C\n');
+%% Apply Confidence on results
+if form_cluster==1
+looking_for=100;
+confident_idx=zeros(looking_for,1);
+maxU_indexed=[1:z ; maxU]';
+sort_max=sortrows(maxU_indexed, 2);
+confident=sort_max((end-looking_for+1):end,:);
+confident_idx(:,1)=confident(:,1);
+confident_prediction=ones(looking_for,1);
+
+% This segment doesn't really help get lower FP
+%binary_table_conf=X(confident_idx,3:end)~=0; % how many features
+%binary_vector_conf=sum(binary_table_conf,2)<2; % less than 3 features consider negative
+%%binary_vector=sum(X_small(:,3:end),2)==0;
+%confident_prediction(binary_vector_conf)=0;
+
+right=sum(Y(confident_idx,1)==confident_prediction);
+wrong=sum(Y(confident_idx,1)~=confident_prediction);
+
+tp=sum((confident_prediction==Y(confident_idx,1))&(confident_prediction==1)); % Predicted yes, actual yes
+tn=sum((confident_prediction==Y(confident_idx,1))&(confident_prediction==0)); % Predicted no , actual no 
+fp=sum((confident_prediction==1)&(Y(confident_idx,1)==0)); % Predicted yes, actual no
+fn=sum((confident_prediction==0)&(Y(confident_idx,1)==1)); % Predicted no, actual yes
+
+fprintf('\nLooking for %d, right predicions %d, wrong predictions %d\n', looking_for, right, wrong);
+fprintf('| TP=%d | TN=%d | FP=%d | FN=%d |\n', tp, tn, fp, fn);
+
+for i=1:fraud_rate*z
+    looking_for=i;
+    confident_idx=zeros(looking_for,1);
+    maxU_indexed=[1:z ; maxU]';
+    sort_max=sortrows(maxU_indexed, 2);
+    confident=sort_max((end-looking_for+1):end,:);
+    confident_idx(:,1)=confident(:,1);
+    confident_prediction=ones(looking_for,1);
+
+    % This segment doesn't really help get lower FP
+    %binary_table_conf=X(confident_idx,3:end)~=0; % how many features
+    %binary_vector_conf=sum(binary_table_conf,2)<2; % less than 3 features consider negative
+    %%binary_vector=sum(X_small(:,3:end),2)==0;
+    %confident_prediction(binary_vector_conf)=0;
+
+    right(looking_for,1)=sum(Y(confident_idx,1)==confident_prediction);
+    wrong(i,1)=sum(Y(confident_idx,1)~=confident_prediction);
+end
+plot(1:fraud_rate*z,wrong(:,1));
+end

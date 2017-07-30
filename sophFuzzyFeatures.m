@@ -61,10 +61,9 @@ daily_std3D=basic_features3D(:,2,:);
 daily_std=permute(daily_std3D,[3 1 2]);
 
 K=4;
-max_iters=10;
 cluster_input=[average_consumption std_consumption];
 % Fuzzy C-Means
-[centers,U] = fcm(cluster_input,K);
+[~,U] = fcm(cluster_input,K);
 maxU=max(U);
 idx=zeros(size(daily_consumption,1),1);
 for i=1:K
