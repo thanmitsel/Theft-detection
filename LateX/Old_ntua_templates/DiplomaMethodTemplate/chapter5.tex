@@ -1,0 +1,43 @@
+\chapter{< τίτλος που αφορά την επίλυση του προβλήματος >, π.χ.: Επεξεργασία πιθανοτικών ερωτημάτων \tl{\textit{k}}-εγγύτερων γειτόνων}
+\label{chap5}
+
+\section{Εισαγωγή}
+
+Εδώ εξηγούμε ότι θα περιγράψουμε το κύριο κομμάτι της διπλωματικής μας, που είναι στην ουσία η ανάπτυξη μεθόδων και αλγορίθμων για την επίλυση του προβλήματος που ορίσαμε στο προηγούμενο κεφάλαιο. 
+
+\section{<τίτλος που αφορά τεχνική/αλγόριθμο 1, π.χ.: Εφαρμογή φίλτρων βάσει καννάβου>}
+
+Περιγραφές μπορούν να γίνουν βάζοντας ενδεικτικά κομμάτια κώδικα ή ψευδοκώδικα, όπως ο Αλγόριθμος \ref{alg:processing} και περιγράφοντάς τα με λόγια. Μην ξεχνάτε να δίνετε πάντα παραδείγματα για το πώς τρέχει ένα κομμάτι ψευδοκώδικα π.χ. για έναν αλγόριθμο.
+Αν έχετε επίσης θεωρήματα που αποδεικνύουν κάποια αποτελέσματα των τεχνικών/αλγορίθμων, τα βάζετε εδώ. 
+
+\begin{otherlanguage}{english}
+\begin{algorithm}
+\caption{\ \ \ Probabilistic $k\theta NN$ Monitoring}
+\begin{algorithmic}[1]
+\begin{footnotesize}
+
+\STATE{\bf Procedure} {\em VerifyCandidate} (focal query point $q$, threshold $\theta$, object $o$, list of auxiliary objects $P$, distance $kMAXDIST$) 
+
+\IF { $\Phi(o, kMAXDIST) \geq \theta$ {\bf and} $L_2(q, o) \leq L_2(q, P.$top()) }
+
+\STATE {$P$.pop()};   \ \ \ \ \ \ \ \ {\em //Replace the most extreme element in $P$, since candidate $o$ ... }
+
+\STATE {$P$.push($o$)};  \ \ \ \ \ {\em //... has enough probability and has its mean closer to focal $q$ }
+
+\ENDIF
+
+\STATE {\bf End Procedure}
+
+
+\end{footnotesize}
+\end{algorithmic}
+\label{alg:processing}
+\end{algorithm}
+\end{otherlanguage}
+
+
+\section{<τίτλος που αφορά τεχνική/αλγόριθμο 2, π.χ.: Βελτιστοποίηση αναζητήσεων>}
+
+...
+
+

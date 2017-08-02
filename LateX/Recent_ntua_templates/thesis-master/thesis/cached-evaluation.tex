@@ -1,0 +1,745 @@
+\chapter{Performance evaluation of cached}\label{ch:cached-evaluation}
+
+\begin{flushright}
+	\textit{"There are three kinds of lies:\\
+		lies, damned lies, \\
+		and \sout{statistics} benchmarks."}	\\
+
+	Mark Twain (modernized)
+\end{flushright}
+
+It may seem as an ironic statement, considering that we are about to provide 
+benchmark results for cached, but it is actually a valid one.
+\begin{comment}
+What Mr.  Twain tries to say here
+\footnote{
+	and that's a phrase usually not heard in programming contexts...
+}
+is that the presentation of partials facts for something can be used to 
+fabricate a plausible truth for it.
+%This is shit, fix it
+In science's case, it so often happens that promising results for an experiment 
+can seem more important to the researcher's eye than negative ones due to 
+positive reinforcement.
+\end{comment}
+In our case, we will try not to smear the next pages with diagrams but first 
+explain the benchmarking methodology behind them, provide a concrete depiction 
+of cached's performance under various workloads, and finally explain the 
+results in depth.
+
+The skeleton of this chapter is the following:
+
+Section \ref{sec:perf-meth} explains the methodology behind our measurements.  
+Section \ref{sec:test-bed} provides details about the hardware on which we have 
+conducted our benchmarks.  Section \ref{sec:vs-plot} presents comparative 
+benchmarks for cached and sosd and quantify the performance gain of our 
+implementation. Section \ref{sec:internals-plot} sheds some light on the 
+internals of cached with the use of several special-purpose synthetic 
+benchmarks.  Finally, Section \ref{sec:vm-plot} evaluates the actual 
+performance of Archipelago and cached for a real VM and compares the results 
+with the results of the previous sections.
+
+\section{Benchmark methodology}\label{sec:perf-meth}
+
+The benchmarks that have been executed and whose results are presented in this 
+chapter, will be split in three categories, all of which have their own 
+distinct goals:
+
+The first category is the comparison between using cached \textbf{on top} of 
+the sosd peer (sosd has been discussed in Section \ref{sec:rados-archip}) and 
+using solely the sosd peer.
+
+\begin{comment}
+The category's goal is to "defend" one of the core thesis arguments, that 
+tiering is a key element that will improve the performance of Archipelago.  
+\end{comment}
+
+In order to effectively compare the performance of cached and sosd, we must 
+consider the following: 
+
+\begin{enumerate}
+	\item The comparison of the two peers should try to focus on what is 
+		the best performance that these peers can achieve for a series 
+		of tough workloads.
+	\item The circumstances under which both peers will be tested need not 
+		be thorough but challenging. For example, it may be interesting 
+		to test both peers against sequential requests, but
+		\begin{inparaenum}[i)]
+		\item such patterns are rarely a nuisance for production environments,
+		\item they do not stress the peers enough to provide something 
+			conclusive and
+		\item they are out of the scope of this section as there can be many 
+			tests of this kind and adding them all here will impede the 
+			document's readability.
+		\end{inparaenum}
+	\item Both peers must be tested under the same, reasonable workload, i.e a 
+		workload that can be encountered in production environments.
+	\item If a peer doesn't show a consistent behavior for a workload, it must 
+		be depicted in the results
+\end{enumerate}
+
+Having the above in mind, the next step is to choose a suitable workload.  This 
+choice though is fairly straight-forward; in production environments, the most 
+troublesome workload is the burst of small random reads/writes and is usually 
+the most common one that is benchmarked.  
+
+One may ponder however, how many requests can be considered as a "burst" or 
+which block size is considered as "small". Of course, there is not only one 
+answer to this question so, we will work with ranges. For our workload, we will 
+use block sizes ranging from 4KB to 64KB and parallel requests ranging from 4 
+to 16.
+
+The second category deals solely with the inner-workings of cached and its 
+behavior on different operation modes or states. Its aim is not to capture the 
+performance against a tough workload, but to explain \textbf{why} this 
+performance is observed and how each of the options affect it. In this 
+category, we measure how threads impact the performance of cached or what 
+impact (if any) does our index mechanism have.
+
+The third category positions cached and sosd in a real-world scenario; an 
+actual VM that is configured to have Archipelago as its backing storage and on 
+which we conduct the same benchmarks as in the previous categories. Our aim in 
+this category is to:
+
+\begin{enumerate}
+	\item Measure under real circumstances the performance of the cached 
+		configurations that have been discussed in the previous 
+		scenarios.
+	\item Compare their results with the respective results of the previous 
+		categories.
+\end{enumerate}
+
+This way, we will be able to check if the reported performance gain of the 
+previous categories can be applied in a real-world scenario.
+
+Finally, in the following sections, for brevity reasons, we will talk about 
+comparing cached and sosd. What the reader must keep in mind however is that 
+cached is essentially the cache layer above sosd, which means that we actually 
+test sosd vs cached over sosd.
+
+\section{Specifications of test-bed}\label{sec:test-bed}
+
+The specifications of the server on which we conducted our benchmarks is the 
+following.
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{ | l | l | }
+		\hline
+		Component & Description \\ \hline \hline
+		CPU &  2 x Intel(R) Xeon(R) CPU E5645 @ 2.40GHz \cite{e5645} \\
+		 & Each CPU has six cores with Hyper-Threading enabled, which equals to 
+		 24 threads. \\ \hline
+		RAΜ & 2 banks x 6 DIMMs PC3-10600 \\
+		& Peak transfer rate: 10660 MB/s \\ \hline
+	\end{tabular}
+	\caption{Test-bed hardware specs}
+	\label{tab:hardware-specs}
+\end{table}
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{ | l | l | }
+		\hline
+		Software & Version \\ \hline \hline
+		OS &  Debian Squeeze \\ \hline
+		Linux kernel & 3.2.0-0 (backported) \\ \hline
+		GCC & Debian 4.4.5-8 \\ \hline
+	\end{tabular}
+	\caption{Test-bed software specs}
+	\label{tab:software-specs}
+\end{table}
+
+\section{Performance comparison between cached and sosd}
+\label{sec:vs-plot}
+
+As mentioned above, for our first test, we will evaluate the read and write 
+performance of cached and sosd for a random workload with parallel requests of 
+small size. In order to measure accurately their performance, we will use two 
+different metrics:
+
+\begin{description}
+	\item[Bandwidth:] \hfill \\
+		Bandwidth measures the maximum throughput that the application 
+		can sustain. This metric is usually used to indicate how much 
+		I/O (from various inputs) can an application handle within a 
+		second.
+	\item[Latency:] \hfill \\
+		Latency is the converse of bandwidth. It is a measurement from 
+		the viewpoint of the issuer of requests and indicates the 
+		responsiveness of the tested application. It is commonly 
+		calculated as the average reply time for a series of requests.
+\end{description}
+
+On the following sections, we present the benchmarks that we conducted for the 
+first category. The first benchmark, which is shown in Section 
+\ref{sec:peak-plot}, shows the behavior of cached during a peak of I/O 
+requests.  The second benchmark, which is shown in Section 
+\ref{sec:sustained-plot}, illustrates the behavior of cached under continuous 
+load.  On these sections, cached is always multi-threaded and uses 4 threads.
+
+\subsection{Workload smaller than cache size - Peak behavior}
+\label{sec:peak-plot}
+
+We begin with the bandwidth performance of our peers. The write performance can 
+be seen in Figure \ref{fig:bw-write-comp-lie.pdf}, while the read performance 
+can be seen in Figure \ref{fig:bw-read-comp-lie.pdf}.
+
+Before we proceed with the interpretation of the diagram results, we will 
+briefly comment on the diagram structure. Due to the fact that the performance 
+of the two peers differs in at least two orders of magnitude, the results would 
+look too flat in a conventional diagram that would scale from 0 to 11000. To 
+amend this, we have broken the y-axis of our diagrams in two parts with 
+different scales and starting values, in order to make the comparison easier to 
+the eye.
+
+\diagram{Comparison of bandwidth performance for write 
+	peaks}{bw-write-comp-lie.pdf}
+\diagram{Comparison of bandwidth performance for read 
+	peaks}{bw-read-comp-lie.pdf}
+
+The initial results look very promising. For write requests, the speedup for 
+very small block sizes (4KB - 16KB) is approximately \textbf{100x} whereas for 
+larger ones (32KB - 64KB) it ranges from \textbf{50x to 200x}. For read 
+requests, the speedup for very small block sizes is approximately \textbf{50x}, 
+whereas for larger block sizes, it ranges between \textbf{20x - 75x}.
+
+These results not only illustrate the performance gap between RAM and
+HDDs but also show that our implementation manages to keep its bandwidth 
+consistently over 1 GB/s in stress scenarios. However, we must keep in mind 
+that we see here is only a part of the full picture, since we do not know yet 
+how cached behaves past its cache size.
+
+Moreover, upon closer inspection the following questions arise:
+
+\textbf{1) Where is the speedup difference between reads and writes attributed 
+	to?}
+
+We have mentioned above that the speedup for writes is between 50x and 200x 
+whereas for reads is between 20x and 75x. Although these speedups are very big, 
+they also show some of the limitations of our implementation.
+
+We attribute the speedup differences to three factors:
+
+\begin{enumerate}
+	\item The performance of cached is almost the same for writes and reads.  
+		\footnote{To be fair, reading seems a bit faster than writing, but that 
+			is probably attributed to CPU caches and the fact that reading from 
+			RAM is a non-destructive operation in contrast to writing.}
+		This is expected behavior as the read and write paths for cached have 
+		many common parts, as seen in Section \ref{sec:cached-flow-design}.
+	\item Cached doesn't scale much past the 16KB block size. This is an 
+		interesting observation with an unexpected answer. It may seem 
+		implausible at first, but what happens is that we are actually hitting 
+		the bandwidth limit of the RAM modules. If we consult the Table 
+		\ref{tab:hardware-specs}, we can see that the bandwidth limit of our 
+		RAM is about \mytilde10.7GB/s
+		\footnote{A more careful look shows that we surpass this limit, 
+			which is expected given the fact that we have a multi 
+			channel RAM setup.}.
+		This limit is approached asymptotically as the block size increases and 
+		the index and concurrency overhead decreases
+	\item On reads, sosd is benefited from the existence of caches in various 
+		levels e.g. on OSD level, on RAID controller level.
+\end{enumerate}
+
+To sum up, the cached's performance remains relatively the same in both reads 
+and writes, it is merely the sosd that is getting faster in reads due to 
+caches. 
+
+\textbf{2) Why is cached's performance increased proportionally to the block 
+	size?}
+
+We expected that sosd's performance would increase proportionally to the block 
+size, due to the rotational nature of hard disk drives, but why does this 
+affect cached too? It is certainly not attributed to any \texttt{memcpy()} 
+performance tricks, since we always write in bucket granularity, which means 
+that a 16KB write is translated to 4 x 4KB writes.
+
+From this observation, we extrapolate that the CPU operations such as indexing,
+job enqueuing, accepting and responding requests, that occur proportionally 
+more times for smaller block sizes, dominate the cached's performance.
+
+We can see this more clearly if we consult Table \ref{tab:2threads}.
+
+\begin{table}[h!]
+	\centering
+	\begin{tabular}{ | l | l | l | l | l |}
+		\hline
+		\input{tables/cached-2threads-write.tex}
+	\end{tabular}
+	\caption{Write performance results for 2-threaded cached}
+	\label{tab:2threads}
+\end{table}
+
+On this table, we present the results for a benchmark that does writes, has 
+four parallel write requests and its block size varies between 4KB and 64KB.  
+Note that this benchmark is conducted on a cached that has \textbf{two} threads 
+instead of four.
+
+Comparing the results of this table with the results of Figure 
+\ref{fig:bw-write-comp-lie.pdf}, and more specifically the "cached-iodepth4" 
+trend line, we can observe two things:
+
+\begin{enumerate}
+	\item The performance for small block sizes (4KB - 8KB) is better than the 
+		performance of cached with 4 threads.
+	\item The gap between the results for 4KB and 8KB is not 2x, as in Figure 
+		\ref{fig:bw-write-comp-lie.pdf}, but 1.5x.
+	\item The overall performance gap between the results for 4KB and 64KB is 
+		less than the gap in Figure \ref{fig:bw-write-comp-lie.pdf}.
+\end{enumerate}
+
+To sum up, these results show that the lock contention in cached, due to the 
+number of threads, can significantly dominate its performance.
+
+\textbf{3) Why cached's perforance does not improve proportionally to the 
+	parallel requests?}
+
+The reason why we see only a minor increase in the performance of cached, even 
+though it is multi-threaded, is because our locking scheme is not fine-grained 
+enough. We have a single lock for our request queue, a single lock for most of 
+the hash table accesses and this inevitably causes a lot of threads to spin.  
+This slight improvement we see is mainly due to the fact that requests are 
+effectively being pipelined while waiting each other to release its lock.  
+
+\diagram{Comparison of latency performance for write 
+	peaks}{lat-write-comp-lie.pdf}
+\diagram{Comparison of latency performance for read 
+	peaks}{lat-read-comp-lie.pdf}
+We now proceed to the latency results. The write performance can be seen in 
+Figure \ref{fig:lat-write-comp-lie.pdf} while the read performance can be seen 
+in Figure \ref{fig:lat-read-comp-lie.pdf}.
+
+The latency results corroborate the observations that we made for the bandwidth 
+results. As we can see, the latency of cached is proportional to the number of 
+parallel requests, which reinforces the assumption that our locking scheme is 
+not granular enough, whereas sosd has only a small variance.
+
+\subsection{Workload larger than cache size - Sustained behavior}
+\label{sec:sustained-plot}
+
+We now proceed to the second part of the comparison between cached and sosd.  
+On this part, we will once again evaluate their performance against a random 
+workload with many parallel requests. Unlike the first part though, where the 
+cache size was larger than the workload, on this part the cache size will
+only be half of it. Having a smaller cache than the workload is after all the 
+most common scenario for production environments and the results should 
+complete the picture of cached's behavior in a performance-intensive 
+environment.
+
+For this test, there are two main parameters we must take into account: the 
+cache size and the maximum objects. These parameters have been decoupled in our 
+implementation and we expect different results for each combination. More 
+specifically, we have tested cached with half the workload size and:
+
+\begin{enumerate}
+	\item half the objects of the workload (referenced as 
+		\textbf{cached-limited} from now on).
+	\item more than the objects of the workload (referenced as 
+		\textbf{cached-unlimited} from now on).
+\end{enumerate}
+
+Also, we have tested cached in write-through mode, to see its behavior in 
+sustained writes. For this mode, cached has been configured to store more than 
+the objects of the workload (i.e. unlimited) but still has space for the half 
+of it.
+
+Furthermore, for this benchmark, we tested only the write performance of cached 
+and sosd, since the evictions and subsequent flushes in reads would skew
+considerably the results. An exception to this is the write-through test, whose 
+flushes do not produce extra writes to the storage backend.
+Also, we chose for our workload to use 16 parallel requests and 4KB block size, 
+since this seemed the most troublesome workload in the previous benchmark.
+
+Before we proceed to the results, we must explain first how the diagrams below 
+are structured. Since cached's performance is fairly unstable in this scenario, 
+we have chosen to illustrate it as the benchmark progresses.  Thus, the x-axis 
+shows what percent of the benchmark has been completed and for every 5\%, we 
+show the performance of cached for that part.
+
+The bandwidth results can be seen in Figure \ref{fig:bw-write-comp-truth.pdf}, 
+while the latency results can be seen in Figure 
+\ref{fig:lat-write-comp-truth.pdf}.  Due to the vast bandwidth drop of cached, 
+the y-axis uses a logarithmic scale to show a more clear picture of what 
+happens when the performance reaches the 10 MB/s mark.
+
+\diagram{Comparison of bandwidth performance for sustained writes} 
+{bw-write-comp-truth.pdf}
+
+\diagram{Comparison of latency performance for sustained writes}
+{lat-write-comp-truth.pdf}
+
+These diagrams have several interesting points which we will address below.
+
+\textbf{1) Why does cached-unlimited's performance drop in the middle of the 
+	benchmark?}
+
+Since cached-unlimited can index more objects than the workload, there is no 
+need to evict entries from the hash table to insert new ones. Cached-limited on 
+the other hand, has at any point a 50\% chance to receive a request for a 
+target that does not index. Thus, when cached-unlimited starts to receive the 
+first 50\% of requests, it only needs to store them and, as we have seen in the 
+first part of this section, it does so very fast.
+
+However, at around 50\% of the benchmark its space is depleted and thus, it has 
+to manually evict entries. At this point, we see that its performance 
+degenerates to the performance of cached-limited.
+
+\textbf{2) Why is cached-limited's performance significantly less than the 
+	sosd's performance?}
+
+As we have explained above, cached-limited constantly evicts entries due to its 
+object limitation. It may seem that the only cost of eviction is that the 
+performance degenerates to the performance of sosd, but that is not entirely 
+true.
+
+When an entry is evicted, all of its contents must be flushed before the new 
+entry can overwrite them. Moreover, the cost of concurrency control for hash 
+table migrations and the cost of creating new requests and copying the data in 
+them is not negligible. Finally, due to constant evictions, there are only a 
+few buckets cached for any entry, which in turn does not leave any margin for 
+coalescence.
+
+\textbf{3) Why does cached-unlimited's performance increase consistently after 
+	the 50\% mark ?}
+
+After the 50\% mark, cached-unlimited will have to resort to evictions in order 
+to store new data. Unlike cached-limited though, cached-unlimited has already 
+cached half of the workload's data, which not only is favorable for 
+coalescence, but also allows flushes to occur in a more sequential fashion.  
+Moreover, cached evicts whole objects to get their buckets, which means that 
+evictions will be less frequent that cached-limited, which constantly evicts 
+entries to index other entries.
+
+\textbf{4) Why does cached in write-through mode perform the same as sosd?}
+
+The performance of cached in write-through mode is the same as sosd's since 
+write requests are essentially forwarded to sosd and are cached when sosd 
+responds. The caching has no significant overhead, compared to the waiting time 
+for sosd, since there are no dirty entries and thus no costly evictions.
+
+What is more interesting however is the comparison of read performance between 
+cached and sosd, which can be seen in Table \ref{tab:writethrough}.
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{ | l | l | l | l | l | l |}
+		\hline
+		Peer& Bandwidth (MB/s) & IOPS	& Latency (usec) & Iodepth & Block size 
+		(KB) \\
+		\hline \hline
+		\input{tables/sosd-read.tex}
+		\input{tables/cached-writethrough-read.tex}
+	\end{tabular}
+	\caption{Read performance comparison of sosd and cached in 
+		write-through mode}
+	\label{tab:writethrough}
+\end{table}
+
+The read performance of cached has a noticeable increase of 25\%. This is 
+expected, since cached serves read requests either from its cached data or from 
+sosd. This means that it has the baseline read performance of sosd plus the 
+extra performance gain from cache hits.
+
+\section{Performance evaluation of cached internals}\label{sec:internals-plot}
+
+To some extent, we have already discussed about the behavior of cached when we 
+tweak various of its parameters, such as the over-subscription of its objects, 
+the cache size or its write policy. In this category, we will further solidify 
+our previous assumptions about the inner workings of cached by measuring:
+
+\begin{enumerate}
+	\item how cached scales with the number of threads
+	\item the overhead of the index mechanism
+\end{enumerate}
+
+Note that the tests will be run with the following parameters:
+
+\begin{description}
+	\item[Mode] Write-back
+	\item[Block size] 4KB
+	\item[Cache size] Always larger than benchmark size
+	\item[Operation] Writes
+\end{description}
+
+The above options have been chosen to isolate cached of any other factors that 
+may alter its performance, such as evictions and delays due to sosd.
+
+\subsection{Cached performance per number of threads}
+
+Measuring the performance impact of multi-threading is nonsensical, if the 
+application is not tested against many parallel requests. Hence, we will test 
+each n-threaded cached configuration against a range of parallel requests and 
+measure its performance.
+
+The bandwidth results can be seen in Figure \ref{fig:bw-write-threads.pdf} 
+whereas the latency results can be seen in Figure 
+\ref{fig:lat-write-threads.pdf}.
+
+\diagram{Bandwidth performance of cached per number of 
+	threads}{bw-write-threads.pdf}
+\diagram{Latency performance of cached per number of 
+	threads}{lat-write-threads.pdf}
+
+From these results, we derive the following conclusions:
+
+\begin{enumerate}
+	\item Cached is generally benefited from multi-threading, when the amount 
+		of parallel requests is more than two. More specifically, we 
+		achieve a major performance improvement of up to 40\% when 
+		using two threads in contrast to one, as well as a lower, but 
+		significant, performance improvement for up to four threads, as 
+		the number of parallel requests increases.
+	\item Cached does not scale past four parallel requests, regardless of 
+		the number of threads.
+	\item Adding more than two threads degrades significantly the performance 
+		of cached, when the number of parallel requests is small.
+\end{enumerate}
+
+Finally, these results, along with the results of the first part, clearly show 
+that we cannot fully utilize the multi-threading capabilities of cached unless 
+we employ a more fine-grained locking scheme.
+
+\subsection{Cold cache vs Warm cache}
+
+This scenario will attempt to evaluate the overhead of cache misses for 
+\textbf{write} operations. Theoretically, this should account to the overhead 
+of adding new entries to cached and consecutively, an indication of the 
+complexity of our index mechanism.
+
+Our experimental procedure is the following:
+
+\begin{enumerate}
+	\item We inserted 128K
+		\footnote{where \textbf{K} is \textbf{x1024} objects}, 256K, 512K and 
+		1M
+		\footnote{where \textbf{M} is \textbf{x1024\textsuperscript{2}} 
+			objects}
+		objects in a cached peer configured to hold up to 2M objects 
+		and measured their average latency times (cold cache).
+	\item Subsequently, we attempted to insert these objects in cached 
+		again and measured their average latency times (warm cache).
+\end{enumerate}
+
+The difference between the first and the second iteration is that in the second 
+iteration, the objects are hot in the cache and thus cached will not need to 
+insert them. This means that the first iteration has the extra actions of 
+allocating the entries and inserting them in the cache, whereas the second 
+iteration will only lookup the objects in the cache.
+
+We expect that the extra indexing action will add a constant overhead to the 
+measurements of the first iteration, regardless of the number of entries.
+Moreover, the latency times for the second iteration should remain the same, 
+regardless of the number of entries.
+
+\textbf{Note:} To get the most accurate results and since we want to test just 
+the overhead of our indexing mechanism, cached has been configured to use one 
+thread.  Moreover, the I/O depth is also one, to make sure that latency times 
+are not skewed by the time the request waits in the request queue.
+
+We present the results in Figure \ref{fig:cold1.pdf}.
+
+\diagram{Latency performance of cold/warm cache per number of 
+	objects}{cold1.pdf}
+
+The focal point in these results is that the write latency, either of cold or 
+warm caches, remains practically the same as the number of objects increases.  
+This reinforces our statement that cached has average case O(1) complexity.
+
+Finally, an interesting finding from our results is that the latency of 
+indexing an entry, even in a hash table that supports 2 million objects (and 
+potentially 8TBs of data), is on average less than 1μs, which is a very strong 
+feature of our implementation.
+
+\begin{comment}
+As a side note, we observe a constant decrease in writelatency as the number of 
+objects increase this is not something that should be attributed to our 
+implementation. (explain that we have used a hash table that holds 2million 
+objects, so it is not mapped to our process's address space. When more objects 
+are indexed, the hash table becomes fuller and the latency of mmap()s is 
+equally distributed to the objects. Else, the hash table is more scarce but the 
+same blocks are hit, albeit not fully written, and thus the mmap latency is the 
+same but distributed to less objects.)
+\end{comment}
+
+\section{Performance evaluation of a VM over Archipelago and cached}
+\label{sec:vm-plot}
+
+In this category, we will attempt to:
+\begin{inparaenum}[i)]
+	\item create a VM using Archipelago as its storage backend with cached 
+		support	and
+	\item use it to evaluate the real-life performance of various Archipelago 
+		configurations, with and without cached.
+\end{inparaenum}
+
+The benchmarks of this section have been conducted on a vanilla Ubuntu 13.04 
+VM. Once the VM was started successfully (which was an important feat in its 
+own right), we installed FIO
+\footnote{Flexible I/O tester, http://git.kernel.dk/?p=fio.git;a=summary}
+, which is a fully-featured benchmark suite created by Jens Axboe, the 
+maintainer of the Linux block layer.
+
+Our aim was to simulate the workloads of the previous categories, in order to 
+produce comparable results. The FIO job file that was created for this purpose 
+is presented in Listing \ref{lst:job.ini}:
+
+\plaintext{FIO job file}{job.ini}
+
+The workload that this job file describes has been uniformly issued for every
+Archipelago configuration that we have tested. We will illustrate this workload 
+through an explanation of the job file parameters, which appear on the 
+\textbf{[global]} section:
+
+\begin{itemize}
+	\item The request block size is \textbf{4KB} and is aligned on a 4KB 
+		boundary,
+	\item the total benchmark size is \textbf{1GB},
+	\item the number of parallel requests is \textbf{16},
+	\item the I/O requests bypass the VM's page cache, to ensure that the 
+		results are not skewed due to guest caching.
+\end{itemize}			
+
+The following two sections, \textbf{[randwrite]} and \textbf{[randread]}, 
+describe the two benchmark tests that were conducted. More specifically, in the 
+first test we issue random writes that span the file and in the second test, we 
+randomly read the written data.
+
+Moreover, the fact that the benchmark is executed on a file means the following 
+two things:
+
+\begin{enumerate}
+	\item That we are bound to include in our measurements the overhead of 
+		filesystem operations and I/O scheduler of the VM. These overheads 
+		however are essential for our benchmarks since they provide a more 
+		accurate measurement of the I/O speed that the common user is likely to 
+		experience.
+	\item That we are guaranteed that only the first write to the file will be 
+		affected by Copy-On-Write delays, while the subsequent writes will 
+		behave normally.  Thus, we can discard the first write and use only
+		the subsequent ones for our measurements.
+\end{enumerate}
+
+Finally, in addition to the bypass of the VM's page cache, we have also ordered 
+the hypervisor to not use the page cache of the host. The only exception to 
+this is the page cache test that evaluates the performance of the VM using the 
+host's page cache in writeback mode.
+
+We can now present the bandwidth and latency results for our benchmarks, which 
+are illustrated in Figures \ref{fig:bw-vm.pdf} and \ref{fig:lat-vm.pdf} 
+respectively. 
+
+\diagram{Bandwidth performance of a VM over Archipelago}{bw-vm.pdf}
+
+\diagram{Latency performance of a VM over Archipelago}{lat-vm.pdf}
+
+We will explain which scenario each label represents:
+
+\begin{description}
+	\item[page-cache] \hfill \\
+		This scenario tests solely the page cache of the \textbf{host} machine.  
+		The rest of the scenarios bypass this page cache.
+	\item[sosd] \hfill \\
+		This scenario tests solely the performance of sosd peer.
+	\item[cached-vast] \hfill \\
+		This scenario uses cached with a large enough cache size, which means 
+		that no evictions occur.
+	\item[cached-unlimited] \hfill \\
+		This scenario uses cached with half of the necessary space for 
+		the benchmark but with the ability to cache practically 
+		unlimited objects.
+	\item[cached-limited] \hfill \\
+		This scenario uses cached with half of the necessary space as 
+		well as the ability to cache half of the necessary objects.
+	\item[cached-writethrough] \hfill \\
+		This scenario uses cached with half of the necessary space, 
+		unlimited objects and in write-through mode.
+\end{description}
+
+		
+Note that we have purposefully combined the write and read results on the same 
+diagrams to make comparisons between them more evident. We will proceed with 
+commenting on the performance results of each tested Archipelago configuration 
+and we will invoke the previous synthetic benchmarks where necessary.
+
+\subsubsection{Page-cache}
+
+Our measurements clearly indicate that the page cache outperforms every 
+Archipelago configuration. It also sets the mark for the upper speed limit that 
+the Archipelago must strive to achieve.
+
+Since page cache stores data in DRAM, we would expect an even better 
+performance, given that our implementation manages to achieve latencies smaller
+than 40μs, for the same number of parallel requests and block size, which can 
+be seen in Figure \ref{fig:lat-write-comp-lie.pdf}.  We attribute this speed 
+difference of < 1ms to the overhead of the paravirtualized storage, as well as 
+the overhead of the VM operations (e.g. the filesystem, scheduler and kernel 
+operations).
+
+\subsubsection{Sosd}
+
+The results for sosd are lower than the expected results. In fact, sosd has an 
+additional latency of about 7ms for writes and 3ms for reads, which cannot be 
+attributed to the < 1ms difference that we have observed in the page cache 
+test. This means that besides the overhead that is incurred from the VM 
+operations, there is also the latency of Archipelago, specifically of xsegbd, 
+vlmcd and mapperd that has a performance penalty which is in the order of 
+milliseconds.
+
+\subsubsection{Cached-vast}
+
+The comparison between sosd and this scenario shows that the performance 
+speedup is approximately 4x for writes and 2x for reads. This is a very 
+reinforcing result for our implementation and it proves that it does make a 
+difference in an actual VM.
+
+Arguably, the performance speedup that we measured in the synthetic benchmarks 
+of previous categories was much bigger, yet we must keep in mind that the 
+latency of the levels above cached do not allow this performance difference to 
+show.  This statement is further reinforced by the comparison between these 
+results and the results of the page-cache scenario; in both scenarios, data is 
+cached in DRAM, which means that the main latency difference between them is 
+the latency of Archipelago, which is approximately 2ms.
+
+\subsubsection{Cached-unlimited}
+
+The results of this scenario were expected, given the results of the previous 
+scenario (cached-vast) and the synthetic benchmarks of Figures 
+\ref{fig:lat-write-comp-truth.pdf} and \ref{fig:bw-write-comp-truth.pdf}.
+
+For the first 50\% of the workload, the performance of cached-unlimited was the 
+same as the performance of cached-vast. Predictably, it dropped after the 50\% 
+mark but, interestingly, it was consistently better than the performance of 
+sosd until the end, something that was not observed in the synthetic benchmarks 
+we had conducted.  This is attributed to the fact that background flushes to 
+sosd are supposed to take on average 3-4ms (see Figure 
+\ref{fig:lat-write-comp-truth.pdf}), which is close to the time that a VM 
+request needs to reach cached.  This means that evictions that happen in the 
+background are essentially masked under the latency of the system.
+
+We must also add that this scenario also achieves a \textbf{sustained} 2.5x 
+performance speedup for  writes, while the peak behavior of this configuration 
+is expected to be the same as cached-vast's. This shows that, even with a small 
+cache, we can achieve a major performance improvement over sosd. 
+
+Finally, we observe that the read performance is the same as sosd's but, as we 
+have already explained, this happens due to background flushes that take place 
+during the read operation, so the results are bound to be skewed.
+
+\subsubsection{Cached-limited}
+
+The revelation of our benchmarks has been this scenario, which is just as fast
+as cached-vast for sustained writes. This is completely different from the 
+results we observed in Figures \ref{fig:lat-write-comp-truth.pdf} and 
+\ref{fig:lat-write-comp-truth.pdf}. It seems that the system latency completely 
+masks the background flushes that take place, which is  probably due to the 
+fact that evictions are more frequent but less batched.
+
+\subsubsection{Cached-writethrough}
+
+This scenario had predictable results. The write speed in writethrough mode was 
+the same as the write speed of sosd whereas the read speed was a bit better, 
+due to the fact that the data were cached. Overall, there was no particular 
+performance improvement in writethrough mode.
+

@@ -1,0 +1,71 @@
+\documentclass{beamer}
+\usepackage{pgfpages}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{fontspec}
+\usepackage{xunicode}
+\usepackage{xltxtra}
+\usepackage{color}
+
+\usepackage{beamertheme_atilla/beamerthemeAtilla}
+
+\defaultfontfeatures{Mapping=tex-text}
+%\setromanfont{Linux Libertine O}
+\setsansfont{FreeSans}
+
+\setbeameroption{show notes}
+\setbeameroption{show notes on second screen=left}
+
+% Hack to allow XeTeX to produce wide pdf
+\renewcommand\pgfsetupphysicalpagesizes{%
+	\pdfpagewidth\pgfphysicalwidth\pdfpageheight\pgfphysicalheight%
+}
+
+% CUSTOM COLORS ===============================================================
+
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{darkgreen}{rgb}{0.0,0.5,0.0}
+\definecolor{mygreen}{rgb}{0,0.6,0}
+\definecolor{mygray}{rgb}{0.5,0.5,0.5}
+\definecolor{mymauve}{rgb}{0.58,0,0.82}
+\definecolor{myorange}{RGB}{246,177,50}
+
+% CUSTOM COMMANDS =============================================================
+
+\newcommand\fixme{\textrm{\textbf{\textcolor{red}{FIXME: }}}}
+\newcommand\todo{\textrm{\textbf{\textcolor{myorange}{TODO: }}}}
+\newcommand\click{{\Large \textrm{\textbf{\textcolor{red}{CLICK! }}}}}
+\newcommand\mytilde{\raise.17ex\hbox{$\scriptstyle\sim$}}
+\newcommand\okeanos{\raise.17ex\hbox{$\scriptstyle\sim$}okeanos }
+\newcommand\spc{\hfill \\}
+\newcommand\dspc{\spc\spc}
+
+\AtBeginSection[]
+{
+	\begin{frame}
+		\frametitle{Table of Contents}
+		\tableofcontents[currentsection]
+	\end{frame}
+}
+
+% PRESENTATION SETTING ========================================================
+
+\author{Αλέξιος Πυργιώτης}
+\title{Σχεδίαση και Υλοποίηση Μηχανισμού Κρυφής Μνήμης για
+	Κατανεμημένο Σύστημα Αποθήκευσης σε Περιβάλλον
+	Υπολογιστικού Νέφους}
+\institute{Εθνικό Μετσόβιο Πολυτεχνείο}
+\date{\today}
+
+
+\begin{document}
+\include{intro}
+\include{storage}
+\include{solutions}
+\include{cached-design}
+\include{cached-evaluation}
+\include{synapsed-design}
+\include{synapsed-evaluation}
+\include{conclusion}
+\end{document}
+

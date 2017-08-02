@@ -1,0 +1,58 @@
+\begin{acknowledgements}
+Θα ήθελα να ευχαριστήσω τον επιβλέποντα καθηγητή κ. ... 
+
+Επίσης ευχαριστώ ιδιαίτερα τον μεταπτυχιακό φοιτητή κ. ... για την καθοδήγηση και ... 
+
+Τέλος θα ήθελα να ευχαριστήσω την οικογένειά μου, ... 
+\end{acknowledgements}
+
+
+\begin{abstract}
+Αντικείμενο της διπλωματικής εργασίας είναι η ανάπτυξη και υλοποίηση ενός αλγορίθμου για την εύρεση πιθανότερων εγγύτερων γειτόνων 
+από συγκεκριμένες σημειακές εστίες σε μία υποθετική υπηρεσία για κατόχους κινητών τηλεφώνων. Όποτε κάποιος χρήστης υποβάλλει ένα ερώτημα, 
+θέτει τρία κριτήρια: \tl{(i)} μία σημειακή εστία ενδιαφέροντος \textit{\tl{q}}, \tl{(ii)} τον επιθυμητό αριθμό \textit{\tl{k}} των αναζητούμενων γειτόνων, 
+καθώς και \tl{(iii)} ένα κατώφλι πιθανότητας  $\theta$. 
+
+Για λόγους προστασίας του απορρήτου, κανένας χρήστης δεν αποκαλύπτει στους υπόλοιπους το ακριβές γωγραφικό στίγμα του, 
+αλλά δηλώνει μία ευρύτερη \textit{περιοχή αβεβαιότητας}. Στην προκειμένη περίπτωση, οι περιοχές αυτές μοντελοποιούνται σύμφωνα με την κανονική κατανομή. 
+Φυσικά, η αβεβαιότητα μπορεί να εχει διαφορετικές παραμέτρους, εκφράζοντας διαφορετικές βαθμίδες ιδωτικότητας. 
+Με τον όρο ``\textit{πιθανότεροι εγγύτεροι γείτονες}'', εννοούμε ότι σε μία συγεκριμένη περιοχή αναζήτησης γύρω από την εστία  \textit{\tl{q}}, 
+έχουν βρεθεί τουλάχιστον \textit{\tl{k}} κινούμενοι χρήστες με πιθανοτική κάλυψη μεγαλύτερη από το δεδομένο κατώφλι $\theta$.
+
+Η εργασία επικεντρώνεται κυρίως στην ανάπτυξη τεχνικών δεικτοδότησης, φιλτραρίσματος και  κλαδέματος βάσει των οποίων 
+θα μπορούμε να μειώσουμε το κόστος και τον χρόνο επεξεργασίας των δεδομένων. Ο αλγόριθμος που προτείνεται επιλέχτηκε να 
+είναι προσεγγιστικός ως προς τον υπολογισμό της πιθανοτικής κάλυψης των περιοχών αβεβαιότητας και παρέχει μία λύση στο 
+πρόβλημα της αποτίμησης πιθανοτικών ερωτημάτων εγγύτερων γειτόνων για αβέβαιες θέσεις κινούμενων αντικειμένων. Με εφαρμογή
+των παραπάνω τεχνικών, πραγματοποιήθηκαν πειράματα σε συνθετικά δεδομένα πάνω στον χάρτη της Αττικής, από τα οποία προέκυψαν 
+θετικά αποτελέσματα. Επίσης, επιβεβαιώθηκαν οι αναμενόμενες επιδόσεις τους σχετικά με τους χρόνους εκτέλεσης και την ακρίβεια 
+των απαντήσεων. Αυτό που μπορεί να εξαχθεί ως γενικό συμπέρασμα της εργασίας είναι ότι ο εν λόγω αλγόριθμος είναι κατάλληλος για 
+προβλήματα πραγματικού χρόνου, θυσιάζοντας την ακρίβεια για χάρη της έγκαιρης απόκρισης.
+
+\begin{keywords}
+  Αβεβαιότητα, Πιθανοτικά ερωτήματα εγγύτερων γειτόνων, διδιάστατη κανονική κατανομή, κινούμενα αντικείμενα, ρεύματα δεδομένων.
+\end{keywords}
+
+\end{abstract}
+
+
+
+\begin{abstracteng}
+\tl{The purpose of this diploma thesis is to develop and implement an algorithm for most likely nearest neighbors monitoring from 
+specific focal points in a hypothetical service for smartphone users. Whenever a user submits a most likely nearest neighbors query, 
+sets three criteria: (i) a focal point of interest \textit{q}, (ii) the desired number \textit{k} of nearest neigbors, and (iii) a probability 
+threshold $\theta$.}
+
+\tl{Because of privacy protection reasons, no user compromises their geographical position to the rest, but declares a wider \textit{uncertainty region}. 
+In this case, these regions are modelled according to the bivariate Gaussian distribution. Of course, uncertainty can acquire different parameters, expressing 
+different scales of privacy. By using the term \textit{$``$most likely nearest neighbors$"$}, we mean that in a certain search region arount point \textit{q}, \textit{k} 
+moving users with probabilistic coverage above a certain threshold $\theta$ have been found.}
+
+\tl{This thesis mainly focuses on developing indexing, filtering and pruning techniques which will enable us to reduce the cost and processing time of data. The suggested 
+algorithm is deliberately chosen to be approximate in the calculation of probabilistic coverage  of uncertain regions and provides a solution to the problem of answering probabilistic nearest neighbor 
+queries for uncertain positions of moving objects. By utilizing the above techniques, a experimental study was conducted against synthetic datasets generated using the map of Athens. In addition, the expected performance on the execution times and accuracy of answers was confirmed. The overall conclusion of this thesis is that the algorithm is suitable for real time problems, where some accuracy may be sacrificed for the benefit of timely response.}
+
+\begin{keywordseng}
+    \tl{Uncertainty, Probabilistic nearest neighbor queries, bivariate Gaussian distribution, moving objects, data streams. }
+\end{keywordseng}
+
+\end{abstracteng}

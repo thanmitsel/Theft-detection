@@ -1,0 +1,193 @@
+\chapter{Introduction}\label{ch:intro}
+
+The racing track was clear and the computer hardware companies were tentatively 
+positioning themselves on the starting blocks, in the April of 1965. Gordon E.  
+Moore was holding the starter pistol, a paper where he famously stated that:
+
+\begin{quotation}
+	"The complexity for minimum component costs has increased at a rate of 
+	roughly a factor of two per year. Certainly over the short term this rate 
+	can be expected to continue, if not to increase. Over the longer term, the 
+	rate of increase is a bit more uncertain, although there is no reason to 
+	believe it will not remain nearly constant for at least 10 years. That 
+	means by 1975, the number of components per integrated circuit for minimum 
+	cost will be 65,000. I believe that such a large circuit can be built on a 
+	single wafer."\cite{Moore}
+\end{quotation}
+
+Until that year, the integrated circuits (or microchips, as they are commonly 
+called) were used prominently in embedded systems. Around the time the paper 
+was published however, they were also starting to being adopted by computer 
+manufacturers. The replacement of vacuum tubes with microchips marked the 
+passage of the mainframe computer to the minicomputer and on to the personal 
+computer that we know today.
+
+Whether Moore's statement was a very accurate prediction of the future of 
+microchips or a self-fulfilling prophecy that hardware companies used to market 
+their products, is unsure. What is sure though is that his statement propelled 
+the development of technology in general, since what became later on as a 
+\textit{"law"} has been applied to numerous other technologies, unrelated to 
+microchips such as the pixels of a camera or network capacity.  Wherever 
+Moore's law was applicable, the industry would excel itself to adhere as much 
+as possible to the projected growth, be it in microchip density, pixel density 
+or performance.
+
+Storage components, e.g. Hard Disk Drives (HDDs), Random Access Memory (RAM) 
+and Flash Memory, had also entered the race and their capacity has been 
+increasing ever since. In the performance track however, hard disks seem old 
+and gasping to catch up the much faster RAM and CPU caches. For decades now, 
+their sub-par performance has been the bottleneck of every IO-intensive 
+application and the headache of storage designers \cite{nvm}.
+
+As exaggerated as this might seem, their limitations have shaped the way 
+storage is built; hardware solutions such as the RAID technology, 
+battery-backed volatile memory in large servers and software solutions such as 
+the Linux's page cache, memcached, bcache, are all notable examples which show 
+that there is a tremendous effort that is being invested in sidestepping hard 
+disks and finding alternative methods to store data.
+
+The HDD's industry answer to this is the continuous drop of their prices.  In 
+2011, HDDs reached their all-time low price of \$0.053/GB \cite{hdd-price}.  
+Moreover, the emerging movement of greener data centers has benefited hard 
+disks, since their lower energy costs than RAM is attractive to enterprises.  
+Yet, for how long can the HDD industry keep lowering their costs to mitigate 
+their lack of performance?
+
+The answer came very fast and unfortunately in a tragic way. The end of July of 
+2011 marked the beginning of a 6-month turmoil for Thailand, with a flood that 
+was described as "the worst flooding yet in terms of the amount of water and 
+people affected" \cite{flood}. The hard disk industry also suffered a huge hit 
+due to the fact that 25\% percent of the global hard disk production was from 
+factories in Thailand, that were largely affected by the flood.
+
+The result was an overnight 40\% percent increase of hard disk prices. The 
+reasons behind this increase were in one part to compensate for the flood 
+damages and in another part to seize the opportunity to increase the profit 
+margins of the two biggest producers, Western Digital and Seagate, from 6\% and 
+3\% to 16\% and 37\% respectively \cite{rosenthal12-unesco}.
+
+The timing could not have been worse for the HDD industry. The price increase 
+led indirectly to the introduction of the more expensive but faster SSDs to the 
+enterprise world. Their vast price drop \cite{ssd-price,ssddrop} in the last 
+few years has made them viable candidates at least for peripheral storage tasks 
+such as journaling and caching, and has led experts to consider them as the 
+successors of HDDs.
+
+On the other hand, HDDs are unable to retort performance-wise and can only 
+marginally improve their performance.  As their rotational speed approaches the 
+speed of sound, their production will be rendered at best difficult, and their 
+heat generation, power consumption and lack of long-term reliability will make 
+their adoption prohibitive \cite{hddtrends,speed-of-sound}.
+
+Our prediction is that in some decades from now, when the dust will settle, the 
+data centers will probably migrate from HDDs to SSDs. Till date however, the 
+storage landscape is baffled with uncertainty as the tug-of-war between SSDs 
+and HDDs is still at large. Moreover, besides SSDs, there are various other 
+flash memory types, such as the IOdrive of Fusion IO, that are being utilized 
+in performance-intensive environments, albeit for higher prices. Besides 
+hardware solutions, there have also been developed various caching and 
+buffering techniques to increase the performance of databases and storage in 
+general.
+
+To sum up, the current storage landscape provides the storage designer with 
+various choices, each of which has its own merits and disadvantages. It is up 
+to the storage designer to weigh these choices and implement the solution that 
+fits the most to the profile of storage he/she builds and the budget of the 
+storage service.
+
+\section{Thesis motivation and background}
+
+The motivation behind this thesis emerged from concerns about the storage 
+performance of the Synnefo \footnote{www.synnefo.org/} cloud software, which 
+powers the \okeanos \footnote{https://okeanos.grnet.gr/} public cloud service 
+\cite{okeanos}. We will briefly explain what \okeanos and Synnefo are in the 
+following paragraphs.
+
+\okeanos is an IaaS (Infrastructure as a Service) that provides Virtual 
+Machines, Virtual Networks and Storage services to the Greek Academic and 
+Research community. It is an open-source service that has been running in 
+production servers since 2011 by GRNET S.A.
+\footnote{Greek Research and Technology Network, https://www.grnet.gr/}
+
+Synnefo \cite{synnefo} is a cloud software stack, also created by GRNET S.A., 
+that implements the following services which are used by \okeanos:
+
+\begin{itemize}
+	\item \textit{Compute Service}, which is the service that enables the 
+		creation and management of Virtual Machines.
+	\item \textit{Network Service}, which is the service that provides network 
+		management, creation and transparent support of various network 
+		configurations.
+	\item \textit{Storage Service}, which is the service responsible for 
+		provisioning the VM volumes and storing user data.
+	\item \textit{Image Service}, which is the service that handles the 
+		customization and the deployment of OS images.
+	\item \textit{Identity Service}, which is the service that is responsible 
+		for user authentication and management, as well as for managing the 
+		various quota and projects of the users.
+\end{itemize}
+
+This thesis will deal exclusively with the Volume Service of Synnefo and more 
+specifically with the part that handles the VMs' data and volumes, which is 
+called Archipelago and is presented in Chapter \ref{ch:archip}.
+
+As we have mentioned at the start of this section, the motivation behind this 
+thesis was the unsatisfactory performance of Archipelago. More specifically, we 
+measured the performance of VMs with and without caching enabled on the host 
+and the results showed that host-side caching improved greatly the Archipelago 
+performance.
+
+Since Archipelago had no caching mechanisms and data were committed directly to 
+a replicated object storage (see more in Section \ref{sec:rados-archip}) that 
+was using hard disks, we concluded that this was the main reason behind the 
+performance issues of Archipelago and decided to implement a caching system 
+that would use a much faster storage medium.
+
+As a result, this thesis presents the implementation of a caching system and 
+documents all the design decisions and the thinking process that has led to 
+this implementation.
+
+\section{Thesis structure}
+
+The thesis is organized as follows:
+
+\begin{description}
+\item[Chapter~\ref{ch:theory}:] \hfill \\
+	We provide the necessary theoretical background for the concepts and 
+	entities that are being discussed throughout the thesis.
+\item[Chapter~\ref{ch:archip}:] \hfill \\
+	We present the architecture of Archipelago and explain how Archipelago 
+	handles I/O requests. Moreover, we provide information about RADOS, one 
+	of the storage backends of Archipelago, as well as sosd, an Archipelago 
+	component that has been created to communicate with RADOS and has been 
+	the subject of a previous CSLab thesis \cite{sosd}.
+\item[Chapter~\ref{ch:triad}:] \hfill \\
+	We explain three of the most discussed concepts in the cloud world; 
+	scalability, tiering and caching, and depict how they can be used in a 
+	real-life scenario. Then, we present the most popular solutions for 
+	increasing the storage performance of an application, such as bcache, 
+	memcached, flashcache. Finally, we weigh their pros and cons explain 
+	why they are inadequate for our purposes.
+\item[Chapter~\ref{ch:cached-design}:] \hfill \\
+	We explain the design of cached and the building blocks that is 
+	consisted of (xcache, xworkq, xwaitq). Moreover, we illustrate how 
+	cached handles I/O requests.
+\item[Chapter~\ref{ch:cached-implementation}:] \hfill \\
+	We present the cached implementation, such as the structures and 
+	methods that we have used, in the form of code snippets. Furthermore, 
+	we accompany them with the necessary commentary.
+\item[Chapter~\ref{ch:cached-evaluation}:] \hfill \\
+	In this chapter, we benchmark the sosd and cached peers under various 
+	scenarios and evaluate their performance. Also, we present the 
+	methodology behind our benchmarks and the specifications of the test 
+	beds.
+\item[Chapter~\ref{ch:synapsed}:] \hfill \\
+	We present synapsed, a complimentary component to cached, whose purpose 
+	is to transfer Archipelago requests over the network and allow cached 
+	to run in other nodes than the host.
+\item[Chapter~\ref{ch:future}:] \hfill \\
+	We provide some concluding remarks about our thesis and assess in what 
+	extend has it managed to achieve the goals that where set.  Also, we 
+	discuss our plans for future improvements and deeper integration with 
+	Archipelago.
+\end{description}

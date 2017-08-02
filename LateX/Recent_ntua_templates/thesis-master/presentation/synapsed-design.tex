@@ -1,0 +1,67 @@
+\section{Synapsed design}
+
+\begin{frame}{Introduction}
+	Previous results show that:
+	\begin{itemize}
+		\item There is high lock contention
+		\item The amount of RAM is important
+	\end{itemize}
+	\note[item]{Από τα προηγούμενα συμπεράσματα, μπορούμε να εξάγουμε ότι 
+		έχουμε τα εξής limitations ανεξαρτήτως latency Αρχιπελάγους: 
+		lock contention και έλλειψη από RAM}
+	\dspc
+	If cached remains at the host, it will:
+	\begin{itemize}
+		\item Compete for CPU time
+		\item Use a fraction of the host's RAM
+	\end{itemize}
+	\note[item]{Αν ο cached τρέχει στον host όπου τρέχουν και τα VMs, θα 
+		έχουμε λιγότερη cpu -> περισσότερο contention και λιγότερη ram}
+	\dspc
+	Idea: what if cached ran on storage nodes?
+	\note[item]{Αν έτρεχε στους αποθηκευτικούς κόμβους;}
+\end{frame}
+
+\begin{frame}
+	If cached was on storage nodes, the pros would be:
+	\begin{itemize}
+		\item Access to more RAM
+		\item Major step towards a distributed cache
+	\end{itemize}
+	\note[item]{Αν έτρεχε εκεί θα \todo}
+	\dspc
+	On the other hand, the cons would be:
+	\begin{itemize}
+		\item Network bottleneck
+		\item Bigger complexity
+	\end{itemize}
+	\dspc
+	Archipelago is network-unaware. Must create a proof-of-concept network peer 
+	to help us in this task.
+\end{frame}
+
+\begin{frame}{Synapsed design}
+	Synapsed is designed to do the following:
+	\begin{itemize}
+		\item Connect two Archipelago peers over network
+		\item Forward read/write XSEG requests
+		\item Use the TCP protocol
+		\item Use vectored I/O, no intermediate copy
+	\end{itemize}
+	\dspc
+	Replication should be trivial to implement, but it is currently missing.
+
+	\note[item]{Το synapsed σχεδιάστηκε για τα εξής:
+		\begin{itemize}
+			\item Σύνδεση δυο Αρχιπέλαγο peers πάνω από network
+			\item Κατάλληλη προώθηση I/O αιτημάτων
+			\item Χρήση του tcp πρωτοκόλλου
+			\item Χρήση μεθόδων διανυσματικού I/O χωρίς περιττά allocation 
+				μνήμης
+		\end{itemize}
+	}
+	\note[item]{H δημιουργία αντιγράφων μπορεί να προστεθεί εύκολα στα 
+		παραπάνω, αλλά εμείς δεν φτάσαμε ώς εκει}
+
+\end{frame}
+

@@ -1,0 +1,77 @@
+%% The Preamble %%
+\documentclass[11pt, a4paper, english, greek, twoside]{report}
+\usepackage[utf8]{inputenc}
+\usepackage{fullpage}
+\usepackage{graphicx}
+\usepackage{wrapfig} % wrap figures around text
+\usepackage{amsmath}
+\graphicspath{ {Images/} } %directory of images
+%% Greek packages and format %%
+\usepackage{xltxtra}
+\usepackage{xgreek}
+\setmainfont[Mapping=tex-text]{GFS Didot}
+%-----------------------------%
+%----------------%
+
+
+
+\begin{document}
+%% Title page %%
+\begin{titlepage}
+	\begin{center}
+		\includegraphics[scale=0.2]{pyrforos.png}\\
+		\Large{Εθνικό Μετσόβιο Πολυτεχνείο}\\
+		\large{Σχολή Ηλεκτρολόγων Μηχανικών\\ και Μηχανικών Υπολογιστών}\\
+		\large{Τομέας Ηλεκτρικής Ισχύος}\\	
+		\vspace*{\stretch{1.0}}
+      	\Large\textbf{Εντοπισμός Ρευματοκλοπών με Μηχανική Μάθηση}\\      	
+		\vspace*{\stretch{0.1}}      	
+      	\large{Διπλωματική Εργασία}\\
+      	\vspace*{\stretch{0.1}}
+      	\large\textit{Μητσέλος Αθανάσιος}
+   	\end{center}
+   	\vspace*{\stretch{2.0}}
+\end{titlepage}
+%--------------%
+
+%% The Front Matter %%
+\chapter*{Περίληψη}
+\chapter*{Λέξεις Κλειδιά}
+\chapter*{Abstract}
+\chapter*{Keywords} 
+\chapter*{Ευχαριστίες}
+\tableofcontents{}
+\chapter*{Ευρετήριο Σχημάτων}
+\chapter*{Ευρετήριο Πινάκων}
+%--------------------%
+
+%% The Main Body %%
+\chapter{Εισαγωγή}
+\input{Chapters/chapter01}
+
+\chapter{Θεωρητικό υπόβαθρο}
+\input{Chapters/chapter02}
+
+\chapter{Περιγραφή και οργάνωση δεδομένων}
+\input{Chapters/chapter03}
+
+\chapter{Αλγόριθμοι επιβλεπόμενης μάθησης}
+\input{Chapters/chapter04}
+
+\chapter{Αλγόριθμοι μη επιβλεπόμενης μάθησης}
+\input{Chapters/chapter05}
+
+\chapter{Δυσκολίες και μελλονική κατεύθυνση}
+\input{Chapters/chapter06}
+
+\chapter{Συμπεράσματα}
+\input{Chapters/chapter07}
+%-----------------%
+
+%% The End Matter %%
+\appendix
+\chapter{Appendix Title}
+%\input{Chapters/appendix}
+%------------------%
+
+\end{document}

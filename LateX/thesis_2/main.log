@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99996 (TeX Live 2016/W32TeX) (preloaded format=xelatex 2017.3.16)  14 JUL 2017 13:35
+This is XeTeX, Version 3.14159265-2.6-0.99996 (TeX Live 2016/W32TeX) (preloaded format=xelatex 2017.3.16)  1 AUG 2017 17:55
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1545,8 +1545,14 @@ Package biblatex Info: ... file 'german.lbx' found.
 
 (c:/texlive/2016/texmf-dist/tex/latex/biblatex/lbx/german.lbx
 File: german.lbx 2016/12/05 v3.7 biblatex localization (PK/JW/AB)
-))
-No file main.aux.
+)) (./main.aux
+(./FrontBackMatter/Titlepage.aux) (./FrontBackMatter/Titleback.aux)
+(./FrontBackMatter/Dedication.aux) (./FrontBackMatter/Abstract.aux)
+(./FrontBackMatter/Publications.aux) (./FrontBackMatter/Acknowledgments.aux)
+(./FrontBackMatter/Contents.aux) (./Chapters/Chapter01.aux)
+(./Chapters/Chapter02.aux) (./Chapters/Chapter03.aux) (./Chapters/Chapter0A.aux
+) (./FrontBackMatter/Bibliography.aux) (./FrontBackMatter/Declaration.aux)
+(./FrontBackMatter/Colophon.aux))
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 46.
@@ -1565,6 +1571,7 @@ LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 46.
 LaTeX Font Info:    ... okay on input line 46.
 LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 46.
 LaTeX Font Info:    Try loading font information for TS1+cmr on input line 46.
+
 (c:/texlive/2016/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
@@ -1613,12 +1620,10 @@ Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 LaTeX Info: Redefining \ref on input line 46.
 LaTeX Info: Redefining \pageref on input line 46.
 LaTeX Info: Redefining \nameref on input line 46.
+
+(./main.out) (./main.out)
 \@outlinefile=\write5
 \openout5 = `main.out'.
-
-
-
-Package hyperref Warning: Rerun to get /PageLabels entry.
 
 LaTeX Info: Redefining \microtypecontext on input line 46.
 Package microtype Info: Character protrusion enabled (level 2).
@@ -1626,6 +1631,7 @@ Package microtype Info: Using default protrusion set `alltext'.
 Package microtype Info: No adjustment of tracking.
 Package microtype Info: No adjustment of spacing.
 Package microtype Info: No adjustment of kerning.
+
 (c:/texlive/2016/texmf-dist/tex/latex/microtype/mt-ppl.cfg
 File: mt-ppl.cfg 2005/11/16 v1.6 microtype config. file: Palatino (RS)
 )
@@ -1785,6 +1791,13 @@ Overfull \hbox (8.78125pt too wide) in paragraph at lines 29--30
  (./FrontBackMatter/Contents.tex
 Package tocbasic Info: character protrusion at toc deactivated on input line 13
 .
+ (./main.toc
+Package microtype Info: Character `029' is missing
+(microtype)             in font `T1/pplj/m/sc/10.95'.
+(microtype)             Ignoring protrusion settings for this character.
+LaTeX Font Info:    Font shape `T1/pplj/bx/n' in size <12> not available
+(Font)              Font shape `T1/pplj/b/n' tried instead on input line 9.
+)
 \tf@toc=\write6
 \openout6 = `main.toc'.
 
@@ -1800,6 +1813,7 @@ Package tocbasic Info: character protrusion at toc deactivated on input line 13
 ]
 Package tocbasic Info: character protrusion at lof deactivated on input line 33
 .
+ (./main.lof)
 \tf@lof=\write7
 \openout7 = `main.lof'.
 
@@ -1808,10 +1822,11 @@ Package tocbasic Info: character protrusion at lof deactivated on input line 33
 ]
 Package tocbasic Info: character protrusion at lot deactivated on input line 46
 .
+ (./main.lot)
 \tf@lot=\write8
 \openout8 = `main.lot'.
 
- [15]
+ [15] (./main.lol)
 \tf@lol=\write9
 \openout9 = `main.lol'.
 
@@ -1824,7 +1839,8 @@ Package tocbasic Info: character protrusion at lot deactivated on input line 46
 
 
 
-] [2]
+]
+[2]
 \openout2 = `Chapters/Chapter01.aux'.
 
  (./Chapters/Chapter01.tex
@@ -1843,9 +1859,6 @@ Overfull \hbox (45.36589pt too wide) in paragraph at lines 12--14
 c Style\T1/pplj/m/n/10.95 '' [[]].
  []
 
-Package microtype Info: Character `029' is missing
-(microtype)             in font `T1/pplj/m/sc/10.95'.
-(microtype)             Ignoring protrusion settings for this character.
 [3
 
 
@@ -1863,9 +1876,6 @@ Overfull \hbox (2.23521pt too wide) in paragraph at lines 67--68
 []\T1/fvm/m/n/10.95 classicthesis-config.tex\T1/pplj/m/n/10.95 : a cen-tral pla
 ce to load all nifty pack-
  []
-
-
-LaTeX Warning: Reference `sec:custom' on page 5 undefined on input line 69.
 
 [5]
 Overfull \hbox (9.23067pt too wide) in paragraph at lines 102--103
@@ -1903,9 +1913,6 @@ Overfull \hbox (1.64066pt too wide) in paragraph at lines 143--143
 
 LaTeX Font Info:    Font shape `T1/fvm/m/n' will be
 (Font)              scaled to size 8.50006pt on input line 145.
-
-LaTeX Warning: Reference `sec:options' on page 7 undefined on input line 150.
-
 
 Overfull \hbox (1.64066pt too wide) in paragraph at lines 158--158
  \T1/fvm/m/sl/9 classicthesis.sty
@@ -1959,26 +1966,6 @@ sus luc-tus mau-
 Package acronym Info: Label `acro:UML' newly defined as it shall be overridden
 although it is yet undefined on input line 18.
 
-Package acronym Warning: Acronym `UML' is not defined on input line 18.
-
-
-Package acronym Warning: Acronym `UML' is not defined on input line 18.
-
-LaTeX Font Info:    Font shape `T1/pplj/bx/n' in size <9> not available
-(Font)              Font shape `T1/pplj/b/n' tried instead on input line 18.
-
-Package acronym Warning: Acronym `UML' is not defined on input line 18.
-
-
-Package acronym Warning: Acronym `UML' is not defined on input line 18.
-
-
-Package acronym Warning: Acronym `UML' is not defined on input line 18.
-
-
-Package acronym Warning: Acronym `UML' is not defined on input line 18.
-
-
 Overfull \hbox (1.45781pt too wide) in paragraph at lines 17--19
 []\T1/pplj/m/n/10.95 Examples: \T1/pplj/m/it/10.95 Ital-ics\T1/pplj/m/n/10.95 ,
  A L L C A P S, \T1/pplj/m/sc/10.95 Small Caps\T1/pplj/m/n/10.95 , \T1/pplj/m/s
@@ -1995,13 +1982,14 @@ Overfull \hbox (3.01057pt too wide) in paragraph at lines 25--25
 ben-dum, nulla
  []
 
-
-LaTeX Warning: Citation 'bentley:1999' on page 14 undefined on input line 39.
-
-
-LaTeX Warning: Citation 'bentley:1999' on page 14 undefined on input line 39.
-
 [14]
+
+LaTeX Warning: Citation 'bentley:1999' on page 15 undefined on input line 39.
+
+
+LaTeX Warning: Citation 'bentley:1999' on page 15 undefined on input line 39.
+
+
 Overfull \hbox (17.99034pt too wide) in paragraph at lines 42--42
 []\T1/pplj/m/n/10.95 Pellentesque habi-tant morbi tris-tique senec-
  []
@@ -2030,13 +2018,13 @@ Overfull \hbox (0.77591pt too wide) in paragraph at lines 52--52
 er leo. Morbi
  []
 
-
+[15]
 Overfull \hbox (9.6941pt too wide) in paragraph at lines 55--55
 \T1/pplj/m/n/10.95 Vestibu-lum diam eros, fringilla et, con-sectetuer eu, non-u
 mmy id, sapien.
  []
 
-[15]
+
 Overfull \hbox (3.73956pt too wide) in paragraph at lines 57--57
 [] []\T1/pplj/m/sc/10.95 a p a r a -g r a p h e x -a m -p l e[] \T1/pplj/m/n/10
 .95 Etiam eu-is-mod. Fusce fa-cil-i-sis lacinia dui.
@@ -2047,9 +2035,6 @@ LaTeX Warning: Citation 'knuth:1976' on page 16 undefined on input line 64.
 
 
 LaTeX Warning: Citation 'knuth:1976' on page 16 undefined on input line 64.
-
-
-LaTeX Warning: Reference `tab:example' on page 16 undefined on input line 64.
 
 
 Overfull \hbox (1.74199pt too wide) in paragraph at lines 64--65
@@ -2092,22 +2077,16 @@ LaTeX Font Info:    Font shape `T1/pplj/bx/n' in size <10> not available
 
 LaTeX Warning: Citation 'knuth:1976' on page 16 undefined on input line 79.
 
-
-LaTeX Warning: Reference `fig:example' on page 16 undefined on input line 88.
-
-
-LaTeX Warning: Reference `fig:example-b' on page 16 undefined on input line 90.
-
-
+[16]
 File: gfx/example_1.jpg Graphic file (type QTm)
-<use  "gfx/example_1.jpg" >
+ <use  "gfx/example_1.jpg" >
 File: gfx/example_2.jpg Graphic file (type QTm)
  <use  "gfx/example_2.jpg" >
 File: gfx/example_3.jpg Graphic file (type QTm)
 
 <use  "gfx/example_3.jpg" >
 File: gfx/example_4.jpg Graphic file (type QTm)
- <use  "gfx/example_4.jpg" > [16]) [17]
+ <use  "gfx/example_4.jpg" >) [17]
 \openout2 = `Chapters/Chapter03.aux'.
 
 
@@ -2157,11 +2136,7 @@ my, scelerisque
 
 
 
-]
-
-LaTeX Warning: Reference `lst:useless' on page 24 undefined on input line 39.
-
-(c:/texlive/2016/texmf-dist/tex/latex/listings/lstlang1.sty
+] (c:/texlive/2016/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2015/06/04 1.6 listings language file
 )) [24]
 \openout2 = `FrontBackMatter/Bibliography.aux'.
@@ -2203,12 +2178,7 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 137.
 (./FrontBackMatter/Acknowledgments.aux) (./FrontBackMatter/Contents.aux)
 (./Chapters/Chapter01.aux) (./Chapters/Chapter02.aux) (./Chapters/Chapter03.aux
 ) (./Chapters/Chapter0A.aux) (./FrontBackMatter/Bibliography.aux)
-(./FrontBackMatter/Declaration.aux) (./FrontBackMatter/Colophon.aux)
-
-Package mparhack Warning: Marginpars may have changed.
-(mparhack)                Rerun to get them right.
-
-)
+(./FrontBackMatter/Declaration.aux) (./FrontBackMatter/Colophon.aux))
 Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 137.
 Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 137.
 
@@ -2217,9 +2187,6 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 
 LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
 
 Package biblatex Warning: Please (re)run BibTeX on the file(s):
@@ -2231,12 +2198,12 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 35260 strings out of 493068
- 630363 string characters out of 6138948
- 1147676 words of memory out of 5000000
- 38672 multiletter control sequences out of 15000+600000
- 51057 words of font info for 74 fonts, out of 8000000 for 9000
+ 35336 strings out of 493068
+ 631950 string characters out of 6138948
+ 1162894 words of memory out of 5000000
+ 38706 multiletter control sequences out of 15000+600000
+ 52412 words of font info for 78 fonts, out of 8000000 for 9000
  1351 hyphenation exceptions out of 8191
- 69i,22n,95p,10449b,4937s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 69i,23n,95p,10449b,5027s stack positions out of 5000i,500n,10000p,200000b,80000s
 
 Output written on main.pdf (45 pages).

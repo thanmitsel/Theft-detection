@@ -1,0 +1,70 @@
+\begin{thebibliography}{1}
+
+\selectlanguage{english}
+
+\bibitem{[ACC+03]}
+D.~J. Abadi, D.~Carney, U.~{\c{C}}etintemel, M.~Cherniack, C.~Convey, S.~Lee,
+  M.~Stonebraker, N.~Tatbul, and S.~Zdonik.
+\newblock Aurora: a new model and architecture for data stream management.
+\newblock {\em The VLDB Journal -- The International Journal on Very Large Data
+  Bases}, 12(2):120--139, 2003.
+\newblock doi:10.1007/s00778-003-0095-z.
+
+\bibitem{[DRS09]}
+N.~Dalvi, C.~R{\'e}, and D.~Suciu.
+\newblock Probabilistic databases: Diamonds in the dirt.
+\newblock {\em Communications of the ACM}, 52(7):86--94, July 2009.
+
+\bibitem{[GBE+00]}
+R.~H. G{\"u}ting, M.~H. B{\"o}hlen, M.~Erwig, C.~S. Jensen, N.~A. Lorentzos,
+  M.~Schneider, and M.~Vazirgiannis.
+\newblock A foundation for representing and querying moving objects.
+\newblock {\em ACM Transactions on Database Systems (TODS)}, 25(1):1--42, 2000.
+\newblock doi:10.1145/352958.352963.
+
+\bibitem{[JMS+08]}
+N.~Jain, S.~Mishra, A.~Srinivasan, J.~Gehrke, J.~Widom, H.~Balakrishnan,
+  U.~{\c{C}}etintemel, M.~Cherniack, R.~Tibbetts, and S.~Zdonik.
+\newblock Towards a streaming {SQL} standard.
+\newblock {\em Proceedings of the VLDB Endowment}, 1(2):1379--1390, 2008.
+
+\bibitem{[MHP05]}
+K.~Mouratidis, D.~Papadias, and M.~Hadjieleftheriou.
+\newblock Conceptual partitioning: an efficient method for continuous nearest
+  neighbor monitoring.
+\newblock In {\em SIGMOD '05: Proceedings of the 24th ACM International
+  Conference on Management of Data}, pages 634--645. ACM Press, 2005.
+\newblock doi:10.1145/1066157.1066230.
+
+\bibitem{[Ora11]}
+{Oracle, Inc}.
+\newblock Complex event processing {CQL} language reference.
+\newblock \url{http://docs.oracle.com/cd/E16764_01/doc.1111/e12048/intro.htm},
+  2009.
+\newblock Last accessed on 15/09/2013.
+
+\bibitem{[PS11]}
+K.~Patroumpas and T.~Sellis.
+\newblock Subsuming multiple sliding windows for shared stream computation.
+\newblock In J.~Eder, M.~Bielikova, and A.~M. Tjoa, editors, {\em Advances in
+  Databases and Information Systems}, volume 6909 of {\em Lecture Notes in
+  Computer Science}, pages 56--69. Springer, 2011.
+\newblock doi:10.1007/978-3-642-23737-9\_5.
+
+\bibitem{[RSV02]}
+P.~Rigaux, M.~Scholl, and A.~Voisard.
+\newblock {\em Spatial databases: with application to {GIS}}.
+\newblock Morgan Kaufmann, 2001.
+
+\bibitem{[Pap15]}
+\textgreek{Σεραφείμ Παπαδιάς}.
+\newblock \textgreek{Απόρριψη φόρτου από ρεύματα
+  τροχιάς κινούμενων αντικειμένων}.
+\newblock \textgreek{Εργαστήριο Συστημάτων Βάσεων
+  Γνώσεων και Δεδομένων, Εθνικό Μετσόβιο
+  Πολυτεχνείο}, "\textgreek{Ιούλιος} 2015.
+\newblock \textgreek{Διπλωματική Εργασία}.
+
+\selectlanguage{greek}
+
+\end{thebibliography}

@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99996 (TeX Live 2016/W32TeX) (preloaded format=xelatex 2017.3.16)  14 JUL 2017 13:36
+This is XeTeX, Version 3.14159265-2.6-0.99996 (TeX Live 2016/W32TeX) (preloaded format=xelatex 2017.3.16)  1 AUG 2017 17:55
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1253,7 +1253,8 @@ LaTeX Info: Redefining \sffamily on input line 58.
 \openout5 = `thesis.idx'.
 
 Writing index file thesis.idx 
-No file thesis.aux.
+(./thesis.aux (./acronyms.aux) (./Chapters/introduction.aux)
+(./Chapters/chapter1.aux))
 \openout1 = `thesis.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 100.
@@ -1277,6 +1278,7 @@ LaTeX Font Info:    ... okay on input line 100.
 \c@lstlisting=\count302
 \AtBeginShipoutBox=\box51
 Package hyperref Info: Link coloring ON on input line 100.
+
 (c:/texlive/2016/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
 
@@ -1291,11 +1293,9 @@ LaTeX Info: Redefining \nameref on input line 100.
 LaTeX Info: Redefining \ref on input line 100.
 LaTeX Info: Redefining \pageref on input line 100.
 LaTeX Info: Redefining \nameref on input line 100.
+(./thesis.out) (./thesis.out)
 \@outlinefile=\write6
 \openout6 = `thesis.out'.
-
-
-Package hyperref Warning: Rerun to get /PageLabels entry.
 
 .................................................
 . fontspec info: "setup-math"
@@ -1377,7 +1377,7 @@ Package microtype Info: Loading generic settings for font family
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 File: Figures/polimi-logo.pdf Graphic file (type QTm)
-<use  "Figures/polimi-logo.pdf" >
+ <use  "Figures/polimi-logo.pdf" >
 (c:/texlive/2016/texmf-dist/tex/generic/oberdiek/se-ascii-print.def
 File: se-ascii-print.def 2016/05/16 v1.11 stringenc: Printable ASCII characters
 
@@ -1446,13 +1446,80 @@ Overfull \hbox (12.02pt too wide) in paragraph at lines 148--149
 fferent datasets
  []
 
-[5] [6
+[5] (./thesis.toc
+LaTeX Font Info:    Try loading font information for U+msa on input line 1.
+ (c:/texlive/2016/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+(c:/texlive/2016/texmf-dist/tex/latex/microtype/mt-msa.cfg
+File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 1.
+
+(c:/texlive/2016/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+(c:/texlive/2016/texmf-dist/tex/latex/microtype/mt-msb.cfg
+File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
+)
+(c:/texlive/2016/texmf-dist/tex/latex/microtype/mt-cmr.cfg
+File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman 
+(RS)
+)) [6
 
 ] [7
 
-] [8] [9
+]
+(./thesis.lof
 
-] [10] [11
+Package natbib Warning: Citation `holz' on page viii undefined on input line 3.
+
+
+LaTeX Font Info:    Font shape `TU/EnvyCodeR(0)/m/n' will be
+(Font)              scaled to size 8.00003pt on input line 5.
+! Font TU/EnvyCodeR(0)/m/n/10="Envy Code R" at 8.00003pt not loadable: Metric (
+TFM) file or installed font not found.
+<to be read again> 
+                   relax 
+l.5 ...cutive \texttt {execve}).}}{14}{figure.2.1}
+                                                  
+I wasn't able to read the size data for this font,
+so I will ignore the font specification.
+[Wizards can fix TFM files using TFtoPL/PLtoTF.]
+You might try inserting a different font spec;
+e.g., type `I\font<same font id>=<substitute font name>'.
+
+Package microtype Info: Loading generic settings for font family
+(microtype)             `EnvyCodeR' (encoding: TU).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
+
+Package microtype Warning: Font `TU/EnvyCodeR(0)/m/n/10' does not specify its
+(microtype)                \fontdimen 6 (width of an `em')! Therefore,
+(microtype)                protrusion will not work with this font.
+
+Missing character: There is no t in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no x in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no v in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no x in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no v in font nullfont!
+Missing character: There is no e in font nullfont!
+) [8] [9
+
+] (./thesis.lot) [10] [11
 
 ]
 \openout2 = `acronyms.aux'.
@@ -1501,10 +1568,6 @@ so I will ignore the font specification.
 You might try inserting a different font spec;
 e.g., type `I\font<same font id>=<substitute font name>'.
 
-Package microtype Info: Loading generic settings for font family
-(microtype)             `EnvyCodeR' (encoding: TU).
-(microtype)             For optimal results, create family-specific settings.
-(microtype)             See the microtype manual for details.
 
 Package microtype Warning: Font `TU/EnvyCodeR(0)/m/n/9' does not specify its
 (microtype)                \fontdimen 6 (width of an `em')! Therefore,
@@ -1569,33 +1632,8 @@ Missing character: There is no e in font nullfont!
 Package acronym Info: Label `acro:URL' newly defined as it shall be overridden
 although it is yet undefined on input line 4.
 
-Package acronym Warning: Acronym `URL' is not defined on input line 4.
-
-
-Package acronym Warning: Acronym `URL' is not defined on input line 4.
-
-
 Package natbib Warning: Citation `google-is-big' on page 1 undefined on input l
 ine 4.
-
-LaTeX Font Info:    Font shape `TU/EnvyCodeR(0)/m/n' will be
-(Font)              scaled to size 8.00003pt on input line 4.
-! Font TU/EnvyCodeR(0)/m/n/10="Envy Code R" at 8.00003pt not loadable: Metric (
-TFM) file or installed font not found.
-<to be read again> 
-                   relax 
-l.4 ...itep{google-is-big}, while \texttt{YouTube}
-                                                   has stocked more than 70 ...
-I wasn't able to read the size data for this font,
-so I will ignore the font specification.
-[Wizards can fix TFM files using TFtoPL/PLtoTF.]
-You might try inserting a different font spec;
-e.g., type `I\font<same font id>=<substitute font name>'.
-
-
-Package microtype Warning: Font `TU/EnvyCodeR(0)/m/n/10' does not specify its
-(microtype)                \fontdimen 6 (width of an `em')! Therefore,
-(microtype)                protrusion will not work with this font.
 
 Missing character: There is no Y in font nullfont!
 Missing character: There is no o in font nullfont!
@@ -1645,25 +1683,6 @@ Package natbib Warning: Citation `whid' on page 2 undefined on input line 13.
 Package natbib Warning: Citation `data-breaches-chronology' on page 2 undefined
  on input line 13.
 
-LaTeX Font Info:    Try loading font information for U+msa on input line 16.
-(c:/texlive/2016/texmf-dist/tex/latex/amsfonts/umsa.fd
-File: umsa.fd 2013/01/14 v3.01 AMS symbols A
-)
-(c:/texlive/2016/texmf-dist/tex/latex/microtype/mt-msa.cfg
-File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
-)
-LaTeX Font Info:    Try loading font information for U+msb on input line 16.
-
-(c:/texlive/2016/texmf-dist/tex/latex/amsfonts/umsb.fd
-File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-)
-(c:/texlive/2016/texmf-dist/tex/latex/microtype/mt-msb.cfg
-File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
-)
-(c:/texlive/2016/texmf-dist/tex/latex/microtype/mt-cmr.cfg
-File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman 
-(RS)
-)
 Missing character: There is no S in font nullfont!
 Missing character: There is no e in font nullfont!
 Missing character: There is no c in font nullfont!
@@ -1708,7 +1727,6 @@ Missing character: There is no i in font nullfont!
 Missing character: There is no v in font nullfont!
 Missing character: There is no e in font nullfont!
 Missing character: There is no X in font nullfont!
-
 
 Package natbib Warning: Citation `secunia2008' on page 2 undefined on input lin
 e 16.
@@ -1834,21 +1852,17 @@ Missing character: There is no w in font nullfont!
 Missing character: There is no s in font nullfont!
 Package acronym Info: Label `acro:DoS' newly defined as it shall be overridden
 although it is yet undefined on input line 53.
-
-Package acronym Warning: Acronym `DoS' is not defined on input line 53.
-
-
-Package acronym Warning: Acronym `DoS' is not defined on input line 53.
-
 Package acronym Info: Label `acro:HTTP' newly defined as it shall be overridden
 
 although it is yet undefined on input line 59.
 
-Package acronym Warning: Acronym `HTTP' is not defined on input line 59.
+Overfull \hbox (18.54668pt too wide) in paragraph at lines 59--60
+\TU/AdobeCaslonPro(0)/m/n/10 connection over the Internet: the [][][]\TU/AdobeC
+aslonPro(0)/m/it/10 HyperText Transfer Protocol \TU/AdobeCaslonPro(0)/m/n/10 ([
+])[]
+ []
 
-
-Package acronym Warning: Acronym `HTTP' is not defined on input line 59.
-
+[5]
 Missing character: There is no W in font nullfont!
 Missing character: There is no i in font nullfont!
 Missing character: There is no n in font nullfont!
@@ -1869,20 +1883,11 @@ Missing character: There is no e in font nullfont!
 Missing character: There is no f in font nullfont!
 Missing character: There is no o in font nullfont!
 Missing character: There is no x in font nullfont!
-[5]
-
-Package acronym Warning: Acronym `HTTP' is not defined on input line 61.
-
 Package acronym Info: Label `acro:SQL' newly defined as it shall be overridden
 although it is yet undefined on input line 61.
-
-Package acronym Warning: Acronym `SQL' is not defined on input line 61.
-
-
-Package acronym Warning: Acronym `SQL' is not defined on input line 61.
-
 LaTeX Font Info:    Font shape `TU/EnvyCodeR(0)/m/n' will be
 (Font)              scaled to size 6.40002pt on input line 63.
+
 ! Font TU/EnvyCodeR(0)/m/n/8="Envy Code R" at 6.40002pt not loadable: Metric (T
 FM) file or installed font not found.
 <to be read again> 
@@ -2013,17 +2018,8 @@ Missing character: There is no . in font nullfont!
 Missing character: There is no p in font nullfont!
 Missing character: There is no h in font nullfont!
 Missing character: There is no p in font nullfont!
-
-Package acronym Warning: Acronym `HTTP' is not defined on input line 76.
-
 Package acronym Info: Label `acro:ISP' newly defined as it shall be overridden
 although it is yet undefined on input line 76.
-
-Package acronym Warning: Acronym `ISP' is not defined on input line 76.
-
-
-Package acronym Warning: Acronym `ISP' is not defined on input line 76.
-
 Missing character: There is no S in font nullfont!
 Missing character: There is no n in font nullfont!
 Missing character: There is no o in font nullfont!
@@ -2031,15 +2027,6 @@ Missing character: There is no r in font nullfont!
 Missing character: There is no t in font nullfont!
 Package acronym Info: Label `acro:IDS' newly defined as it shall be overridden
 although it is yet undefined on input line 76.
-
-Package acronym Warning: Acronym `IDS' is not defined on input line 76.
-
-
-Package acronym Warning: Acronym `IDS' is not defined on input line 76.
-
-
-Package acronym Warning: Acronym `SQL' is not defined on input line 76.
-
 Missing character: There is no M in font nullfont!
 Missing character: There is no o in font nullfont!
 Missing character: There is no d in font nullfont!
@@ -2056,6 +2043,13 @@ Package natbib Warning: Citation `ristic:mod_security' on page 6 undefined on i
 nput line 76.
 
 
+Overfull \hbox (12.44601pt too wide) in paragraph at lines 76--77
+\TU/AdobeCaslonPro(0)/m/n/10 if the [][][]\TU/AdobeCaslonPro(0)/m/it/10 Interne
+t Service Provider \TU/AdobeCaslonPro(0)/m/n/10 ([])[] network adopt , a lightw
+eight [][][]\TU/AdobeCaslonPro(0)/m/it/10 Intrusion
+ []
+
+[6]
 Overfull \hbox (13.186pt too wide) in paragraph at lines 78--79
 []\TU/AdobeCaslonPro(0)/m/n/10 Ideally, an effective and comprehensive counterm
 easure can be achieved
@@ -2067,7 +2061,6 @@ Overfull \hbox (0.818pt too wide) in paragraph at lines 78--79
 -side, server-side, network-
  []
 
-[6]
 
 Package natbib Warning: Citation `ranum-myths' on page 7 undefined on input lin
 e 86.
@@ -2078,35 +2071,13 @@ Overfull \hbox (6.11658pt too wide) in paragraph at lines 86--87
 t
  []
 
-
-Package acronym Warning: Acronym `IDS' is not defined on input line 92.
-
 Package acronym Info: Label `acro:ID' newly defined as it shall be overridden
 although it is yet undefined on input line 95.
-
-Package acronym Warning: Acronym `ID' is not defined on input line 95.
-
-
-Package acronym Warning: Acronym `ID' is not defined on input line 95.
-
-[7]
-
-Package acronym Warning: Acronym `IDS' is not defined on input line 101.
-
-
-Package acronym Warning: Acronym `HTTP' is not defined on input line 105.
-
-
-Package acronym Warning: Acronym `HTTP' is not defined on input line 105.
-
-[8]
+[7] [8]
 Overfull \hbox (4.77112pt too wide) in paragraph at lines 109--110
 \TU/AdobeCaslonPro(0)/m/n/10 in web applications and can distinguish good \TU/A
 dobeCaslonPro(0)/m/it/10 vs. \TU/AdobeCaslonPro(0)/m/n/10 malicious changes
  []
-
-
-Package acronym Warning: Acronym `IDS' is not defined on input line 110.
 
 
 Overfull \hbox (3.0433pt too wide) in paragraph at lines 110--111
@@ -2120,20 +2091,10 @@ Overfull \hbox (1.53665pt too wide) in paragraph at lines 110--111
 er-trained ones
  []
 
-[9]
-
-Package acronym Warning: Acronym `IDS' is not defined on input line 115.
-
-) [10]
+[9]) [10]
 \openout2 = `Chapters/chapter1.aux'.
 
  (./Chapters/chapter1.tex
-
-Package acronym Warning: Acronym `IDS' is not defined on input line 22.
-
-
-Package acronym Warning: Acronym `IDS' is not defined on input line 22.
-
 (c:/texlive/2016/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2015/06/04 1.6 listings language file
 )
@@ -2504,29 +2465,12 @@ Missing character: There is no v in font nullfont!
 Missing character: There is no e in font nullfont!
 Package acronym Info: Label `acro:TCP' newly defined as it shall be overridden
 although it is yet undefined on input line 104.
-
-
-Package acronym Warning: Acronym `TCP' is not defined on input line 104.
-
-
-Package acronym Warning: Acronym `TCP' is not defined on input line 104.
-
-[14
+ [14
 
 
 ]
 Package acronym Info: Label `acro:IP' newly defined as it shall be overridden
 although it is yet undefined on input line 106.
-
-
-Package acronym Warning: Acronym `IP' is not defined on input line 106.
-
-
-Package acronym Warning: Acronym `IP' is not defined on input line 106.
-
-
-Package acronym Warning: Acronym `TCP' is not defined on input line 106.
-
 
 Overfull \hbox (2.60664pt too wide) in paragraph at lines 107--108
 []\TU/AdobeCaslonPro(0)/m/n/10 means that stochastic techniques are exploited t
@@ -2541,29 +2485,8 @@ be constructed
 
 Package acronym Info: Label `acro:TTL' newly defined as it shall be overridden
 although it is yet undefined on input line 108.
-
-Package acronym Warning: Acronym `TTL' is not defined on input line 108.
-
-
-Package acronym Warning: Acronym `TTL' is not defined on input line 108.
-
 Package acronym Info: Label `acro:SOM' newly defined as it shall be overridden
 although it is yet undefined on input line 109.
-
-Package acronym Warning: Acronym `SOM' is not defined on input line 109.
-
-
-Package acronym Warning: Acronym `SOM' is not defined on input line 109.
-
-
-Package acronym Warning: Acronym `IDS' is not defined on input line 146.
-
-
-Package acronym Warning: Acronym `IDS' is not defined on input line 147.
-
-
-Package acronym Warning: Acronym `IDS' is not defined on input line 147.
-
 [15]
 Missing character: There is no W in font nullfont!
 Missing character: There is no i in font nullfont!
@@ -2577,10 +2500,6 @@ Missing character: There is no i in font nullfont!
 Missing character: There is no s in font nullfont!
 Missing character: There is no c in font nullfont!
 Missing character: There is no o in font nullfont!
-
-
-Package acronym Warning: Acronym `TCP' is not defined on input line 155.
-
 Missing character: There is no < in font nullfont!
 Missing character: There is no f in font nullfont!
 Missing character: There is no u in font nullfont!
@@ -2639,9 +2558,6 @@ Missing character: There is no i in font nullfont!
 Missing character: There is no s in font nullfont!
 Missing character: There is no c in font nullfont!
 Missing character: There is no o in font nullfont!
-
-Package acronym Warning: Acronym `TCP' is not defined on input line 176.
-
 ) [16]
 No file thesis.bbl.
 No file thesis.ind.
@@ -2667,16 +2583,13 @@ Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 233.
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 233.
  ) 
 Here is how much of TeX's memory you used:
- 25195 strings out of 493068
- 442255 string characters out of 6138948
- 620428 words of memory out of 5000000
- 28858 multiletter control sequences out of 15000+600000
+ 25223 strings out of 493068
+ 442646 string characters out of 6138948
+ 630704 words of memory out of 5000000
+ 28868 multiletter control sequences out of 15000+600000
  12021 words of font info for 65 fonts, out of 8000000 for 9000
  1351 hyphenation exceptions out of 8191
  42i,12n,68p,10525b,1887s stack positions out of 5000i,500n,10000p,200000b,80000s

@@ -1,0 +1,431 @@
+\chapter{Archipelago}\label{ch:archip}
+
+This chapter presents Archipelago, a distributed storage layer that is part of 
+the Synnefo cloud software. More specifically, Section 
+\ref{sec:overview-archip} introduces Archipelago and its basic features.  
+Section \ref{sec:arch-archip} shows the architecture of Archipelago and 
+explains the components that it consists of. Section \ref{sec:req-archip} 
+illustrates how Archipelago handles the I/O request flow up to the storage 
+backend and finally, Section \ref{sec:rados-archip} shows an important 
+Archipelago storage backend, the RADOS object storage.
+
+\section{Overview}\label{sec:overview-archip}
+
+Archipelago is a distributed storage layer that is part of the Synnefo cloud 
+software. It is responsible for creating Copy-on-Write, snapshottable volumes 
+for VMs.  Archipelago can be considered as a storage layer (see Figure 
+\ref{fig:archipelago_overview_a.pdf}) that is positioned between the VM's block 
+device, and the underlying storage. Also, we can see that it is distributed in 
+nature since it can run in an arbitrary number of nodes and most importantly 
+with zero communication overhead between them.
+
+\diagram{Archipelago overview}{archipelago_overview_a.pdf}
+
+Archipelago has the following objectives:
+
+\begin{itemize}
+	\item Thinly provision volumes to VMs with zero data movement.
+	\item Snapshot VM volumes and use them as system images with, again, zero 
+		data movement.
+	\item Allow VM migrations between Archipelago nodes with no restrictions.
+	\item Be agnostic to the actual storage backend used.
+\end{itemize}
+
+\section{Architecture}\label{sec:arch-archip}
+
+Archipelago has a modular architecture, which allows it to categorize its 
+operations and assign them to distinct components. The IPC between these 
+components, which are called \textbf{peers} in the Archipelago dialect, is 
+facilitated by XSEG.
+
+XSEG can be considered as the kernel of Archipelago and is a custom mechanism 
+that:
+\begin{inparaenum}[i)]
+\item defines a common communication protocol for all peers, regardless of 
+	their type (userspace/kernelspace, singlethreaded/multithreaded) and
+\item builds a shared memory segment, where peers can share data using 
+	zero-copy techniques.
+\end{inparaenum}
+The above are provided to the peers by the \texttt{libxseg} library.
+
+In Figure \ref{fig:new_sxima_numbered.pdf}, we present the architecture of 
+Archipelago.  Moreover, we show the Archipelago peers, the communication 
+channels between them and we briefly explain the operations that they are 
+responsible for.
+
+\diagram{Archipelago components}{new_sxima_numbered.pdf}
+
+\begin{description}
+	\item[XSEG Block Device (xsegbd)] \hfill \\
+		xsegbd is a kernel module that exposes a VM's volume as a block device.  
+		For each VM, Archi\-pelago registers an xsegbd block device. This block 
+		device provides the entry point for the requests that enter the 
+		Archipelago layer.
+	\item[VoLuMe Composer Daemon (vlmcd)] \hfill \\
+		vlmcd accepts requests from the various xsegbd devices and 
+		translates them to object requests, with the help of mapperd.
+	\item[Mapper Daemon (mapperd)] \hfill \\
+		mapperd is responsible for the mapping of volumes to objects.  
+		This means that it must tackle a broad set of tasks such as 
+		knowing the objects that a volume consists of, cloning and 
+		snapshotting volumes and creating new ones.
+	\item[Blocker Daemon (blockerd)] \hfill \\
+		blockerd is not a specific entity but a family of drivers, each 
+		of which is written for a specific storage type. Blockers have 
+		a single purpose, to read/write objects from/to the storage.  
+		Currently, there are blockers for NFS and the RADOS object 
+		storage.
+\end{description}
+
+\section{Requests}\label{sec:req-archip}
+
+In the previous section, we have shown that Archipelago uses distinct 
+components that operate in various modes and spaces. At this point, one might 
+wonder, why can't the above logic be handled solely by our custom block device 
+driver?
+
+The reason is because the approach that we have favored gives us the following 
+benefits:
+
+\begin{enumerate}
+	\item We can do most of our operations in user space instead of kernel 
+		space.
+	\item We can support multiple storage backends by means of plugging.
+	\item We have a more manageable, modular software due to the fact that 
+		it is split in smaller, single-purpose entities.
+\end{enumerate}
+
+The request flow can be seen in Figure \ref{fig:new_sxima_numbered.pdf}. We 
+will explain what happens in every step of the process, with the same order as 
+they are presented in Figure \ref{fig:new_sxima_numbered.pdf}:
+
+\begin{enumerate}
+	\item The VM issues an I/O request, which is essentially a request to a 
+		block device. The hypervisor forwards this request to an xsegbd 
+		device, which is attached to every VM.
+	\item The xsegbd's purpose is to bring this request to the user space, 
+		by copying its data to the shared memory segment and sending a
+		request through XSEG to vlmcd
+	\item Once the vlmcd receives the request, it forwards it to
+		mapperd, along with the volume name. Then, it waits until
+		mapperd returns with the objects that this request consists of.  
+	\item The mapperd usually has the mapping of a volume, i.e. the objects 
+		that a volume consists of, cached in its memory, so it can 
+		respond quickly.  Using the volume's mapping, mapperd can  
+		decide which are the objects that this request consists of.
+		In the rare event that the mapping is not cached, it queries a 
+		special purpose blocker to retrieve it.
+	\item At this point, mapperd has two courses of action:
+		\begin{enumerate}[i)]
+			\item it can either respond to vlmcd the correct 
+				objects	that it must read from or write to (3) 
+				or
+			\item perform a CoW operation (5)->(4)->(3)
+		\end{enumerate}
+
+		The CoW operation will be performed if the VM has asked to 
+		write on an object which shares data with another object.  In 
+		this case, mapperd will send a copy request to the data blocker 
+		and will create a new object with the same data (5).  Then, 
+		mapperd will update its mapping and store it using the blocker 
+		for mappings (4). Once all of the above have finished, mapperd 
+		will respond to vlmcd the name of the copied object (3).
+	\item At this point, vlmcd can send the request for the correct object 
+		to the data blocker.
+	\item Finally, the blocker will read/write the requested data to the 
+		storage type that it has been written for.
+\end{enumerate}
+
+Once the storage backend completes the request, the data blocker notifies the 
+vlmcd, which in turn notifies the xsebd, which finally notifies the VM.
+
+\subsection{Request polling}\label{sec:arch-poll}
+
+There is a part that has been omitted in the previous section and that is how 
+peers send and receive requests. This is a rather intricate aspect of the 
+Archipelago IPC, but we will explain it here since it is needed to understand 
+mainly the synapsed implementation.
+
+To begin with, one of the features of the shared segment is that it provides a 
+number of \textbf{custom ports}. These ports are similar to network ports, in 
+the sense that peers bind them and can listen for requests through them. Each 
+port has essentially two queues:
+\begin{inparaenum}[i)]
+\item a \textbf{request queue}, where new requests are accepted, and
+\item a \textbf{reply queue}, where replies to requests are received.
+\end{inparaenum}
+
+Thus, when a peer wants to send a request to another peer, it merely needs to 
+enqueue that request to the request queue of the peer's port. Likewise, when a 
+peer responds to a request that was sent by another peer, it will enqueue that 
+request in the reply queue of that peer.
+
+Moreover, peers are notified about new requests via signals. When a peer 
+receives a signal, it wakes up and then accepts the request. However, context 
+switching is expensive, so once the peer has served a request, it will not 
+sleep immediately. Instead, it will iterate its ports for new requests for a 
+small number of cycles and if no request is received until then, it will sleep.
+
+\section{RADOS and sosd}\label{sec:rados-archip}
+
+As we have mentioned above, Archipelago is not restricted to a storage backend 
+and can work with any backend for which a blocker can be created. There is one 
+backend however that provides many important features that are used to make 
+Archipelago more scalable and reliable.
+
+
+This backend is RADOS\cite{rados}, which is the object store component of the 
+Ceph \footnote{ceph.com} system. Ceph is a free distributed object store and 
+file system that has been created by Sage Weil for his doctoral dissertation
+\cite{weil-thesis} and has been supported by his company, Inktank, ever since.
+
+The architecture of Ceph can be seen in Figure \ref{fig:ceph.png}.
+\footnote{Picture retrieved from the official website on September 24, 2013.  
+	All rights go to the respective owners.}
+
+\diagram{Ceph entry points}{ceph.png}
+
+Ceph utilizes RADOS to achieve the following:
+
+\begin{itemize}
+	\item \textit{Replication}, which means that there can be many copies 
+		of the same object so that the object is always accessible, 
+		even when a node experiences a failure.
+	\item \textit{Fault tolerance}, which is achieved by not having a 
+		single point of failure. Instead, RADOS uses elected servers 
+		called \textbf{monitors}, each of which have mappings of the 
+		storage nodes where the objects and their replicas are stored.  
+	\item \textit{Self-management}, which is possible since monitors know 
+		at any time the status of the storage nodes and, for example, 
+		can command to create new object replicas if a node experiences 
+		a failure.
+	\item \textit{Scalability}, which is aided by the fact that there is no 
+		point of failure, which means that adding new nodes 
+		theoretically does not add any communication overhead.
+\end{itemize}
+
+In a nutshell, RADOS consists of the following components:
+
+\begin{itemize}
+	\item \textit{object store daemons}, which are userspace processes that run 
+		in the storage backend and are responsible for storing the data.
+	\item \textit{monitor daemons}, which are monitoring userspace processes 
+		that run in an odd number of servers that form a Paxos part-time 
+		parliament\cite{Paxos}. Their main responsibility is holding and 
+		reliably updating the mapping of objects to object store daemons, as 
+		well as self-healing when an object store daemon or monitor daemon has 
+		crashed.
+\end{itemize}
+
+The mapping of objects to object store daemons is done indirectly with the help 
+of the \textit{CRUSH map} and \textit{placement groups (pgs)}.  Generally 
+speaking, placement groups can be considered as logical buckets where more than 
+one values can be assigned to.
+
+RADOS uses placement groups in the following manner: On initialization, it is 
+configured to have a fixed number of placement groups and a range of values 
+assigned to each of them. When it is asked to find an object, the object name 
+is hashed and its hash value is used to find in which placement group it 
+belongs.  The relationship between placement groups and object store daemons is 
+stored in CRUSH maps that each monitor daemon holds. This way, the objects are 
+pseudorandomly distributed to the storage backend, which in turn implicitly 
+guarantees load balancing. 
+
+There are various entry points for RADOS, as is evident from Figure 
+\ref{fig:ceph.png}. Archipelago uses librados for I/O requests and more 
+specifically, a blocker called sosd\cite{sosd} has been created by Filippos 
+Giannakos to facilitate the communication between RADOS and Archipelago.
+
+
+\begin{comment}
+\section{XSEG design}
+
+The shared memory segment provides, besides a common IPC, the following to the 
+peers that join it:
+
+\begin{enumerate}
+	\item A fast way to synchronize and/or have access to each other's data 
+		using relative pointers (XSEG pointers) to the start of the 
+		segment.
+	\item A custom memory allocation mechanism that allocates data from the 
+		segment, taking into account the memory fragmentation issues.
+	\item Structures such as hash tables and stacks, that can be used and 
+		accessed from different processes.
+	\item An indication for the memory that is used by Archipelago.
+\end{enumerate}
+
+To achieve the above, XSEG utilizes several components that fall under the 
+following main categories:
+
+\begin{description}
+	\item[Drivers] \hfill \\
+		Drivers implement the common communication and memory 
+		allocation protocol for every peer type (userspace/kernelspace, 
+		single-threaded/multi-threaded).
+	\item[Libraries] \hfill \\
+		Libraries (or libxseg to be exact) are linked with peers and 
+		allow them to use xtypes (see below) as well as useful generic 
+		functions, such as logging.
+	\item[Xtypes] \hfill \\
+		Xtypes are data structures such as hash tables, queues, stacks 
+		etc. whose data reside in the segment and can be used 
+		concurrently by all peers. In fact, it is a rule in Archipelago 
+		that if a structure must be accessed by more that one peers, it 
+		must be designed as an XSEG type that will provide zero-copy 
+		guarantees and integration with the segment.
+	\item[Peers] \hfill \\
+		Peers, which have been discussed above, are the components that 
+		are responsible for accepting, processing and sending I/O 
+		requests.
+\end{description}
+
+\subsection{Drivers}
+
+\subsection{Libraries}
+
+\subsection{Xtypes}\label{sec:arch-xtypes}
+
+The rationale behind xtypes is:
+
+\begin{itemize}
+	\item Abstraction(?) layers: Creating inner abstractions layers for 
+		software is not a new concept but it's very easy to miss, 
+		especially when you start small and end up big.
+		
+		In a nutshell, when writing code for a new software (in our case 
+		a peer for Archipelago but this can apply to most software that 
+		surpass the 1000 LOC\footnote[1]
+		{Lines Of Code}
+		mark) it is wrong practice to create from scratch a monolithic 
+		implementation with indistinguishable parts. There is a main 
+		reason for this:
+		
+		Monolithic implementations usually derive from lack of code 
+		architecture and planning. Although it is feasible for a 
+		programmer to create fully-functional code that meets the 
+		necessary requirements, albeit with a lot more effort and 
+		concentration, this approach will backfire when the programmer 
+		needs to add new features. Since there is no explicit code 
+		architecture and the fragile inner correlations are between 
+		lines of code and not separate entities, stored precariously in 
+		the developer's mind, the result will eventually be constant 
+		code refactorization.
+		
+		One might think that new features happen once in a while in the 
+		development cycle but that would be wrong.  This happens more 
+		often than you might think and is actually the common case in 
+		iteration and test-driven development.
+
+		The right practice instead is to...
+	\item Re-usability:...
+	\item User-space / Kernel-space agnosticity: (I doubt that such a word 
+		even exists...)
+\end{itemize}	
+
+\subsection{Peers}\label{sec:arch-peer}
+
+Peers are Archipelago components that are responsible for accepting, processing 
+and sending of the I/O requests. They are essential for the modular nature of 
+Archipelago since each of them can be considered as a separate entity. They do 
+their own logging, signal handling and processing.
+
+The main Archipelago peers can be seen in Figure ?. As we can see from this 
+figure, peers are processes that are attached to an XSEG segment. In the 
+previous chaptr, we have mentioned that XSEG segments facilitate the IPC between 
+different Archipelago components by offering a shared space where process can 
+read and write to very fast. This however barely scratches the surface of IPC in 
+Archipelago. In the following section, we will discuss more in-length the 
+details behind Archipelago IPC
+
+\section{Archipelago IPC}\label{sec:arch-ipc}
+
+An important part of the shared segment that was intentionally skipped in the 
+previous section is its ports.
+
+When XSEG is being initialized, it reserves space in the segment for a number 
+of custom ports.  These ports are similar to network ports, in the sense that 
+peers bind them and can listen for requests through them. Each port has 
+essentially two queues:
+\begin{inparaenum}[i)]
+\item a request queue, where new requests are accepted, and
+\item a reply queue, where replies to requests are received.
+\end{inparaenum}
+XSEG requests do not differ drastically from common requests and typically have 
+a target, offset, size and a buffer to store the data. Targets can either be 
+objects or volumes, depending on the peer context.
+
+Another important aspect of the Archipelago IPC, is the mechanism with which 
+peers poll for new requests, which is seen in the following section.
+
+\subsection{Polling}
+\label{sec:arch-poll}
+
+The polling process \ref{sec:arch-poll}is the following:
+
+\begin{enumerate}
+	\item On peer initialization, the SIGIO signal is blocked and the PID 
+		of the peer is masked from other peers.
+	\item On the request loop, the peer checks its ports, without blocking
+		and for a limited amount of cycles.
+	\item On the last cycle, it unmasks its PID and check its ports one 
+		last time.
+	\item If there are no enqueued requests, it uses sigtimedwait to sleep 
+		for 10s. sigtimedwait is a function that allows to wait 
+		synchronously for pending signals, which is generally faster 
+		than invoking a signal handler.
+	\item If the 10s expire, the peer masks again its PID and goes to step 
+		2.
+\end{enumerate}
+
+To understand what requests are in XSEG context, we present some parts of the 
+xseg\_request structure:
+
+\begin{description}
+	\item[source port:] The port from
+\end{description}
+
+in particular have basically the following structure:
+
+For instance, queues are  allocated in the segment, both queues and request are 
+custom-built entities for XSEG
+The interesting part of this process is
+
+
+Fist of all, we must clarify that in Archipelago, IPC is done strictly between 
+peers in the \textbf{same} memory segment. The reason is that we have crafted 
+our own methods for IPC and the processes that need it must attain to a certain 
+architecture, which is the peer architecture.
+
+The entrance point for IPC is the peer port. When a peer is registered in the 
+segment, it attaches itself to a port range. Peer ports are completely different 
+to common ports (which are these ports?). When a peer wants to send a request to 
+another peer, it must first "get" the registered port on the segment. The xseg 
+port is a structure that holds the necessary information as to where to send the 
+request. Every port has three different queues; reply, request, free queue.
+
+Request queues are typically a stack that can be addressed from different peers 
+in the same segment. For this reason, they are designed as xtypes. For speed 
+resons, they are pre-allocated to a certain length and re-allocated on-line, if 
+there is need
+
+Also, ports are designed to be considered as paths. That is, when a request is 
+sent from one port to another...
+
+\section{Request flow example}
+
+We have bench xseg which works like so:
+
+\begin{enumerate}
+	\item Get request
+	\item Prepare request
+	\item Create chunk
+	\item Allocate peer request
+	\item Set request (xhash)
+	\item Submit request
+\end{enumerate}
+
+\subsection{Get request}\label{sec:get-req-archip}
+
+Explain here about xq or in xtypes?
+\end{comment}
+
