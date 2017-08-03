@@ -1,7 +1,10 @@
+% Guide: https://www.sharelatex.com/blog/2013/08/06/thesis-series-pt2.html
+% Ntua template:  
 %% The Preamble %%
-\documentclass[11pt, a4paper, english, greek, twoside]{report}
+%\documentclass[11pt, a4paper, english, greek, twoside]{report}
+\documentclass[11pt, twoside]{report}
 \usepackage[utf8]{inputenc}
-\usepackage{fullpage}
+%\usepackage{fullpage} % problem with headers
 \usepackage{graphicx}
 \usepackage{wrapfig} % wrap figures around text
 \usepackage{amsmath}
@@ -11,6 +14,25 @@
 \usepackage{xgreek}
 \setmainfont[Mapping=tex-text]{GFS Didot}
 %-----------------------------%
+%% Layout packages %%
+\usepackage[a4paper,width=150mm,top=25mm,bottom=25mm]{geometry}
+%\usepackage[a4paper,width=150mm,top=25mm,bottom=25mm,bindingoffset=6mm]{geometry} % no offset
+\usepackage{fancyhdr}% headers and footers
+\pagestyle{fancy}
+% Customization (not necessary)%
+\fancyhead{}
+\fancyhead[RO,LE]{Εντοπισμός Ρευματοκλοπών με Μηχανική Μάθηση}
+\fancyfoot{}
+\fancyfoot[LE,RO]{\thepage}
+\fancyfoot[LO,CE]{Κεφάλαιο \thechapter}
+\fancyfoot[CO,RE]{Μητσέλος Αθανάσιος}
+%------------------------------%
+%-------------------%
+% Bibliography %% press F11 to start biber
+\usepackage[sorting=ynt]{biblatex} % sort by year, name, title
+%\bibliography{references}
+\addbibresource{references.bib} % cite files
+%--------------%
 %----------------%
 
 
@@ -40,9 +62,9 @@
 \chapter*{Abstract}
 \chapter*{Keywords} 
 \chapter*{Ευχαριστίες}
-\tableofcontents{}
-\chapter*{Ευρετήριο Σχημάτων}
-\chapter*{Ευρετήριο Πινάκων}
+\tableofcontents{} % Index Chapters
+\listoffigures{}	% Index Figures
+\listoftables{} % Index Tables
 %--------------------%
 
 %% The Main Body %%
@@ -70,8 +92,8 @@
 
 %% The End Matter %%
 \appendix
-\chapter{Appendix Title}
+\chapter{Συχνές ερωτήσεις}
 %\input{Chapters/appendix}
 %------------------%
-
+\printbibliography
 \end{document}

@@ -1,0 +1,104 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 2.8 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \sortlist[entry]{ynt/global/}
+    \entry{stationarity}{online}{}
+      \name{author}{2}{}{%
+        {{hash=a3ecf7dc6730e4e8fc15fcbf9e002e55}{%
+           family={Hyndman},
+           familyi={H\bibinitperiod},
+           given={Rob\bibnamedelima J.},
+           giveni={R\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=95cfbf5a8396e08b434cc6f7f5b18dc8}{%
+           family={Athanasopoulos},
+           familyi={A\bibinitperiod},
+           given={George},
+           giveni={G\bibinitperiod}}}%
+      }
+      \strng{namehash}{b0437d5c2ac2ff47ae2617b69caf4fe7}
+      \strng{fullhash}{b0437d5c2ac2ff47ae2617b69caf4fe7}
+      \strng{authornamehash}{b0437d5c2ac2ff47ae2617b69caf4fe7}
+      \strng{authorfullhash}{b0437d5c2ac2ff47ae2617b69caf4fe7}
+      \field{sortinit}{2}
+      \field{sortinithash}{0aa614ace9f3a40ef5a67e7f7a184048}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Forecasting: principles and practice}
+      \field{year}{2012}
+      \verb{url}
+      \verb https://www.otexts.org/fpp
+      \endverb
+    \endentry
+    \entry{timeseriesanalysis}{book}{}
+      \name{author}{2}{}{%
+        {{hash=b8c62a486689db330068d84b374e1b87}{%
+           family={George\bibnamedelimb E.\bibnamedelimi P.\bibnamedelimi Box},
+           familyi={G\bibinitperiod\bibinitdelim E\bibinitperiod\bibinitdelim P\bibinitperiod\bibinitdelim B\bibinitperiod},
+           given={Gregory\bibnamedelimb C.\bibnamedelimi Reinsel},
+           giveni={G\bibinitperiod\bibinitdelim C\bibinitperiod\bibinitdelim R\bibinitperiod},
+           suffix={Gwilym\bibnamedelimb M.\bibnamedelimi Jenkins},
+           suffixi={G\bibinitperiod\bibinitdelim M\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=0e838ab0cc6f426eb4a1ca925f511cd6}{%
+           family={Ljung},
+           familyi={L\bibinitperiod},
+           given={Greta\bibnamedelima M.},
+           giveni={G\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {New Jersey}%
+      }
+      \list{publisher}{1}{%
+        {Wiley}%
+      }
+      \strng{namehash}{202f22df7ce849fba21cbe03209fab6d}
+      \strng{fullhash}{202f22df7ce849fba21cbe03209fab6d}
+      \strng{authornamehash}{202f22df7ce849fba21cbe03209fab6d}
+      \strng{authorfullhash}{202f22df7ce849fba21cbe03209fab6d}
+      \field{sortinit}{2}
+      \field{sortinithash}{0aa614ace9f3a40ef5a67e7f7a184048}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Time Series Analysis: Forecasting and Control}
+      \field{year}{2016}
+    \endentry
+    \entry{mathworkstrend}{online}{}
+      \name{author}{1}{}{%
+        {{hash=8f631b769d4710fba49eafd295c9d96d}{%
+           family={Mathworks},
+           familyi={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{8f631b769d4710fba49eafd295c9d96d}
+      \strng{fullhash}{8f631b769d4710fba49eafd295c9d96d}
+      \strng{authornamehash}{8f631b769d4710fba49eafd295c9d96d}
+      \strng{authorfullhash}{8f631b769d4710fba49eafd295c9d96d}
+      \field{sortinit}{2}
+      \field{sortinithash}{0aa614ace9f3a40ef5a67e7f7a184048}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Parametric Trend Estimation}
+      \field{year}{2017}
+      \verb{url}
+      \verb https://www.mathworks.com/help/econ/parametric-trend-estimation.html
+      \endverb
+    \endentry
+  \endsortlist
+\endrefsection
+\endinput
+
