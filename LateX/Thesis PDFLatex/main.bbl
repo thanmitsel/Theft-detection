@@ -56,6 +56,25 @@
 		\newblock{E07-RMF-04-03.}
 		\newblock{2007.}
 		
+		\bibitem{tacis}
+		Tacis.
+		\newblock{\em Improving Residential Electricity Services.}
+		\newblock{Tacis Technical Dissemination Project.}
+		\newblock{\en{\url{http://www.tacisinfo.ru.}}}
+		\newblock{1998.}
+		
+		\bibitem{mkhwanazi}
+		Mkhwanazi.
+		\newblock{\em Electricity as a birthright and the problem of non-payment.}
+		\newblock{Third Annual South Africa Revenue Protection Conference.}
+		\newblock{1999.}
+		
+		\bibitem{artoftradeoff}
+		Micheal J. North and Charles M. Macal.
+		\newblock {\em Managing Business Complexity: Discovering Strategic Solutions with Agent-Based Modeling and Simulation.}
+		\newblock New York: Oxford University Press, 2007.
+		\newblock{ch. 2, Other angles on Nondeterminism}
+		
     \selectlanguage{greek}
 		
 		\bibitem{energypress}
@@ -77,6 +96,7 @@
 		\bibitem{dehfraud}
 		Δημόσια Επιχείρηση Ηλεκτρισμού.
 		\newblock{\em{To Κόστος των Ρευματοκλοπών.}}
-		\newblock{\en{Athens, 5 May 2016.}}
+		\newblock{\en{Athens, 5 May 2017.}}
 		\newblock{Δελτίο τύπου 552017.}
+		
 \end{thebibliography}

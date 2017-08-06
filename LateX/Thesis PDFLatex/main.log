@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/W32TeX) (preloaded format=pdflatex 2017.3.16)  6 AUG 2017 03:55
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/W32TeX) (preloaded format=pdflatex 2017.3.16)  6 AUG 2017 19:34
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1464,32 +1464,32 @@ Underfull \hbox (badness 10000) in paragraph at lines 118--118
 
 
 ] (./main.toc [7]
-LaTeX Info: Redefining \anw@print on input line 87.
-)
+LaTeX Info: Redefining \anw@print on input line 106.
+ [8])
 \tf@toc=\write5
 \openout5 = `main.toc'.
 
- [8]
-(./main.lof)
+ [9]
+[10
+
+] (./main.lof)
 \tf@lof=\write6
 \openout6 = `main.lof'.
 
- [9
-
-] [10
+ [11] [12
 
 ] (./main.lot
-LaTeX Info: Redefining \anw@print on input line 34.
+LaTeX Info: Redefining \anw@print on input line 36.
 )
 \tf@lot=\write7
 \openout7 = `main.lot'.
 
- [11] [12
+ [13] [14
 
 ]
 \textKappa \textepsilon \textphi \acctonos \textalpha \textlambda \textalpha \t
 extiota \textomicron  1.
-(./chapters/chapter01.tex [13] [14]) [15] [16
+(./chapters/chapter01.tex [15] [16] [17]) [18] [19] [20
 
 ]
 \textKappa \textepsilon \textphi \acctonos \textalpha \textlambda \textalpha \t
@@ -1499,13 +1499,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 2--3
 
  []
 
-) [17] [18
+) [21] [22
 
 ]
 \textKappa \textepsilon \textphi \acctonos \textalpha \textlambda \textalpha \t
 extiota \textomicron  3.
 (./chapters/chapter03.tex
-<../../plots/Trend_estimation/quadratic_Trend_ALL.png, id=102, 1445.4pt x 732.4
+<../../plots/Trend_estimation/quadratic_Trend_ALL.png, id=115, 1445.4pt x 732.4
 8656pt>
 File: ../../plots/Trend_estimation/quadratic_Trend_ALL.png Graphic file (type p
 ng)
@@ -1518,9 +1518,9 @@ Overfull \hbox (85.34781pt too wide) in paragraph at lines 13--14
  [][] 
  []
 
-[19] [20 <../../plots/Trend_estimation/quadratic_Trend_ALL.png (PNG copy)>]
-[21]
-<../../plots/Trend_estimation/seasonal_1.png, id=116, 1445.4pt x 732.48656pt>
+[23] [24 <../../plots/Trend_estimation/quadratic_Trend_ALL.png (PNG copy)>]
+[25]
+<../../plots/Trend_estimation/seasonal_1.png, id=129, 1445.4pt x 732.48656pt>
 File: ../../plots/Trend_estimation/seasonal_1.png Graphic file (type png)
 
 <use ../../plots/Trend_estimation/seasonal_1.png>
@@ -1532,7 +1532,7 @@ Overfull \hbox (85.34781pt too wide) in paragraph at lines 41--42
  [][] 
  []
 
-<../../plots/Trend_estimation/seasonal_2.png, id=117, 1445.4pt x 732.48656pt>
+<../../plots/Trend_estimation/seasonal_2.png, id=130, 1445.4pt x 732.48656pt>
 File: ../../plots/Trend_estimation/seasonal_2.png Graphic file (type png)
 
 <use ../../plots/Trend_estimation/seasonal_2.png>
@@ -1544,7 +1544,7 @@ Overfull \hbox (85.34781pt too wide) in paragraph at lines 47--48
  [][] 
  []
 
-<../../plots/Trend_estimation/seasonal_3.png, id=118, 1445.4pt x 732.48656pt>
+<../../plots/Trend_estimation/seasonal_3.png, id=131, 1445.4pt x 732.48656pt>
 File: ../../plots/Trend_estimation/seasonal_3.png Graphic file (type png)
 
 <use ../../plots/Trend_estimation/seasonal_3.png>
@@ -1556,7 +1556,7 @@ Overfull \hbox (85.34781pt too wide) in paragraph at lines 53--54
  [][] 
  []
 
-<../../plots/Trend_estimation/seasonal_4.png, id=119, 1445.4pt x 732.48656pt>
+<../../plots/Trend_estimation/seasonal_4.png, id=132, 1445.4pt x 732.48656pt>
 File: ../../plots/Trend_estimation/seasonal_4.png Graphic file (type png)
 
 <use ../../plots/Trend_estimation/seasonal_4.png>
@@ -1571,14 +1571,14 @@ Overfull \hbox (85.34781pt too wide) in paragraph at lines 59--60
 
 Underfull \vbox (badness 2042) has occurred while \output is active []
 
- [22 <../../plots/Trend_estimation/seasonal_1.png (PNG copy)> <../../plots/Tren
+ [26 <../../plots/Trend_estimation/seasonal_1.png (PNG copy)> <../../plots/Tren
 d_estimation/seasonal_2.png (PNG copy)>]
 
-LaTeX Warning: Text page 23 contains only floats.
+LaTeX Warning: Text page 27 contains only floats.
 
-[23 <../../plots/Trend_estimation/seasonal_3.png (PNG copy)> <../../plots/Trend
+[27 <../../plots/Trend_estimation/seasonal_3.png (PNG copy)> <../../plots/Trend
 _estimation/seasonal_4.png (PNG copy)>]
-<../../plots/Trend_estimation/seasonal_month_ALL.png, id=126, 1445.4pt x 732.48
+<../../plots/Trend_estimation/seasonal_month_ALL.png, id=139, 1445.4pt x 732.48
 656pt>
 File: ../../plots/Trend_estimation/seasonal_month_ALL.png Graphic file (type pn
 g)
@@ -1592,7 +1592,7 @@ Overfull \hbox (85.34781pt too wide) in paragraph at lines 76--77
  []
 
 
-<../../plots/Trend_estimation/Deseasonalized_ALL.png, id=127, 1445.4pt x 732.48
+<../../plots/Trend_estimation/Deseasonalized_ALL.png, id=140, 1445.4pt x 732.48
 656pt>
 File: ../../plots/Trend_estimation/Deseasonalized_ALL.png Graphic file (type pn
 g)
@@ -1605,8 +1605,8 @@ Overfull \hbox (85.34781pt too wide) in paragraph at lines 85--86
  [][] 
  []
 
-[24]
-<../../plots/Trend_estimation/Deseasonalized_month_ALL.png, id=131, 1445.4pt x 
+[28]
+<../../plots/Trend_estimation/Deseasonalized_month_ALL.png, id=144, 1445.4pt x 
 732.48656pt>
 File: ../../plots/Trend_estimation/Deseasonalized_month_ALL.png Graphic file (t
 ype png)
@@ -1620,10 +1620,10 @@ Overfull \hbox (85.34781pt too wide) in paragraph at lines 93--94
  []
 
 
-LaTeX Warning: Citation `stationarity' on page 25 undefined on input line 99.
+LaTeX Warning: Citation `stationarity' on page 29 undefined on input line 99.
 
 
-<../../plots/Trend_estimation/irregular_component_all.png, id=132, 1445.4pt x 7
+<../../plots/Trend_estimation/irregular_component_all.png, id=145, 1445.4pt x 7
 32.48656pt>
 File: ../../plots/Trend_estimation/irregular_component_all.png Graphic file (ty
 pe png)
@@ -1636,8 +1636,8 @@ Overfull \hbox (85.34781pt too wide) in paragraph at lines 102--103
  [][] 
  []
 
-[25 <../../plots/Trend_estimation/seasonal_month_ALL.png (PNG copy)>]
-<../../plots/Trend_estimation/irregular_component_month_all.png, id=137, 1445.4
+[29 <../../plots/Trend_estimation/seasonal_month_ALL.png (PNG copy)>]
+<../../plots/Trend_estimation/irregular_component_month_all.png, id=149, 1445.4
 pt x 732.48656pt>
 File: ../../plots/Trend_estimation/irregular_component_month_all.png Graphic fi
 le (type png)
@@ -1654,66 +1654,61 @@ Overfull \hbox (85.34781pt too wide) in paragraph at lines 110--111
 
 Underfull \vbox (badness 4832) has occurred while \output is active []
 
- [26 <../../plots/Trend_estimation/Deseasonalized_ALL.png (PNG copy)>] [27 <../
+ [30 <../../plots/Trend_estimation/Deseasonalized_ALL.png (PNG copy)>] [31 <../
 ../plots/Trend_estimation/Deseasonalized_month_ALL.png (PNG copy)>]
 
-LaTeX Warning: Text page 28 contains only floats.
+LaTeX Warning: Text page 32 contains only floats.
 
-[28 <../../plots/Trend_estimation/irregular_component_all.png (PNG copy)> <../.
+[32 <../../plots/Trend_estimation/irregular_component_all.png (PNG copy)> <../.
 ./plots/Trend_estimation/irregular_component_month_all.png (PNG copy)>])
-[29] [30
+[33] [34
 
 ]
 \textKappa \textepsilon \textphi \acctonos \textalpha \textlambda \textalpha \t
 extiota \textomicron  4.
-(./chapters/chapter04.tex) [31] [32
+(./chapters/chapter04.tex) [35] [36
 
 ]
 \textKappa \textepsilon \textphi \acctonos \textalpha \textlambda \textalpha \t
 extiota \textomicron  5.
-(./chapters/chapter05.tex) [33] [34
+(./chapters/chapter05.tex) [37] [38
 
 ]
 \textKappa \textepsilon \textphi \acctonos \textalpha \textlambda \textalpha \t
 extiota \textomicron  6.
-(./chapters/chapter06.tex) [35] [36
+(./chapters/chapter06.tex) [39] [40
 
 ]
 \textKappa \textepsilon \textphi \acctonos \textalpha \textlambda \textalpha \t
 extiota \textomicron  7.
-(./chapters/chapter07.tex) [37] [38] (./main.bbl
-Underfull \hbox (badness 6526) in paragraph at lines 62--67
+(./chapters/chapter07.tex) [41] [42] (./main.bbl
+Underfull \hbox (badness 6526) in paragraph at lines 81--86
 []\LGR/cmr/m/n/10.95 Jodwr c Pa-na-go-Ôlhc.  \LGR/cmr/m/it/10.95 {Eg-qei-rÐdio}
  a-pì th RA-E gia thn a-nti-me-t¸pi-sh
  []
 
 
-Underfull \hbox (badness 3977) in paragraph at lines 62--67
+Underfull \hbox (badness 3977) in paragraph at lines 81--86
 \LGR/cmr/m/it/10.95 twn ìlo kai pe-ris-sìte-rwn reu-ma-to-klo-p¸n.  $\OT1/cmtt/
 m/n/10.95 https : / / energypress . gr / news /
  []
 
 
-Overfull \hbox (72.45738pt too wide) in paragraph at lines 62--67
+Overfull \hbox (72.45738pt too wide) in paragraph at lines 81--86
 \OT1/cmtt/m/n/10.95 egheiridio-[]apo-[]ti-[]rae-[]gia-[]tin-[]antimetopisi-[]to
 n-[]olo-[]kai-[]perissoteron-[]reymatoklopon.$
  []
 
-) [39
+[43
 
-]
+]) [44]
 \openout2 = `chapter7.aux'.
 
 
 No file chapter7.tex.
 \openout2 = `results.aux'.
 
-(./results.tex [40
-
-
-
-
-]
+(./results.tex
 \textPi \textalpha \textrho \acctonos \textalpha \textrho \texttau \texteta \te
 xtmu \textalpha  \MakeUppercase {\textalpha \anw@true \anw@print \relax }.
 LaTeX Info: Redefining \anw@print on input line 1.
@@ -1736,7 +1731,12 @@ Overfull \hbox (25.86533pt too wide) in alignment at lines 50--70
  [] [] [] [] [] [] [] [] [] [] [] [] [] 
  []
 
-[41]
+[45
+
+
+
+
+]
 Overfull \hbox (25.86533pt too wide) in alignment at lines 70--90
  [] [] [] [] [] [] [] [] [] [] [] [] [] 
  []
@@ -1751,19 +1751,19 @@ Overfull \hbox (25.86533pt too wide) in alignment at lines 90--108
  []
 
 LaTeX Info: Redefining \anw@print on input line 108.
-[42]) [43]
+[46]) [47]
 \openout2 = `glossary.aux'.
 
- (./glossary.tex [44
+ (./glossary.tex [48
 
 
 
-]) [45] [46
+]) [49] [50
 
 
 ]
 No file main.ind.
-[47] (./main.aux (./abstract.aux) (./chapter7.aux) (./results.aux)
+[51] (./main.aux (./abstract.aux) (./chapter7.aux) (./results.aux)
 (./glossary.aux))
 
 LaTeX Warning: There were undefined references.
@@ -1773,10 +1773,10 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 8372 strings out of 493013
- 119115 string characters out of 6136993
- 239401 words of memory out of 5000000
- 11602 multiletter control sequences out of 15000+600000
+ 8375 strings out of 493013
+ 119148 string characters out of 6136993
+ 239416 words of memory out of 5000000
+ 11605 multiletter control sequences out of 15000+600000
  27028 words of font info for 64 fonts, out of 8000000 for 9000
  1143 hyphenation exceptions out of 8191
  59i,11n,94p,2566b,660s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1803,10 +1803,10 @@ rxn1728.pfb><c:/texlive/2016/texmf-dist/fonts/type1/public/cbfonts/grxn2074.pfb
 ><c:/texlive/2016/texmf-dist/fonts/type1/public/cbfonts/grxn2488.pfb><c:/texliv
 e/2016/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb><c:/texlive/2016/tex
 mf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
-Output written on main.pdf (53 pages, 1237222 bytes).
+Output written on main.pdf (57 pages, 1244722 bytes).
 PDF statistics:
- 291 PDF objects out of 1000 (max. 8388607)
- 197 compressed objects within 2 object streams
+ 305 PDF objects out of 1000 (max. 8388607)
+ 206 compressed objects within 3 object streams
  0 named destinations out of 1000 (max. 500000)
  56 words of extra memory for PDF output out of 10000 (max. 10000000)
 
