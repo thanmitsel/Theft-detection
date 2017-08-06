@@ -1,0 +1,82 @@
+\begin{thebibliography}{10}
+    \selectlanguage{english}
+		\bibitem{malaysia}
+		Malay Mail.
+		\newblock{\em Tenaga out to short-circuit electricity thefts.}
+		\newblock{1999.}
+		\newblock{January 1.}
+		
+		\bibitem{theftanalysis}
+		Thomas B. Smith.
+		\newblock{\em Electricity theft: a comparative analysis}
+		\newblock{Energy Policy}
+		\newblock{Volume 32. Issue 18.}
+		\newblock{2004.}
+		\newblock{pp. 2067-2076.}
+		
+		\bibitem{netherlands}
+		P. Kadurek, J. Blom, J. F. G. Cobben and W.L.Kling.
+		\newblock{\em Theft detection and smart metering practices and expectations in the Netherlands}
+		\newblock{Innovative Smart Grid Technologies Conference Europe.}
+		\newblock{2010 IEEE PES.}
+		\newblock{2010.}
+		\newblock{pp. 1}
+		
+		\bibitem{mathworkstrend}
+		Mathworks.
+		\newblock{\em Parametric Trend Estimation.}
+		\newblock{2017.}
+		\newblock{\url{https://www.mathworks.com/help/econ/parametric-trend-estimation.html.}}
+		\newblock{(accessed 4 August 2017).}
+		
+		\bibitem{timeseriesanalysis}
+		George E. P. Box, Gwilym M. Jenkins, Gregory C. Reinsel, Greta M. Ljung.
+		\newblock {\em Time Series Analysis: Forecasting and Control}.
+		\newblock New Jersey: Wiley, 2016.
+		\newblock{pp. 310-324.}
+		
+		\bibitem{mathworkstrend}
+		Rob J. Hyndman and George Athanasopoulos.
+		\newblock{\em Forecasting: principles and practice.}
+		\newblock{2012.}
+		\newblock{\url{https://www.otexts.org/fpp.}}
+		\newblock{(accessed 4 August, 2017).}
+		
+		\bibitem{india}
+		S. De, R. Anand, A. Naveen and S. Moinuddin.
+		\newblock{\em E-metering solution for checking energy thefts and streamlining revenue collection in India.}
+		\newblock{Transmission and Distribution Conference and Exposition.}
+		\newblock{2003 IEEE PES}
+		\newblock{2003.}
+		\newblock{pp. 654-658 vol.2.}
+		
+		\bibitem{regulation}
+		ERGEG.
+		\newblock{\em Smart Metering with a Focus on Electricity Regulation.}
+		\newblock{E07-RMF-04-03.}
+		\newblock{2007.}
+		
+    \selectlanguage{greek}
+		
+		\bibitem{energypress}
+		Θοδωρής Παναγούλης.
+		\newblock{\em «Εγχειρίδιο» από τη ΡΑΕ για την αντιμετώπιση των όλο και περισσότερων ρευματοκλοπών.}
+		\newblock{\en{\url{https://energypress.gr/news/egheiridio-apo-ti-rae-gia-tin-antimetopisi-ton-olo-kai-perissoteron-reymatoklopon.}}}
+		\newblock{\en{accessed 6 August 2017.}}
+		\newblock{2017.}
+		
+		\bibitem{rae}
+		Ρυθμιστική Αρχή Ενέργειας.
+		\newblock{\em Εγχειρίδιο Ρευματοκλοπών σε εφαρμογή της παραγράφου 23 του άρθρου 95 του Κώδικα Διαχείρισης Δικτύου Διαχείρισης Διανομής Ηλεκτρικής Ενέργειας.}
+		\newblock{\en{Athens, 30 May 2017.}}
+		%\newblock{\en{\url{https://www.lawspot.gr/sites/default/files/images/nea/misc/reumatoklopes-rae.pdf.}}}
+		\newblock{Εφημερίδα της κυβερνήσεως της Ελληνικής Δημοκρατίας.}
+		\newblock{\en{pp. 1871 vol.2.}}
+		
+		
+		\bibitem{dehfraud}
+		Δημόσια Επιχείρηση Ηλεκτρισμού.
+		\newblock{\em{To Κόστος των Ρευματοκλοπών.}}
+		\newblock{\en{Athens, 5 May 2016.}}
+		\newblock{Δελτίο τύπου 552017.}
+\end{thebibliography}

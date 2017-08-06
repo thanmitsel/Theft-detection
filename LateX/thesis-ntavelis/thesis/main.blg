@@ -1,0 +1,62 @@
+This is BibTeX, Version 0.99d (TeX Live 2015/Debian)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: main.aux
+The style file: plain.bst
+A level-1 auxiliary file: abstract.aux
+A level-1 auxiliary file: chapter1.aux
+A level-1 auxiliary file: chapterabst.aux
+A level-1 auxiliary file: chapter2.aux
+A level-1 auxiliary file: chapter3.aux
+A level-1 auxiliary file: chapter4.aux
+A level-1 auxiliary file: chapter5.aux
+A level-1 auxiliary file: chapter8.aux
+A level-1 auxiliary file: chapter7.aux
+A level-1 auxiliary file: results.aux
+A level-1 auxiliary file: glossary.aux
+Database file #1: references.bib
+Warning--empty booktitle in Ester96adensity-based
+Warning--there's a number but no volume in RePEc:for:ijafaa:y:2007:i:6:p:12-15
+Warning--empty chapter and pages in 7bbfd6bb156749e8b7caad536d020100
+Warning--empty journal in article
+You've used 26 entries,
+            2118 wiz_defined-function locations,
+            658 strings with 7715 characters,
+and the built_in function-call counts, 7693 in all, are:
+= -- 751
+> -- 279
+< -- 2
++ -- 114
+- -- 86
+* -- 504
+:= -- 1261
+add.period$ -- 74
+call.type$ -- 26
+change.case$ -- 119
+chr.to.int$ -- 0
+cite$ -- 30
+duplicate$ -- 284
+empty$ -- 692
+format.name$ -- 86
+if$ -- 1641
+int.to.chr$ -- 0
+int.to.str$ -- 26
+missing$ -- 21
+newline$ -- 127
+num.names$ -- 52
+pop$ -- 143
+preamble$ -- 1
+purify$ -- 95
+quote$ -- 0
+skip$ -- 216
+stack$ -- 0
+substring$ -- 543
+swap$ -- 43
+text.length$ -- 2
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 100
+warning$ -- 4
+while$ -- 75
+width$ -- 28
+write$ -- 268
+(There were 4 warnings)

@@ -1,0 +1,146 @@
+\begin{thebibliography}{10}
+
+    \selectlanguage{english}
+
+\bibitem{Assimakopoulos2000}
+V.~Assimakopoulos and K.~Nikolopoulos.
+\newblock The theta model: a decomposition approach to forecasting.
+\newblock {\em International Journal of Forecasting}, 16(4):521--530, oct 2000.
+
+\bibitem{BUNN1999431}
+Derek~W. Bunn and Angelos~I. Vassilopoulos.
+\newblock Comparison of seasonal estimation methods in multi-item short-term
+  forecasting.
+\newblock {\em International Journal of Forecasting}, 15(4):431 -- 443, 1999.
+
+\bibitem{numpy}
+NumPy Developers.
+\newblock Numpy, 2017.
+
+\bibitem{Ester96adensity-based}
+Martin Ester, Hans-Peter Kriegel, Jörg Sander, and Xiaowei Xu.
+\newblock A density-based algorithm for discovering clusters in large spatial
+  databases with noise.
+\newblock pages 226--231. AAAI Press, 1996.
+
+\bibitem{10.2307/1392565}
+David~F. Findley, Brian~C. Monsell, William~R. Bell, Mark~C. Otto, and
+  Bor-Chung Chen.
+\newblock New capabilities and methods of the x-12-arima seasonal-adjustment
+  program.
+\newblock {\em Journal of Business \& Economic Statistics}, 16(2):127--152,
+  1998.
+
+\bibitem{FOR:FOR3980040103}
+Everette~S. Gardner.
+\newblock Exponential smoothing: The state of the art.
+\newblock {\em Journal of Forecasting}, 4(1):1--28, 1985.
+
+\bibitem{GARDNER2006637}
+Everette~S. Gardner.
+\newblock Exponential smoothing: The state of the art—part ii.
+\newblock {\em International Journal of Forecasting}, 22(4):637 -- 666, 2006.
+
+\bibitem{DEGOOIJER2006443}
+Jan G.~De Gooijer and Rob~J. Hyndman.
+\newblock 25 years of time series forecasting.
+\newblock {\em International Journal of Forecasting}, 22(3):443 -- 473, 2006.
+\newblock Twenty five years of forecasting.
+
+\bibitem{HOLT20045}
+Charles~C. Holt.
+\newblock Forecasting seasonals and trends by exponentially weighted moving
+  averages.
+\newblock {\em International Journal of Forecasting}, 20(1):5 -- 10, 2004.
+
+\bibitem{RePEc:for:ijafaa:y:2007:i:6:p:12-15}
+Rob Hyndman and Andrey~V. Kostenko.
+\newblock Minimum sample size requirements for seasonal forecasting models.
+\newblock {\em Foresight: The International Journal of Applied Forecasting},
+  (6):12--15, 2007.
+
+\bibitem{fpp}
+Rob~J Hyndman and George Athanasopoulos.
+\newblock Forecasting: Principles and practice, 2012.
+
+\bibitem{HYNDMAN2006679}
+Rob~J. Hyndman and Anne~B. Koehler.
+\newblock Another look at measures of forecast accuracy.
+\newblock {\em International Journal of Forecasting}, 22(4):679 -- 688, 2006.
+
+\bibitem{james1961}
+W.~James and Charles Stein.
+\newblock Estimation with quadratic loss.
+\newblock In {\em Proceedings of the Fourth Berkeley Symposium on Mathematical
+  Statistics and Probability, Volume 1: Contributions to the Theory of
+  Statistics}, pages 361--379, Berkeley, Calif., 1961. University of California
+  Press.
+
+\bibitem{jupyter}
+Project Jupyter.
+\newblock Project jupyter, 2017.
+
+\bibitem{doi:10.1080/03610926.2011.560741}
+Marcin Kozak.
+\newblock “a dendrite method for cluster analysis” by caliński and
+  harabasz: A classical work that is far too often incorrectly cited.
+\newblock {\em Communications in Statistics - Theory and Methods},
+  41(12):2279--2280, 2012.
+
+\bibitem{pandas}
+Inc. Lambda~Foundry and PyData~Development Team.
+\newblock Pandas, 2017.
+
+\bibitem{1056489}
+S.~Lloyd.
+\newblock Least squares quantization in pcm.
+\newblock {\em IEEE Transactions on Information Theory}, 28(2):129--137, March
+  1982.
+
+\bibitem{MILLER2003669}
+Don~M. Miller and Dan Williams.
+\newblock Shrinkage estimators of time series seasonal factors and their effect
+  on forecasting accuracy.
+\newblock {\em International Journal of Forecasting}, 19(4):669 -- 684, 2003.
+
+\bibitem{7bbfd6bb156749e8b7caad536d020100}
+K~Nikolopoulos and V~Assimakopoulos.
+\newblock {\em Generalizing the Theta model}.
+\newblock unknown, 2004.
+
+\bibitem{10.2307/2628137}
+C.~Carl Pegels.
+\newblock Exponential forecasting: Some new variations.
+\newblock {\em Management Science}, 15(5):311--315, 1969.
+
+\bibitem{article}
+Peter R.~Winters.
+\newblock Forecasting sales by exponentially weighted moving averages.
+\newblock 6:324--342, 04 1960.
+
+\bibitem{scikit-learn}
+scikit-learn developers.
+\newblock scikit-learn, 2017.
+
+\bibitem{petropoulos}
+\textgreek{Φώτιος Πετρόπουλος, Βασίλειος
+  Ασημακόπουλος}.
+\newblock {\em \textgreek{Επιχειρησιακές Προβλέψεις}}.
+\newblock \textgreek{Συμμετρία}, 2011.
+
+\bibitem{fsunotes}
+Forecasting \&~Strategy Unit.
+\newblock \textgreek{Σημειώσεις Μαθήματος Τεχνικών
+  Προβλέψεων}, 2017.
+
+\bibitem{WITHYCOMBE1989547}
+Richard Withycombe.
+\newblock Forecasting with combined seasonal indices.
+\newblock {\em International Journal of Forecasting}, 5(4):547 -- 552, 1989.
+
+\bibitem{matplotlib}
+Matplotlib Development~Team (“MDT”).
+\newblock Matplotlib, 2017.
+
+    \selectlanguage{greek}
+\end{thebibliography}

@@ -1,0 +1,1082 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.6.11)  18 JUL 2017 21:41
+entering extended mode
+ restricted \write18 enabled.
+ file:line:error style messages enabled.
+ %&-line parsing enabled.
+**glossary.tex
+(./glossary.tex
+LaTeX2e <2016/02/01>
+Babel <3.9q> and hyphenation patterns for 7 language(s) loaded.
+./glossary.tex:3: Undefined control sequence.
+l.3 \chapter
+            *{Î“Î»Ï‰ÏƒÏƒÎ¬ÏÎ¹Î¿}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+./glossary.tex:3: LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.3 \chapter*
+             {Î“Î»Ï‰ÏƒÏƒÎ¬ÏÎ¹Î¿}
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+Missing character: There is no * in font nullfont!
+Missing character: There is no Î in font nullfont!
+Missing character: There is no “ in font nullfont!
+Missing character: There is no Î in font nullfont!
+Missing character: There is no » in font nullfont!
+Missing character: There is no Ï in font nullfont!
+Missing character: There is no ‰ in font nullfont!
+Missing character: There is no Ï in font nullfont!
+Missing character: There is no ƒ in font nullfont!
+Missing character: There is no Ï in font nullfont!
+Missing character: There is no ƒ in font nullfont!
+Missing character: There is no Î in font nullfont!
+Missing character: There is no ¬ in font nullfont!
+Missing character: There is no Ï in font nullfont!
+Missing character: There is no  in font nullfont!
+Missing character: There is no Î in font nullfont!
+Missing character: There is no ¹ in font nullfont!
+Missing character: There is no Î in font nullfont!
+Missing character: There is no ¿ in font nullfont!
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 3--5
+[]
+ []
+
+
+./glossary.tex:8: LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.8 \begin{tabbing}
+                   
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 8--8
+[] 
+ []
+
+Missing character: There is no a in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no a in font nullfont!
+./glossary.tex:11: Undefined control sequence.
+l.11   \Large
+             \textbf{Î•Î»Î»Î·Î½Î¹ÎºÏŒÏ‚ ÏŒÏÎ¿Ï‚} \> \Large\textbf{Î‘Î³Î³Î»Î...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Missing character: There is no Î in font cmbx10!
+Missing character: There is no • in font cmbx10!
+Missing character: There is no Î in font cmbx10!
+Missing character: There is no » in font cmbx10!
+Missing character: There is no Î in font cmbx10!
+Missing character: There is no » in font cmbx10!
+Missing character: There is no Î in font cmbx10!
+Missing character: There is no · in font cmbx10!
+Missing character: There is no Î in font cmbx10!
+Missing character: There is no ½ in font cmbx10!
+Missing character: There is no Î in font cmbx10!
+Missing character: There is no ¹ in font cmbx10!
+Missing character: There is no Î in font cmbx10!
+Missing character: There is no º in font cmbx10!
+Missing character: There is no Ï in font cmbx10!
+Missing character: There is no Œ in font cmbx10!
+Missing character: There is no Ï in font cmbx10!
+Missing character: There is no ‚ in font cmbx10!
+Missing character: There is no Ï in font cmbx10!
+Missing character: There is no Œ in font cmbx10!
+Missing character: There is no Ï in font cmbx10!
+Missing character: There is no  in font cmbx10!
+Missing character: There is no Î in font cmbx10!
+Missing character: There is no ¿ in font cmbx10!
+Missing character: There is no Ï in font cmbx10!
+Missing character: There is no ‚ in font cmbx10!
+./glossary.tex:11: Undefined control sequence.
+l.11 ...tbf{Î•Î»Î»Î·Î½Î¹ÎºÏŒÏ‚ ÏŒÏÎ¿Ï‚} \> \Large
+                                                  \textbf{Î‘Î³Î³Î»Î¹ÎºÏŒÏ‚ Ï...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Missing character: There is no Î in font cmbx10!
+Missing character: There is no ‘ in font cmbx10!
+Missing character: There is no Î in font cmbx10!
+Missing character: There is no ³ in font cmbx10!
+Missing character: There is no Î in font cmbx10!
+Missing character: There is no ³ in font cmbx10!
+Missing character: There is no Î in font cmbx10!
+Missing character: There is no » in font cmbx10!
+Missing character: There is no Î in font cmbx10!
+Missing character: There is no ¹ in font cmbx10!
+Missing character: There is no Î in font cmbx10!
+Missing character: There is no º in font cmbx10!
+Missing character: There is no Ï in font cmbx10!
+Missing character: There is no Œ in font cmbx10!
+Missing character: There is no Ï in font cmbx10!
+Missing character: There is no ‚ in font cmbx10!
+Missing character: There is no Ï in font cmbx10!
+Missing character: There is no Œ in font cmbx10!
+Missing character: There is no Ï in font cmbx10!
+Missing character: There is no  in font cmbx10!
+Missing character: There is no Î in font cmbx10!
+Missing character: There is no ¿ in font cmbx10!
+Missing character: There is no Ï in font cmbx10!
+Missing character: There is no ‚ in font cmbx10!
+Missing character: There is no Î in font nullfont!
+Missing character: There is no ± in font nullfont!
+Missing character: There is no Î in font nullfont!
+Missing character: There is no ² in font nullfont!
+Missing character: There is no Î in font nullfont!
+Missing character: There is no µ in font nullfont!
+Missing character: There is no Î in font nullfont!
+Missing character: There is no ² in font nullfont!
+Missing character: There is no Î in font nullfont!
+Missing character: There is no ± in font nullfont!
+Missing character: There is no Î in font nullfont!
+Missing character: There is no ¹ in font nullfont!
+Missing character: There is no Ï in font nullfont!
+Missing character: There is no Œ in font nullfont!
+Missing character: There is no Ï in font nullfont!
+Missing character: There is no „ in font nullfont!
+Missing character: There is no Î in font nullfont!
+Missing character: There is no · in font nullfont!
+Missing character: There is no Ï in font nullfont!
+Missing character: There is no „ in font nullfont!
+Missing character: There is no Î in font nullfont!
+Missing character: There is no ± in font nullfont!
+./glossary.tex:12: Undefined control sequence.
+\gloss #1#2->#1 \> \en 
+                       {#2}\\ 
+l.12   \gloss{Î±Î²ÎµÎ²Î±Î¹ÏŒÏ„Î·Ï„Î±}{uncertainty}
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Missing character: There is no u in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no y in font nullfont!
+Missing character: There is no Î in font nullfont!
+Missing character: There is no ± in font nullfont!
+Missing character: There is no Î in font nullfont!
+Missing character: There is no ¸ in font nullfont!
+Missing character: There is no Ï in font nullfont!
+Missing character: There is no  in font nullfont!
+Missing character: There is no Î in font nullfont!
+Missing character: There is no ¿ in font nullfont!
+Missing character: There is no Î in font nullfont!
+Missing character: There is no ¹ in font nullfont!
+Missing character: There is no Ï in font nullfont!
+Missing character: There is no ƒ in font nullfont!
+Missing character: There is no Ï in font nullfont!
+Missing character: There is no „ in font nullfont!
+Missing character: There is no Î in font nullfont!
+Missing character: There is no ¹ in font nullfont!
+Missing character: There is no Î in font nullfont!
+Missing character: There is no º in font nullfont!
+Missing character: There is no Î in font nullfont!
+Missing character: There is no ® in font nullfont!
+Missing character: There is no Ï in font nullfont!
+Missing character: There is no ƒ in font nullfont!
+Missing character: There is no Ï in font nullfont!
+Missing character: There is no … in font nullfont!
+Missing character: There is no Î in font nullfont!
+Missing character: There is no ½ in font nullfont!
+Missing character: There is no Î in font nullfont!
+Missing character: There is no ¬ in font nullfont!
+Missing character: There is no Ï in font nullfont!
+Missing character: There is no  in font nullfont!
+Missing character: There is no Ï in font nullfont!
+Missing character: There is no „ in font nullfont!
+Missing character: There is no Î in font nullfont!
+Missing character: There is no · in font nullfont!
+Missing character: There is no Ï in font nullfont!
+Missing character: There is no ƒ in font nullfont!
+Missing character: There is no Î in font nullfont!
+Missing character: There is no · in font nullfont!
+Missing character: There is no Î in font nullfont!
+Missing character: There is no º in font nullfont!
+Missing character: There is no Î in font nullfont!
+Missing character: There is no ± in font nullfont!
+Missing character: There is no Ï in font nullfont!
+Missing character: There is no „ in font nullfont!
+Missing character: There is no Î in font nullfont!
+Missing character: There is no ± in font nullfont!
+Missing character: There is no Î in font nullfont!
+Missing character: There is no ½ in font nullfont!
+Missing character: There is no Î in font nullfont!
+Missing character: There is no ¿ in font nullfont!
+Missing character: There is no Î in font nullfont!
+Missing character: There is no ¼ in font nullfont!
+Missing character: There is no Î in font nullfont!
+Missing character: There is no ® in font nullfont!
+Missing character: There is no Ï in font nullfont!
+Missing character: There is no ‚ in font nullfont!
+./glossary.tex:13: Undefined control sequence.
+\gloss #1#2->#1 \> \en 
+                       {#2}\\ 
+l.13 ...¿Î¼Î®Ï‚}{cumulative distribution function}
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Missing character: There is no c in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no v in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no b in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no Î in font nullfont!
+Missing character: There is no ± in font nullfont!
+Missing character: There is no Ï in font nullfont!
+Missing character: There is no € in font nullfont!
+Missing character: There is no Î in font nullfont!
+Missing character: There is no ¿ in font nullfont!
+Missing character: There is no Ï in font nullfont!
+Missing character: There is no „ in font nullfont!
+Missing character: There is no Î in font nullfont!
+Missing character: There is no ¯ in font nullfont!
+Missing character: There is no Î in font nullfont!
+Missing character: There is no ¼ in font nullfont!
+Missing character: There is no Î in font nullfont!
+Missing character: There is no · in font nullfont!
+Missing character: There is no Ï in font nullfont!
+Missing character: There is no ƒ in font nullfont!
+Missing character: There is no Î in font nullfont!
+Missing character: There is no · in font nullfont!
+Missing character: There is no Î in font nullfont!
+Missing character: There is no µ in font nullfont!
+Missing character: There is no Ï in font nullfont!
+Missing character: There is no  in font nullfont!
+Missing character: There is no Ï in font nullfont!
+Missing character: There is no ‰ in font nullfont!
+Missing character: There is no Ï in font nullfont!
+Missing character: There is no „ in font nullfont!
+Missing character: There is no Î in font nullfont!
+Missing character: There is no · in font nullfont!
+Missing character: There is no Î in font nullfont!
+Missing character: There is no ¼ in font nullfont!
+Missing character: There is no Î in font nullfont!
+Missing character: There is no ¬ in font nullfont!
+Missing character: There is no Ï in font nullfont!
+Missing character: There is no „ in font nullfont!
+Missing character: There is no Ï in font nullfont!
+Missing character: There is no ‰ in font nullfont!
+Missing character: There is no Î in font nullfont!
+Missing character: There is no ½ in font nullfont!
+./glossary.tex:14: Undefined control sequence.
+\gloss #1#2->#1 \> \en 
+                       {#2}\\ 
+l.14 ...Î· ÎµÏÏ‰Ï„Î·Î¼Î¬Ï„Ï‰Î½}{query evaluation}
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Missing character: There is no q in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no y in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no v in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no Î in font nullfont!
+Missing character: There is no ´ in font nullfont!
+Missing character: There is no Î in font nullfont!
+Missing character: There is no µ in font nullfont!
+Missing character: There is no Î in font nullfont!
+Missing character: There is no ¹ in font nullfont!
+Missing character: There is no Î in font nullfont!
+Missing character: There is no ³ in font nullfont!
+Missing character: There is no Î in font nullfont!
+Missing character: There is no ¼ in font nullfont!
+Missing character: There is no Î in font nullfont!
+Missing character: There is no ± in font nullfont!
+Missing character: There is no Ï in font nullfont!
+Missing character: There is no „ in font nullfont!
+Missing character: There is no Î in font nullfont!
+Missing character: There is no ¿ in font nullfont!
+Missing character: There is no Î in font nullfont!
+Missing character: There is no » in font nullfont!
+Missing character: There is no Î in font nullfont!
+Missing character: There is no · in font nullfont!
+Missing character: There is no Ï in font nullfont!
+Missing character: There is no ˆ in font nullfont!
+Missing character: There is no Î in font nullfont!
+Missing character: There is no ¯ in font nullfont!
+Missing character: There is no Î in font nullfont!
+Missing character: There is no ± in font nullfont!
+./glossary.tex:15: Undefined control sequence.
+\gloss #1#2->#1 \> \en 
+                       {#2}\\ 
+l.15 ...loss{Î´ÎµÎ¹Î³Î¼Î±Ï„Î¿Î»Î·ÏˆÎ¯Î±}{sampling}
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Missing character: There is no s in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no g in font nullfont!
+Missing character: There is no Î in font nullfont!
+Missing character: There is no ´ in font nullfont!
+Missing character: There is no Î in font nullfont!
+Missing character: There is no µ in font nullfont!
+Missing character: There is no Î in font nullfont!
+Missing character: There is no ¹ in font nullfont!
+Missing character: There is no Î in font nullfont!
+Missing character: There is no º in font nullfont!
+Missing character: There is no Ï in font nullfont!
+Missing character: There is no „ in font nullfont!
+Missing character: There is no Î in font nullfont!
+Missing character: There is no ¿ in font nullfont!
+Missing character: There is no Î in font nullfont!
+Missing character: There is no ´ in font nullfont!
+Missing character: There is no Ï in font nullfont!
+Missing character: There is no Œ in font nullfont!
+Missing character: There is no Ï in font nullfont!
+Missing character: There is no „ in font nullfont!
+Missing character: There is no Î in font nullfont!
+Missing character: There is no · in font nullfont!
+Missing character: There is no Ï in font nullfont!
+Missing character: There is no ƒ in font nullfont!
+Missing character: There is no Î in font nullfont!
+Missing character: There is no · in font nullfont!
+./glossary.tex:16: Undefined control sequence.
+\gloss #1#2->#1 \> \en 
+                       {#2}\\ 
+l.16   \gloss{Î´ÎµÎ¹ÎºÏ„Î¿Î´ÏŒÏ„Î·ÏƒÎ·}{indexing}
+                                                 
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Missing character: There is no i in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no x in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no g in font nullfont!
+Missing character: There is no Î in font nullfont!
+Missing character: There is no µ in font nullfont!
+Missing character: There is no Ï in font nullfont!
+Missing character: There is no  in font nullfont!
+Missing character: There is no Ï in font nullfont!
+Missing character: There is no  in font nullfont!
+Missing character: There is no Ï in font nullfont!
+Missing character: There is no „ in font nullfont!
+Missing character: There is no Î in font nullfont!
+Missing character: There is no · in font nullfont!
+Missing character: There is no Î in font nullfont!
+Missing character: There is no ¼ in font nullfont!
+Missing character: There is no Î in font nullfont!
+Missing character: There is no ± in font nullfont!
+Missing character: There is no Î in font nullfont!
+Missing character: There is no ´ in font nullfont!
+Missing character: There is no Î in font nullfont!
+Missing character: There is no ¹ in font nullfont!
+Missing character: There is no Î in font nullfont!
+Missing character: There is no ± in font nullfont!
+Missing character: There is no Ï in font nullfont!
+Missing character: There is no  in font nullfont!
+Missing character: There is no Î in font nullfont!
+Missing character: There is no º in font nullfont!
+Missing character: There is no Î in font nullfont!
+Missing character: There is no µ in font nullfont!
+Missing character: There is no Î in font nullfont!
+Missing character: There is no ¯ in font nullfont!
+Missing character: There is no Î in font nullfont!
+Missing character: There is no ± in font nullfont!
+Missing character: There is no Ï in font nullfont!
+Missing character: There is no ‚ in font nullfont!
+./glossary.tex:17: Undefined control sequence.
+\gloss #1#2->#1 \> \en 
+                       {#2}\\ 
+l.17 ...Î¼Î± Î´Î¹Î±ÏÎºÎµÎ¯Î±Ï‚}{continuous query}
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Missing character: There is no c in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no q in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no y in font nullfont!
+Missing character: There is no Î in font nullfont!
+Missing character: There is no µ in font nullfont!
+Missing character: There is no Ï in font nullfont!
+Missing character: There is no  in font nullfont!
+Missing character: There is no Ï in font nullfont!
+Missing character: There is no  in font nullfont!
+Missing character: There is no Ï in font nullfont!
+Missing character: There is no „ in font nullfont!
+Missing character: There is no Î in font nullfont!
+Missing character: There is no · in font nullfont!
+Missing character: There is no Î in font nullfont!
+Missing character: There is no ¼ in font nullfont!
+Missing character: There is no Î in font nullfont!
+Missing character: There is no ± in font nullfont!
+Missing character: There is no Î in font nullfont!
+Missing character: There is no µ in font nullfont!
+Missing character: There is no Î in font nullfont!
+Missing character: There is no ³ in font nullfont!
+Missing character: There is no Î in font nullfont!
+Missing character: There is no ³ in font nullfont!
+Missing character: There is no Ï in font nullfont!
+Missing character: There is no  in font nullfont!
+Missing character: There is no Ï in font nullfont!
+Missing character: There is no „ in font nullfont!
+Missing character: There is no Î in font nullfont!
+Missing character: There is no µ in font nullfont!
+Missing character: There is no Ï in font nullfont!
+Missing character: There is no  in font nullfont!
+Missing character: There is no Î in font nullfont!
+Missing character: There is no ¿ in font nullfont!
+Missing character: There is no Ï in font nullfont!
+Missing character: There is no … in font nullfont!
+Missing character: There is no Î in font nullfont!
+Missing character: There is no ³ in font nullfont!
+Missing character: There is no Î in font nullfont!
+Missing character: There is no µ in font nullfont!
+Missing character: There is no Î in font nullfont!
+Missing character: There is no ¯ in font nullfont!
+Missing character: There is no Ï in font nullfont!
+Missing character: There is no „ in font nullfont!
+Missing character: There is no Î in font nullfont!
+Missing character: There is no ¿ in font nullfont!
+Missing character: There is no Î in font nullfont!
+Missing character: There is no ½ in font nullfont!
+Missing character: There is no Î in font nullfont!
+Missing character: There is no ± in font nullfont!
+./glossary.tex:18: Undefined control sequence.
+\gloss #1#2->#1 \> \en 
+                       {#2}\\ 
+l.18 ...Ï… Î³ÎµÎ¯Ï„Î¿Î½Î±}{nearest-neighbor query}
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Missing character: There is no n in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no g in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no b in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no q in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no y in font nullfont!
+Missing character: There is no Î in font nullfont!
+Missing character: There is no ¹ in font nullfont!
+Missing character: There is no Î in font nullfont!
+Missing character: There is no ´ in font nullfont!
+Missing character: There is no Î in font nullfont!
+Missing character: There is no ¹ in font nullfont!
+Missing character: There is no Ï in font nullfont!
+Missing character: There is no ‰ in font nullfont!
+Missing character: There is no Ï in font nullfont!
+Missing character: There is no „ in font nullfont!
+Missing character: There is no Î in font nullfont!
+Missing character: There is no ¹ in font nullfont!
+Missing character: There is no Î in font nullfont!
+Missing character: There is no º in font nullfont!
+Missing character: There is no Ï in font nullfont!
+Missing character: There is no Œ in font nullfont!
+Missing character: There is no Ï in font nullfont!
+Missing character: There is no „ in font nullfont!
+Missing character: There is no Î in font nullfont!
+Missing character: There is no · in font nullfont!
+Missing character: There is no Ï in font nullfont!
+Missing character: There is no „ in font nullfont!
+Missing character: There is no Î in font nullfont!
+Missing character: There is no ± in font nullfont!
+./glossary.tex:19: Undefined control sequence.
+\gloss #1#2->#1 \> \en 
+                       {#2}\\ 
+l.19   \gloss{Î¹Î´Î¹Ï‰Ï„Î¹ÎºÏŒÏ„Î·Ï„Î±}{privacy}
+                                                
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Missing character: There is no p in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no v in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no y in font nullfont!
+Missing character: There is no Î in font nullfont!
+Missing character: There is no º in font nullfont!
+Missing character: There is no Î in font nullfont!
+Missing character: There is no ¬ in font nullfont!
+Missing character: There is no Î in font nullfont!
+Missing character: There is no ½ in font nullfont!
+Missing character: There is no Î in font nullfont!
+Missing character: There is no ½ in font nullfont!
+Missing character: There is no Î in font nullfont!
+Missing character: There is no ± in font nullfont!
+Missing character: There is no Î in font nullfont!
+Missing character: There is no ² in font nullfont!
+Missing character: There is no Î in font nullfont!
+Missing character: There is no ¿ in font nullfont!
+Missing character: There is no Ï in font nullfont!
+Missing character: There is no ‚ in font nullfont!
+./glossary.tex:20: Undefined control sequence.
+\gloss #1#2->#1 \> \en 
+                       {#2}\\ 
+l.20   \gloss{ÎºÎ¬Î½Î½Î±Î²Î¿Ï‚}{grid}
+                                     
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Missing character: There is no g in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no Î in font nullfont!
+Missing character: There is no º in font nullfont!
+Missing character: There is no Î in font nullfont!
+Missing character: There is no ¹ in font nullfont!
+Missing character: There is no Î in font nullfont!
+Missing character: There is no ½ in font nullfont!
+Missing character: There is no Î in font nullfont!
+Missing character: There is no ¿ in font nullfont!
+Missing character: There is no Ï in font nullfont!
+Missing character: There is no  in font nullfont!
+Missing character: There is no Î in font nullfont!
+Missing character: There is no ¼ in font nullfont!
+Missing character: There is no Î in font nullfont!
+Missing character: There is no µ in font nullfont!
+Missing character: There is no Î in font nullfont!
+Missing character: There is no ½ in font nullfont!
+Missing character: There is no Î in font nullfont!
+Missing character: There is no ¿ in font nullfont!
+Missing character: There is no Î in font nullfont!
+Missing character: There is no ± in font nullfont!
+Missing character: There is no Î in font nullfont!
+Missing character: There is no ½ in font nullfont!
+Missing character: There is no Ï in font nullfont!
+Missing character: There is no „ in font nullfont!
+Missing character: There is no Î in font nullfont!
+Missing character: There is no ¹ in font nullfont!
+Missing character: There is no Î in font nullfont!
+Missing character: There is no º in font nullfont!
+Missing character: There is no Î in font nullfont!
+Missing character: There is no µ in font nullfont!
+Missing character: There is no Î in font nullfont!
+Missing character: There is no ¯ in font nullfont!
+Missing character: There is no Î in font nullfont!
+Missing character: There is no ¼ in font nullfont!
+Missing character: There is no Î in font nullfont!
+Missing character: There is no µ in font nullfont!
+Missing character: There is no Î in font nullfont!
+Missing character: There is no ½ in font nullfont!
+Missing character: There is no Î in font nullfont!
+Missing character: There is no ¿ in font nullfont!
+./glossary.tex:21: Undefined control sequence.
+\gloss #1#2->#1 \> \en 
+                       {#2}\\ 
+l.21 ...½Î¿ Î±Î½Ï„Î¹ÎºÎµÎ¯Î¼ÎµÎ½Î¿}{moving object}
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Missing character: There is no m in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no v in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no g in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no b in font nullfont!
+Missing character: There is no j in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no Ï in font nullfont!
+Missing character: There is no € in font nullfont!
+Missing character: There is no Î in font nullfont!
+Missing character: There is no ± in font nullfont!
+Missing character: There is no Ï in font nullfont!
+Missing character: There is no  in font nullfont!
+Missing character: There is no Î in font nullfont!
+Missing character: There is no ¬ in font nullfont!
+Missing character: There is no Î in font nullfont!
+Missing character: There is no ¸ in font nullfont!
+Missing character: There is no Ï in font nullfont!
+Missing character: There is no … in font nullfont!
+Missing character: There is no Ï in font nullfont!
+Missing character: There is no  in font nullfont!
+Missing character: There is no Î in font nullfont!
+Missing character: There is no ¿ in font nullfont!
+./glossary.tex:22: Undefined control sequence.
+\gloss #1#2->#1 \> \en 
+                       {#2}\\ 
+l.22   \gloss{Ï€Î±ÏÎ¬Î¸Ï…ÏÎ¿}{window}
+                                       
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Missing character: There is no w in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no w in font nullfont!
+Missing character: There is no Ï in font nullfont!
+Missing character: There is no € in font nullfont!
+Missing character: There is no Î in font nullfont!
+Missing character: There is no ¿ in font nullfont!
+Missing character: There is no Î in font nullfont!
+Missing character: There is no » in font nullfont!
+Missing character: There is no Ï in font nullfont!
+Missing character: There is no … in font nullfont!
+Missing character: There is no Ï in font nullfont!
+Missing character: There is no € in font nullfont!
+Missing character: There is no Î in font nullfont!
+Missing character: There is no » in font nullfont!
+Missing character: There is no Î in font nullfont!
+Missing character: There is no µ in font nullfont!
+Missing character: There is no Î in font nullfont!
+Missing character: There is no ¾ in font nullfont!
+Missing character: There is no Î in font nullfont!
+Missing character: There is no ¯ in font nullfont!
+Missing character: There is no Î in font nullfont!
+Missing character: There is no ± in font nullfont!
+./glossary.tex:23: Undefined control sequence.
+\gloss #1#2->#1 \> \en 
+                       {#2}\\ 
+l.23   \gloss{Ï€Î¿Î»Ï…Ï€Î»ÎµÎ¾Î¯Î±}{multiplexing}
+                                                 
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Missing character: There is no m in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no x in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no g in font nullfont!
+Missing character: There is no Ï in font nullfont!
+Missing character: There is no  in font nullfont!
+Missing character: There is no Î in font nullfont!
+Missing character: There is no µ in font nullfont!
+Missing character: There is no Ï in font nullfont!
+Missing character: There is no  in font nullfont!
+Missing character: There is no Î in font nullfont!
+Missing character: There is no ¼ in font nullfont!
+Missing character: There is no Î in font nullfont!
+Missing character: There is no ± in font nullfont!
+Missing character: There is no Î in font nullfont!
+Missing character: There is no ´ in font nullfont!
+Missing character: There is no Î in font nullfont!
+Missing character: There is no µ in font nullfont!
+Missing character: There is no Î in font nullfont!
+Missing character: There is no ´ in font nullfont!
+Missing character: There is no Î in font nullfont!
+Missing character: There is no ¿ in font nullfont!
+Missing character: There is no Î in font nullfont!
+Missing character: There is no ¼ in font nullfont!
+Missing character: There is no Î in font nullfont!
+Missing character: There is no ­ in font nullfont!
+Missing character: There is no Î in font nullfont!
+Missing character: There is no ½ in font nullfont!
+Missing character: There is no Ï in font nullfont!
+Missing character: There is no ‰ in font nullfont!
+Missing character: There is no Î in font nullfont!
+Missing character: There is no ½ in font nullfont!
+./glossary.tex:24: Undefined control sequence.
+\gloss #1#2->#1 \> \en 
+                       {#2}\\ 
+l.24 ...ÎµÏÎ¼Î± Î´ÎµÎ´Î¿Î¼Î­Î½Ï‰Î½}{data stream}
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Missing character: There is no d in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no Ï in font nullfont!
+Missing character: There is no ƒ in font nullfont!
+Missing character: There is no Î in font nullfont!
+Missing character: There is no · in font nullfont!
+Missing character: There is no Î in font nullfont!
+Missing character: There is no ¼ in font nullfont!
+Missing character: There is no Î in font nullfont!
+Missing character: There is no µ in font nullfont!
+Missing character: There is no Î in font nullfont!
+Missing character: There is no ¹ in font nullfont!
+Missing character: There is no Î in font nullfont!
+Missing character: There is no ± in font nullfont!
+Missing character: There is no Î in font nullfont!
+Missing character: There is no º in font nullfont!
+Missing character: There is no Î in font nullfont!
+Missing character: There is no ® in font nullfont!
+Missing character: There is no Î in font nullfont!
+Missing character: There is no µ in font nullfont!
+Missing character: There is no Ï in font nullfont!
+Missing character: There is no ƒ in font nullfont!
+Missing character: There is no Ï in font nullfont!
+Missing character: There is no „ in font nullfont!
+Missing character: There is no Î in font nullfont!
+Missing character: There is no ¯ in font nullfont!
+Missing character: There is no Î in font nullfont!
+Missing character: There is no ± in font nullfont!
+./glossary.tex:25: Undefined control sequence.
+\gloss #1#2->#1 \> \en 
+                       {#2}\\ 
+l.25 ...{ÏƒÎ·Î¼ÎµÎ¹Î±ÎºÎ® ÎµÏƒÏ„Î¯Î±}{focal point}
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Missing character: There is no f in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no Ï in font nullfont!
+Missing character: There is no ƒ in font nullfont!
+Missing character: There is no Ï in font nullfont!
+Missing character: There is no … in font nullfont!
+Missing character: There is no Î in font nullfont!
+Missing character: There is no ½ in font nullfont!
+Missing character: There is no Î in font nullfont!
+Missing character: There is no ¬ in font nullfont!
+Missing character: There is no Î in font nullfont!
+Missing character: There is no ¸ in font nullfont!
+Missing character: There is no Ï in font nullfont!
+Missing character: There is no  in font nullfont!
+Missing character: There is no Î in font nullfont!
+Missing character: There is no ¿ in font nullfont!
+Missing character: There is no Î in font nullfont!
+Missing character: There is no ¹ in font nullfont!
+Missing character: There is no Ï in font nullfont!
+Missing character: There is no ƒ in font nullfont!
+Missing character: There is no Î in font nullfont!
+Missing character: There is no · in font nullfont!
+./glossary.tex:26: Undefined control sequence.
+\gloss #1#2->#1 \> \en 
+                       {#2}\\ 
+l.26   \gloss{ÏƒÏ…Î½Î¬Î¸ÏÎ¿Î¹ÏƒÎ·}{aggregation}
+                                                
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Missing character: There is no a in font nullfont!
+Missing character: There is no g in font nullfont!
+Missing character: There is no g in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no g in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no Ï in font nullfont!
+Missing character: There is no ƒ in font nullfont!
+Missing character: There is no Ï in font nullfont!
+Missing character: There is no  in font nullfont!
+Missing character: There is no Î in font nullfont!
+Missing character: There is no ½ in font nullfont!
+Missing character: There is no Î in font nullfont!
+Missing character: There is no ´ in font nullfont!
+Missing character: There is no Î in font nullfont!
+Missing character: There is no µ in font nullfont!
+Missing character: There is no Ï in font nullfont!
+Missing character: There is no ƒ in font nullfont!
+Missing character: There is no Î in font nullfont!
+Missing character: There is no · in font nullfont!
+./glossary.tex:27: Undefined control sequence.
+\gloss #1#2->#1 \> \en 
+                       {#2}\\ 
+l.27   \gloss{ÏƒÏÎ½Î´ÎµÏƒÎ·}{join}
+                                   
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Missing character: There is no j in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no Ï in font nullfont!
+Missing character: There is no † in font nullfont!
+Missing character: There is no Î in font nullfont!
+Missing character: There is no ¹ in font nullfont!
+Missing character: There is no Î in font nullfont!
+Missing character: There is no » in font nullfont!
+Missing character: There is no Ï in font nullfont!
+Missing character: There is no „ in font nullfont!
+Missing character: There is no Ï in font nullfont!
+Missing character: There is no  in font nullfont!
+Missing character: There is no Î in font nullfont!
+Missing character: There is no ¬ in font nullfont!
+Missing character: There is no Ï in font nullfont!
+Missing character: There is no  in font nullfont!
+Missing character: There is no Î in font nullfont!
+Missing character: There is no ¹ in font nullfont!
+Missing character: There is no Ï in font nullfont!
+Missing character: There is no ƒ in font nullfont!
+Missing character: There is no Î in font nullfont!
+Missing character: There is no ¼ in font nullfont!
+Missing character: There is no Î in font nullfont!
+Missing character: There is no ± in font nullfont!
+./glossary.tex:28: Undefined control sequence.
+\gloss #1#2->#1 \> \en 
+                       {#2}\\ 
+l.28   \gloss{Ï†Î¹Î»Ï„ÏÎ¬ÏÎ¹ÏƒÎ¼Î±}{filtering}
+                                                
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Missing character: There is no f in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no g in font nullfont!
+Missing character: There is no Ï in font nullfont!
+Missing character: There is no ‡ in font nullfont!
+Missing character: There is no Ï in font nullfont!
+Missing character: There is no  in font nullfont!
+Missing character: There is no Î in font nullfont!
+Missing character: There is no ¿ in font nullfont!
+Missing character: There is no Î in font nullfont!
+Missing character: There is no ½ in font nullfont!
+Missing character: There is no Ï in font nullfont!
+Missing character: There is no Œ in font nullfont!
+Missing character: There is no Ï in font nullfont!
+Missing character: There is no ƒ in font nullfont!
+Missing character: There is no Î in font nullfont!
+Missing character: There is no · in font nullfont!
+Missing character: There is no Î in font nullfont!
+Missing character: There is no ¼ in font nullfont!
+Missing character: There is no Î in font nullfont!
+Missing character: There is no ¿ in font nullfont!
+./glossary.tex:29: Undefined control sequence.
+\gloss #1#2->#1 \> \en 
+                       {#2}\\ 
+l.29   \gloss{Ï‡ÏÎ¿Î½ÏŒÏƒÎ·Î¼Î¿}{timestamp}
+                                            
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Missing character: There is no t in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no p in font nullfont!
+)
+! Emergency stop.
+<*> glossary.tex
+                
+*** (job aborted, no legal \end found)
+
+ 
+Here is how much of TeX's memory you used:
+ 9 strings out of 494877
+ 162 string characters out of 6179315
+ 46589 words of memory out of 5000000
+ 3403 multiletter control sequences out of 15000+600000
+ 3948 words of font info for 15 fonts, out of 8000000 for 9000
+ 59 hyphenation exceptions out of 8191
+ 13i,1n,10p,122b,124s stack positions out of 5000i,500n,10000p,200000b,80000s
+!  ==> Fatal error occurred, no output PDF file produced!

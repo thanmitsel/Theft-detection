@@ -1,0 +1,634 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.6.11)  18 JUL 2017 21:56
+entering extended mode
+ restricted \write18 enabled.
+ file:line:error style messages enabled.
+ %&-line parsing enabled.
+**chapter8.tex
+(./chapter8.tex
+LaTeX2e <2016/02/01>
+Babel <3.9q> and hyphenation patterns for 7 language(s) loaded.
+./chapter8.tex:1: Undefined control sequence.
+l.1 \chapter
+            {ŒïœÄŒØŒªŒøŒ≥ŒøœÇ}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+./chapter8.tex:1: LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1 \chapter{Œ
+              ïœÄŒØŒªŒøŒ≥ŒøœÇ}
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+Missing character: There is no Œ in font nullfont!
+Missing character: There is no ï in font nullfont!
+Missing character: There is no œ in font nullfont!
+Missing character: There is no Ä in font nullfont!
+Missing character: There is no Œ in font nullfont!
+Missing character: There is no Ø in font nullfont!
+Missing character: There is no Œ in font nullfont!
+Missing character: There is no ª in font nullfont!
+Missing character: There is no Œ in font nullfont!
+Missing character: There is no ø in font nullfont!
+Missing character: There is no Œ in font nullfont!
+Missing character: There is no ≥ in font nullfont!
+Missing character: There is no Œ in font nullfont!
+Missing character: There is no ø in font nullfont!
+Missing character: There is no œ in font nullfont!
+Missing character: There is no Ç in font nullfont!
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 1--3
+[]
+ []
+
+
+./chapter8.tex:4: LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.4 Œ
+     £œÑŒø
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+Missing character: There is no Œ in font nullfont!
+Missing character: There is no £ in font nullfont!
+Missing character: There is no œ in font nullfont!
+Missing character: There is no Ñ in font nullfont!
+Missing character: There is no Œ in font nullfont!
+Missing character: There is no ø in font nullfont!
+./chapter8.tex:5: Undefined control sequence.
+l.5 \section
+            {Œ£œçŒΩŒøœàŒ∑ Œ∫Œ±Œπ œÉœÖŒºœÄŒµœÅŒ¨œÉŒºŒ±œÑŒ±}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Missing character: There is no Œ in font nullfont!
+Missing character: There is no £ in font nullfont!
+Missing character: There is no œ in font nullfont!
+Missing character: There is no ç in font nullfont!
+Missing character: There is no Œ in font nullfont!
+Missing character: There is no Ω in font nullfont!
+Missing character: There is no Œ in font nullfont!
+Missing character: There is no ø in font nullfont!
+Missing character: There is no œ in font nullfont!
+Missing character: There is no à in font nullfont!
+Missing character: There is no Œ in font nullfont!
+Missing character: There is no ∑ in font nullfont!
+Missing character: There is no Œ in font nullfont!
+Missing character: There is no ∫ in font nullfont!
+Missing character: There is no Œ in font nullfont!
+Missing character: There is no ± in font nullfont!
+Missing character: There is no Œ in font nullfont!
+Missing character: There is no π in font nullfont!
+Missing character: There is no œ in font nullfont!
+Missing character: There is no É in font nullfont!
+Missing character: There is no œ in font nullfont!
+Missing character: There is no Ö in font nullfont!
+Missing character: There is no Œ in font nullfont!
+Missing character: There is no º in font nullfont!
+Missing character: There is no œ in font nullfont!
+Missing character: There is no Ä in font nullfont!
+Missing character: There is no Œ in font nullfont!
+Missing character: There is no µ in font nullfont!
+Missing character: There is no œ in font nullfont!
+Missing character: There is no Å in font nullfont!
+Missing character: There is no Œ in font nullfont!
+Missing character: There is no ¨ in font nullfont!
+Missing character: There is no œ in font nullfont!
+Missing character: There is no É in font nullfont!
+Missing character: There is no Œ in font nullfont!
+Missing character: There is no º in font nullfont!
+Missing character: There is no Œ in font nullfont!
+Missing character: There is no ± in font nullfont!
+Missing character: There is no œ in font nullfont!
+Missing character: There is no Ñ in font nullfont!
+Missing character: There is no Œ in font nullfont!
+Missing character: There is no ± in font nullfont!
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 4--6
+[]
+ []
+
+
+./chapter8.tex:7: LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.7 Œ
+     £œÑŒ∑ œÄŒ±œÅŒøœçœÉŒ± ŒµœÅŒ≥Œ±œÉŒØŒ± ŒµŒØŒ¥Œ±ŒºŒµ œåœÑŒπ Œ≠œáŒøŒΩœÑŒ±œÇ ...
+
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+Missing character: There is no Œ in font nullfont!
+Missing character: There is no £ in font nullfont!
+Missing character: There is no œ in font nullfont!
+Missing character: There is no Ñ in font nullfont!
+Missing character: There is no Œ in font nullfont!
+Missing character: There is no ∑ in font nullfont!
+Missing character: There is no œ in font nullfont!
+Missing character: There is no Ä in font nullfont!
+Missing character: There is no Œ in font nullfont!
+Missing character: There is no ± in font nullfont!
+Missing character: There is no œ in font nullfont!
+Missing character: There is no Å in font nullfont!
+Missing character: There is no Œ in font nullfont!
+Missing character: There is no ø in font nullfont!
+Missing character: There is no œ in font nullfont!
+Missing character: There is no ç in font nullfont!
+Missing character: There is no œ in font nullfont!
+Missing character: There is no É in font nullfont!
+Missing character: There is no Œ in font nullfont!
+Missing character: There is no ± in font nullfont!
+Missing character: There is no Œ in font nullfont!
+Missing character: There is no µ in font nullfont!
+Missing character: There is no œ in font nullfont!
+Missing character: There is no Å in font nullfont!
+Missing character: There is no Œ in font nullfont!
+Missing character: There is no ≥ in font nullfont!
+Missing character: There is no Œ in font nullfont!
+Missing character: There is no ± in font nullfont!
+Missing character: There is no œ in font nullfont!
+Missing character: There is no É in font nullfont!
+Missing character: There is no Œ in font nullfont!
+Missing character: There is no Ø in font nullfont!
+Missing character: There is no Œ in font nullfont!
+Missing character: There is no ± in font nullfont!
+Missing character: There is no Œ in font nullfont!
+Missing character: There is no µ in font nullfont!
+Missing character: There is no Œ in font nullfont!
+Missing character: There is no Ø in font nullfont!
+Missing character: There is no Œ in font nullfont!
+Missing character: There is no ¥ in font nullfont!
+Missing character: There is no Œ in font nullfont!
+Missing character: There is no ± in font nullfont!
+Missing character: There is no Œ in font nullfont!
+Missing character: There is no º in font nullfont!
+Missing character: There is no Œ in font nullfont!
+Missing character: There is no µ in font nullfont!
+Missing character: There is no œ in font nullfont!
+Missing character: There is no å in font nullfont!
+Missing character: There is no œ in font nullfont!
+Missing character: There is no Ñ in font nullfont!
+Missing character: There is no Œ in font nullfont!
+Missing character: There is no π in font nullfont!
+Missing character: There is no Œ in font nullfont!
+Missing character: There is no ≠ in font nullfont!
+Missing character: There is no œ in font nullfont!
+Missing character: There is no á in font nullfont!
+Missing character: There is no Œ in font nullfont!
+Missing character: There is no ø in font nullfont!
+Missing character: There is no Œ in font nullfont!
+Missing character: There is no Ω in font nullfont!
+Missing character: There is no œ in font nullfont!
+Missing character: There is no Ñ in font nullfont!
+Missing character: There is no Œ in font nullfont!
+Missing character: There is no ± in font nullfont!
+Missing character: There is no œ in font nullfont!
+Missing character: There is no Ç in font nullfont!
+Missing character: There is no Œ in font nullfont!
+Missing character: There is no ≠ in font nullfont!
+Missing character: There is no Œ in font nullfont!
+Missing character: There is no Ω in font nullfont!
+Missing character: There is no Œ in font nullfont!
+Missing character: There is no ± in font nullfont!
+Missing character: There is no Œ in font nullfont!
+Missing character: There is no º in font nullfont!
+Missing character: There is no Œ in font nullfont!
+Missing character: There is no µ in font nullfont!
+Missing character: There is no Œ in font nullfont!
+Missing character: There is no ≥ in font nullfont!
+Missing character: There is no Œ in font nullfont!
+Missing character: There is no ¨ in font nullfont!
+Missing character: There is no Œ in font nullfont!
+Missing character: There is no ª in font nullfont!
+Missing character: There is no Œ in font nullfont!
+Missing character: There is no ø in font nullfont!
+Missing character: There is no œ in font nullfont!
+Missing character: There is no Ä in font nullfont!
+Missing character: There is no Œ in font nullfont!
+Missing character: There is no ª in font nullfont!
+Missing character: There is no Œ in font nullfont!
+Missing character: There is no Æ in font nullfont!
+Missing character: There is no Œ in font nullfont!
+Missing character: There is no ∏ in font nullfont!
+Missing character: There is no Œ in font nullfont!
+Missing character: There is no ø in font nullfont!
+Missing character: There is no œ in font nullfont!
+Missing character: There is no Ç in font nullfont!
+Missing character: There is no Œ in font nullfont!
+Missing character: There is no ¥ in font nullfont!
+Missing character: There is no Œ in font nullfont!
+Missing character: There is no µ in font nullfont!
+Missing character: There is no Œ in font nullfont!
+Missing character: There is no ¥ in font nullfont!
+Missing character: There is no Œ in font nullfont!
+Missing character: There is no ø in font nullfont!
+Missing character: There is no Œ in font nullfont!
+Missing character: There is no º in font nullfont!
+Missing character: There is no Œ in font nullfont!
+Missing character: There is no ≠ in font nullfont!
+Missing character: There is no Œ in font nullfont!
+Missing character: There is no Ω in font nullfont!
+Missing character: There is no œ in font nullfont!
+Missing character: There is no â in font nullfont!
+Missing character: There is no Œ in font nullfont!
+Missing character: There is no Ω in font nullfont!
+Missing character: There is no œ in font nullfont!
+Missing character: There is no Ä in font nullfont!
+Missing character: There is no Œ in font nullfont!
+Missing character: There is no ø in font nullfont!
+Missing character: There is no œ in font nullfont!
+Missing character: There is no Ö in font nullfont!
+Missing character: There is no œ in font nullfont!
+Missing character: There is no Ä in font nullfont!
+Missing character: There is no Œ in font nullfont!
+Missing character: There is no µ in font nullfont!
+Missing character: There is no œ in font nullfont!
+Missing character: There is no Å in font nullfont!
+Missing character: There is no Œ in font nullfont!
+Missing character: There is no π in font nullfont!
+Missing character: There is no Œ in font nullfont!
+Missing character: There is no ≥ in font nullfont!
+Missing character: There is no œ in font nullfont!
+Missing character: There is no Å in font nullfont!
+Missing character: There is no Œ in font nullfont!
+Missing character: There is no ¨ in font nullfont!
+Missing character: There is no œ in font nullfont!
+Missing character: There is no Ü in font nullfont!
+Missing character: There is no Œ in font nullfont!
+Missing character: There is no ø in font nullfont!
+Missing character: There is no œ in font nullfont!
+Missing character: There is no Ö in font nullfont!
+Missing character: There is no Œ in font nullfont!
+Missing character: There is no Ω in font nullfont!
+Missing character: There is no Œ in font nullfont!
+Missing character: There is no ± in font nullfont!
+Missing character: There is no Œ in font nullfont!
+Missing character: There is no Ω in font nullfont!
+Missing character: There is no œ in font nullfont!
+Missing character: There is no Ñ in font nullfont!
+Missing character: There is no Œ in font nullfont!
+Missing character: There is no Ø in font nullfont!
+Missing character: There is no œ in font nullfont!
+Missing character: There is no É in font nullfont!
+Missing character: There is no œ in font nullfont!
+Missing character: There is no Ñ in font nullfont!
+Missing character: There is no Œ in font nullfont!
+Missing character: There is no ø in font nullfont!
+Missing character: There is no Œ in font nullfont!
+Missing character: There is no π in font nullfont!
+Missing character: There is no œ in font nullfont!
+Missing character: There is no á in font nullfont!
+Missing character: There is no Œ in font nullfont!
+Missing character: There is no ± in font nullfont!
+Missing character: There is no Œ in font nullfont!
+Missing character: There is no º in font nullfont!
+Missing character: There is no Œ in font nullfont!
+Missing character: There is no µ in font nullfont!
+Missing character: There is no Œ in font nullfont!
+Missing character: There is no ≥ in font nullfont!
+Missing character: There is no Œ in font nullfont!
+Missing character: There is no ≠ in font nullfont!
+Missing character: There is no Œ in font nullfont!
+Missing character: There is no ∏ in font nullfont!
+Missing character: There is no Œ in font nullfont!
+Missing character: There is no ∑ in font nullfont!
+Missing character: There is no Œ in font nullfont!
+Missing character: There is no º in font nullfont!
+Missing character: There is no œ in font nullfont!
+Missing character: There is no Ä in font nullfont!
+Missing character: There is no Œ in font nullfont!
+Missing character: There is no ø in font nullfont!
+Missing character: There is no œ in font nullfont!
+Missing character: There is no Å in font nullfont!
+Missing character: There is no Œ in font nullfont!
+Missing character: There is no ø in font nullfont!
+Missing character: There is no œ in font nullfont!
+Missing character: There is no ç in font nullfont!
+Missing character: There is no Œ in font nullfont!
+Missing character: There is no º in font nullfont!
+Missing character: There is no Œ in font nullfont!
+Missing character: There is no µ in font nullfont!
+Missing character: There is no Œ in font nullfont!
+Missing character: There is no Ω in font nullfont!
+Missing character: There is no Œ in font nullfont!
+Missing character: There is no ± in font nullfont!
+Missing character: There is no œ in font nullfont!
+Missing character: There is no á in font nullfont!
+Missing character: There is no œ in font nullfont!
+Missing character: There is no Å in font nullfont!
+Missing character: There is no Œ in font nullfont!
+Missing character: There is no ∑ in font nullfont!
+Missing character: There is no œ in font nullfont!
+Missing character: There is no É in font nullfont!
+Missing character: There is no Œ in font nullfont!
+Missing character: There is no π in font nullfont!
+Missing character: There is no Œ in font nullfont!
+Missing character: There is no º in font nullfont!
+Missing character: There is no Œ in font nullfont!
+Missing character: There is no ø in font nullfont!
+Missing character: There is no œ in font nullfont!
+Missing character: There is no Ä in font nullfont!
+Missing character: There is no Œ in font nullfont!
+Missing character: There is no ø in font nullfont!
+Missing character: There is no Œ in font nullfont!
+Missing character: There is no π in font nullfont!
+Missing character: There is no Œ in font nullfont!
+Missing character: There is no Æ in font nullfont!
+Missing character: There is no œ in font nullfont!
+Missing character: There is no É in font nullfont!
+Missing character: There is no Œ in font nullfont!
+Missing character: There is no ø in font nullfont!
+Missing character: There is no œ in font nullfont!
+Missing character: There is no Ö in font nullfont!
+Missing character: There is no Œ in font nullfont!
+Missing character: There is no º in font nullfont!
+Missing character: There is no Œ in font nullfont!
+Missing character: There is no µ in font nullfont!
+Missing character: There is no œ in font nullfont!
+Missing character: There is no Ñ in font nullfont!
+Missing character: There is no Œ in font nullfont!
+Missing character: There is no ∑ in font nullfont!
+Missing character: There is no œ in font nullfont!
+Missing character: There is no É in font nullfont!
+Missing character: There is no œ in font nullfont!
+Missing character: There is no Ö in font nullfont!
+Missing character: There is no Œ in font nullfont!
+Missing character: There is no Ω in font nullfont!
+Missing character: There is no Œ in font nullfont!
+Missing character: There is no ø in font nullfont!
+Missing character: There is no Œ in font nullfont!
+Missing character: There is no ª in font nullfont!
+Missing character: There is no Œ in font nullfont!
+Missing character: There is no π in font nullfont!
+Missing character: There is no Œ in font nullfont!
+Missing character: There is no ∫ in font nullfont!
+Missing character: There is no Œ in font nullfont!
+Missing character: There is no Æ in font nullfont!
+Missing character: There is no œ in font nullfont!
+Missing character: There is no Ä in font nullfont!
+Missing character: There is no Œ in font nullfont!
+Missing character: There is no ª in font nullfont!
+Missing character: There is no Œ in font nullfont!
+Missing character: There is no ∑ in font nullfont!
+Missing character: There is no œ in font nullfont!
+Missing character: There is no Å in font nullfont!
+Missing character: There is no Œ in font nullfont!
+Missing character: There is no ø in font nullfont!
+Missing character: There is no œ in font nullfont!
+Missing character: There is no Ü in font nullfont!
+Missing character: There is no Œ in font nullfont!
+Missing character: There is no ø in font nullfont!
+Missing character: There is no œ in font nullfont!
+Missing character: There is no Å in font nullfont!
+Missing character: There is no Œ in font nullfont!
+Missing character: There is no Ø in font nullfont!
+Missing character: There is no Œ in font nullfont!
+Missing character: There is no ± in font nullfont!
+Missing character: There is no Œ in font nullfont!
+Missing character: There is no ≥ in font nullfont!
+Missing character: There is no Œ in font nullfont!
+Missing character: There is no π in font nullfont!
+Missing character: There is no Œ in font nullfont!
+Missing character: There is no ± in font nullfont!
+Missing character: There is no Œ in font nullfont!
+Missing character: There is no Ω in font nullfont!
+Missing character: There is no Œ in font nullfont!
+Missing character: There is no ± in font nullfont!
+Missing character: There is no œ in font nullfont!
+Missing character: There is no Ö in font nullfont!
+Missing character: There is no œ in font nullfont!
+Missing character: There is no Ä in font nullfont!
+Missing character: There is no Œ in font nullfont!
+Missing character: There is no ø in font nullfont!
+Missing character: There is no Œ in font nullfont!
+Missing character: There is no ≤ in font nullfont!
+Missing character: There is no Œ in font nullfont!
+Missing character: There is no ø in font nullfont!
+Missing character: There is no Œ in font nullfont!
+Missing character: There is no ∑ in font nullfont!
+Missing character: There is no Œ in font nullfont!
+Missing character: There is no ∏ in font nullfont!
+Missing character: There is no Œ in font nullfont!
+Missing character: There is no Æ in font nullfont!
+Missing character: There is no œ in font nullfont!
+Missing character: There is no É in font nullfont!
+Missing character: There is no Œ in font nullfont!
+Missing character: There is no ø in font nullfont!
+Missing character: There is no œ in font nullfont!
+Missing character: There is no Ö in font nullfont!
+Missing character: There is no Œ in font nullfont!
+Missing character: There is no º in font nullfont!
+Missing character: There is no Œ in font nullfont!
+Missing character: There is no µ in font nullfont!
+Missing character: There is no œ in font nullfont!
+Missing character: There is no Ñ in font nullfont!
+Missing character: There is no Œ in font nullfont!
+Missing character: There is no ∑ in font nullfont!
+Missing character: There is no Œ in font nullfont!
+Missing character: There is no ¥ in font nullfont!
+Missing character: There is no Œ in font nullfont!
+Missing character: There is no π in font nullfont!
+Missing character: There is no Œ in font nullfont!
+Missing character: There is no ± in font nullfont!
+Missing character: There is no Œ in font nullfont!
+Missing character: There is no ¥ in font nullfont!
+Missing character: There is no Œ in font nullfont!
+Missing character: There is no π in font nullfont!
+Missing character: There is no Œ in font nullfont!
+Missing character: There is no ∫ in font nullfont!
+Missing character: There is no Œ in font nullfont!
+Missing character: There is no ± in font nullfont!
+Missing character: There is no œ in font nullfont!
+Missing character: There is no É in font nullfont!
+Missing character: There is no Œ in font nullfont!
+Missing character: There is no Ø in font nullfont!
+Missing character: There is no Œ in font nullfont!
+Missing character: There is no ± in font nullfont!
+Missing character: There is no œ in font nullfont!
+Missing character: There is no Ñ in font nullfont!
+Missing character: There is no Œ in font nullfont!
+Missing character: There is no ∑ in font nullfont!
+Missing character: There is no œ in font nullfont!
+Missing character: There is no Ç in font nullfont!
+Missing character: There is no œ in font nullfont!
+Missing character: There is no Ä in font nullfont!
+Missing character: There is no œ in font nullfont!
+Missing character: There is no Å in font nullfont!
+Missing character: There is no œ in font nullfont!
+Missing character: There is no å in font nullfont!
+Missing character: There is no Œ in font nullfont!
+Missing character: There is no ≤ in font nullfont!
+Missing character: There is no Œ in font nullfont!
+Missing character: There is no ª in font nullfont!
+Missing character: There is no Œ in font nullfont!
+Missing character: There is no µ in font nullfont!
+Missing character: There is no œ in font nullfont!
+Missing character: There is no à in font nullfont!
+Missing character: There is no Œ in font nullfont!
+Missing character: There is no ∑ in font nullfont!
+Missing character: There is no œ in font nullfont!
+Missing character: There is no Ç in font nullfont!
+Missing character: There is no Œ in font nullfont!
+Missing character: There is no º in font nullfont!
+Missing character: There is no Œ in font nullfont!
+Missing character: There is no π in font nullfont!
+Missing character: There is no Œ in font nullfont!
+Missing character: There is no ∫ in font nullfont!
+Missing character: There is no œ in font nullfont!
+Missing character: There is no Å in font nullfont!
+Missing character: There is no œ in font nullfont!
+Missing character: There is no é in font nullfont!
+Missing character: There is no Œ in font nullfont!
+Missing character: There is no Ω in font nullfont!
+Missing character: There is no œ in font nullfont!
+Missing character: There is no á in font nullfont!
+Missing character: There is no œ in font nullfont!
+Missing character: There is no Å in font nullfont!
+Missing character: There is no Œ in font nullfont!
+Missing character: There is no ø in font nullfont!
+Missing character: There is no Œ in font nullfont!
+Missing character: There is no Ω in font nullfont!
+Missing character: There is no Œ in font nullfont!
+Missing character: There is no ø in font nullfont!
+Missing character: There is no œ in font nullfont!
+Missing character: There is no É in font nullfont!
+Missing character: There is no Œ in font nullfont!
+Missing character: There is no µ in font nullfont!
+Missing character: There is no Œ in font nullfont!
+Missing character: There is no π in font nullfont!
+Missing character: There is no œ in font nullfont!
+Missing character: There is no Å in font nullfont!
+Missing character: There is no œ in font nullfont!
+Missing character: There is no é in font nullfont!
+Missing character: There is no Œ in font nullfont!
+Missing character: There is no Ω in font nullfont!
+Missing character: There is no . in font nullfont!
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 7--8
+[]
+ []
+
+./chapter8.tex:10: Undefined control sequence.
+l.10 \section
+             {ŒúŒµŒªŒªŒøŒΩœÑŒπŒ∫Œ≠œÇ ŒµœÄŒµŒ∫œÑŒ¨œÉŒµŒπœÇ}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+./chapter8.tex:10: LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.10 \section{Œ
+               úŒµŒªŒªŒøŒΩœÑŒπŒ∫Œ≠œÇ ŒµœÄŒµŒ∫œÑŒ¨œÉŒµŒπœÇ}
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+Missing character: There is no Œ in font nullfont!
+Missing character: There is no ú in font nullfont!
+Missing character: There is no Œ in font nullfont!
+Missing character: There is no µ in font nullfont!
+Missing character: There is no Œ in font nullfont!
+Missing character: There is no ª in font nullfont!
+Missing character: There is no Œ in font nullfont!
+Missing character: There is no ª in font nullfont!
+Missing character: There is no Œ in font nullfont!
+Missing character: There is no ø in font nullfont!
+Missing character: There is no Œ in font nullfont!
+Missing character: There is no Ω in font nullfont!
+Missing character: There is no œ in font nullfont!
+Missing character: There is no Ñ in font nullfont!
+Missing character: There is no Œ in font nullfont!
+Missing character: There is no π in font nullfont!
+Missing character: There is no Œ in font nullfont!
+Missing character: There is no ∫ in font nullfont!
+Missing character: There is no Œ in font nullfont!
+Missing character: There is no ≠ in font nullfont!
+Missing character: There is no œ in font nullfont!
+Missing character: There is no Ç in font nullfont!
+Missing character: There is no Œ in font nullfont!
+Missing character: There is no µ in font nullfont!
+Missing character: There is no œ in font nullfont!
+Missing character: There is no Ä in font nullfont!
+Missing character: There is no Œ in font nullfont!
+Missing character: There is no µ in font nullfont!
+Missing character: There is no Œ in font nullfont!
+Missing character: There is no ∫ in font nullfont!
+Missing character: There is no œ in font nullfont!
+Missing character: There is no Ñ in font nullfont!
+Missing character: There is no Œ in font nullfont!
+Missing character: There is no ¨ in font nullfont!
+Missing character: There is no œ in font nullfont!
+Missing character: There is no É in font nullfont!
+Missing character: There is no Œ in font nullfont!
+Missing character: There is no µ in font nullfont!
+Missing character: There is no Œ in font nullfont!
+Missing character: There is no π in font nullfont!
+Missing character: There is no œ in font nullfont!
+Missing character: There is no Ç in font nullfont!
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 10--11
+[]
+ []
+
+
+./chapter8.tex:12: LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.12 Œ
+      †œÅœéœÑŒ±
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+Missing character: There is no Œ in font nullfont!
+Missing character: There is no † in font nullfont!
+Missing character: There is no œ in font nullfont!
+Missing character: There is no Å in font nullfont!
+Missing character: There is no œ in font nullfont!
+Missing character: There is no é in font nullfont!
+Missing character: There is no œ in font nullfont!
+Missing character: There is no Ñ in font nullfont!
+Missing character: There is no Œ in font nullfont!
+Missing character: There is no ± in font nullfont!
+)
+! Emergency stop.
+<*> chapter8.tex
+                
+*** (job aborted, no legal \end found)
+
+ 
+Here is how much of TeX's memory you used:
+ 5 strings out of 494877
+ 138 string characters out of 6179315
+ 45589 words of memory out of 5000000
+ 3399 multiletter control sequences out of 15000+600000
+ 3640 words of font info for 14 fonts, out of 8000000 for 9000
+ 59 hyphenation exceptions out of 8191
+ 5i,0n,4p,429b,16s stack positions out of 5000i,500n,10000p,200000b,80000s
+!  ==> Fatal error occurred, no output PDF file produced!

@@ -1,0 +1,2299 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.6.11)  20 JUL 2017 03:30
+entering extended mode
+ restricted \write18 enabled.
+ file:line:error style messages enabled.
+ %&-line parsing enabled.
+**results.tex
+(./results.tex
+LaTeX2e <2016/02/01>
+Babel <3.9q> and hyphenation patterns for 7 language(s) loaded.
+./results.tex:1: Undefined control sequence.
+l.1 \chapter
+            {ŒëŒΩŒ±ŒªœÖœÑŒπŒ∫Œ¨ ŒëœÄŒøœÑŒµŒªŒ≠œÉŒºŒ±œÑŒ±}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+./results.tex:1: LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1 \chapter{Œ
+              ëŒΩŒ±ŒªœÖœÑŒπŒ∫Œ¨ ŒëœÄŒøœÑŒµŒªŒ≠œÉŒºŒ±œÑŒ±}
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+Missing character: There is no Œ in font nullfont!
+Missing character: There is no ë in font nullfont!
+Missing character: There is no Œ in font nullfont!
+Missing character: There is no Ω in font nullfont!
+Missing character: There is no Œ in font nullfont!
+Missing character: There is no ± in font nullfont!
+Missing character: There is no Œ in font nullfont!
+Missing character: There is no ª in font nullfont!
+Missing character: There is no œ in font nullfont!
+Missing character: There is no Ö in font nullfont!
+Missing character: There is no œ in font nullfont!
+Missing character: There is no Ñ in font nullfont!
+Missing character: There is no Œ in font nullfont!
+Missing character: There is no π in font nullfont!
+Missing character: There is no Œ in font nullfont!
+Missing character: There is no ∫ in font nullfont!
+Missing character: There is no Œ in font nullfont!
+Missing character: There is no ¨ in font nullfont!
+Missing character: There is no Œ in font nullfont!
+Missing character: There is no ë in font nullfont!
+Missing character: There is no œ in font nullfont!
+Missing character: There is no Ä in font nullfont!
+Missing character: There is no Œ in font nullfont!
+Missing character: There is no ø in font nullfont!
+Missing character: There is no œ in font nullfont!
+Missing character: There is no Ñ in font nullfont!
+Missing character: There is no Œ in font nullfont!
+Missing character: There is no µ in font nullfont!
+Missing character: There is no Œ in font nullfont!
+Missing character: There is no ª in font nullfont!
+Missing character: There is no Œ in font nullfont!
+Missing character: There is no ≠ in font nullfont!
+Missing character: There is no œ in font nullfont!
+Missing character: There is no É in font nullfont!
+Missing character: There is no Œ in font nullfont!
+Missing character: There is no º in font nullfont!
+Missing character: There is no Œ in font nullfont!
+Missing character: There is no ± in font nullfont!
+Missing character: There is no œ in font nullfont!
+Missing character: There is no Ñ in font nullfont!
+Missing character: There is no Œ in font nullfont!
+Missing character: There is no ± in font nullfont!
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 1--2
+[]
+ []
+
+
+./results.tex:3: LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.3 Œ
+     ëŒ∫ŒøŒªŒøœÖŒ∏ŒøœçŒΩ œÑŒ± Œ±ŒΩŒ±ŒªœÖœÑŒπŒ∫Œ¨ Œ±œÄŒøœÑŒµŒªŒ≠œÉŒºŒ±œÑŒ± Œ±...
+
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+Missing character: There is no Œ in font nullfont!
+Missing character: There is no ë in font nullfont!
+Missing character: There is no Œ in font nullfont!
+Missing character: There is no ∫ in font nullfont!
+Missing character: There is no Œ in font nullfont!
+Missing character: There is no ø in font nullfont!
+Missing character: There is no Œ in font nullfont!
+Missing character: There is no ª in font nullfont!
+Missing character: There is no Œ in font nullfont!
+Missing character: There is no ø in font nullfont!
+Missing character: There is no œ in font nullfont!
+Missing character: There is no Ö in font nullfont!
+Missing character: There is no Œ in font nullfont!
+Missing character: There is no ∏ in font nullfont!
+Missing character: There is no Œ in font nullfont!
+Missing character: There is no ø in font nullfont!
+Missing character: There is no œ in font nullfont!
+Missing character: There is no ç in font nullfont!
+Missing character: There is no Œ in font nullfont!
+Missing character: There is no Ω in font nullfont!
+Missing character: There is no œ in font nullfont!
+Missing character: There is no Ñ in font nullfont!
+Missing character: There is no Œ in font nullfont!
+Missing character: There is no ± in font nullfont!
+Missing character: There is no Œ in font nullfont!
+Missing character: There is no ± in font nullfont!
+Missing character: There is no Œ in font nullfont!
+Missing character: There is no Ω in font nullfont!
+Missing character: There is no Œ in font nullfont!
+Missing character: There is no ± in font nullfont!
+Missing character: There is no Œ in font nullfont!
+Missing character: There is no ª in font nullfont!
+Missing character: There is no œ in font nullfont!
+Missing character: There is no Ö in font nullfont!
+Missing character: There is no œ in font nullfont!
+Missing character: There is no Ñ in font nullfont!
+Missing character: There is no Œ in font nullfont!
+Missing character: There is no π in font nullfont!
+Missing character: There is no Œ in font nullfont!
+Missing character: There is no ∫ in font nullfont!
+Missing character: There is no Œ in font nullfont!
+Missing character: There is no ¨ in font nullfont!
+Missing character: There is no Œ in font nullfont!
+Missing character: There is no ± in font nullfont!
+Missing character: There is no œ in font nullfont!
+Missing character: There is no Ä in font nullfont!
+Missing character: There is no Œ in font nullfont!
+Missing character: There is no ø in font nullfont!
+Missing character: There is no œ in font nullfont!
+Missing character: There is no Ñ in font nullfont!
+Missing character: There is no Œ in font nullfont!
+Missing character: There is no µ in font nullfont!
+Missing character: There is no Œ in font nullfont!
+Missing character: There is no ª in font nullfont!
+Missing character: There is no Œ in font nullfont!
+Missing character: There is no ≠ in font nullfont!
+Missing character: There is no œ in font nullfont!
+Missing character: There is no É in font nullfont!
+Missing character: There is no Œ in font nullfont!
+Missing character: There is no º in font nullfont!
+Missing character: There is no Œ in font nullfont!
+Missing character: There is no ± in font nullfont!
+Missing character: There is no œ in font nullfont!
+Missing character: There is no Ñ in font nullfont!
+Missing character: There is no Œ in font nullfont!
+Missing character: There is no ± in font nullfont!
+Missing character: There is no Œ in font nullfont!
+Missing character: There is no ± in font nullfont!
+Missing character: There is no Œ in font nullfont!
+Missing character: There is no ∫ in font nullfont!
+Missing character: There is no œ in font nullfont!
+Missing character: There is no Å in font nullfont!
+Missing character: There is no Œ in font nullfont!
+Missing character: There is no Ø in font nullfont!
+Missing character: There is no Œ in font nullfont!
+Missing character: There is no ≤ in font nullfont!
+Missing character: There is no Œ in font nullfont!
+Missing character: There is no µ in font nullfont!
+Missing character: There is no Œ in font nullfont!
+Missing character: There is no π in font nullfont!
+Missing character: There is no Œ in font nullfont!
+Missing character: There is no ± in font nullfont!
+Missing character: There is no œ in font nullfont!
+Missing character: There is no Ç in font nullfont!
+Missing character: There is no œ in font nullfont!
+Missing character: There is no Ñ in font nullfont!
+Missing character: There is no œ in font nullfont!
+Missing character: There is no â in font nullfont!
+Missing character: There is no Œ in font nullfont!
+Missing character: There is no Ω in font nullfont!
+Missing character: There is no Œ in font nullfont!
+Missing character: There is no º in font nullfont!
+Missing character: There is no Œ in font nullfont!
+Missing character: There is no µ in font nullfont!
+Missing character: There is no Œ in font nullfont!
+Missing character: There is no ∏ in font nullfont!
+Missing character: There is no œ in font nullfont!
+Missing character: There is no å in font nullfont!
+Missing character: There is no Œ in font nullfont!
+Missing character: There is no ¥ in font nullfont!
+Missing character: There is no œ in font nullfont!
+Missing character: There is no â in font nullfont!
+Missing character: There is no Œ in font nullfont!
+Missing character: There is no Ω in font nullfont!
+Missing character: There is no Œ in font nullfont!
+Missing character: There is no º in font nullfont!
+Missing character: There is no Œ in font nullfont!
+Missing character: There is no µ in font nullfont!
+Missing character: There is no œ in font nullfont!
+Missing character: There is no Ñ in font nullfont!
+Missing character: There is no Œ in font nullfont!
+Missing character: There is no ∑ in font nullfont!
+Missing character: There is no Œ in font nullfont!
+Missing character: There is no Ω in font nullfont!
+Missing character: There is no Œ in font nullfont!
+Missing character: There is no ∫ in font nullfont!
+Missing character: There is no Œ in font nullfont!
+Missing character: There is no ª in font nullfont!
+Missing character: There is no Œ in font nullfont!
+Missing character: There is no ± in font nullfont!
+Missing character: There is no œ in font nullfont!
+Missing character: There is no É in font nullfont!
+Missing character: There is no œ in font nullfont!
+Missing character: There is no É in font nullfont!
+Missing character: There is no Œ in font nullfont!
+Missing character: There is no π in font nullfont!
+Missing character: There is no Œ in font nullfont!
+Missing character: There is no ∫ in font nullfont!
+Missing character: There is no Œ in font nullfont!
+Missing character: There is no Æ in font nullfont!
+Missing character: There is no Œ in font nullfont!
+Missing character: There is no ∫ in font nullfont!
+Missing character: There is no Œ in font nullfont!
+Missing character: There is no ± in font nullfont!
+Missing character: There is no Œ in font nullfont!
+Missing character: There is no π in font nullfont!
+Missing character: There is no œ in font nullfont!
+Missing character: There is no Ä in font nullfont!
+Missing character: There is no œ in font nullfont!
+Missing character: There is no Å in font nullfont!
+Missing character: There is no Œ in font nullfont!
+Missing character: There is no ø in font nullfont!
+Missing character: There is no œ in font nullfont!
+Missing character: There is no Ñ in font nullfont!
+Missing character: There is no Œ in font nullfont!
+Missing character: There is no µ in font nullfont!
+Missing character: There is no Œ in font nullfont!
+Missing character: There is no π in font nullfont!
+Missing character: There is no Œ in font nullfont!
+Missing character: There is no Ω in font nullfont!
+Missing character: There is no œ in font nullfont!
+Missing character: There is no å in font nullfont!
+Missing character: There is no Œ in font nullfont!
+Missing character: There is no º in font nullfont!
+Missing character: There is no Œ in font nullfont!
+Missing character: There is no µ in font nullfont!
+Missing character: There is no Œ in font nullfont!
+Missing character: There is no Ω in font nullfont!
+Missing character: There is no Œ in font nullfont!
+Missing character: There is no ∑ in font nullfont!
+Missing character: There is no Œ in font nullfont!
+Missing character: There is no º in font nullfont!
+Missing character: There is no Œ in font nullfont!
+Missing character: There is no ≠ in font nullfont!
+Missing character: There is no Œ in font nullfont!
+Missing character: There is no ∏ in font nullfont!
+Missing character: There is no Œ in font nullfont!
+Missing character: There is no ø in font nullfont!
+Missing character: There is no Œ in font nullfont!
+Missing character: There is no ¥ in font nullfont!
+Missing character: There is no Œ in font nullfont!
+Missing character: There is no ø in font nullfont!
+Missing character: There is no : in font nullfont!
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 3--4
+[]
+ []
+
+
+./results.tex:5: LaTeX Error: Environment longtable undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.5 \begin{longtable}
+                     {|r|rrrrrr|rrrrrr|}
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+./results.tex:5: LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.5 \begin{longtable}{|
+                       r|rrrrrr|rrrrrr|}
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+Missing character: There is no | in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no | in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no | in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no | in font nullfont!
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 5--6
+[] 
+ []
+
+
+./results.tex:7: LaTeX Error: \caption outside float.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.7 \caption
+            {ŒîŒµŒØŒ∫œÑŒµœÇ ŒëŒ∫œÅŒØŒ≤ŒµŒπŒ±œÇ Œ≥ŒπŒ± œåŒªŒµœÇ œÑŒπœÇ œáœÅŒø...
+
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+./results.tex:7: LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.7 \caption{Œ
+              îŒµŒØŒ∫œÑŒµœÇ ŒëŒ∫œÅŒØŒ≤ŒµŒπŒ±œÇ Œ≥ŒπŒ± œåŒªŒµœÇ œÑŒπœÇ œáœÅŒø...
+
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+Missing character: There is no Œ in font nullfont!
+Missing character: There is no î in font nullfont!
+Missing character: There is no Œ in font nullfont!
+Missing character: There is no µ in font nullfont!
+Missing character: There is no Œ in font nullfont!
+Missing character: There is no Ø in font nullfont!
+Missing character: There is no Œ in font nullfont!
+Missing character: There is no ∫ in font nullfont!
+Missing character: There is no œ in font nullfont!
+Missing character: There is no Ñ in font nullfont!
+Missing character: There is no Œ in font nullfont!
+Missing character: There is no µ in font nullfont!
+Missing character: There is no œ in font nullfont!
+Missing character: There is no Ç in font nullfont!
+Missing character: There is no Œ in font nullfont!
+Missing character: There is no ë in font nullfont!
+Missing character: There is no Œ in font nullfont!
+Missing character: There is no ∫ in font nullfont!
+Missing character: There is no œ in font nullfont!
+Missing character: There is no Å in font nullfont!
+Missing character: There is no Œ in font nullfont!
+Missing character: There is no Ø in font nullfont!
+Missing character: There is no Œ in font nullfont!
+Missing character: There is no ≤ in font nullfont!
+Missing character: There is no Œ in font nullfont!
+Missing character: There is no µ in font nullfont!
+Missing character: There is no Œ in font nullfont!
+Missing character: There is no π in font nullfont!
+Missing character: There is no Œ in font nullfont!
+Missing character: There is no ± in font nullfont!
+Missing character: There is no œ in font nullfont!
+Missing character: There is no Ç in font nullfont!
+Missing character: There is no Œ in font nullfont!
+Missing character: There is no ≥ in font nullfont!
+Missing character: There is no Œ in font nullfont!
+Missing character: There is no π in font nullfont!
+Missing character: There is no Œ in font nullfont!
+Missing character: There is no ± in font nullfont!
+Missing character: There is no œ in font nullfont!
+Missing character: There is no å in font nullfont!
+Missing character: There is no Œ in font nullfont!
+Missing character: There is no ª in font nullfont!
+Missing character: There is no Œ in font nullfont!
+Missing character: There is no µ in font nullfont!
+Missing character: There is no œ in font nullfont!
+Missing character: There is no Ç in font nullfont!
+Missing character: There is no œ in font nullfont!
+Missing character: There is no Ñ in font nullfont!
+Missing character: There is no Œ in font nullfont!
+Missing character: There is no π in font nullfont!
+Missing character: There is no œ in font nullfont!
+Missing character: There is no Ç in font nullfont!
+Missing character: There is no œ in font nullfont!
+Missing character: There is no á in font nullfont!
+Missing character: There is no œ in font nullfont!
+Missing character: There is no Å in font nullfont!
+Missing character: There is no Œ in font nullfont!
+Missing character: There is no ø in font nullfont!
+Missing character: There is no Œ in font nullfont!
+Missing character: There is no Ω in font nullfont!
+Missing character: There is no Œ in font nullfont!
+Missing character: There is no ø in font nullfont!
+Missing character: There is no œ in font nullfont!
+Missing character: There is no É in font nullfont!
+Missing character: There is no Œ in font nullfont!
+Missing character: There is no µ in font nullfont!
+Missing character: There is no Œ in font nullfont!
+Missing character: There is no π in font nullfont!
+Missing character: There is no œ in font nullfont!
+Missing character: There is no Å in font nullfont!
+Missing character: There is no Œ in font nullfont!
+Missing character: There is no ≠ in font nullfont!
+Missing character: There is no œ in font nullfont!
+Missing character: There is no Ç in font nullfont!
+./results.tex:8: Misplaced \noalign.
+\hline ->\noalign 
+                  {\ifnum 0=`}\fi \hrule \@height \arrayrulewidth \futurelet...
+l.8   \hline
+            
+I expect to see \noalign only after the \cr of
+an alignment. Proceed, and I'll ignore this case.
+
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 7--8
+[]
+ []
+
+
+./results.tex:11: LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.11  &
+          &   &   &   &  &   &   &   &   &   &   &  \\
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+./results.tex:11: Misplaced alignment tab character &.
+<recently read> &
+                 
+l.11  &
+          &   &   &   &  &   &   &   &   &   &   &  \\
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+./results.tex:11: Misplaced alignment tab character &.
+l.11  &   &
+              &   &   &  &   &   &   &   &   &   &  \\
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+./results.tex:11: Misplaced alignment tab character &.
+l.11  &   &   &
+                  &   &  &   &   &   &   &   &   &  \\
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+./results.tex:11: Misplaced alignment tab character &.
+l.11  &   &   &   &
+                      &  &   &   &   &   &   &   &  \\
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+./results.tex:11: Misplaced alignment tab character &.
+l.11  &   &   &   &   &
+                         &   &   &   &   &   &   &  \\
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+./results.tex:11: Misplaced alignment tab character &.
+l.11  &   &   &   &   &  &
+                             &   &   &   &   &   &  \\
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+./results.tex:11: Misplaced alignment tab character &.
+l.11  &   &   &   &   &  &   &
+                                 &   &   &   &   &  \\
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+./results.tex:11: Misplaced alignment tab character &.
+l.11  &   &   &   &   &  &   &   &
+                                     &   &   &   &  \\
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+./results.tex:11: Misplaced alignment tab character &.
+l.11  &   &   &   &   &  &   &   &   &
+                                         &   &   &  \\
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+./results.tex:11: Misplaced alignment tab character &.
+l.11  &   &   &   &   &  &   &   &   &   &
+                                             &   &  \\
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+./results.tex:11: Misplaced alignment tab character &.
+l.11  &   &   &   &   &  &   &   &   &   &   &
+                                                 &  \\
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+./results.tex:11: Misplaced alignment tab character &.
+l.11  &   &   &   &   &  &   &   &   &   &   &   &
+                                                    \\
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+
+./results.tex:12: LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.12  \hline
+            
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+./results.tex:12: Misplaced \noalign.
+\hline ->\noalign 
+                  {\ifnum 0=`}\fi \hrule \@height \arrayrulewidth \futurelet...
+l.12  \hline
+            
+I expect to see \noalign only after the \cr of
+an alignment. Proceed, and I'll ignore this case.
+
+./results.tex:13: You can't use `macro parameter character #' in vertical mode.
+<recently read> ##
+                  
+l.13  #
+        &   \en{Damped} &   \en{Holt} &   \en{LRL} &  \en{Naive} &  \en{SES}...
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+./results.tex:13: Misplaced alignment tab character &.
+l.13  # &
+            \en{Damped} &   \en{Holt} &   \en{LRL} &  \en{Naive} &  \en{SES}...
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+./results.tex:13: Undefined control sequence.
+l.13  # &   \en
+               {Damped} &   \en{Holt} &   \en{LRL} &  \en{Naive} &  \en{SES}...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+./results.tex:13: LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.13  # &   \en{D
+                 amped} &   \en{Holt} &   \en{LRL} &  \en{Naive} &  \en{SES}...
+
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+Missing character: There is no D in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no d in font nullfont!
+./results.tex:13: Misplaced alignment tab character &.
+l.13  # &   \en{Damped} &
+                            \en{Holt} &   \en{LRL} &  \en{Naive} &  \en{SES}...
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+./results.tex:13: Undefined control sequence.
+l.13  # &   \en{Damped} &   \en
+                               {Holt} &   \en{LRL} &  \en{Naive} &  \en{SES}...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Missing character: There is no H in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no t in font nullfont!
+./results.tex:13: Misplaced alignment tab character &.
+l.13  # &   \en{Damped} &   \en{Holt} &
+                                          \en{LRL} &  \en{Naive} &  \en{SES}...
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+./results.tex:13: Undefined control sequence.
+l.13  # &   \en{Damped} &   \en{Holt} &   \en
+                                             {LRL} &  \en{Naive} &  \en{SES}...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Missing character: There is no L in font nullfont!
+Missing character: There is no R in font nullfont!
+Missing character: There is no L in font nullfont!
+./results.tex:13: Misplaced alignment tab character &.
+l.13 ...  \en{Damped} &   \en{Holt} &   \en{LRL} &
+                                                    \en{Naive} &  \en{SES} &...
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+./results.tex:13: Undefined control sequence.
+l.13 ...{Damped} &   \en{Holt} &   \en{LRL} &  \en
+                                                  {Naive} &  \en{SES} &  \en...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Missing character: There is no N in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no v in font nullfont!
+Missing character: There is no e in font nullfont!
+./results.tex:13: Misplaced alignment tab character &.
+l.13 ...&   \en{Holt} &   \en{LRL} &  \en{Naive} &
+                                                    \en{SES} &  \en{Theta} &...
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+./results.tex:13: Undefined control sequence.
+l.13 ...en{Holt} &   \en{LRL} &  \en{Naive} &  \en
+                                                  {SES} &  \en{Theta} &   \e...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Missing character: There is no S in font nullfont!
+Missing character: There is no E in font nullfont!
+Missing character: There is no S in font nullfont!
+./results.tex:13: Misplaced alignment tab character &.
+l.13 ...} &   \en{LRL} &  \en{Naive} &  \en{SES} &
+                                                    \en{Theta} &   \en{Dampe...
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+./results.tex:13: Undefined control sequence.
+l.13 ... \en{LRL} &  \en{Naive} &  \en{SES} &  \en
+                                                  {Theta} &   \en{Damped} & ...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Missing character: There is no T in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no a in font nullfont!
+./results.tex:13: Misplaced alignment tab character &.
+l.13 ... &  \en{Naive} &  \en{SES} &  \en{Theta} &
+                                                     \en{Damped} &   \en{Hol...
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+./results.tex:13: Undefined control sequence.
+l.13 ...n{Naive} &  \en{SES} &  \en{Theta} &   \en
+                                                  {Damped} &   \en{Holt} &  ...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Missing character: There is no D in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no d in font nullfont!
+./results.tex:13: Misplaced alignment tab character &.
+l.13 ...  \en{SES} &  \en{Theta} &   \en{Damped} &
+                                                     \en{Holt} &   \en{LRL} ...
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+./results.tex:13: Undefined control sequence.
+l.13 ...SES} &  \en{Theta} &   \en{Damped} &   \en
+                                                  {Holt} &   \en{LRL} &  \en...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Missing character: There is no H in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no t in font nullfont!
+./results.tex:13: Misplaced alignment tab character &.
+l.13 ...\en{Theta} &   \en{Damped} &   \en{Holt} &
+                                                     \en{LRL} &  \en{Naive} ...
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+./results.tex:13: Undefined control sequence.
+l.13 ...eta} &   \en{Damped} &   \en{Holt} &   \en
+                                                  {LRL} &  \en{Naive} &  \en...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Missing character: There is no L in font nullfont!
+Missing character: There is no R in font nullfont!
+Missing character: There is no L in font nullfont!
+./results.tex:13: Misplaced alignment tab character &.
+l.13 ...  \en{Damped} &   \en{Holt} &   \en{LRL} &
+                                                    \en{Naive} &  \en{SES} &...
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+./results.tex:13: Undefined control sequence.
+l.13 ...{Damped} &   \en{Holt} &   \en{LRL} &  \en
+                                                  {Naive} &  \en{SES} &  \en...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Missing character: There is no N in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no v in font nullfont!
+Missing character: There is no e in font nullfont!
+./results.tex:13: Misplaced alignment tab character &.
+l.13 ...&   \en{Holt} &   \en{LRL} &  \en{Naive} &
+                                                    \en{SES} &  \en{Theta} \\
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+./results.tex:13: Undefined control sequence.
+l.13 ...en{Holt} &   \en{LRL} &  \en{Naive} &  \en
+                                                  {SES} &  \en{Theta} \\
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Missing character: There is no S in font nullfont!
+Missing character: There is no E in font nullfont!
+Missing character: There is no S in font nullfont!
+./results.tex:13: Misplaced alignment tab character &.
+l.13 ...} &   \en{LRL} &  \en{Naive} &  \en{SES} &
+                                                    \en{Theta} \\
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+./results.tex:13: Undefined control sequence.
+l.13 ... \en{LRL} &  \en{Naive} &  \en{SES} &  \en
+                                                  {Theta} \\
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Missing character: There is no T in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no a in font nullfont!
+./results.tex:14: Misplaced \noalign.
+\hline ->\noalign 
+                  {\ifnum 0=`}\fi \hrule \@height \arrayrulewidth \futurelet...
+l.14  \hline
+            
+I expect to see \noalign only after the \cr of
+an alignment. Proceed, and I'll ignore this case.
+
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 13--14
+[]
+ []
+
+
+./results.tex:15: LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.15 1
+       & 1.46 & 1.66 & 1.45 & 1.39 & 1.39 & 1.53 & 1.99 & 2.25 & 3.15 & 1.8 ...
+
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+Missing character: There is no 1 in font nullfont!
+./results.tex:15: Misplaced alignment tab character &.
+l.15 1 &
+         1.46 & 1.66 & 1.45 & 1.39 & 1.39 & 1.53 & 1.99 & 2.25 & 3.15 & 1.8 ...
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 4 in font nullfont!
+Missing character: There is no 6 in font nullfont!
+./results.tex:15: Misplaced alignment tab character &.
+l.15 1 & 1.46 &
+                1.66 & 1.45 & 1.39 & 1.39 & 1.53 & 1.99 & 2.25 & 3.15 & 1.8 ...
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 6 in font nullfont!
+Missing character: There is no 6 in font nullfont!
+./results.tex:15: Misplaced alignment tab character &.
+l.15 1 & 1.46 & 1.66 &
+                       1.45 & 1.39 & 1.39 & 1.53 & 1.99 & 2.25 & 3.15 & 1.8 ...
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 4 in font nullfont!
+Missing character: There is no 5 in font nullfont!
+./results.tex:15: Misplaced alignment tab character &.
+l.15 1 & 1.46 & 1.66 & 1.45 &
+                              1.39 & 1.39 & 1.53 & 1.99 & 2.25 & 3.15 & 1.8 ...
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 3 in font nullfont!
+Missing character: There is no 9 in font nullfont!
+./results.tex:15: Misplaced alignment tab character &.
+l.15 1 & 1.46 & 1.66 & 1.45 & 1.39 &
+                                     1.39 & 1.53 & 1.99 & 2.25 & 3.15 & 1.8 ...
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 3 in font nullfont!
+Missing character: There is no 9 in font nullfont!
+./results.tex:15: Misplaced alignment tab character &.
+l.15 1 & 1.46 & 1.66 & 1.45 & 1.39 & 1.39 &
+                                            1.53 & 1.99 & 2.25 & 3.15 & 1.8 ...
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 5 in font nullfont!
+Missing character: There is no 3 in font nullfont!
+./results.tex:15: Misplaced alignment tab character &.
+l.15 1 & 1.46 & 1.66 & 1.45 & 1.39 & 1.39 & 1.53 &
+                                                   1.99 & 2.25 & 3.15 & 1.8 ...
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 9 in font nullfont!
+Missing character: There is no 9 in font nullfont!
+./results.tex:15: Misplaced alignment tab character &.
+l.15 ... 1.66 & 1.45 & 1.39 & 1.39 & 1.53 & 1.99 &
+                                                   2.25 & 3.15 & 1.8 & 1.84 ...
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no 5 in font nullfont!
+./results.tex:15: Misplaced alignment tab character &.
+l.15 ... 1.45 & 1.39 & 1.39 & 1.53 & 1.99 & 2.25 &
+                                                   3.15 & 1.8 & 1.84 & 2.05 \\
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+Missing character: There is no 3 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no 5 in font nullfont!
+./results.tex:15: Misplaced alignment tab character &.
+l.15 ... 1.39 & 1.39 & 1.53 & 1.99 & 2.25 & 3.15 &
+                                                   1.8 & 1.84 & 2.05 \\
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 8 in font nullfont!
+./results.tex:15: Misplaced alignment tab character &.
+l.15 ...& 1.39 & 1.53 & 1.99 & 2.25 & 3.15 & 1.8 &
+                                                   1.84 & 2.05 \\
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 8 in font nullfont!
+Missing character: There is no 4 in font nullfont!
+./results.tex:15: Misplaced alignment tab character &.
+l.15 ...& 1.53 & 1.99 & 2.25 & 3.15 & 1.8 & 1.84 &
+                                                   2.05 \\
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 5 in font nullfont!
+Missing character: There is no 2 in font nullfont!
+./results.tex:16: Misplaced alignment tab character &.
+l.16 2 &
+         0.9 & 0.99 & 0.99 & 1.0 & 0.84 & 0.82 & 1.04 & 1.06 & 1.06 & 1.0 & ...
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 9 in font nullfont!
+./results.tex:16: Misplaced alignment tab character &.
+l.16 2 & 0.9 &
+               0.99 & 0.99 & 1.0 & 0.84 & 0.82 & 1.04 & 1.06 & 1.06 & 1.0 & ...
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 9 in font nullfont!
+Missing character: There is no 9 in font nullfont!
+./results.tex:16: Misplaced alignment tab character &.
+l.16 2 & 0.9 & 0.99 &
+                      0.99 & 1.0 & 0.84 & 0.82 & 1.04 & 1.06 & 1.06 & 1.0 & ...
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 9 in font nullfont!
+Missing character: There is no 9 in font nullfont!
+./results.tex:16: Misplaced alignment tab character &.
+l.16 2 & 0.9 & 0.99 & 0.99 &
+                             1.0 & 0.84 & 0.82 & 1.04 & 1.06 & 1.06 & 1.0 & ...
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 0 in font nullfont!
+./results.tex:16: Misplaced alignment tab character &.
+l.16 2 & 0.9 & 0.99 & 0.99 & 1.0 &
+                                   0.84 & 0.82 & 1.04 & 1.06 & 1.06 & 1.0 & ...
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 8 in font nullfont!
+Missing character: There is no 4 in font nullfont!
+./results.tex:16: Misplaced alignment tab character &.
+l.16 2 & 0.9 & 0.99 & 0.99 & 1.0 & 0.84 &
+                                          0.82 & 1.04 & 1.06 & 1.06 & 1.0 & ...
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 8 in font nullfont!
+Missing character: There is no 2 in font nullfont!
+./results.tex:16: Misplaced alignment tab character &.
+l.16 2 & 0.9 & 0.99 & 0.99 & 1.0 & 0.84 & 0.82 &
+                                                 1.04 & 1.06 & 1.06 & 1.0 & ...
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 4 in font nullfont!
+./results.tex:16: Misplaced alignment tab character &.
+l.16 ...& 0.99 & 0.99 & 1.0 & 0.84 & 0.82 & 1.04 &
+                                                   1.06 & 1.06 & 1.0 & 1.0 &...
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 6 in font nullfont!
+./results.tex:16: Misplaced alignment tab character &.
+l.16 ...& 0.99 & 1.0 & 0.84 & 0.82 & 1.04 & 1.06 &
+                                                   1.06 & 1.0 & 1.0 & 1.03 \\
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 6 in font nullfont!
+./results.tex:16: Misplaced alignment tab character &.
+l.16 ...& 1.0 & 0.84 & 0.82 & 1.04 & 1.06 & 1.06 &
+                                                   1.0 & 1.0 & 1.03 \\
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 0 in font nullfont!
+./results.tex:16: Misplaced alignment tab character &.
+l.16 ...& 0.84 & 0.82 & 1.04 & 1.06 & 1.06 & 1.0 &
+                                                   1.0 & 1.03 \\
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 0 in font nullfont!
+./results.tex:16: Misplaced alignment tab character &.
+l.16 ... & 0.82 & 1.04 & 1.06 & 1.06 & 1.0 & 1.0 &
+                                                   1.03 \\
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 3 in font nullfont!
+Missing character: There is no 3 in font nullfont!
+./results.tex:17: Misplaced alignment tab character &.
+l.17 3 &
+         0.97 & 0.93 & 0.93 & 0.85 & 1.11 & 1.07 & 1.04 & 1.37 & 2.25 & 1.37...
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 9 in font nullfont!
+Missing character: There is no 7 in font nullfont!
+./results.tex:17: Misplaced alignment tab character &.
+l.17 3 & 0.97 &
+                0.93 & 0.93 & 0.85 & 1.11 & 1.07 & 1.04 & 1.37 & 2.25 & 1.37...
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 9 in font nullfont!
+Missing character: There is no 3 in font nullfont!
+./results.tex:17: Misplaced alignment tab character &.
+l.17 3 & 0.97 & 0.93 &
+                       0.93 & 0.85 & 1.11 & 1.07 & 1.04 & 1.37 & 2.25 & 1.37...
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 9 in font nullfont!
+Missing character: There is no 3 in font nullfont!
+./results.tex:17: Misplaced alignment tab character &.
+l.17 3 & 0.97 & 0.93 & 0.93 &
+                              0.85 & 1.11 & 1.07 & 1.04 & 1.37 & 2.25 & 1.37...
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 8 in font nullfont!
+Missing character: There is no 5 in font nullfont!
+./results.tex:17: Misplaced alignment tab character &.
+l.17 3 & 0.97 & 0.93 & 0.93 & 0.85 &
+                                     1.11 & 1.07 & 1.04 & 1.37 & 2.25 & 1.37...
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no 1 in font nullfont!
+./results.tex:17: Misplaced alignment tab character &.
+l.17 3 & 0.97 & 0.93 & 0.93 & 0.85 & 1.11 &
+                                            1.07 & 1.04 & 1.37 & 2.25 & 1.37...
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 7 in font nullfont!
+./results.tex:17: Misplaced alignment tab character &.
+l.17 3 & 0.97 & 0.93 & 0.93 & 0.85 & 1.11 & 1.07 &
+                                                   1.04 & 1.37 & 2.25 & 1.37...
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 4 in font nullfont!
+./results.tex:17: Misplaced alignment tab character &.
+l.17 ... 0.93 & 0.93 & 0.85 & 1.11 & 1.07 & 1.04 &
+                                                   1.37 & 2.25 & 1.37 & 1.37...
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 3 in font nullfont!
+Missing character: There is no 7 in font nullfont!
+./results.tex:17: Misplaced alignment tab character &.
+l.17 ... 0.93 & 0.85 & 1.11 & 1.07 & 1.04 & 1.37 &
+                                                   2.25 & 1.37 & 1.37 & 1.37 \\
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no 5 in font nullfont!
+./results.tex:17: Misplaced alignment tab character &.
+l.17 ... 0.85 & 1.11 & 1.07 & 1.04 & 1.37 & 2.25 &
+                                                   1.37 & 1.37 & 1.37 \\
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 3 in font nullfont!
+Missing character: There is no 7 in font nullfont!
+./results.tex:17: Misplaced alignment tab character &.
+l.17 ... 1.11 & 1.07 & 1.04 & 1.37 & 2.25 & 1.37 &
+                                                   1.37 & 1.37 \\
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 3 in font nullfont!
+Missing character: There is no 7 in font nullfont!
+./results.tex:17: Misplaced alignment tab character &.
+l.17 ... 1.07 & 1.04 & 1.37 & 2.25 & 1.37 & 1.37 &
+                                                   1.37 \\
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 3 in font nullfont!
+Missing character: There is no 7 in font nullfont!
+Missing character: There is no 4 in font nullfont!
+./results.tex:18: Misplaced alignment tab character &.
+l.18 4 &
+         0.86 & 0.83 & 0.94 & 0.85 & 0.85 & 0.84 & 0.87 & 1.06 & 3.64 & 1.01...
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 8 in font nullfont!
+Missing character: There is no 6 in font nullfont!
+./results.tex:18: Misplaced alignment tab character &.
+l.18 4 & 0.86 &
+                0.83 & 0.94 & 0.85 & 0.85 & 0.84 & 0.87 & 1.06 & 3.64 & 1.01...
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 8 in font nullfont!
+Missing character: There is no 3 in font nullfont!
+./results.tex:18: Misplaced alignment tab character &.
+l.18 4 & 0.86 & 0.83 &
+                       0.94 & 0.85 & 0.85 & 0.84 & 0.87 & 1.06 & 3.64 & 1.01...
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 9 in font nullfont!
+Missing character: There is no 4 in font nullfont!
+./results.tex:18: Misplaced alignment tab character &.
+l.18 4 & 0.86 & 0.83 & 0.94 &
+                              0.85 & 0.85 & 0.84 & 0.87 & 1.06 & 3.64 & 1.01...
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 8 in font nullfont!
+Missing character: There is no 5 in font nullfont!
+./results.tex:18: Misplaced alignment tab character &.
+l.18 4 & 0.86 & 0.83 & 0.94 & 0.85 &
+                                     0.85 & 0.84 & 0.87 & 1.06 & 3.64 & 1.01...
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 8 in font nullfont!
+Missing character: There is no 5 in font nullfont!
+./results.tex:18: Misplaced alignment tab character &.
+l.18 4 & 0.86 & 0.83 & 0.94 & 0.85 & 0.85 &
+                                            0.84 & 0.87 & 1.06 & 3.64 & 1.01...
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 8 in font nullfont!
+Missing character: There is no 4 in font nullfont!
+./results.tex:18: Misplaced alignment tab character &.
+l.18 4 & 0.86 & 0.83 & 0.94 & 0.85 & 0.85 & 0.84 &
+                                                   0.87 & 1.06 & 3.64 & 1.01...
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 8 in font nullfont!
+Missing character: There is no 7 in font nullfont!
+./results.tex:18: Misplaced alignment tab character &.
+l.18 ... 0.83 & 0.94 & 0.85 & 0.85 & 0.84 & 0.87 &
+                                                   1.06 & 3.64 & 1.01 & 1.01...
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 6 in font nullfont!
+./results.tex:18: Misplaced alignment tab character &.
+l.18 ... 0.94 & 0.85 & 0.85 & 0.84 & 0.87 & 1.06 &
+                                                   3.64 & 1.01 & 1.01 & 1.04 \\
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+Missing character: There is no 3 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 6 in font nullfont!
+Missing character: There is no 4 in font nullfont!
+./results.tex:18: Misplaced alignment tab character &.
+l.18 ... 0.85 & 0.85 & 0.84 & 0.87 & 1.06 & 3.64 &
+                                                   1.01 & 1.01 & 1.04 \\
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 1 in font nullfont!
+./results.tex:18: Misplaced alignment tab character &.
+l.18 ... 0.85 & 0.84 & 0.87 & 1.06 & 3.64 & 1.01 &
+                                                   1.01 & 1.04 \\
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 1 in font nullfont!
+./results.tex:18: Misplaced alignment tab character &.
+l.18 ... 0.84 & 0.87 & 1.06 & 3.64 & 1.01 & 1.01 &
+                                                   1.04 \\
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 4 in font nullfont!
+Missing character: There is no 5 in font nullfont!
+./results.tex:19: Misplaced alignment tab character &.
+l.19 5 &
+         0.7 & 0.67 & 0.67 & 0.86 & 0.75 & 0.75 & 1.19 & 1.19 & 1.24 & 1.13 ...
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 7 in font nullfont!
+./results.tex:19: Misplaced alignment tab character &.
+l.19 5 & 0.7 &
+               0.67 & 0.67 & 0.86 & 0.75 & 0.75 & 1.19 & 1.19 & 1.24 & 1.13 ...
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 6 in font nullfont!
+Missing character: There is no 7 in font nullfont!
+./results.tex:19: Misplaced alignment tab character &.
+l.19 5 & 0.7 & 0.67 &
+                      0.67 & 0.86 & 0.75 & 0.75 & 1.19 & 1.19 & 1.24 & 1.13 ...
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 6 in font nullfont!
+Missing character: There is no 7 in font nullfont!
+./results.tex:19: Misplaced alignment tab character &.
+l.19 5 & 0.7 & 0.67 & 0.67 &
+                             0.86 & 0.75 & 0.75 & 1.19 & 1.19 & 1.24 & 1.13 ...
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 8 in font nullfont!
+Missing character: There is no 6 in font nullfont!
+./results.tex:19: Misplaced alignment tab character &.
+l.19 5 & 0.7 & 0.67 & 0.67 & 0.86 &
+                                    0.75 & 0.75 & 1.19 & 1.19 & 1.24 & 1.13 ...
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 7 in font nullfont!
+Missing character: There is no 5 in font nullfont!
+./results.tex:19: Misplaced alignment tab character &.
+l.19 5 & 0.7 & 0.67 & 0.67 & 0.86 & 0.75 &
+                                           0.75 & 1.19 & 1.19 & 1.24 & 1.13 ...
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 7 in font nullfont!
+Missing character: There is no 5 in font nullfont!
+./results.tex:19: Misplaced alignment tab character &.
+l.19 5 & 0.7 & 0.67 & 0.67 & 0.86 & 0.75 & 0.75 &
+                                                  1.19 & 1.19 & 1.24 & 1.13 ...
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no 9 in font nullfont!
+./results.tex:19: Misplaced alignment tab character &.
+l.19 ... 0.67 & 0.67 & 0.86 & 0.75 & 0.75 & 1.19 &
+                                                   1.19 & 1.24 & 1.13 & 1.19...
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no 9 in font nullfont!
+./results.tex:19: Misplaced alignment tab character &.
+l.19 ... 0.67 & 0.86 & 0.75 & 0.75 & 1.19 & 1.19 &
+                                                   1.24 & 1.13 & 1.19 & 1.19 \\
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no 4 in font nullfont!
+./results.tex:19: Misplaced alignment tab character &.
+l.19 ... 0.86 & 0.75 & 0.75 & 1.19 & 1.19 & 1.24 &
+                                                   1.13 & 1.19 & 1.19 \\
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no 3 in font nullfont!
+./results.tex:19: Misplaced alignment tab character &.
+l.19 ... 0.75 & 0.75 & 1.19 & 1.19 & 1.24 & 1.13 &
+                                                   1.19 & 1.19 \\
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no 9 in font nullfont!
+./results.tex:19: Misplaced alignment tab character &.
+l.19 ... 0.75 & 1.19 & 1.19 & 1.24 & 1.13 & 1.19 &
+                                                   1.19 \\
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no 9 in font nullfont!
+Missing character: There is no 6 in font nullfont!
+./results.tex:20: Misplaced alignment tab character &.
+l.20 6 &
+         0.77 & 0.76 & 1.38 & 0.73 & 0.78 & 0.77 & 0.99 & 1.04 & 5.62 & 1.04...
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 7 in font nullfont!
+Missing character: There is no 7 in font nullfont!
+./results.tex:20: Misplaced alignment tab character &.
+l.20 6 & 0.77 &
+                0.76 & 1.38 & 0.73 & 0.78 & 0.77 & 0.99 & 1.04 & 5.62 & 1.04...
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 7 in font nullfont!
+Missing character: There is no 6 in font nullfont!
+./results.tex:20: Misplaced alignment tab character &.
+l.20 6 & 0.77 & 0.76 &
+                       1.38 & 0.73 & 0.78 & 0.77 & 0.99 & 1.04 & 5.62 & 1.04...
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 3 in font nullfont!
+Missing character: There is no 8 in font nullfont!
+./results.tex:20: Misplaced alignment tab character &.
+l.20 6 & 0.77 & 0.76 & 1.38 &
+                              0.73 & 0.78 & 0.77 & 0.99 & 1.04 & 5.62 & 1.04...
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 7 in font nullfont!
+Missing character: There is no 3 in font nullfont!
+./results.tex:20: Misplaced alignment tab character &.
+l.20 6 & 0.77 & 0.76 & 1.38 & 0.73 &
+                                     0.78 & 0.77 & 0.99 & 1.04 & 5.62 & 1.04...
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 7 in font nullfont!
+Missing character: There is no 8 in font nullfont!
+./results.tex:20: Misplaced alignment tab character &.
+l.20 6 & 0.77 & 0.76 & 1.38 & 0.73 & 0.78 &
+                                            0.77 & 0.99 & 1.04 & 5.62 & 1.04...
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 7 in font nullfont!
+Missing character: There is no 7 in font nullfont!
+./results.tex:20: Misplaced alignment tab character &.
+l.20 6 & 0.77 & 0.76 & 1.38 & 0.73 & 0.78 & 0.77 &
+                                                   0.99 & 1.04 & 5.62 & 1.04...
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 9 in font nullfont!
+Missing character: There is no 9 in font nullfont!
+./results.tex:20: Misplaced alignment tab character &.
+l.20 ... 0.76 & 1.38 & 0.73 & 0.78 & 0.77 & 0.99 &
+                                                   1.04 & 5.62 & 1.04 & 1.04...
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 4 in font nullfont!
+./results.tex:20: Misplaced alignment tab character &.
+l.20 ... 1.38 & 0.73 & 0.78 & 0.77 & 0.99 & 1.04 &
+                                                   5.62 & 1.04 & 1.04 & 1.04 \\
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+Missing character: There is no 5 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 6 in font nullfont!
+Missing character: There is no 2 in font nullfont!
+./results.tex:20: Misplaced alignment tab character &.
+l.20 ... 0.73 & 0.78 & 0.77 & 0.99 & 1.04 & 5.62 &
+                                                   1.04 & 1.04 & 1.04 \\
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 4 in font nullfont!
+./results.tex:20: Misplaced alignment tab character &.
+l.20 ... 0.78 & 0.77 & 0.99 & 1.04 & 5.62 & 1.04 &
+                                                   1.04 & 1.04 \\
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 4 in font nullfont!
+./results.tex:20: Misplaced alignment tab character &.
+l.20 ... 0.77 & 0.99 & 1.04 & 5.62 & 1.04 & 1.04 &
+                                                   1.04 \\
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 4 in font nullfont!
+Missing character: There is no 7 in font nullfont!
+./results.tex:21: Misplaced alignment tab character &.
+l.21 7 &
+         0.66 & 0.77 & 0.77 & 0.67 & 0.35 & 0.44 & 1.1 & 1.08 & 1.08 & 0.78 ...
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 6 in font nullfont!
+Missing character: There is no 6 in font nullfont!
+./results.tex:21: Misplaced alignment tab character &.
+l.21 7 & 0.66 &
+                0.77 & 0.77 & 0.67 & 0.35 & 0.44 & 1.1 & 1.08 & 1.08 & 0.78 ...
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 7 in font nullfont!
+Missing character: There is no 7 in font nullfont!
+./results.tex:21: Misplaced alignment tab character &.
+l.21 7 & 0.66 & 0.77 &
+                       0.77 & 0.67 & 0.35 & 0.44 & 1.1 & 1.08 & 1.08 & 0.78 ...
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 7 in font nullfont!
+Missing character: There is no 7 in font nullfont!
+./results.tex:21: Misplaced alignment tab character &.
+l.21 7 & 0.66 & 0.77 & 0.77 &
+                              0.67 & 0.35 & 0.44 & 1.1 & 1.08 & 1.08 & 0.78 ...
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 6 in font nullfont!
+Missing character: There is no 7 in font nullfont!
+./results.tex:21: Misplaced alignment tab character &.
+l.21 7 & 0.66 & 0.77 & 0.77 & 0.67 &
+                                     0.35 & 0.44 & 1.1 & 1.08 & 1.08 & 0.78 ...
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 3 in font nullfont!
+Missing character: There is no 5 in font nullfont!
+./results.tex:21: Misplaced alignment tab character &.
+l.21 7 & 0.66 & 0.77 & 0.77 & 0.67 & 0.35 &
+                                            0.44 & 1.1 & 1.08 & 1.08 & 0.78 ...
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 4 in font nullfont!
+Missing character: There is no 4 in font nullfont!
+./results.tex:21: Misplaced alignment tab character &.
+l.21 7 & 0.66 & 0.77 & 0.77 & 0.67 & 0.35 & 0.44 &
+                                                   1.1 & 1.08 & 1.08 & 0.78 ...
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 1 in font nullfont!
+./results.tex:21: Misplaced alignment tab character &.
+l.21 ...& 0.77 & 0.77 & 0.67 & 0.35 & 0.44 & 1.1 &
+                                                   1.08 & 1.08 & 0.78 & 1.16...
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 8 in font nullfont!
+./results.tex:21: Misplaced alignment tab character &.
+l.21 ...& 0.77 & 0.67 & 0.35 & 0.44 & 1.1 & 1.08 &
+                                                   1.08 & 0.78 & 1.16 & 1.12 \\
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 8 in font nullfont!
+./results.tex:21: Misplaced alignment tab character &.
+l.21 ...& 0.67 & 0.35 & 0.44 & 1.1 & 1.08 & 1.08 &
+                                                   0.78 & 1.16 & 1.12 \\
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 7 in font nullfont!
+Missing character: There is no 8 in font nullfont!
+./results.tex:21: Misplaced alignment tab character &.
+l.21 ...& 0.35 & 0.44 & 1.1 & 1.08 & 1.08 & 0.78 &
+                                                   1.16 & 1.12 \\
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no 6 in font nullfont!
+./results.tex:21: Misplaced alignment tab character &.
+l.21 ...& 0.44 & 1.1 & 1.08 & 1.08 & 0.78 & 1.16 &
+                                                   1.12 \\
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no 8 in font nullfont!
+./results.tex:22: Misplaced alignment tab character &.
+l.22 8 &
+         0.67 & 0.65 & 0.54 & 0.69 & 0.67 & 0.66 & 0.6 & 0.76 & 1.01 & 0.87 ...
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 6 in font nullfont!
+Missing character: There is no 7 in font nullfont!
+./results.tex:22: Misplaced alignment tab character &.
+l.22 8 & 0.67 &
+                0.65 & 0.54 & 0.69 & 0.67 & 0.66 & 0.6 & 0.76 & 1.01 & 0.87 ...
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 6 in font nullfont!
+Missing character: There is no 5 in font nullfont!
+./results.tex:22: Misplaced alignment tab character &.
+l.22 8 & 0.67 & 0.65 &
+                       0.54 & 0.69 & 0.67 & 0.66 & 0.6 & 0.76 & 1.01 & 0.87 ...
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 5 in font nullfont!
+Missing character: There is no 4 in font nullfont!
+./results.tex:22: Misplaced alignment tab character &.
+l.22 8 & 0.67 & 0.65 & 0.54 &
+                              0.69 & 0.67 & 0.66 & 0.6 & 0.76 & 1.01 & 0.87 ...
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 6 in font nullfont!
+Missing character: There is no 9 in font nullfont!
+./results.tex:22: Misplaced alignment tab character &.
+l.22 8 & 0.67 & 0.65 & 0.54 & 0.69 &
+                                     0.67 & 0.66 & 0.6 & 0.76 & 1.01 & 0.87 ...
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 6 in font nullfont!
+Missing character: There is no 7 in font nullfont!
+./results.tex:22: Misplaced alignment tab character &.
+l.22 8 & 0.67 & 0.65 & 0.54 & 0.69 & 0.67 &
+                                            0.66 & 0.6 & 0.76 & 1.01 & 0.87 ...
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 6 in font nullfont!
+Missing character: There is no 6 in font nullfont!
+./results.tex:22: Misplaced alignment tab character &.
+l.22 8 & 0.67 & 0.65 & 0.54 & 0.69 & 0.67 & 0.66 &
+                                                   0.6 & 0.76 & 1.01 & 0.87 ...
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 6 in font nullfont!
+./results.tex:22: Misplaced alignment tab character &.
+l.22 ...& 0.65 & 0.54 & 0.69 & 0.67 & 0.66 & 0.6 &
+                                                   0.76 & 1.01 & 0.87 & 0.87...
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 7 in font nullfont!
+Missing character: There is no 6 in font nullfont!
+./results.tex:22: Misplaced alignment tab character &.
+l.22 ...& 0.54 & 0.69 & 0.67 & 0.66 & 0.6 & 0.76 &
+                                                   1.01 & 0.87 & 0.87 & 0.82 \\
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 1 in font nullfont!
+./results.tex:22: Misplaced alignment tab character &.
+l.22 ...& 0.69 & 0.67 & 0.66 & 0.6 & 0.76 & 1.01 &
+                                                   0.87 & 0.87 & 0.82 \\
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 8 in font nullfont!
+Missing character: There is no 7 in font nullfont!
+./results.tex:22: Misplaced alignment tab character &.
+l.22 ...& 0.67 & 0.66 & 0.6 & 0.76 & 1.01 & 0.87 &
+                                                   0.87 & 0.82 \\
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 8 in font nullfont!
+Missing character: There is no 7 in font nullfont!
+./results.tex:22: Misplaced alignment tab character &.
+l.22 ...& 0.66 & 0.6 & 0.76 & 1.01 & 0.87 & 0.87 &
+                                                   0.82 \\
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 8 in font nullfont!
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no 9 in font nullfont!
+./results.tex:23: Misplaced alignment tab character &.
+l.23 9 &
+         0.5 & 0.47 & 0.46 & 0.5 & 0.5 & 0.48 & 0.46 & 0.51 & 0.72 & 0.51 & ...
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 5 in font nullfont!
+./results.tex:23: Misplaced alignment tab character &.
+l.23 9 & 0.5 &
+               0.47 & 0.46 & 0.5 & 0.5 & 0.48 & 0.46 & 0.51 & 0.72 & 0.51 & ...
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 4 in font nullfont!
+Missing character: There is no 7 in font nullfont!
+./results.tex:23: Misplaced alignment tab character &.
+l.23 9 & 0.5 & 0.47 &
+                      0.46 & 0.5 & 0.5 & 0.48 & 0.46 & 0.51 & 0.72 & 0.51 & ...
+(That makes 100 errors; please try again.) 
+Here is how much of TeX's memory you used:
+ 6 strings out of 494877
+ 143 string characters out of 6179315
+ 46589 words of memory out of 5000000
+ 3400 multiletter control sequences out of 15000+600000
+ 3640 words of font info for 14 fonts, out of 8000000 for 9000
+ 59 hyphenation exceptions out of 8191
+ 6i,0n,5p,199b,30s stack positions out of 5000i,500n,10000p,200000b,80000s
+
+./results.tex:23:  ==> Fatal error occurred, no output PDF file produced!

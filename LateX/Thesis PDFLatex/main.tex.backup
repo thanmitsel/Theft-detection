@@ -1,0 +1,152 @@
+\documentclass[11pt,a4paper,english,greek,twoside]{dblab-thesis}
+\usepackage{epsfig}
+%\usepackage[english,greek]{babel}
+%\usepackage[T1]{fontenc}
+%\usepackage[iso-8859-7]{inputenc}
+%\usepackage{graphicx}
+%\DeclareGraphicsRule{.tif}{bmp}{}{}
+\usepackage[explicit]{titlesec}
+\usepackage{indentfirst}
+\usepackage{verbatim}
+\usepackage{amsmath}
+\usepackage{subcaption}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{epstopdf}
+\usepackage{latexsym}
+\usepackage{index}
+\usepackage{datetime}
+\usepackage{textcomp}
+\usepackage{graphicx}
+\usepackage{url}
+\usepackage{array}
+\usepackage{algorithm}
+\usepackage{algorithmic}
+\usepackage{babel}
+\usepackage{afterpage}
+\usepackage{caption}
+%\usepackage{makeidx}
+%\bibliographystyle{alpha}
+\bibliographystyle{abbrv}
+
+\newindex{default}{idx}{ind}{Ευρετήριο όρων}
+\newindex{en}{edx}{end}{Ευρετήριο αγγλικών όρων}
+%\makeindex
+
+
+% Page definitions
+%\setlength{\textheight}{23cm} \setlength{\textwidth}{15.5cm}
+%\setlength{\oddsidemargin}{0.2cm}
+%\setlength{\evensidemargin}{0.2cm} \setlength{\topmargin}{-1.2cm}
+%\setlength{\headsep}{1.5cm}
+
+% 1.5 spacing
+\renewcommand{\baselinestretch}{1.2}
+
+\newcommand\blankpage{%
+    \null
+    \thispagestyle{empty}%
+    \addtocounter{page}{-1}%
+    \newpage}
+% latin text (and greek text)
+%\newcommand{\prg}[1]{\textlatin{\texttt{#1}}}
+\newcommand{\tl}[1]{\textlatin{#1}}
+\newcommand{\tg}[1]{\textgreek{#1}}
+
+% typeset short english phrases
+\newcommand{\en}[1]{\foreignlanguage{english}{#1}}
+
+% typeset source code
+\newcommand{\src}[1]{{\tt\en{#1}}}
+
+
+
+% typeset a backslash
+\newcommand{\bkslash}{\en{\symbol{92}}}
+
+%typeset infx(a) supx(a) etc
+%\newcommand{\infx}[1]{inf_x({#1})}
+%\newcommand{\infy}[1]{inf_y({#1})}
+%\newcommand{\supx}[1]{sup_x({#1})}
+%\newcommand{\supy}[1]{sup_y({#1})}
+%\newcommand{\dlt}{\delta}
+%\newcommand{\most}{${\cal M}ost$}
+%\newcommand{\br}{${\cal B}r$}
+\newcommand*\Hide{%
+\titleformat{\chapter}[display]
+  {}{}{0pt}{\Huge}
+\titleformat{\part}
+  {}{}{0pt}{}
+}
+\newtheorem{definition}{Ορισμός}
+\newtheorem{proposition}{Πρόταση}
+\newtheorem{theorem}{Θεώρημα}
+\newtheorem{corollary}{Συμπέρασμα}
+\newtheorem{lemma}{Λήμμα}
+\newtheorem{example}{Παράδειγμα}
+\newtheorem{remark}{Σημείωση}
+\newtheorem{notation}{Συμβολισμός}
+\newtheorem{law}{Νόμος}
+\renewcommand{\thedefinition}{\arabic{chapter}.\arabic{definition}}
+\renewcommand{\theproposition}{\arabic{chapter}.\arabic{proposition}}
+\renewcommand{\thetheorem}{\arabic{chapter}.\arabic{theorem}}
+\renewcommand{\thecorollary}{\arabic{chapter}.\arabic{corollary}}
+\renewcommand{\thelemma}{\arabic{chapter}.\arabic{lemma}}
+\renewcommand{\theexample}{\arabic{chapter}.\arabic{example}}
+\newcommand{\set}[1]{\left\{#1\right\}}
+\newcommand{\To}{\Longrightarrow}
+\newcommand{\xml}{\en{XML}}
+
+
+\selectlanguage{greek}
+\hyphenation{τμή-μα Επο-μέ-νως}
+
+\title{Βελτíωση ακρíβειας κλασικών μεθóδων πρόβλεψης χρονοσειρών με χρήση μεθóδων ομαδοποíησης σ }
+\author{Ευάγγελος Νταβέλης}
+\supervisor{Βασíλειος Ασημακóπουλος}
+\TRnumber{ΕΣΒΓΔ-ΔΙΠΛ-2015-03}
+\epitropiF{Νεκτάριος Κοζύρης}
+\epitropiS{Ιωάννης Θεοδωρίδης}
+
+
+\begin{document}
+\selectlanguage{greek}
+\maketitle
+
+\frontmatter
+\pagenumbering{roman}
+\mainmatter
+\include{abstract}
+\tableofcontents
+\listoffigures
+\listoftables
+\include{chapter1}
+\include{chapter2}
+\include{chapter3}
+\include{chapter4}
+\include{chapter5}
+\include{chapter6}
+\include{chapter7}
+\include{chapter8}
+
+
+
+%OPTION #1: Embed bibliography from file `references.tex' using plain references.
+\include{references}
+%\addcontentsline{toc}{chapter}{Βιβλιογραφία}
+
+%OPTION #2: Alternatively, prepare properly formatted BibTeX entries in file `references.bib'. 
+%After processing with BibTeX, a file `main.bbl' is automatically populated and it is actually used for producing references in the resulting pdf. 
+%IMPORTANT: You must manually modify `main.bbl' by adding \selectlanguage{english} (TOP) and \selectlanguage{english} (BOTTOM) in order to correctly display Latin and Greek characters in the final text.
+%\bibliography{references}
+
+
+%\appendix
+%\include{proofs}
+
+\include{glossary}
+
+\backmatter
+\printindex
+
+\end{document}
