@@ -37,6 +37,18 @@
 \newindex{en}{edx}{end}{Ευρετήριο αγγλικών όρων}
 %\makeindex
 
+% For confusion matrix %
+\usepackage{array}
+\usepackage{multirow}
+
+\newcommand\MyBox[2]{
+  \fbox{\lower0.75cm
+     \vbox to 1.7cm{\vfil
+      \hbox to 1.7cm{\hfil\parbox{1.4cm}{#1\\#2}\hfil}
+      \vfil}%
+   }%
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % Page definitions
 %\setlength{\textheight}{23cm} \setlength{\textwidth}{15.5cm}

@@ -75,6 +75,30 @@
 		\newblock New York: Oxford University Press, 2007.
 		\newblock{ch. 2, Other angles on Nondeterminism}
 		
+		\bibitem{reduceloss}
+		P. Antmann.
+		\newblock{\em Reducing Technical and Non-Technical Losses in the Power Sector. }
+		\newblock{Transmission and Distribution Conference and Exposition.}
+		\newblock{World Bank, Washington, DC.}
+		\newblock{2009.}
+		\newblock{pp. 24-26 vol.2.}
+		
+		\bibitem{learningstyle}
+		Jason Brownlee.
+		\newblock{\em A Tour of Machine Learning Algorithms.}
+		\newblock{2013.}
+		\newblock{\url{http://machinelearningmastery.com/a-tour-of-machine-learning-algorithms/.}}
+		\newblock{(accessed 7 August, 2017).}
+		
+		\bibitem{propab}
+		S. Axelsson.
+		\newblock{\em The Base-Rate Fallacy and its Implications for the Difficulty of Intrusion Detection.}
+		\newblock{CCS '99 Proceedings of the 6th ACM conference on Computer and communications security.}
+		\newblock{Computer and Communications Security.}
+		\newblock{1999.}
+		\newblock{pp. 1-7}
+		
+Technical report, Department of Computer Science, Chalmers University of Technology. 20 May, p. 5.
     \selectlanguage{greek}
 		
 		\bibitem{energypress}
