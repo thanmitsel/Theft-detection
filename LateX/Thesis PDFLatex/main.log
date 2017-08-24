@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/W32TeX) (preloaded format=pdflatex 2017.3.16)  8 AUG 2017 01:58
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/W32TeX) (preloaded format=pdflatex 2017.3.16)  24 AUG 2017 23:47
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1464,7 +1464,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 130--130
 
 
 ] (./main.toc [7]
-LaTeX Info: Redefining \anw@print on input line 113.
+LaTeX Info: Redefining \anw@print on input line 117.
  [8])
 \tf@toc=\write5
 \openout5 = `main.toc'.
@@ -1479,7 +1479,7 @@ LaTeX Info: Redefining \anw@print on input line 113.
  [11] [12
 
 ] (./main.lot
-LaTeX Info: Redefining \anw@print on input line 40.
+LaTeX Info: Redefining \anw@print on input line 46.
 )
 \tf@lot=\write7
 \openout7 = `main.lot'.
@@ -1520,203 +1520,262 @@ Overfull \hbox (1.8372pt too wide) in paragraph at lines 34--34
 \textKappa \textepsilon \textphi \acctonos \textalpha \textlambda \textalpha \t
 extiota \textomicron  3.
 (./chapters/chapter03.tex
-<../../plots/Trend_estimation/quadratic_Trend_ALL.png, id=133, 1445.4pt x 732.4
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [27]
+LaTeX Info: Redefining \anw@print on input line 44.
+LaTeX Info: Redefining \anw@print on input line 44.
+LaTeX Info: Redefining \anw@print on input line 44.
+LaTeX Info: Redefining \anw@print on input line 44.
+
+Overfull \hbox (49.92763pt too wide) in paragraph at lines 52--64
+[][] 
+ []
+
+LaTeX Info: Redefining \anw@print on input line 64.
+LaTeX Info: Redefining \anw@print on input line 64.
+LaTeX Info: Redefining \anw@print on input line 64.
+LaTeX Info: Redefining \anw@print on input line 64.
+LaTeX Info: Redefining \anw@print on input line 70.
+LaTeX Info: Redefining \anw@print on input line 70.
+[28]
+<../../plots/Consumption_Analysis/gr_cluster_form.png, id=140, 1445.4pt x 732.4
+8656pt>
+File: ../../plots/Consumption_Analysis/gr_cluster_form.png Graphic file (type p
+ng)
+ <use ../../plots/Consumption_Analysis/gr_cluster_form.png>
+Package pdftex.def Info: ../../plots/Consumption_Analysis/gr_cluster_form.png u
+sed on input line 74.
+(pdftex.def)             Requested size: 512.13914pt x 284.52856pt.
+
+Overfull \hbox (85.34781pt too wide) in paragraph at lines 74--75
+ [][] 
+ []
+
+[29 <../../plots/Consumption_Analysis/gr_cluster_form.png (PNG copy)>]
+<../../plots/Consumption_Analysis/gr_cluster_cons_level.png, id=144, 1445.4pt x
+ 732.48656pt>
+File: ../../plots/Consumption_Analysis/gr_cluster_cons_level.png Graphic file (
+type png)
+ <use ../../plots/Consumption_Analysis/gr_cluster_cons_level.png>
+Package pdftex.def Info: ../../plots/Consumption_Analysis/gr_cluster_cons_level
+.png used on input line 89.
+(pdftex.def)             Requested size: 512.13914pt x 284.52856pt.
+
+Overfull \hbox (85.34781pt too wide) in paragraph at lines 89--90
+ [][] 
+ []
+
+[30 <../../plots/Consumption_Analysis/gr_cluster_cons_level.png (PNG copy)>]
+<../../plots/Trend_estimation/quadratic_Trend_ALL.png, id=148, 1445.4pt x 732.4
 8656pt>
 File: ../../plots/Trend_estimation/quadratic_Trend_ALL.png Graphic file (type p
 ng)
  <use ../../plots/Trend_estimation/quadratic_Trend_ALL.png>
 Package pdftex.def Info: ../../plots/Trend_estimation/quadratic_Trend_ALL.png u
-sed on input line 13.
+sed on input line 113.
 (pdftex.def)             Requested size: 512.13914pt x 341.42981pt.
 
-Overfull \hbox (85.34781pt too wide) in paragraph at lines 13--14
+Overfull \hbox (85.34781pt too wide) in paragraph at lines 113--114
  [][] 
  []
 
-[27] [28 <../../plots/Trend_estimation/quadratic_Trend_ALL.png (PNG copy)>]
-[29]
-<../../plots/Trend_estimation/seasonal_1.png, id=143, 1445.4pt x 732.48656pt>
+[31] [32 <../../plots/Trend_estimation/quadratic_Trend_ALL.png (PNG copy)>]
+[33]
+<../../plots/Trend_estimation/seasonal_1.png, id=159, 1445.4pt x 732.48656pt>
 File: ../../plots/Trend_estimation/seasonal_1.png Graphic file (type png)
 
 <use ../../plots/Trend_estimation/seasonal_1.png>
 Package pdftex.def Info: ../../plots/Trend_estimation/seasonal_1.png used on in
-put line 41.
+put line 141.
 (pdftex.def)             Requested size: 512.13914pt x 284.52856pt.
 
-Overfull \hbox (85.34781pt too wide) in paragraph at lines 41--42
+Overfull \hbox (85.34781pt too wide) in paragraph at lines 141--142
  [][] 
  []
 
-<../../plots/Trend_estimation/seasonal_2.png, id=144, 1445.4pt x 732.48656pt>
+<../../plots/Trend_estimation/seasonal_2.png, id=160, 1445.4pt x 732.48656pt>
 File: ../../plots/Trend_estimation/seasonal_2.png Graphic file (type png)
 
 <use ../../plots/Trend_estimation/seasonal_2.png>
 Package pdftex.def Info: ../../plots/Trend_estimation/seasonal_2.png used on in
-put line 47.
+put line 147.
 (pdftex.def)             Requested size: 512.13914pt x 284.52856pt.
 
-Overfull \hbox (85.34781pt too wide) in paragraph at lines 47--48
+Overfull \hbox (85.34781pt too wide) in paragraph at lines 147--148
  [][] 
  []
 
-<../../plots/Trend_estimation/seasonal_3.png, id=145, 1445.4pt x 732.48656pt>
+<../../plots/Trend_estimation/seasonal_3.png, id=161, 1445.4pt x 732.48656pt>
 File: ../../plots/Trend_estimation/seasonal_3.png Graphic file (type png)
 
 <use ../../plots/Trend_estimation/seasonal_3.png>
 Package pdftex.def Info: ../../plots/Trend_estimation/seasonal_3.png used on in
-put line 53.
+put line 153.
 (pdftex.def)             Requested size: 512.13914pt x 284.52856pt.
 
-Overfull \hbox (85.34781pt too wide) in paragraph at lines 53--54
+Overfull \hbox (85.34781pt too wide) in paragraph at lines 153--154
  [][] 
  []
 
-<../../plots/Trend_estimation/seasonal_4.png, id=146, 1445.4pt x 732.48656pt>
+<../../plots/Trend_estimation/seasonal_4.png, id=162, 1445.4pt x 732.48656pt>
 File: ../../plots/Trend_estimation/seasonal_4.png Graphic file (type png)
 
 <use ../../plots/Trend_estimation/seasonal_4.png>
 Package pdftex.def Info: ../../plots/Trend_estimation/seasonal_4.png used on in
-put line 59.
+put line 159.
 (pdftex.def)             Requested size: 512.13914pt x 284.52856pt.
 
-Overfull \hbox (85.34781pt too wide) in paragraph at lines 59--60
+Overfull \hbox (85.34781pt too wide) in paragraph at lines 159--160
  [][] 
  []
 
 
 Underfull \vbox (badness 2042) has occurred while \output is active []
 
- [30 <../../plots/Trend_estimation/seasonal_1.png (PNG copy)> <../../plots/Tren
+ [34 <../../plots/Trend_estimation/seasonal_1.png (PNG copy)> <../../plots/Tren
 d_estimation/seasonal_2.png (PNG copy)>]
 
-LaTeX Warning: Text page 31 contains only floats.
+LaTeX Warning: Text page 35 contains only floats.
 
-[31 <../../plots/Trend_estimation/seasonal_3.png (PNG copy)> <../../plots/Trend
+[35 <../../plots/Trend_estimation/seasonal_3.png (PNG copy)> <../../plots/Trend
 _estimation/seasonal_4.png (PNG copy)>]
-<../../plots/Trend_estimation/seasonal_month_ALL.png, id=154, 1445.4pt x 732.48
+<../../plots/Trend_estimation/seasonal_month_ALL.png, id=169, 1445.4pt x 732.48
 656pt>
 File: ../../plots/Trend_estimation/seasonal_month_ALL.png Graphic file (type pn
 g)
  <use ../../plots/Trend_estimation/seasonal_month_ALL.png>
 Package pdftex.def Info: ../../plots/Trend_estimation/seasonal_month_ALL.png us
-ed on input line 76.
+ed on input line 176.
 (pdftex.def)             Requested size: 512.13914pt x 341.42981pt.
 
-Overfull \hbox (85.34781pt too wide) in paragraph at lines 76--77
+Overfull \hbox (85.34781pt too wide) in paragraph at lines 176--177
  [][] 
  []
 
 
-<../../plots/Trend_estimation/Deseasonalized_ALL.png, id=155, 1445.4pt x 732.48
+<../../plots/Trend_estimation/Deseasonalized_ALL.png, id=170, 1445.4pt x 732.48
 656pt>
 File: ../../plots/Trend_estimation/Deseasonalized_ALL.png Graphic file (type pn
 g)
  <use ../../plots/Trend_estimation/Deseasonalized_ALL.png>
 Package pdftex.def Info: ../../plots/Trend_estimation/Deseasonalized_ALL.png us
-ed on input line 85.
+ed on input line 185.
 (pdftex.def)             Requested size: 512.13914pt x 341.42981pt.
 
-Overfull \hbox (85.34781pt too wide) in paragraph at lines 85--86
+Overfull \hbox (85.34781pt too wide) in paragraph at lines 185--186
  [][] 
  []
 
-[32]
-<../../plots/Trend_estimation/Deseasonalized_month_ALL.png, id=159, 1445.4pt x 
+[36]
+<../../plots/Trend_estimation/Deseasonalized_month_ALL.png, id=174, 1445.4pt x 
 732.48656pt>
 File: ../../plots/Trend_estimation/Deseasonalized_month_ALL.png Graphic file (t
 ype png)
  <use ../../plots/Trend_estimation/Deseasonalized_month_ALL.png>
 Package pdftex.def Info: ../../plots/Trend_estimation/Deseasonalized_month_ALL.
-png used on input line 93.
+png used on input line 193.
 (pdftex.def)             Requested size: 512.13914pt x 341.42981pt.
 
-Overfull \hbox (85.34781pt too wide) in paragraph at lines 93--94
+Overfull \hbox (85.34781pt too wide) in paragraph at lines 193--194
  [][] 
  []
 
 
-LaTeX Warning: Citation `stationarity' on page 33 undefined on input line 99.
+LaTeX Warning: Citation `stationarity' on page 37 undefined on input line 199.
 
 
-<../../plots/Trend_estimation/irregular_component_all.png, id=160, 1445.4pt x 7
+<../../plots/Trend_estimation/irregular_component_all.png, id=175, 1445.4pt x 7
 32.48656pt>
 File: ../../plots/Trend_estimation/irregular_component_all.png Graphic file (ty
 pe png)
  <use ../../plots/Trend_estimation/irregular_component_all.png>
 Package pdftex.def Info: ../../plots/Trend_estimation/irregular_component_all.p
-ng used on input line 102.
+ng used on input line 202.
 (pdftex.def)             Requested size: 512.13914pt x 284.52856pt.
 
-Overfull \hbox (85.34781pt too wide) in paragraph at lines 102--103
+Overfull \hbox (85.34781pt too wide) in paragraph at lines 202--203
  [][] 
  []
 
-[33 <../../plots/Trend_estimation/seasonal_month_ALL.png (PNG copy)>]
-<../../plots/Trend_estimation/irregular_component_month_all.png, id=164, 1445.4
+[37 <../../plots/Trend_estimation/seasonal_month_ALL.png (PNG copy)>]
+<../../plots/Trend_estimation/irregular_component_month_all.png, id=180, 1445.4
 pt x 732.48656pt>
 File: ../../plots/Trend_estimation/irregular_component_month_all.png Graphic fi
 le (type png)
 
 <use ../../plots/Trend_estimation/irregular_component_month_all.png>
 Package pdftex.def Info: ../../plots/Trend_estimation/irregular_component_month
-_all.png used on input line 110.
+_all.png used on input line 210.
 (pdftex.def)             Requested size: 512.13914pt x 284.52856pt.
 
-Overfull \hbox (85.34781pt too wide) in paragraph at lines 110--111
+Overfull \hbox (85.34781pt too wide) in paragraph at lines 210--211
  [][] 
  []
 
 
 Underfull \vbox (badness 4832) has occurred while \output is active []
 
- [34 <../../plots/Trend_estimation/Deseasonalized_ALL.png (PNG copy)>] [35 <../
+ [38 <../../plots/Trend_estimation/Deseasonalized_ALL.png (PNG copy)>] [39 <../
 ../plots/Trend_estimation/Deseasonalized_month_ALL.png (PNG copy)>]
 
-LaTeX Warning: Text page 36 contains only floats.
+LaTeX Warning: Text page 40 contains only floats.
 
-[36 <../../plots/Trend_estimation/irregular_component_all.png (PNG copy)> <../.
+[40 <../../plots/Trend_estimation/irregular_component_all.png (PNG copy)> <../.
 ./plots/Trend_estimation/irregular_component_month_all.png (PNG copy)>])
-[37] [38
+[41] [42
 
 ]
 \textKappa \textepsilon \textphi \acctonos \textalpha \textlambda \textalpha \t
 extiota \textomicron  4.
-(./chapters/chapter04.tex) [39] [40
+(./chapters/chapter04.tex) [43] [44
 
 ]
 \textKappa \textepsilon \textphi \acctonos \textalpha \textlambda \textalpha \t
 extiota \textomicron  5.
-(./chapters/chapter05.tex) [41] [42
+(./chapters/chapter05.tex) [45] [46
 
 ]
 \textKappa \textepsilon \textphi \acctonos \textalpha \textlambda \textalpha \t
 extiota \textomicron  6.
-(./chapters/chapter06.tex) [43] [44
+(./chapters/chapter06.tex) [47] [48
 
 ]
 \textKappa \textepsilon \textphi \acctonos \textalpha \textlambda \textalpha \t
 extiota \textomicron  7.
-(./chapters/chapter07.tex) [45] [46] (./main.bbl [47
+(./chapters/chapter07.tex) [49] [50] (./main.bbl [51
 
 ]
-Underfull \hbox (badness 6526) in paragraph at lines 105--110
+Underfull \hbox (badness 10000) in paragraph at lines 102--105
+[]\OT1/cmr/m/n/10.95 Commission for En-ergy Reg-u-la-tion.  $\OT1/cmtt/m/n/10.9
+5 http : / / www . cer . ie / about-[]cer /
+ []
+
+
+Underfull \hbox (badness 2790) in paragraph at lines 115--119
+[]\OT1/cmr/m/n/10.95 Oracle  \OT1/cmr/m/it/10.95 Data Min-ing Con-cepts  $\OT1/
+cmtt/m/n/10.95 https : / / docs . oracle . com / cd / B28359 _ 01 /
+ []
+
+
+Underfull \hbox (badness 6526) in paragraph at lines 123--128
 []\LGR/cmr/m/n/10.95 Jodwr c Pa-na-go-Ôlhc.  \LGR/cmr/m/it/10.95 {Eg-qei-rÐdio}
  a-pì th RA-E gia thn a-nti-me-t¸pi-sh
  []
 
 
-Underfull \hbox (badness 3977) in paragraph at lines 105--110
+Underfull \hbox (badness 3977) in paragraph at lines 123--128
 \LGR/cmr/m/it/10.95 twn ìlo kai pe-ris-sìte-rwn reu-ma-to-klo-p¸n.  $\OT1/cmtt/
 m/n/10.95 https : / / energypress . gr / news /
  []
 
 
-Overfull \hbox (72.45738pt too wide) in paragraph at lines 105--110
+Overfull \hbox (72.45738pt too wide) in paragraph at lines 123--128
 \OT1/cmtt/m/n/10.95 egheiridio-[]apo-[]ti-[]rae-[]gia-[]tin-[]antimetopisi-[]to
 n-[]olo-[]kai-[]perissoteron-[]reymatoklopon.$
  []
 
-) [48]
+) [52]
 \openout2 = `chapter7.aux'.
 
 
@@ -1746,7 +1805,7 @@ Overfull \hbox (25.86533pt too wide) in alignment at lines 50--70
  [] [] [] [] [] [] [] [] [] [] [] [] [] 
  []
 
-[49
+[53
 
 
 
@@ -1766,19 +1825,19 @@ Overfull \hbox (25.86533pt too wide) in alignment at lines 90--108
  []
 
 LaTeX Info: Redefining \anw@print on input line 108.
-[50]) [51]
+[54]) [55]
 \openout2 = `glossary.aux'.
 
- (./glossary.tex [52
+ (./glossary.tex [56
 
 
 
-]) [53] [54
+]) [57] [58
 
 
 ]
 No file main.ind.
-[55] (./main.aux (./abstract.aux) (./chapter7.aux) (./results.aux)
+[59] (./main.aux (./abstract.aux) (./chapter7.aux) (./results.aux)
 (./glossary.aux))
 
 LaTeX Warning: There were undefined references.
@@ -1788,10 +1847,10 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 8381 strings out of 493013
- 119225 string characters out of 6136993
- 239498 words of memory out of 5000000
- 11611 multiletter control sequences out of 15000+600000
+ 8409 strings out of 493013
+ 120074 string characters out of 6136993
+ 239613 words of memory out of 5000000
+ 11636 multiletter control sequences out of 15000+600000
  27335 words of font info for 65 fonts, out of 8000000 for 9000
  1143 hyphenation exceptions out of 8191
  59i,12n,94p,2566b,660s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1809,21 +1868,22 @@ ist/fonts/type1/public/amsfonts/cm/cmtt10.pfb><c:/texlive/2016/texmf-dist/fonts
 /type1/public/cbfonts/grmc1095.pfb><c:/texlive/2016/texmf-dist/fonts/type1/publ
 ic/cbfonts/grmc1200.pfb><c:/texlive/2016/texmf-dist/fonts/type1/public/cbfonts/
 grmc2074.pfb><c:/texlive/2016/texmf-dist/fonts/type1/public/cbfonts/grmi1095.pf
-b><c:/texlive/2016/texmf-dist/fonts/type1/public/cbfonts/grmn1095.pfb><c:/texli
-ve/2016/texmf-dist/fonts/type1/public/cbfonts/grmn1200.pfb><c:/texlive/2016/tex
-mf-dist/fonts/type1/public/cbfonts/grmo1095.pfb><c:/texlive/2016/texmf-dist/fon
-ts/type1/public/cbfonts/grxc1200.pfb><c:/texlive/2016/texmf-dist/fonts/type1/pu
-blic/cbfonts/grxn1095.pfb><c:/texlive/2016/texmf-dist/fonts/type1/public/cbfont
-s/grxn1200.pfb><c:/texlive/2016/texmf-dist/fonts/type1/public/cbfonts/grxn1440.
-pfb><c:/texlive/2016/texmf-dist/fonts/type1/public/cbfonts/grxn1728.pfb><c:/tex
-live/2016/texmf-dist/fonts/type1/public/cbfonts/grxn2074.pfb><c:/texlive/2016/t
-exmf-dist/fonts/type1/public/cbfonts/grxn2488.pfb><c:/texlive/2016/texmf-dist/f
-onts/type1/public/cm-super/sfrm1095.pfb><c:/texlive/2016/texmf-dist/fonts/type1
-/public/cm-super/sfrm1200.pfb>
-Output written on main.pdf (61 pages, 1282425 bytes).
+b><c:/texlive/2016/texmf-dist/fonts/type1/public/cbfonts/grmn1000.pfb><c:/texli
+ve/2016/texmf-dist/fonts/type1/public/cbfonts/grmn1095.pfb><c:/texlive/2016/tex
+mf-dist/fonts/type1/public/cbfonts/grmn1200.pfb><c:/texlive/2016/texmf-dist/fon
+ts/type1/public/cbfonts/grmo1095.pfb><c:/texlive/2016/texmf-dist/fonts/type1/pu
+blic/cbfonts/grxc1200.pfb><c:/texlive/2016/texmf-dist/fonts/type1/public/cbfont
+s/grxn1095.pfb><c:/texlive/2016/texmf-dist/fonts/type1/public/cbfonts/grxn1200.
+pfb><c:/texlive/2016/texmf-dist/fonts/type1/public/cbfonts/grxn1440.pfb><c:/tex
+live/2016/texmf-dist/fonts/type1/public/cbfonts/grxn1728.pfb><c:/texlive/2016/t
+exmf-dist/fonts/type1/public/cbfonts/grxn2074.pfb><c:/texlive/2016/texmf-dist/f
+onts/type1/public/cbfonts/grxn2488.pfb><c:/texlive/2016/texmf-dist/fonts/type1/
+public/cm-super/sfrm1095.pfb><c:/texlive/2016/texmf-dist/fonts/type1/public/cm-
+super/sfrm1200.pfb>
+Output written on main.pdf (65 pages, 1557556 bytes).
 PDF statistics:
- 326 PDF objects out of 1000 (max. 8388607)
- 221 compressed objects within 3 object streams
+ 344 PDF objects out of 1000 (max. 8388607)
+ 232 compressed objects within 3 object streams
  0 named destinations out of 1000 (max. 500000)
- 56 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 66 words of extra memory for PDF output out of 10000 (max. 10000000)
 

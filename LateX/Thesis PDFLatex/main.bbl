@@ -98,7 +98,25 @@
 		\newblock{1999.}
 		\newblock{pp. 1-7}
 		
-Technical report, Department of Computer Science, Chalmers University of Technology. 20 May, p. 5.
+		\bibitem{cer}
+		Commission for Energy Regulation.
+		\newblock{\url{http://www.cer.ie/about-cer/general-information.}}
+		\newblock{accessed 24 August, 2017.}
+		
+		\bibitem{rawdataNN}
+		V. Ford, A. Siraj and W. Eberle.
+		\newblock{\em Smart Grid Energy Fraud Detection Using Articial Neural Network.}
+		\newblock{Computational Intelligence Applications in Smart Grid (CIASG).}
+		\newblock{2014 IEEE Symposium}
+		\newblock{2014.}
+		\newblock{pp. 2-4.}
+		
+		\bibitem{miningOracle}
+		Oracle
+		\newblock{\em Data Mining Concepts}
+		\newblock{\url{https://docs.oracle.com/cd/B28359_01/datamine.111/b28129/process.htm#DMCON002.}}
+		\newblock{accessed 24 August, 2017}
+
     \selectlanguage{greek}
 		
 		\bibitem{energypress}

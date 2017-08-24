@@ -17,13 +17,19 @@
 \addvspace {10\p@ }
 \select@language {greek}
 \select@language {greek}
+\contentsline {table}{\numberline {3.1}{\ignorespaces \IeC {\textSigma }\IeC {\texttau }\IeC {\textiota }\IeC {\textgamma }\IeC {\textmu }\IeC {\textiota }\IeC {\ensuregreek {\acctonos \textomicron }}\IeC {\texttau }\IeC {\textupsilon }\IeC {\textpi }\IeC {\textalpha } \IeC {\textalpha }\IeC {\textrho }\IeC {\textchi }\IeC {\textepsilon }\IeC {\ensuregreek {\acctonos \textiota }}\IeC {\textomicron }\IeC {\textupsilon } \IeC {\textdelta }\IeC {\textepsilon }\IeC {\textdelta }\IeC {\textomicron }\IeC {\textmu }\IeC {\ensuregreek {\acctonos \textepsilon }}\IeC {\textnu }\IeC {\textomega }\IeC {\textnu }\relax }}{28}
+\contentsline {table}{\numberline {3.2}{\ignorespaces \IeC {\textOmicron }\IeC {\textmu }\IeC {\textalpha }\IeC {\textdelta }\IeC {\textomicron }\IeC {\textpi }\IeC {\textomicron }\IeC {\textiota }\IeC {\ensuregreek {\acctonos \texteta }}\IeC {\textsigma }\IeC {\textepsilon }\IeC {\textiota }\IeC {\textvarsigma } \IeC {\textmu }\IeC {\textepsilon } 2 \IeC {\textkappa }\IeC {\textrho }\IeC {\textiota }\IeC {\texttau }\IeC {\ensuregreek {\acctonos \texteta }}\IeC {\textrho }\IeC {\textiota }\IeC {\textalpha }\relax }}{28}
 \select@language {greek}
 \select@language {greek}
 \select@language {greek}
 \select@language {greek}
 \select@language {greek}
 \select@language {greek}
-\contentsline {table}{\numberline {3.1}{\ignorespaces \IeC {\ensuregreek {\acctonos \textEpsilon }}\IeC {\textlambda }\IeC {\textepsilon }\IeC {\textgamma }\IeC {\textchi }\IeC {\textomicron }\IeC {\textvarsigma } \IeC {\textsigma }\IeC {\textupsilon }\IeC {\textsigma }\IeC {\texttau }\IeC {\textalpha }\IeC {\textdelta }\IeC {\textomicron }\IeC {\textpi }\IeC {\textomicron }\IeC {\ensuregreek {\acctonos \textiota }}\IeC {\texteta }\IeC {\textsigma }\IeC {\texteta }\IeC {\textvarsigma } \IeC {\textSigma }\IeC {\textalpha }\IeC {\textbeta }\IeC {\textbeta }\IeC {\ensuregreek {\acctonos \textalpha }}\IeC {\texttau }\IeC {\textomicron }\IeC {\textupsilon }\relax }}{35}
+\select@language {greek}
+\select@language {greek}
+\select@language {greek}
+\select@language {greek}
+\contentsline {table}{\numberline {3.3}{\ignorespaces \IeC {\ensuregreek {\acctonos \textEpsilon }}\IeC {\textlambda }\IeC {\textepsilon }\IeC {\textgamma }\IeC {\textchi }\IeC {\textomicron }\IeC {\textvarsigma } \IeC {\textsigma }\IeC {\textupsilon }\IeC {\textsigma }\IeC {\texttau }\IeC {\textalpha }\IeC {\textdelta }\IeC {\textomicron }\IeC {\textpi }\IeC {\textomicron }\IeC {\ensuregreek {\acctonos \textiota }}\IeC {\texteta }\IeC {\textsigma }\IeC {\texteta }\IeC {\textvarsigma } \IeC {\textSigma }\IeC {\textalpha }\IeC {\textbeta }\IeC {\textbeta }\IeC {\ensuregreek {\acctonos \textalpha }}\IeC {\texttau }\IeC {\textomicron }\IeC {\textupsilon }\relax }}{39}
 \select@language {greek}
 \select@language {greek}
 \addvspace {10\p@ }
@@ -37,4 +43,4 @@
 \addvspace {10\p@ }
 \select@language {greek}
 \select@language {greek}
-\contentsline {table}{\numberline {\MakeUppercase {\textalpha \anw@true \anw@print \relax }.1}{\ignorespaces \IeC {\textDelta }\IeC {\textepsilon }\IeC {\ensuregreek {\acctonos \textiota }}\IeC {\textkappa }\IeC {\texttau }\IeC {\textepsilon }\IeC {\textvarsigma } \IeC {\textAlpha }\IeC {\textkappa }\IeC {\textrho }\IeC {\ensuregreek {\acctonos \textiota }}\IeC {\textbeta }\IeC {\textepsilon }\IeC {\textiota }\IeC {\textalpha }\IeC {\textvarsigma } \IeC {\textgamma }\IeC {\textiota }\IeC {\textalpha } \IeC {\ensuregreek {\acctonos \textomicron }}\IeC {\textlambda }\IeC {\textepsilon }\IeC {\textvarsigma } \IeC {\texttau }\IeC {\textiota }\IeC {\textvarsigma } \IeC {\textchi }\IeC {\textrho }\IeC {\textomicron }\IeC {\textnu }\IeC {\textomicron }\IeC {\textsigma }\IeC {\textepsilon }\IeC {\textiota }\IeC {\textrho }\IeC {\ensuregreek {\acctonos \textepsilon }}\IeC {\textvarsigma }\relax }}{51}
+\contentsline {table}{\numberline {\MakeUppercase {\textalpha \anw@true \anw@print \relax }.1}{\ignorespaces \IeC {\textDelta }\IeC {\textepsilon }\IeC {\ensuregreek {\acctonos \textiota }}\IeC {\textkappa }\IeC {\texttau }\IeC {\textepsilon }\IeC {\textvarsigma } \IeC {\textAlpha }\IeC {\textkappa }\IeC {\textrho }\IeC {\ensuregreek {\acctonos \textiota }}\IeC {\textbeta }\IeC {\textepsilon }\IeC {\textiota }\IeC {\textalpha }\IeC {\textvarsigma } \IeC {\textgamma }\IeC {\textiota }\IeC {\textalpha } \IeC {\ensuregreek {\acctonos \textomicron }}\IeC {\textlambda }\IeC {\textepsilon }\IeC {\textvarsigma } \IeC {\texttau }\IeC {\textiota }\IeC {\textvarsigma } \IeC {\textchi }\IeC {\textrho }\IeC {\textomicron }\IeC {\textnu }\IeC {\textomicron }\IeC {\textsigma }\IeC {\textepsilon }\IeC {\textiota }\IeC {\textrho }\IeC {\ensuregreek {\acctonos \textepsilon }}\IeC {\textvarsigma }\relax }}{55}
