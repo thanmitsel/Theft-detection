@@ -116,7 +116,26 @@
 		\newblock{\em Data Mining Concepts}
 		\newblock{\url{https://docs.oracle.com/cd/B28359_01/datamine.111/b28129/process.htm#DMCON002.}}
 		\newblock{accessed 24 August, 2017}
-
+		
+		\bibitem{histogram}
+		James J. Filliben and Alan Heckert.
+		\newblock{\em NIST/SEMATECH eHandbook of Statistical Methods.}
+		\newblock{\url{http://www.itl.nist.gov/div898/handbook/eda/section3/histogra.htm.}}
+		\newblock{(accessed 25 August, 2017).}
+		
+		\bibitem{histogram}
+		Paul Johnson and Matt Beverlin.
+		\newblock{\em Beta Distribution.}
+		\newblock{2013.}
+		\newblock{\url{http://pj.freefaculty.org/guides/stat/Distributions/DistributionWriteups/Beta/Beta.pdf.}}
+		\newblock{(accessed 25 August, 2017).}
+		
+		\bibitem{conspatterns}
+		Paria Jokar, Nasim Arianpoo and Victor C. M. Leung.
+		\newblock{\em Electricity Theft Detection in AMI Using Customers’ Consumption Patterns.}
+		\newblock{ IEEE Transactions on Smart Grid.}
+		\newblock{2016.}
+		\newblock{pp. 216-226, vol. 7}
     \selectlanguage{greek}
 		
 		\bibitem{energypress}

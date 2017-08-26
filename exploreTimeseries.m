@@ -41,20 +41,20 @@ for j=1:5
     if cost>temp_cost % Pick the lowest cost        
         cost=temp_cost;                
         centroids=temp_centroids;                
-        idx=temp_idx;            
+        idx_form=temp_idx;            
     end    
 end
 %% Print size of clusters
 fprintf('|Cluster  | Members    |\n');
 for i=1:K_clusters
-    fprintf('|  %d   |   %d  |\n',i, sum(idx==i));
+    fprintf('|  %d   |   %d  |\n',i, sum(idx_form==i));
 end
 %% Plot clusters
 T=size(daily_consumption,2);
 figure; hold on;
 for i=1:K_clusters
     ax1=subplot(K_clusters/2,2,i);
-    daily_cluster=daily_consumption(idx==i,:);
+    daily_cluster=daily_consumption(idx_form==i,:);
     plot(daily_cluster(2,:));
     h1 = gca;
     h1.XLim = [0,T];
