@@ -136,7 +136,25 @@
 		\newblock{ IEEE Transactions on Smart Grid.}
 		\newblock{2016.}
 		\newblock{pp. 216-226, vol. 7}
+		
+		\bibitem{liblinearguide}
+		Rong-En Fan, Kai-Wei Chang, Cho-Jui Hsieh, Xiang-Rui Wang and Chih-Jen Lin.
+		\newblock{\em LIBLINEAR: A Library for Large Linear Classification.}
+		\newblock{Journal of Machine Learning Research.}
+		\newblock{2008.}
+		\newblock{pp. 1871-1874 vol. 9}
+		
+		\bibitem{liblinearreport}
+		C.-Y. Hsia, Y. Zhu and Chih-Jen Lin.
+		\newblock{\em A Study on Trust Region Update Rules in Newton Methods for Large-scale Linear Classification.}
+		\newblock{JMLR: Workshop and Conference Proceedings.}
+		\newblock{2017.}
     \selectlanguage{greek}
+		\bibitem{haykin}
+		\en{Simon Haykin}.
+		\newblock{\em{Νευρωνικά Δίκτυα και Μηχανική Μάθηση.}}
+		\newblock{Αθήνα: Παπασωτηρίου 2010.}
+		\newblock{\en{pp. 276-280.}}
 		
 		\bibitem{energypress}
 		Θοδωρής Παναγούλης.

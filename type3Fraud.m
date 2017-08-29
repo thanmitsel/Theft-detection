@@ -14,6 +14,9 @@ for i=1:length(fraudDays)
   Y(fraudDays(i),1)=1;
 end
 f_Data_temp=F_Data(:)';
+%F_Data_t=F_Data';
+%f_Data_t=F_Data_t(:);
 f_Data=f_Data_temp';
+%f_Data=f_Data_t';
 y=1;
 end

@@ -13,7 +13,7 @@ someID=ID(r_cons,:);
 
 % Convertions
 [h, H]=convertHours3D(somehh);
-[d]=convertDays3D(hh);
+[d]=convertDays3D(somehh);
 %% Fraud Initialization
 % Create Fraud data
 fprintf('Choose type of attack.\n');
@@ -132,7 +132,7 @@ if x==0
     prediction= svmpredict(Y_test,X_test,model);
 elseif x==1   
     %arguments=['-s ' num2str(0) ' -v ' num2str(vfolds)]; % not v-validation mode
-    arguments=['-s ' num2str(1)]; % L2-Regularized L2-loss support vector classification (dual)
+    arguments=['-s ' num2str(7)]; % L2-Regularized L2-loss support vector classification (dual)
     model=train(Y_train,X_train, arguments);
     prediction= predict(Y_test,X_test,model);
 end
