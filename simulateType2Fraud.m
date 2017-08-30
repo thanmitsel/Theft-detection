@@ -9,7 +9,8 @@ thiefs=find(fraud_idx==1);
 for i=1:size(thiefs,1)
     one_H=H(:,:,thiefs(i));
 	[f_data, y, F_data,Y] = type2Fraud(one_H);
-	f_data2D(thiefs(i),:)=f_data';
-	F_data3D(:,:,thiefs(i))=F_data;
+	%f_data2D(thiefs(i),:)=f_data';
+	f_data2D(thiefs(i),:)=f_data;
+    F_data3D(:,:,thiefs(i))=F_data;
 	Y2D(:,thiefs(i))=Y;
 end

@@ -29,5 +29,7 @@ if normalization==1
     [X_test]=normalizeTest(X_test, minval, maxval); % Normalize Test set based to these values
 end
 Y_test=Ytest2D(:);
+% NOTE Care cause they are shuffled
+% Their ID are mixed now!!!
 X_full=[X_train;X_test];
 Y_full=[Y_train;Y_test];

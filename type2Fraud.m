@@ -5,6 +5,7 @@ F_data=data;
 Y=zeros(size(data,1),1);
 [fraudDays] = initFraudperMatrix(data);
 % dstart=fraudDays(1);
+
 for i=1:length(fraudDays) 
   [tstart, duration] = initFraudperRow(data);
   intensity=1-betarnd(6,3);
@@ -12,7 +13,10 @@ for i=1:length(fraudDays)
     intensity*data(fraudDays(i),tstart:(tstart+duration));
   Y(fraudDays(i),1)=1;
 end
-f_data_temp=F_data(:)';
-f_data=f_data_temp';
+%f_data_temp=F_data(:)';
+%f_data=f_data_temp';
+F_data_t=F_data';
+f_data_t=F_data_t(:);
+f_data=f_data_t';
 y=1;
 end

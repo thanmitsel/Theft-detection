@@ -11,8 +11,12 @@ F_data_only=intensity*data(dstart:end,:);
 F_data=[data(1:(dstart-1),:); F_data_only];
 Y(dstart:end)=1;
 
-f_data_temp=F_data(:)';
-f_data=f_data_temp';
+%f_data_temp=F_data(:)';
+%f_data=f_data_temp';
+F_data_t=F_data';
+f_data_t=F_data_t(:);
+f_data=f_data_t';
+
 y=1;
 end
 

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/W32TeX) (preloaded format=pdflatex 2017.3.16)  28 AUG 2017 18:08
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/W32TeX) (preloaded format=pdflatex 2017.3.16)  30 AUG 2017 21:35
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1307,7 +1307,7 @@ LaTeX Warning: Label `mathworkstrend' multiply defined.
 
 LaTeX Warning: Label `histogram' multiply defined.
 
-(./chapter7.aux) (./results.aux) (./glossary.aux))
+(./glossary.aux))
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 132.
@@ -1327,8 +1327,7 @@ LaTeX Font Info:    ... okay on input line 132.
 LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 132.
 LaTeX Font Info:    Try loading font information for TS1+cmr on input line 132.
 
-
-(c:/texlive/2016/texmf-dist/tex/latex/base/ts1cmr.fd
+ (c:/texlive/2016/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    ... okay on input line 132.
@@ -1473,7 +1472,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 134--134
 
 
 ] (./main.toc [7] [8]
-LaTeX Info: Redefining \anw@print on input line 131.
+LaTeX Info: Redefining \anw@print on input line 136.
 )
 \tf@toc=\write5
 \openout5 = `main.toc'.
@@ -1488,7 +1487,13 @@ LaTeX Info: Redefining \anw@print on input line 131.
  [11] [12
 
 ] (./main.lot
-LaTeX Info: Redefining \anw@print on input line 65.
+LaTeX Info: Redefining \anw@print on input line 66.
+LaTeX Info: Redefining \anw@print on input line 67.
+LaTeX Info: Redefining \anw@print on input line 70.
+LaTeX Info: Redefining \anw@print on input line 71.
+LaTeX Info: Redefining \anw@print on input line 72.
+LaTeX Info: Redefining \anw@print on input line 73.
+LaTeX Info: Redefining \anw@print on input line 74.
 )
 \tf@lot=\write7
 \openout7 = `main.lot'.
@@ -1945,22 +1950,59 @@ input line 369.
 extiota \textomicron  4.
 (./chapters/chapter04.tex [47
 
-] [48] [49] [50] [51]) [52]
+] [48]
+LaTeX Info: Redefining \anw@print on input line 34.
+
+Overfull \hbox (70.80418pt too wide) in paragraph at lines 83--94
+ [][] 
+ []
+
+[49]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [50]
+[51]
+Underfull \vbox (badness 1082) has occurred while \output is active []
+
+ [52]
+Underfull \hbox (badness 10000) in paragraph at lines 181--182
+
+ []
+
+[53] <../../plots/ROC50_1.png, id=249, 421.575pt x 316.18124pt>
+File: ../../plots/ROC50_1.png Graphic file (type png)
+
+<use ../../plots/ROC50_1.png>
+Package pdftex.def Info: ../../plots/ROC50_1.png used on input line 188.
+(pdftex.def)             Requested size: 398.34544pt x 284.546pt.
+
+<../../plots/ROC35.png, id=250, 421.575pt x 316.18124pt>
+File: ../../plots/ROC35.png Graphic file (type png)
+
+<use ../../plots/ROC35.png>
+Package pdftex.def Info: ../../plots/ROC35.png used on input line 218.
+(pdftex.def)             Requested size: 398.34544pt x 284.546pt.
+)
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [54 <../../plots/ROC50_1.png (PNG copy)>] [55 <../../plots/ROC35.png (PNG copy
+)>]
+[56
+
+]
 \textKappa \textepsilon \textphi \acctonos \textalpha \textlambda \textalpha \t
 extiota \textomicron  5.
-(./chapters/chapter05.tex) [53
-
-] [54
+(./chapters/chapter05.tex) [57] [58
 
 ]
 \textKappa \textepsilon \textphi \acctonos \textalpha \textlambda \textalpha \t
 extiota \textomicron  6.
-(./chapters/chapter06.tex) [55] [56
+(./chapters/chapter06.tex) [59] [60
 
 ]
 \textKappa \textepsilon \textphi \acctonos \textalpha \textlambda \textalpha \t
 extiota \textomicron  7.
-(./chapters/chapter07.tex) [57] [58] (./main.bbl [59
+(./chapters/chapter07.tex) [61] [62] (./main.bbl [63
 
 ]
 Underfull \hbox (badness 10000) in paragraph at lines 102--105
@@ -1975,87 +2017,72 @@ cmtt/m/n/10.95 https : / / docs . oracle . com / cd / B28359 _ 01 /
  []
 
 
-Underfull \hbox (badness 6526) in paragraph at lines 160--165
+Underfull \hbox (badness 6526) in paragraph at lines 176--181
 []\LGR/cmr/m/n/10.95 Jodwr c Pa-na-go-Ôlhc.  \LGR/cmr/m/it/10.95 {Eg-qei-rÐdio}
  a-pì th RA-E gia thn a-nti-me-t¸pi-sh
  []
 
 
-Underfull \hbox (badness 3977) in paragraph at lines 160--165
+Underfull \hbox (badness 3977) in paragraph at lines 176--181
 \LGR/cmr/m/it/10.95 twn ìlo kai pe-ris-sìte-rwn reu-ma-to-klo-p¸n.  $\OT1/cmtt/
 m/n/10.95 https : / / energypress . gr / news /
  []
 
 
-Overfull \hbox (72.45738pt too wide) in paragraph at lines 160--165
+Overfull \hbox (72.45738pt too wide) in paragraph at lines 176--181
 \OT1/cmtt/m/n/10.95 egheiridio-[]apo-[]ti-[]rae-[]gia-[]tin-[]antimetopisi-[]to
 n-[]olo-[]kai-[]perissoteron-[]reymatoklopon.$
  []
 
-[60]) [61]
-\openout2 = `chapter7.aux'.
-
-
-No file chapter7.tex.
-\openout2 = `results.aux'.
-
-(./results.tex [62
-
-
-
+[64]) [65] [66
 
 ]
 \textPi \textalpha \textrho \acctonos \textalpha \textrho \texttau \texteta \te
 xtmu \textalpha  \MakeUppercase {\textalpha \anw@true \anw@print \relax }.
-LaTeX Info: Redefining \anw@print on input line 1.
-
-Overfull \hbox (25.86533pt too wide) in alignment at lines 5--30
- [] [] [] [] [] [] [] [] [] [] [] [] [] 
- []
-
-
-Underfull \vbox (badness 10000) detected at line 30
- []
-
-
-Overfull \hbox (25.86533pt too wide) in alignment at lines 30--50
- [] [] [] [] [] [] [] [] [] [] [] [] [] 
- []
-
-
-Overfull \hbox (25.86533pt too wide) in alignment at lines 50--70
- [] [] [] [] [] [] [] [] [] [] [] [] [] 
- []
-
-[63]
-Overfull \hbox (25.86533pt too wide) in alignment at lines 70--90
- [] [] [] [] [] [] [] [] [] [] [] [] [] 
- []
-
-LaTeX Info: Redefining \anw@print on input line 107.
-LaTeX Info: Redefining \anw@print on input line 107.
-LaTeX Info: Redefining \anw@print on input line 107.
-LaTeX Info: Redefining \anw@print on input line 107.
-
-Overfull \hbox (25.86533pt too wide) in alignment at lines 90--108
- [] [] [] [] [] [] [] [] [] [] [] [] [] 
- []
-
-LaTeX Info: Redefining \anw@print on input line 108.
-[64]) [65]
+LaTeX Info: Redefining \anw@print on input line 179.
+(./chapters/appendixA.tex
+LaTeX Info: Redefining \anw@print on input line 24.
+LaTeX Info: Redefining \anw@print on input line 24.
+LaTeX Info: Redefining \anw@print on input line 24.
+LaTeX Info: Redefining \anw@print on input line 24.
+LaTeX Info: Redefining \anw@print on input line 51.
+LaTeX Info: Redefining \anw@print on input line 51.
+LaTeX Info: Redefining \anw@print on input line 51.
+LaTeX Info: Redefining \anw@print on input line 51.
+LaTeX Info: Redefining \anw@print on input line 78.
+LaTeX Info: Redefining \anw@print on input line 78.
+LaTeX Info: Redefining \anw@print on input line 78.
+LaTeX Info: Redefining \anw@print on input line 78.
+LaTeX Info: Redefining \anw@print on input line 105.
+LaTeX Info: Redefining \anw@print on input line 105.
+LaTeX Info: Redefining \anw@print on input line 105.
+LaTeX Info: Redefining \anw@print on input line 105.
+LaTeX Info: Redefining \anw@print on input line 132.
+LaTeX Info: Redefining \anw@print on input line 132.
+LaTeX Info: Redefining \anw@print on input line 132.
+LaTeX Info: Redefining \anw@print on input line 132.
+LaTeX Info: Redefining \anw@print on input line 159.
+LaTeX Info: Redefining \anw@print on input line 159.
+LaTeX Info: Redefining \anw@print on input line 159.
+LaTeX Info: Redefining \anw@print on input line 159.
+LaTeX Info: Redefining \anw@print on input line 187.
+LaTeX Info: Redefining \anw@print on input line 187.
+LaTeX Info: Redefining \anw@print on input line 187.
+LaTeX Info: Redefining \anw@print on input line 187.
+) [67]
+LaTeX Info: Redefining \anw@print on input line 185.
+ [68] [69]
 \openout2 = `glossary.aux'.
 
- (./glossary.tex [66
+ (./glossary.tex [70
 
 
-
-]) [67] [68
+]) [71] [72
 
 
 ]
 No file main.ind.
-[69] (./main.aux (./abstract.aux) (./chapter7.aux) (./results.aux)
-(./glossary.aux))
+[73] (./main.aux (./abstract.aux) (./glossary.aux))
 
 LaTeX Warning: There were undefined references.
 
@@ -2064,10 +2091,10 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 8505 strings out of 493013
- 122884 string characters out of 6136993
- 240016 words of memory out of 5000000
- 11718 multiletter control sequences out of 15000+600000
+ 8514 strings out of 493013
+ 123218 string characters out of 6136993
+ 216808 words of memory out of 5000000
+ 11734 multiletter control sequences out of 15000+600000
  27956 words of font info for 67 fonts, out of 8000000 for 9000
  1143 hyphenation exceptions out of 8191
  59i,12n,94p,2566b,660s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -2102,10 +2129,10 @@ xn1728.pfb><c:/texlive/2016/texmf-dist/fonts/type1/public/cbfonts/grxn2074.pfb>
 /2016/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb><c:/texlive/201
 6/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb><c:/texlive/2016/texmf-di
 st/fonts/type1/public/cm-super/sfrm1200.pfb>
-Output written on main.pdf (75 pages, 1825772 bytes).
+Output written on main.pdf (79 pages, 1882087 bytes).
 PDF statistics:
- 412 PDF objects out of 1000 (max. 8388607)
- 273 compressed objects within 3 object streams
+ 427 PDF objects out of 1000 (max. 8388607)
+ 282 compressed objects within 3 object streams
  0 named destinations out of 1000 (max. 500000)
- 121 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 131 words of extra memory for PDF output out of 10000 (max. 10000000)
 

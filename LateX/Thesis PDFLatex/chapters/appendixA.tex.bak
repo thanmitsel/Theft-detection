@@ -1,0 +1,189 @@
+\begin{table}[ht!]
+\centering
+\begin{tabular}{ |c||c|c|c|c|c|  }
+ \hline
+ Συνδυασμός & \en{DR}  & \en{FPR} & \en{Accuracy} & \en{F1 score} & \en{BDR} \\
+ \hline
+1 & 94.66 & 35.93 & 67.04 & 35.79 & 0.23 \\
+  \hline
+2 & 93.89 & 34.62 & 68.15 & 36.39 & 0.23 \\
+  \hline
+3 &92.37 & 39.70 & 63.41 & 32.88 & 0.21 \\
+  \hline
+4 & 91.67 & 21.23 & 80.15 & 49.62 & 0.32\\
+  \hline
+5 & 93.13 & 34.21 & 68.44 & 36.42 & 0.23\\
+ \hline
+6 & 91.60 & 35.11 & 67.48 & 35.35 & 0.22 \\
+ \hline
+7 & 93.89 & 34.29 & 68.44 & 36.61 & 0.23\\
+ \hline
+8 & 94.66 & 35.93 & 67.04 & 35.79 & 0.23\\
+ \hline
+\end{tabular}
+\caption{Αποτελέσματα δοκιμής τύπου 1 κανονικοποίηση [-1,1]}
+\label{tab:exploreclassifiers1norm2}
+\end{table}
+
+\begin{table}[ht!]
+\centering
+\begin{tabular}{ |c||c|c|c|c|c|  }
+ \hline
+ Συνδυασμός & \en{DR}  & \en{FPR} & \en{Accuracy} & \en{F1 score} & \en{BDR} \\
+ \hline
+1 & 75.65 & 1.38 & 96.67 & 79.45 & 0.86 \\
+  \hline
+2 & 80.00 & 1.46 & 96.96 & 81.78 & 0.86 \\
+  \hline
+3 &80.00 & 1.46 & 96.96 & 81.78 & 0.86 \\
+  \hline
+4 & 80.87 & 1.54 & 96.96 & 81.94 & 0.85\\
+  \hline
+5 & 81.74 & 1.94 & 96.67 & 80.69 & 0.82\\
+ \hline
+6 & 77.39 & 1.54 & 96.67 & 79.82 & 0.85 \\
+ \hline
+7 & 65.22 & 1.62 & 95.56 & 71.43 & 0.82\\
+ \hline
+8 & 75.65 & 1.46 & 96.59 & 79.09 & 0.85\\
+ \hline
+\end{tabular}
+\caption{Αποτελέσματα δοκιμής τύπου 1 κανονικοποίηση [0,1]}
+\label{tab:exploreclassifiers1norm1}
+\end{table}
+
+\begin{table}
+\centering
+\begin{tabular}{ |c||c|c|c|c|c|  }
+ \hline
+ Συνδυασμός & \en{DR}  & \en{FPR} & \en{Accuracy} & \en{F1 score} & \en{BDR} \\
+ \hline
+1 & 4.65 & 0.82 & 90.15 & 8.28 & 0.39\\
+  \hline
+2 & 12.40 & 3.77 & 88.22 & 16.75 & 0.27 \\
+  \hline
+3 & 10.08 & 3.19 & 88.52 & 14.36 & 0.26\\
+  \hline
+4 & 9.30 & 2.87 & 88.74 & 13.64 & 0.26\\
+  \hline
+5 & 13.18 & 4.01 & 88.07 & 17.44 & 0.27\\
+ \hline
+6 & 8.53 & 3.44 & 88.15 & 12.09 & 0.22\\
+ \hline
+7 & 0.78 & 0.41 & 90.15 & 1.48 & 0.17\\
+ \hline
+8 & 4.65 & 0.82 & 90.15 & 8.28 & 0.39\\
+ \hline
+\end{tabular}
+\caption{Αποτελέσματα δοκιμής τύπου 2 με κανονικοποίηση [0,1]}
+\label{tab:exploreclassifiers2}
+\end{table}
+
+\begin{table}
+\centering
+\begin{tabular}{ |c||c|c|c|c|c|  }
+ \hline
+ Συνδυασμός & \en{DR}  & \en{FPR} & \en{Accuracy} & \en{F1 score} & \en{BDR} \\
+ \hline
+ 1 & 2.05 & 0.83 & 88.67 & 3.77 & 0.21\\
+  \hline
+ 2 & 9.59 & 2.82 & 87.70 & 14.43 & 0.27\\
+  \hline
+ 3 & 8.22 & 2.66 & 87.70 & 12.63 & 0.25\\
+  \hline
+ 4 & 8.22 & 2.33 & 88.00 & 12.90 & 0.28\\
+  \hline
+ 5 & 10.27 & 3.16 & 87.48 & 15.08 & 0.26\\
+ \hline
+ 6 & 8.90 & 2.41 & 88.00 & 13.83 & 0.29\\
+ \hline
+7& 0.68 & 0.50 & 88.81 & 1.31 & 0.13\\
+ \hline
+8 & 2.05 & 0.83 & 88.67 & 3.77 & 0.21\\
+ \hline
+\end{tabular}
+\caption{Αποτελέσματα δοκιμής τύπου 3 με κανονικοποίηση [0,1]}
+\label{tab:exploreclassifiers3}
+\end{table}
+
+\begin{table}
+\centering
+\begin{tabular}{ |c||c|c|c|c|c|  }
+ \hline
+ Συνδυασμός & \en{DR}  & \en{FPR} & \en{Accuracy} & \en{F1 score} & \en{BDR} \\
+ \hline
+1 & 1.55 & 0.74 & 89.93 & 2.86 & 0.19\\
+  \hline
+2 & 10.85 & 3.03 & 88.74 & 15.56 & 0.28\\
+  \hline
+3 & 10.08 & 3.03 & 88.67 & 14.53 & 0.27\\
+  \hline
+4 & 5.43 & 2.70 & 88.52 & 8.28 & 0.18\\
+  \hline
+5 & 13.18 & 3.69 & 88.37 & 17.80 & 0.28 \\
+ \hline
+6 & 8.53 & 2.87 & 88.67 & 12.57 & 0.25\\
+ \hline
+7 & 0.00 & 0.25 & 90.22 &  NaN & 0.00\\
+ \hline
+8 & 1.55 & 0.66 & 90.00 & 2.88 & 0.21\\
+ \hline
+\end{tabular}
+\caption{Αποτελέσματα δοκιμής μικτών τύπων με κανονικοποίηση [0,1]}
+\label{tab:exploreclassifiersmix}
+\end{table}
+
+\begin{table}
+\centering
+\begin{tabular}{ |c|c|c|c| }
+\hline
+μικρός & 3 & 2 & 1\\
+\hline
+89.9300  & 88.6700 &  90.1500 &  96.6700\\
+\hline
+   88.7400  &  87.7000 &  88.2200 &  96.9600\\
+   \hline
+   88.6700  & 87.7000 &  88.5200  & 96.9600\\
+   \hline
+   88.5200  & 88.0000 &  88.7400  & 96.9600\\
+   \hline
+   88.3700  & 87.4800 &  88.0700  & 96.6700\\
+   \hline
+   88.6700  & 88.0000 &  88.1500  & 96.6700\\
+   \hline
+   90.2200  & 88.8100 &  90.1500  & 96.5600\\
+   \hline
+   90.0000  & 88.6700 &  90.1500  & 96.5900\\
+\hline   
+   \end{tabular}
+\caption{πίνακας\en{Accuracy} }
+\label{tab:accuracytypes}
+\end{table}
+
+\begin{table}
+\centering
+\begin{tabular}{ |c|c|c|c|  }
+\hline
+1 & 2 & 3 & μικτός\\
+\hline
+
+   80.7800   & 8.2800 &   3.7700 &   2.8600\\
+   \hline
+   81.2300   &16.7500 &  14.4300 &  15.5600\\
+\hline   
+   79.2500   &14.3600 &  12.6300 &  14.5300\\
+\hline
+   79.8500   &13.6400 &  12.9000 &   8.2800\\
+\hline   
+   80.3100   &17.4400 &  15.0800 & 17.8000\\
+   \hline
+   78.6300   &12.0900 &  13.8300 &  12.5700\\
+\hline   
+   78.9100   & 1.4800 &   1.3100 &        0\\
+\hline   
+   81.2300   & 8.2800 &   3.7700 &   2.8800\\
+\hline   
+   \end{tabular}
+\caption{πίνακας\en{F1 score} }
+\label{tab:F1scoretypes}
+\end{table}

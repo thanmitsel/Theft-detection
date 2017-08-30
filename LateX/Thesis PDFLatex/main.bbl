@@ -149,6 +149,22 @@
 		\newblock{\em A Study on Trust Region Update Rules in Newton Methods for Large-scale Linear Classification.}
 		\newblock{JMLR: Workshop and Conference Proceedings.}
 		\newblock{2017.}
+		
+		\bibitem{giwrgis}
+		G. Messinis and  A. Dimeas.
+		\newblock{\em Utilizing smart meter data for electricity fraud.}
+		\newblock{First South East European Region CIGRE Conference.}
+		\newblock{2016.}
+		\newblock{pp. 7}
+		
+		\bibitem{libsvmguide}
+		C.-W. Hsu, C.-C. Chang and C.-J. Lin.
+		\newblock{\em A Practical Guide to Support Vector Classification.}
+		\newblock{Talk at University of Freiburg.}
+		\newblock{2003.}
+		\newblock{pp. 1-3 , 12-16}
+		
+		
     \selectlanguage{greek}
 		\bibitem{haykin}
 		\en{Simon Haykin}.

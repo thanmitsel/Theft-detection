@@ -56,7 +56,6 @@ end
 
 [days]=convertDays3D(F_data3D); % if more days than the threshold then fraud
 
-
 % Feature extraction
 % 14 Features 
 X=zeros(size(H,1),14,size(H,3));

@@ -19,11 +19,13 @@ for i=1:size(thiefs,1)
     elseif size(thiefs)/i> 0.7 & size(thiefs)/i <=0.9
         one_H=H(:,:,thiefs(i));
         [f_data, y, F_data,Y] = type2Fraud(one_H);
-        f_data2D(thiefs(i),:)=f_data';
+        %f_data2D(thiefs(i),:)=f_data';
+        f_data2D(thiefs(i),:)=f_data;
     else
         one_H=H(:,:,thiefs(i));
         [f_data, y, F_data,Y] = type3Fraud(one_H);
-        f_data2D(thiefs(i),:)=f_data';
+        %f_data2D(thiefs(i),:)=f_data';
+        f_data2D(thiefs(i),:)=f_data;
     end    
     F_data3D(:,:,thiefs(i))=F_data;
 	Y2D(:,thiefs(i))=Y;
