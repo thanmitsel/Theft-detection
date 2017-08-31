@@ -2,7 +2,7 @@
 % In this script we get consumer data and add fraud values to their data.
 
 % pick some z vector 
-z=4500;
+z=2000;
 r_cons=randi(size(hh,1),z,1);
 somehh=hh(r_cons,:);
 HH=zeros(365,48,size(somehh,1));
@@ -79,10 +79,32 @@ elseif norm==2
     [train_idx, test_idx]=crossvalind('HoldOut',z,P);
     X_train=Xn(train_idx,:);
     Y_train=Yn(train_idx);
-    [X_train, mu, sigma] = normalizeMinus_Plus(X_train); 
+    [X_train, mu, sigma] = normalizeMinus_Plus(X_train);
     X_test=Xn(test_idx,:);
     Y_test=Yn(test_idx);
     [X_test] = normalizeMinus_PlusTest(X_test, mu, sigma);
+    X_full=[X_train;X_test];
+    Y_full=Yn;
+elseif norm==3
+    Xn_t=Xn';
+    [Xn_t, mu, sigma] = normalizeMinus_Plus(Xn_t);
+    Xn=Xn_t';
+    [train_idx, test_idx]=crossvalind('HoldOut',z,P);
+    X_train=Xn(train_idx,:);
+    Y_train=Yn(train_idx);
+    X_test=Xn(test_idx,:);
+    Y_test=Yn(test_idx);
+    X_full=[X_train;X_test];
+    Y_full=Yn;
+elseif norm==4
+    Xn_t=Xn';
+    [Xn_t, ~, ~] = normalizeFeatures(Xn_t);
+    Xn=Xn_t';
+    [train_idx, test_idx]=crossvalind('HoldOut',z,P);
+    X_train=Xn(train_idx,:);
+    Y_train=Yn(train_idx);
+    X_test=Xn(test_idx,:);
+    Y_test=Yn(test_idx);
     X_full=[X_train;X_test];
     Y_full=Yn;
 end
@@ -109,7 +131,7 @@ elseif test==2
     [Y_train, X_train]=get_sparse(double(Y_train), double(X_train));
     [Y_test, X_test]=get_sparse(double(Y_test), double(X_test));
 
-    arguments=['-s ' num2str(4)];
+    arguments=['-s ' num2str(2)];
     tic
     model=train(Y_train,X_train, arguments);
     toc

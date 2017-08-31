@@ -2,7 +2,7 @@
 % In this script we get consumer data and add fraud values to their data.
 
 % pick some z vector 
-z=4500;
+z=2000;
 r_cons=randi(size(hh,1),z,1);
 somehh=hh(r_cons,:);
 HH=zeros(365,48,size(somehh,1));
@@ -28,7 +28,7 @@ someID=ID(r_cons,:);
 %    h=somehh;
 %end
 
-intensity=0:0.05:1;
+intensity=0:0.001:1;
 result_table=zeros(size(intensity,2),6);
 for int_idx=1:size(intensity,2)
 fraud_rate=0.1; % Percentage of consumers who fraud
