@@ -164,7 +164,18 @@
 		\newblock{2003.}
 		\newblock{pp. 1-3 , 12-16}
 		
+		\bibitem{aihorizon}
+		aihorizon.
+		\newblock{\em Machine Learning, Part II: Supervised and Unsupervised Learning.}
+		\newblock{\url{http://www.aihorizon.com/essays/generalai/supervised_unsupervised_machine_learning.htm.}}
+		\newblock{accessed 1 September, 2017}
 		
+		\bibitem{Anomaly}
+		V. Chandola, A. Banerjee, V. Kumar.
+		\newblock{\em Anomaly Detection: A Survey.}
+		\newblock{ACM Computing Surveys.}
+		\newblock{2009.}
+		\newblock{pp. 6-8}
     \selectlanguage{greek}
 		\bibitem{haykin}
 		\en{Simon Haykin}.

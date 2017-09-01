@@ -16,7 +16,7 @@
     one_H=zeros(size(H(:,:,1)));
 
 % fraud_rate=0.05; % Percentage of consumers who fraud
-fraud_rate=0.3; % Percentage of consumers who fraud
+fraud_rate=0.1; % Percentage of consumers who fraud
 [normal_idx, fraud_idx] = crossvalind('HoldOut', size(H,3), fraud_rate); % Keep in mind crossval floors the rate
 thiefs=find(fraud_idx==1);
 for i=1:size(thiefs,1)    

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/W32TeX) (preloaded format=pdflatex 2017.3.16)  31 AUG 2017 18:04
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/W32TeX) (preloaded format=pdflatex 2017.3.16)  1 SEP 2017 21:27
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1269,26 +1269,59 @@ Package: longtable 2014/10/28 v4.11 Multi-page Table package (DPC)
 \c@LT@chunks=\count146
 \LT@p@ftn=\toks40
 )
-\idxtitle@default=\toks41
+(c:/texlive/2016/texmf-dist/tex/latex/tabu/tabu.sty
+Package: tabu 2011/02/26 v2.8 - flexible LaTeX tabulars (FC)
+
+(c:/texlive/2016/texmf-dist/tex/latex/varwidth/varwidth.sty
+Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
+\@vwid@box=\box36
+\sift@deathcycles=\count147
+\@vwid@loff=\dimen128
+\@vwid@roff=\dimen129
+)
+\c@taburow=\count148
+\tabu@nbcols=\count149
+\tabu@cnt=\count150
+\tabu@Xcol=\count151
+\tabu@alloc=\count152
+\tabu@nested=\count153
+\tabu@target=\dimen130
+\tabu@spreadtarget=\dimen131
+\tabu@naturalX=\dimen132
+\tabucolX=\dimen133
+\tabu@Xsum=\dimen134
+\extrarowdepth=\dimen135
+\abovetabulinesep=\dimen136
+\belowtabulinesep=\dimen137
+\tabustrutrule=\dimen138
+\tabu@thebody=\toks41
+\tabu@footnotes=\toks42
+\tabu@box=\box37
+\tabu@arstrutbox=\box38
+\tabu@hleads=\box39
+\tabu@vleads=\box40
+\tabu@cellskip=\skip68
+)
+\idxtitle@default=\toks43
 \tf@default=\write3
 \openout3 = `main.idx'.
 
-Package index Info: Writing index file main.idx on input line 36.
-\idxtitle@en=\toks42
+Package index Info: Writing index file main.idx on input line 37.
+\idxtitle@en=\toks44
 \tf@en=\write4
 \openout4 = `main.edx'.
 
-Package index Info: Writing index file main.edx on input line 37.
-\c@definition=\count147
-\c@proposition=\count148
-\c@theorem=\count149
-\c@corollary=\count150
-\c@lemma=\count151
-\c@example=\count152
-\c@remark=\count153
-\c@notation=\count154
-\c@law=\count155
-LaTeX Font Info:    Try loading font information for LGR+cmr on input line 121.
+Package index Info: Writing index file main.edx on input line 38.
+\c@definition=\count154
+\c@proposition=\count155
+\c@theorem=\count156
+\c@corollary=\count157
+\c@lemma=\count158
+\c@example=\count159
+\c@remark=\count160
+\c@notation=\count161
+\c@law=\count162
+LaTeX Font Info:    Try loading font information for LGR+cmr on input line 122.
 
 
 (c:/texlive/2016/texmf-dist/tex/latex/cbfonts-fd/lgrcmr.fd
@@ -1310,48 +1343,48 @@ LaTeX Warning: Label `histogram' multiply defined.
 (./glossary.aux))
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 132.
-LaTeX Font Info:    ... okay on input line 132.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 132.
-LaTeX Font Info:    ... okay on input line 132.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 132.
-LaTeX Font Info:    ... okay on input line 132.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 132.
-LaTeX Font Info:    ... okay on input line 132.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 132.
-LaTeX Font Info:    ... okay on input line 132.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 132.
-LaTeX Font Info:    ... okay on input line 132.
-LaTeX Font Info:    Checking defaults for LGR/cmr/m/n on input line 132.
-LaTeX Font Info:    ... okay on input line 132.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 132.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 132.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 133.
+LaTeX Font Info:    ... okay on input line 133.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 133.
+LaTeX Font Info:    ... okay on input line 133.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 133.
+LaTeX Font Info:    ... okay on input line 133.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 133.
+LaTeX Font Info:    ... okay on input line 133.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 133.
+LaTeX Font Info:    ... okay on input line 133.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 133.
+LaTeX Font Info:    ... okay on input line 133.
+LaTeX Font Info:    Checking defaults for LGR/cmr/m/n on input line 133.
+LaTeX Font Info:    ... okay on input line 133.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 133.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 133.
 
  (c:/texlive/2016/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 132.
+LaTeX Font Info:    ... okay on input line 133.
 
 (c:/texlive/2016/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count156
-\scratchdimen=\dimen128
-\scratchbox=\box36
-\nofMPsegments=\count157
-\nofMParguments=\count158
-\everyMPshowfont=\toks43
-\MPscratchCnt=\count159
-\MPscratchDim=\dimen129
-\MPnumerator=\count160
-\makeMPintoPDFobject=\count161
-\everyMPtoPDFconversion=\toks44
+\scratchcounter=\count163
+\scratchdimen=\dimen139
+\scratchbox=\box41
+\nofMPsegments=\count164
+\nofMParguments=\count165
+\everyMPshowfont=\toks45
+\MPscratchCnt=\count166
+\MPscratchDim=\dimen140
+\MPnumerator=\count167
+\makeMPintoPDFobject=\count168
+\everyMPtoPDFconversion=\toks46
 )
 
 Package fmtcount Warning: Setting `\languagename' to `english'.
 (fmtcount)                Reason is that `\languagename' was `greek',
 (fmtcount)                but `greek' was not loaded by fmtcount,
 (fmtcount)                whereas `english' was the last language loaded by fmt
-count ;  on input line 132.
+count ;  on input line 133.
 
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: float package is loaded.
@@ -1368,26 +1401,26 @@ Package epstopdf Info: Source file: <pyrforos.eps>
 (epstopdf)                    size: 4473 bytes
 (epstopdf)             Command: <repstopdf --outfile=pyrforos-eps-converted-to.
 pdf pyrforos.eps>
-(epstopdf)             \includegraphics on input line 134.
+(epstopdf)             \includegraphics on input line 135.
 Package epstopdf Info: Output file is already uptodate.
 
 <pyrforos-eps-converted-to.pdf, id=1, 240.9pt x 240.9pt>
 File: pyrforos-eps-converted-to.pdf Graphic file (type pdf)
 
 <use pyrforos-eps-converted-to.pdf>
-Package pdftex.def Info: pyrforos-eps-converted-to.pdf used on input line 134.
+Package pdftex.def Info: pyrforos-eps-converted-to.pdf used on input line 135.
 (pdftex.def)             Requested size: 71.13188pt x 71.13104pt.
-LaTeX Font Info:    Try loading font information for U+msa on input line 134.
+LaTeX Font Info:    Try loading font information for U+msa on input line 135.
 
 (c:/texlive/2016/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 134.
+LaTeX Font Info:    Try loading font information for U+msb on input line 135.
 
 (c:/texlive/2016/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Try loading font information for U+lasy on input line 134.
+LaTeX Font Info:    Try loading font information for U+lasy on input line 135.
 
 (c:/texlive/2016/texmf-dist/tex/latex/base/ulasy.fd
 File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
@@ -1407,29 +1440,29 @@ Package epstopdf Info: Source file: <pyrforos.eps>
 (epstopdf)                    size: 4473 bytes
 (epstopdf)             Command: <repstopdf --outfile=pyrforos-eps-converted-to.
 pdf pyrforos.eps>
-(epstopdf)             \includegraphics on input line 134.
+(epstopdf)             \includegraphics on input line 135.
 Package epstopdf Info: Output file is already uptodate.
 File: pyrforos-eps-converted-to.pdf Graphic file (type pdf)
  <use pyrforos-eps-converted-to.pdf>
-Package pdftex.def Info: pyrforos-eps-converted-to.pdf used on input line 134.
+Package pdftex.def Info: pyrforos-eps-converted-to.pdf used on input line 135.
 (pdftex.def)             Requested size: 56.9055pt x 56.90556pt.
 
-Overfull \hbox (17.0pt too wide) in paragraph at lines 134--134
+Overfull \hbox (17.0pt too wide) in paragraph at lines 135--135
 []$[]$ 
  []
 
 [3]
-Underfull \hbox (badness 10000) in paragraph at lines 134--134
+Underfull \hbox (badness 10000) in paragraph at lines 135--135
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 134--134
+Underfull \hbox (badness 10000) in paragraph at lines 135--135
 
  []
 
 
-Overfull \hbox (17.0pt too wide) in paragraph at lines 134--134
+Overfull \hbox (17.0pt too wide) in paragraph at lines 135--135
 [][] 
  []
 
@@ -1442,14 +1475,14 @@ Package epstopdf Info: Source file: <pyrforos.eps>
 (epstopdf)                    size: 4473 bytes
 (epstopdf)             Command: <repstopdf --outfile=pyrforos-eps-converted-to.
 pdf pyrforos.eps>
-(epstopdf)             \includegraphics on input line 134.
+(epstopdf)             \includegraphics on input line 135.
 Package epstopdf Info: Output file is already uptodate.
 File: pyrforos-eps-converted-to.pdf Graphic file (type pdf)
  <use pyrforos-eps-converted-to.pdf>
-Package pdftex.def Info: pyrforos-eps-converted-to.pdf used on input line 134.
+Package pdftex.def Info: pyrforos-eps-converted-to.pdf used on input line 135.
 (pdftex.def)             Requested size: 56.9055pt x 56.90556pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 134--134
+Underfull \hbox (badness 10000) in paragraph at lines 135--135
 
  []
 
@@ -1472,7 +1505,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 134--134
 
 
 ] (./main.toc [7] [8]
-LaTeX Info: Redefining \anw@print on input line 137.
+LaTeX Info: Redefining \anw@print on input line 153.
 )
 \tf@toc=\write5
 \openout5 = `main.toc'.
@@ -1487,13 +1520,13 @@ LaTeX Info: Redefining \anw@print on input line 137.
  [11] [12
 
 ] (./main.lot
-LaTeX Info: Redefining \anw@print on input line 66.
-LaTeX Info: Redefining \anw@print on input line 67.
-LaTeX Info: Redefining \anw@print on input line 70.
-LaTeX Info: Redefining \anw@print on input line 71.
-LaTeX Info: Redefining \anw@print on input line 72.
-LaTeX Info: Redefining \anw@print on input line 73.
-LaTeX Info: Redefining \anw@print on input line 74.
+LaTeX Info: Redefining \anw@print on input line 76.
+LaTeX Info: Redefining \anw@print on input line 77.
+LaTeX Info: Redefining \anw@print on input line 80.
+LaTeX Info: Redefining \anw@print on input line 81.
+LaTeX Info: Redefining \anw@print on input line 82.
+LaTeX Info: Redefining \anw@print on input line 83.
+LaTeX Info: Redefining \anw@print on input line 84.
 )
 \tf@lot=\write7
 \openout7 = `main.lot'.
@@ -2032,17 +2065,39 @@ Package pdftex.def Info: ../../plots/ROC35.png used on input line 253.
 ]
 \textKappa \textepsilon \textphi \acctonos \textalpha \textlambda \textalpha \t
 extiota \textomicron  5.
-(./chapters/chapter05.tex) [59] [60
+(./chapters/chapter05.tex [59] [60] [61] [62] [63] [64] [65]
+Overfull \hbox (8.46246pt too wide) in paragraph at lines 273--273
+ []\OT1/cmr/m/n/10.95 Accuracy| 
+ []
 
-]
+
+Overfull \hbox (8.46246pt too wide) in paragraph at lines 288--288
+ []\OT1/cmr/m/n/10.95 Accuracy| 
+ []
+
+[66]
+<../../plots/systems/un_supervised.png, id=294, 289.83281pt x 363.60844pt>
+File: ../../plots/systems/un_supervised.png Graphic file (type png)
+
+<use ../../plots/systems/un_supervised.png>
+Package pdftex.def Info: ../../plots/systems/un_supervised.png used on input li
+ne 308.
+(pdftex.def)             Requested size: 256.08852pt x 284.53444pt.
+)
+Underfull \vbox (badness 5105) has occurred while \output is active []
+
+ [67]
+[68 <../../plots/systems/un_supervised.png>]
 \textKappa \textepsilon \textphi \acctonos \textalpha \textlambda \textalpha \t
 extiota \textomicron  6.
-(./chapters/chapter06.tex) [61] [62
+(./chapters/chapter06.tex) [69
+
+] [70
 
 ]
 \textKappa \textepsilon \textphi \acctonos \textalpha \textlambda \textalpha \t
 extiota \textomicron  7.
-(./chapters/chapter07.tex) [63] [64] (./main.bbl [65
+(./chapters/chapter07.tex) [71] [72] (./main.bbl [73
 
 ]
 Underfull \hbox (badness 10000) in paragraph at lines 102--105
@@ -2057,29 +2112,35 @@ cmtt/m/n/10.95 https : / / docs . oracle . com / cd / B28359 _ 01 /
  []
 
 
-Underfull \hbox (badness 6526) in paragraph at lines 176--181
+Underfull \hbox (badness 1776) in paragraph at lines 168--172
+[]\OT1/cmr/m/n/10.95 aihorizon.  \OT1/cmr/m/it/10.95 Ma-chine Learn-ing, Part I
+I: Su-per-vised and Un-su-per-vised Learn-
+ []
+
+[74]
+Underfull \hbox (badness 6526) in paragraph at lines 187--192
 []\LGR/cmr/m/n/10.95 Jodwr c Pa-na-go-Ôlhc.  \LGR/cmr/m/it/10.95 {Eg-qei-rÐdio}
  a-pì th RA-E gia thn a-nti-me-t¸pi-sh
  []
 
 
-Underfull \hbox (badness 3977) in paragraph at lines 176--181
+Underfull \hbox (badness 3977) in paragraph at lines 187--192
 \LGR/cmr/m/it/10.95 twn ìlo kai pe-ris-sìte-rwn reu-ma-to-klo-p¸n.  $\OT1/cmtt/
 m/n/10.95 https : / / energypress . gr / news /
  []
 
 
-Overfull \hbox (72.45738pt too wide) in paragraph at lines 176--181
+Overfull \hbox (72.45738pt too wide) in paragraph at lines 187--192
 \OT1/cmtt/m/n/10.95 egheiridio-[]apo-[]ti-[]rae-[]gia-[]tin-[]antimetopisi-[]to
 n-[]olo-[]kai-[]perissoteron-[]reymatoklopon.$
  []
 
-[66]) [67] [68
+) [75] [76
 
 ]
 \textPi \textalpha \textrho \acctonos \textalpha \textrho \texttau \texteta \te
 xtmu \textalpha  \MakeUppercase {\textalpha \anw@true \anw@print \relax }.
-LaTeX Info: Redefining \anw@print on input line 179.
+LaTeX Info: Redefining \anw@print on input line 180.
 (./chapters/appendixA.tex
 LaTeX Info: Redefining \anw@print on input line 24.
 LaTeX Info: Redefining \anw@print on input line 24.
@@ -2109,20 +2170,20 @@ LaTeX Info: Redefining \anw@print on input line 187.
 LaTeX Info: Redefining \anw@print on input line 187.
 LaTeX Info: Redefining \anw@print on input line 187.
 LaTeX Info: Redefining \anw@print on input line 187.
-) [69]
-LaTeX Info: Redefining \anw@print on input line 185.
- [70] [71]
+) [77]
+LaTeX Info: Redefining \anw@print on input line 186.
+ [78] [79]
 \openout2 = `glossary.aux'.
 
- (./glossary.tex [72
+ (./glossary.tex [80
 
 
-]) [73] [74
+]) [81] [82
 
 
 ]
 No file main.ind.
-[75] (./main.aux (./abstract.aux) (./glossary.aux))
+[83] (./main.aux (./abstract.aux) (./glossary.aux))
 
 LaTeX Warning: There were undefined references.
 
@@ -2131,13 +2192,13 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 8529 strings out of 493013
- 123743 string characters out of 6136993
- 216873 words of memory out of 5000000
- 11747 multiletter control sequences out of 15000+600000
- 27956 words of font info for 67 fonts, out of 8000000 for 9000
+ 9268 strings out of 493013
+ 134326 string characters out of 6136993
+ 232025 words of memory out of 5000000
+ 12475 multiletter control sequences out of 15000+600000
+ 28337 words of font info for 68 fonts, out of 8000000 for 9000
  1143 hyphenation exceptions out of 8191
- 59i,12n,94p,2566b,660s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 59i,13n,94p,2566b,660s stack positions out of 5000i,500n,10000p,200000b,80000s
 {c:/texlive/2016/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}<c:/tex
 live/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><c:/texlive/2016
 /texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2016/texmf-di
@@ -2168,11 +2229,12 @@ xn1728.pfb><c:/texlive/2016/texmf-dist/fonts/type1/public/cbfonts/grxn2074.pfb>
 <c:/texlive/2016/texmf-dist/fonts/type1/public/cbfonts/grxn2488.pfb><c:/texlive
 /2016/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb><c:/texlive/201
 6/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb><c:/texlive/2016/texmf-di
-st/fonts/type1/public/cm-super/sfrm1200.pfb>
-Output written on main.pdf (81 pages, 1924132 bytes).
+st/fonts/type1/public/cm-super/sfrm1200.pfb><c:/texlive/2016/texmf-dist/fonts/t
+ype1/public/cm-super/sfti1095.pfb>
+Output written on main.pdf (89 pages, 2001821 bytes).
 PDF statistics:
- 435 PDF objects out of 1000 (max. 8388607)
- 286 compressed objects within 3 object streams
+ 468 PDF objects out of 1000 (max. 8388607)
+ 307 compressed objects within 4 object streams
  0 named destinations out of 1000 (max. 500000)
- 141 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 146 words of extra memory for PDF output out of 10000 (max. 10000000)
 
