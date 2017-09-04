@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/W32TeX) (preloaded format=pdflatex 2017.3.16)  1 SEP 2017 21:27
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/W32TeX) (preloaded format=pdflatex 2017.3.16)  3 SEP 2017 21:12
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1334,12 +1334,6 @@ LaTeX Warning: Label `fig:betadays' multiply defined.
 
 LaTeX Warning: Label `sub@fig:betadays' multiply defined.
 
-
-LaTeX Warning: Label `mathworkstrend' multiply defined.
-
-
-LaTeX Warning: Label `histogram' multiply defined.
-
 (./glossary.aux))
 \openout1 = `main.aux'.
 
@@ -1520,23 +1514,24 @@ LaTeX Info: Redefining \anw@print on input line 153.
  [11] [12
 
 ] (./main.lot
-LaTeX Info: Redefining \anw@print on input line 76.
-LaTeX Info: Redefining \anw@print on input line 77.
-LaTeX Info: Redefining \anw@print on input line 80.
-LaTeX Info: Redefining \anw@print on input line 81.
-LaTeX Info: Redefining \anw@print on input line 82.
-LaTeX Info: Redefining \anw@print on input line 83.
-LaTeX Info: Redefining \anw@print on input line 84.
+LaTeX Info: Redefining \anw@print on input line 93.
+LaTeX Info: Redefining \anw@print on input line 94.
+LaTeX Info: Redefining \anw@print on input line 97.
+LaTeX Info: Redefining \anw@print on input line 98.
+LaTeX Info: Redefining \anw@print on input line 99.
+ [13]
+LaTeX Info: Redefining \anw@print on input line 100.
+LaTeX Info: Redefining \anw@print on input line 101.
 )
 \tf@lot=\write7
 \openout7 = `main.lot'.
 
- [13] [14
-
-]
+ [14]
 \textKappa \textepsilon \textphi \acctonos \textalpha \textlambda \textalpha \t
 extiota \textomicron  1.
-(./chapters/chapter01.tex [15] [16] [17]) [18] [19] [20
+(./chapters/chapter01.tex [15
+
+] [16] [17]) [18] [19] [20
 
 ]
 \textKappa \textepsilon \textphi \acctonos \textalpha \textlambda \textalpha \t
@@ -1871,9 +1866,6 @@ Overfull \hbox (85.34781pt too wide) in paragraph at lines 277--278
  []
 
 
-LaTeX Warning: Citation `stationarity' on page 39 undefined on input line 283.
-
-
 <../../plots/Trend_estimation/irregular_component_all.png, id=192, 1445.4pt x 7
 32.48656pt>
 File: ../../plots/Trend_estimation/irregular_component_all.png Graphic file (ty
@@ -2065,77 +2057,115 @@ Package pdftex.def Info: ../../plots/ROC35.png used on input line 253.
 ]
 \textKappa \textepsilon \textphi \acctonos \textalpha \textlambda \textalpha \t
 extiota \textomicron  5.
-(./chapters/chapter05.tex [59] [60] [61] [62] [63] [64] [65]
-Overfull \hbox (8.46246pt too wide) in paragraph at lines 273--273
- []\OT1/cmr/m/n/10.95 Accuracy| 
+(./chapters/chapter05.tex [59] [60] [61] [62]
+Underfull \vbox (badness 10000) detected at line 77
  []
 
 
-Overfull \hbox (8.46246pt too wide) in paragraph at lines 288--288
- []\OT1/cmr/m/n/10.95 Accuracy| 
+Underfull \vbox (badness 10000) detected at line 93
  []
+
+[63]
+Underfull \vbox (badness 10000) detected at line 106
+ []
+
+
+Underfull \vbox (badness 10000) detected at line 118
+ []
+
+
+Underfull \vbox (badness 10000) detected at line 132
+ []
+
+
+Underfull \vbox (badness 10000) detected at line 144
+ []
+
+[64]
+Underfull \vbox (badness 10000) detected at line 160
+ []
+
+
+Underfull \vbox (badness 10000) detected at line 172
+ []
+
+
+Underfull \vbox (badness 10000) detected at line 185
+ []
+
+[65]
+Underfull \vbox (badness 10000) detected at line 201
+ []
+
+
+Underfull \vbox (badness 10000) detected at line 214
+ []
+
+
+Underfull \vbox (badness 10000) detected at line 227
+ []
+
+
+Underfull \vbox (badness 10000) detected at line 245
+ []
+
+
+Overfull \vbox (16.80148pt too high) has occurred while \output is active []
+
 
 [66]
-<../../plots/systems/un_supervised.png, id=294, 289.83281pt x 363.60844pt>
+Overfull \hbox (1.84155pt too wide) in paragraph at lines 268--268
+ []\LGR/cmr/m/n/10.95 Qarakt.| 
+ []
+
+
+Overfull \hbox (8.46246pt too wide) in paragraph at lines 268--268
+ []\OT1/cmr/m/n/10.95 Accuracy| 
+ []
+
+
+Underfull \vbox (badness 10000) detected at line 268
+ []
+
+
+Overfull \hbox (1.84155pt too wide) in paragraph at lines 286--286
+ []\LGR/cmr/m/n/10.95 Qarakt.| 
+ []
+
+
+Overfull \hbox (8.46246pt too wide) in paragraph at lines 286--286
+ []\OT1/cmr/m/n/10.95 Accuracy| 
+ []
+
+
+Underfull \vbox (badness 10000) detected at line 286
+ []
+
+[67]
+<../../plots/systems/un_supervised.png, id=298, 289.83281pt x 363.60844pt>
 File: ../../plots/systems/un_supervised.png Graphic file (type png)
 
 <use ../../plots/systems/un_supervised.png>
 Package pdftex.def Info: ../../plots/systems/un_supervised.png used on input li
-ne 308.
+ne 306.
 (pdftex.def)             Requested size: 256.08852pt x 284.53444pt.
-)
-Underfull \vbox (badness 5105) has occurred while \output is active []
+ [68] [69 <../../plots/systems/un_supervised.png>]
 
- [67]
-[68 <../../plots/systems/un_supervised.png>]
+LaTeX Warning: Citation `PCA' on page 70 undefined on input line 328.
+
+) [70]
 \textKappa \textepsilon \textphi \acctonos \textalpha \textlambda \textalpha \t
 extiota \textomicron  6.
-(./chapters/chapter06.tex) [69
+(./chapters/chapter06.tex) [71
 
-] [70
+] [72
 
 ]
 \textKappa \textepsilon \textphi \acctonos \textalpha \textlambda \textalpha \t
 extiota \textomicron  7.
-(./chapters/chapter07.tex) [71] [72] (./main.bbl [73
+(./chapters/chapter07.tex) [73] [74] (./main.bbl [75
 
-]
-Underfull \hbox (badness 10000) in paragraph at lines 102--105
-[]\OT1/cmr/m/n/10.95 Commission for En-ergy Reg-u-la-tion.  $\OT1/cmtt/m/n/10.9
-5 http : / / www . cer . ie / about-[]cer /
- []
-
-
-Underfull \hbox (badness 2790) in paragraph at lines 115--119
-[]\OT1/cmr/m/n/10.95 Oracle  \OT1/cmr/m/it/10.95 Data Min-ing Con-cepts  $\OT1/
-cmtt/m/n/10.95 https : / / docs . oracle . com / cd / B28359 _ 01 /
- []
-
-
-Underfull \hbox (badness 1776) in paragraph at lines 168--172
-[]\OT1/cmr/m/n/10.95 aihorizon.  \OT1/cmr/m/it/10.95 Ma-chine Learn-ing, Part I
-I: Su-per-vised and Un-su-per-vised Learn-
- []
-
-[74]
-Underfull \hbox (badness 6526) in paragraph at lines 187--192
-[]\LGR/cmr/m/n/10.95 Jodwr c Pa-na-go-Ôlhc.  \LGR/cmr/m/it/10.95 {Eg-qei-rÐdio}
- a-pì th RA-E gia thn a-nti-me-t¸pi-sh
- []
-
-
-Underfull \hbox (badness 3977) in paragraph at lines 187--192
-\LGR/cmr/m/it/10.95 twn ìlo kai pe-ris-sìte-rwn reu-ma-to-klo-p¸n.  $\OT1/cmtt/
-m/n/10.95 https : / / energypress . gr / news /
- []
-
-
-Overfull \hbox (72.45738pt too wide) in paragraph at lines 187--192
-\OT1/cmtt/m/n/10.95 egheiridio-[]apo-[]ti-[]rae-[]gia-[]tin-[]antimetopisi-[]to
-n-[]olo-[]kai-[]perissoteron-[]reymatoklopon.$
- []
-
-) [75] [76
+] [76]) [77] [78
 
 ]
 \textPi \textalpha \textrho \acctonos \textalpha \textrho \texttau \texteta \te
@@ -2170,20 +2200,20 @@ LaTeX Info: Redefining \anw@print on input line 187.
 LaTeX Info: Redefining \anw@print on input line 187.
 LaTeX Info: Redefining \anw@print on input line 187.
 LaTeX Info: Redefining \anw@print on input line 187.
-) [77]
+) [79]
 LaTeX Info: Redefining \anw@print on input line 186.
- [78] [79]
+ [80] [81]
 \openout2 = `glossary.aux'.
 
- (./glossary.tex [80
+ (./glossary.tex [82
 
 
-]) [81] [82
+]) [83] [84
 
 
 ]
 No file main.ind.
-[83] (./main.aux (./abstract.aux) (./glossary.aux))
+[85] (./main.aux (./abstract.aux) (./glossary.aux))
 
 LaTeX Warning: There were undefined references.
 
@@ -2192,13 +2222,13 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 9268 strings out of 493013
- 134326 string characters out of 6136993
- 232025 words of memory out of 5000000
- 12475 multiletter control sequences out of 15000+600000
- 28337 words of font info for 68 fonts, out of 8000000 for 9000
+ 9305 strings out of 493013
+ 134743 string characters out of 6136993
+ 233718 words of memory out of 5000000
+ 12513 multiletter control sequences out of 15000+600000
+ 28169 words of font info for 67 fonts, out of 8000000 for 9000
  1143 hyphenation exceptions out of 8191
- 59i,13n,94p,2566b,660s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 59i,12n,94p,2566b,838s stack positions out of 5000i,500n,10000p,200000b,80000s
 {c:/texlive/2016/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}<c:/tex
 live/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><c:/texlive/2016
 /texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2016/texmf-di
@@ -2213,28 +2243,27 @@ st/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/texlive/2016/texmf-dist/fonts/ty
 pe1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2016/texmf-dist/fonts/type1/publi
 c/amsfonts/cm/cmsy6.pfb><c:/texlive/2016/texmf-dist/fonts/type1/public/amsfonts
 /cm/cmsy8.pfb><c:/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10
-.pfb><c:/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb><c:/
-texlive/2016/texmf-dist/fonts/type1/public/cbfonts/grmc1095.pfb><c:/texlive/201
-6/texmf-dist/fonts/type1/public/cbfonts/grmc1200.pfb><c:/texlive/2016/texmf-dis
-t/fonts/type1/public/cbfonts/grmc2074.pfb><c:/texlive/2016/texmf-dist/fonts/typ
-e1/public/cbfonts/grmi1095.pfb><c:/texlive/2016/texmf-dist/fonts/type1/public/c
-bfonts/grmn1000.pfb><c:/texlive/2016/texmf-dist/fonts/type1/public/cbfonts/grmn
-1095.pfb><c:/texlive/2016/texmf-dist/fonts/type1/public/cbfonts/grmn1200.pfb><c
-:/texlive/2016/texmf-dist/fonts/type1/public/cbfonts/grmo1095.pfb><c:/texlive/2
-016/texmf-dist/fonts/type1/public/cbfonts/grxc1200.pfb><c:/texlive/2016/texmf-d
-ist/fonts/type1/public/cbfonts/grxn1095.pfb><c:/texlive/2016/texmf-dist/fonts/t
-ype1/public/cbfonts/grxn1200.pfb><c:/texlive/2016/texmf-dist/fonts/type1/public
-/cbfonts/grxn1440.pfb><c:/texlive/2016/texmf-dist/fonts/type1/public/cbfonts/gr
-xn1728.pfb><c:/texlive/2016/texmf-dist/fonts/type1/public/cbfonts/grxn2074.pfb>
-<c:/texlive/2016/texmf-dist/fonts/type1/public/cbfonts/grxn2488.pfb><c:/texlive
-/2016/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb><c:/texlive/201
-6/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb><c:/texlive/2016/texmf-di
-st/fonts/type1/public/cm-super/sfrm1200.pfb><c:/texlive/2016/texmf-dist/fonts/t
-ype1/public/cm-super/sfti1095.pfb>
-Output written on main.pdf (89 pages, 2001821 bytes).
+.pfb><c:/texlive/2016/texmf-dist/fonts/type1/public/cbfonts/grmc1095.pfb><c:/te
+xlive/2016/texmf-dist/fonts/type1/public/cbfonts/grmc1200.pfb><c:/texlive/2016/
+texmf-dist/fonts/type1/public/cbfonts/grmc2074.pfb><c:/texlive/2016/texmf-dist/
+fonts/type1/public/cbfonts/grmi1095.pfb><c:/texlive/2016/texmf-dist/fonts/type1
+/public/cbfonts/grmn1000.pfb><c:/texlive/2016/texmf-dist/fonts/type1/public/cbf
+onts/grmn1095.pfb><c:/texlive/2016/texmf-dist/fonts/type1/public/cbfonts/grmn12
+00.pfb><c:/texlive/2016/texmf-dist/fonts/type1/public/cbfonts/grmo1095.pfb><c:/
+texlive/2016/texmf-dist/fonts/type1/public/cbfonts/grxc1200.pfb><c:/texlive/201
+6/texmf-dist/fonts/type1/public/cbfonts/grxn1095.pfb><c:/texlive/2016/texmf-dis
+t/fonts/type1/public/cbfonts/grxn1200.pfb><c:/texlive/2016/texmf-dist/fonts/typ
+e1/public/cbfonts/grxn1440.pfb><c:/texlive/2016/texmf-dist/fonts/type1/public/c
+bfonts/grxn1728.pfb><c:/texlive/2016/texmf-dist/fonts/type1/public/cbfonts/grxn
+2074.pfb><c:/texlive/2016/texmf-dist/fonts/type1/public/cbfonts/grxn2488.pfb><c
+:/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb><c:/te
+xlive/2016/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb><c:/texlive/2016
+/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb><c:/texlive/2016/texmf-dis
+t/fonts/type1/public/cm-super/sfti1095.pfb>
+Output written on main.pdf (91 pages, 1987794 bytes).
 PDF statistics:
- 468 PDF objects out of 1000 (max. 8388607)
- 307 compressed objects within 4 object streams
+ 471 PDF objects out of 1000 (max. 8388607)
+ 309 compressed objects within 4 object streams
  0 named destinations out of 1000 (max. 500000)
  146 words of extra memory for PDF output out of 10000 (max. 10000000)
 

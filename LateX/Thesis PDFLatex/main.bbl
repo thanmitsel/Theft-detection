@@ -1,208 +1,192 @@
 \begin{thebibliography}{10}
-    \selectlanguage{english}
-		\bibitem{malaysia}
-		Malay Mail.
-		\newblock{\em Tenaga out to short-circuit electricity thefts.}
-		\newblock{1999.}
-		\newblock{January 1.}
-		
-		\bibitem{theftanalysis}
-		Thomas B. Smith.
-		\newblock{\em Electricity theft: a comparative analysis}
-		\newblock{Energy Policy}
-		\newblock{Volume 32. Issue 18.}
-		\newblock{2004.}
-		\newblock{pp. 2067-2076.}
-		
-		\bibitem{netherlands}
-		P. Kadurek, J. Blom, J. F. G. Cobben and W.L.Kling.
-		\newblock{\em Theft detection and smart metering practices and expectations in the Netherlands}
-		\newblock{Innovative Smart Grid Technologies Conference Europe.}
-		\newblock{2010 IEEE PES.}
-		\newblock{2010.}
-		\newblock{pp. 1}
-		
-		\bibitem{mathworkstrend}
-		Mathworks.
-		\newblock{\em Parametric Trend Estimation.}
-		\newblock{2017.}
-		\newblock{\url{https://www.mathworks.com/help/econ/parametric-trend-estimation.html.}}
-		\newblock{(accessed 4 August 2017).}
-		
-		\bibitem{timeseriesanalysis}
-		George E. P. Box, Gwilym M. Jenkins, Gregory C. Reinsel, Greta M. Ljung.
-		\newblock {\em Time Series Analysis: Forecasting and Control}.
-		\newblock New Jersey: Wiley, 2016.
-		\newblock{pp. 310-324.}
-		
-		\bibitem{mathworkstrend}
-		Rob J. Hyndman and George Athanasopoulos.
-		\newblock{\em Forecasting: principles and practice.}
-		\newblock{2012.}
-		\newblock{\url{https://www.otexts.org/fpp.}}
-		\newblock{(accessed 4 August, 2017).}
-		
-		\bibitem{india}
-		S. De, R. Anand, A. Naveen and S. Moinuddin.
-		\newblock{\em E-metering solution for checking energy thefts and streamlining revenue collection in India.}
-		\newblock{Transmission and Distribution Conference and Exposition.}
-		\newblock{2003 IEEE PES}
-		\newblock{2003.}
-		\newblock{pp. 654-658 vol.2.}
-		
-		\bibitem{regulation}
-		ERGEG.
-		\newblock{\em Smart Metering with a Focus on Electricity Regulation.}
-		\newblock{E07-RMF-04-03.}
-		\newblock{2007.}
-		
-		\bibitem{tacis}
-		Tacis.
-		\newblock{\em Improving Residential Electricity Services.}
-		\newblock{Tacis Technical Dissemination Project.}
-		\newblock{\en{\url{http://www.tacisinfo.ru.}}}
-		\newblock{1998.}
-		
-		\bibitem{mkhwanazi}
-		Mkhwanazi.
-		\newblock{\em Electricity as a birthright and the problem of non-payment.}
-		\newblock{Third Annual South Africa Revenue Protection Conference.}
-		\newblock{1999.}
-		
-		\bibitem{artoftradeoff}
-		Micheal J. North and Charles M. Macal.
-		\newblock {\em Managing Business Complexity: Discovering Strategic Solutions with Agent-Based Modeling and Simulation.}
-		\newblock New York: Oxford University Press, 2007.
-		\newblock{ch. 2, Other angles on Nondeterminism}
-		
-		\bibitem{reduceloss}
-		P. Antmann.
-		\newblock{\em Reducing Technical and Non-Technical Losses in the Power Sector. }
-		\newblock{Transmission and Distribution Conference and Exposition.}
-		\newblock{World Bank, Washington, DC.}
-		\newblock{2009.}
-		\newblock{pp. 24-26 vol.2.}
-		
-		\bibitem{learningstyle}
-		Jason Brownlee.
-		\newblock{\em A Tour of Machine Learning Algorithms.}
-		\newblock{2013.}
-		\newblock{\url{http://machinelearningmastery.com/a-tour-of-machine-learning-algorithms/.}}
-		\newblock{(accessed 7 August, 2017).}
-		
-		\bibitem{propab}
-		S. Axelsson.
-		\newblock{\em The Base-Rate Fallacy and its Implications for the Difficulty of Intrusion Detection.}
-		\newblock{CCS '99 Proceedings of the 6th ACM conference on Computer and communications security.}
-		\newblock{Computer and Communications Security.}
-		\newblock{1999.}
-		\newblock{pp. 1-7}
-		
-		\bibitem{cer}
-		Commission for Energy Regulation.
-		\newblock{\url{http://www.cer.ie/about-cer/general-information.}}
-		\newblock{accessed 24 August, 2017.}
-		
-		\bibitem{rawdataNN}
-		V. Ford, A. Siraj and W. Eberle.
-		\newblock{\em Smart Grid Energy Fraud Detection Using Articial Neural Network.}
-		\newblock{Computational Intelligence Applications in Smart Grid (CIASG).}
-		\newblock{2014 IEEE Symposium}
-		\newblock{2014.}
-		\newblock{pp. 2-4.}
-		
-		\bibitem{miningOracle}
-		Oracle
-		\newblock{\em Data Mining Concepts}
-		\newblock{\url{https://docs.oracle.com/cd/B28359_01/datamine.111/b28129/process.htm#DMCON002.}}
-		\newblock{accessed 24 August, 2017}
-		
-		\bibitem{histogram}
-		James J. Filliben and Alan Heckert.
-		\newblock{\em NIST/SEMATECH eHandbook of Statistical Methods.}
-		\newblock{\url{http://www.itl.nist.gov/div898/handbook/eda/section3/histogra.htm.}}
-		\newblock{(accessed 25 August, 2017).}
-		
-		\bibitem{histogram}
-		Paul Johnson and Matt Beverlin.
-		\newblock{\em Beta Distribution.}
-		\newblock{2013.}
-		\newblock{\url{http://pj.freefaculty.org/guides/stat/Distributions/DistributionWriteups/Beta/Beta.pdf.}}
-		\newblock{(accessed 25 August, 2017).}
-		
-		\bibitem{conspatterns}
-		Paria Jokar, Nasim Arianpoo and Victor C. M. Leung.
-		\newblock{\em Electricity Theft Detection in AMI Using Customers’ Consumption Patterns.}
-		\newblock{ IEEE Transactions on Smart Grid.}
-		\newblock{2016.}
-		\newblock{pp. 216-226, vol. 7}
-		
-		\bibitem{liblinearguide}
-		Rong-En Fan, Kai-Wei Chang, Cho-Jui Hsieh, Xiang-Rui Wang and Chih-Jen Lin.
-		\newblock{\em LIBLINEAR: A Library for Large Linear Classification.}
-		\newblock{Journal of Machine Learning Research.}
-		\newblock{2008.}
-		\newblock{pp. 1871-1874 vol. 9}
-		
-		\bibitem{liblinearreport}
-		C.-Y. Hsia, Y. Zhu and Chih-Jen Lin.
-		\newblock{\em A Study on Trust Region Update Rules in Newton Methods for Large-scale Linear Classification.}
-		\newblock{JMLR: Workshop and Conference Proceedings.}
-		\newblock{2017.}
-		
-		\bibitem{giwrgis}
-		G. Messinis and  A. Dimeas.
-		\newblock{\em Utilizing smart meter data for electricity fraud.}
-		\newblock{First South East European Region CIGRE Conference.}
-		\newblock{2016.}
-		\newblock{pp. 7}
-		
-		\bibitem{libsvmguide}
-		C.-W. Hsu, C.-C. Chang and C.-J. Lin.
-		\newblock{\em A Practical Guide to Support Vector Classification.}
-		\newblock{Talk at University of Freiburg.}
-		\newblock{2003.}
-		\newblock{pp. 1-3 , 12-16}
-		
-		\bibitem{aihorizon}
-		aihorizon.
-		\newblock{\em Machine Learning, Part II: Supervised and Unsupervised Learning.}
-		\newblock{\url{http://www.aihorizon.com/essays/generalai/supervised_unsupervised_machine_learning.htm.}}
-		\newblock{accessed 1 September, 2017}
-		
-		\bibitem{Anomaly}
-		V. Chandola, A. Banerjee, V. Kumar.
-		\newblock{\em Anomaly Detection: A Survey.}
-		\newblock{ACM Computing Surveys.}
-		\newblock{2009.}
-		\newblock{pp. 6-8}
-    \selectlanguage{greek}
-		\bibitem{haykin}
-		\en{Simon Haykin}.
-		\newblock{\em{Νευρωνικά Δίκτυα και Μηχανική Μάθηση.}}
-		\newblock{Αθήνα: Παπασωτηρίου 2010.}
-		\newblock{\en{pp. 276-280.}}
-		
-		\bibitem{energypress}
-		Θοδωρής Παναγούλης.
-		\newblock{\em «Εγχειρίδιο» από τη ΡΑΕ για την αντιμετώπιση των όλο και περισσότερων ρευματοκλοπών.}
-		\newblock{\en{\url{https://energypress.gr/news/egheiridio-apo-ti-rae-gia-tin-antimetopisi-ton-olo-kai-perissoteron-reymatoklopon.}}}
-		\newblock{\en{accessed 6 August 2017.}}
-		\newblock{2017.}
-		
-		\bibitem{rae}
-		Ρυθμιστική Αρχή Ενέργειας.
-		\newblock{\em Εγχειρίδιο Ρευματοκλοπών σε εφαρμογή της παραγράφου 23 του άρθρου 95 του Κώδικα Διαχείρισης Δικτύου Διαχείρισης Διανομής Ηλεκτρικής Ενέργειας.}
-		\newblock{\en{Athens, 30 May 2017.}}
-		%\newblock{\en{\url{https://www.lawspot.gr/sites/default/files/images/nea/misc/reumatoklopes-rae.pdf.}}}
-		\newblock{Εφημερίδα της κυβερνήσεως της Ελληνικής Δημοκρατίας.}
-		\newblock{\en{pp. 1871 vol.2.}}
-		
-		
-		\bibitem{dehfraud}
-		Δημόσια Επιχείρηση Ηλεκτρισμού.
-		\newblock{\em{To Κόστος των Ρευματοκλοπών.}}
-		\newblock{\en{Athens, 5 May 2017.}}
-		\newblock{Δελτίο τύπου 552017.}
-		
+\selectlanguage{english}
+\bibitem{reduceloss}
+P.~Antmann.
+\newblock Reducing technical and non-technical losses in the power sector.
+\newblock In {\em Transmission and Distribution Conference and Exposition},
+  pages 24--26. World Bank, 2009.
+
+\bibitem{propab}
+S.~Axelsson.
+\newblock The base-rate fallacy and its implications for the difficulty of
+  intrusion detection.
+\newblock In {\em CCS '99 Proceedings of the 6th ACM conference on Computer and
+  communications security}, pages 1--7. Computer and Communications Security,
+  1999.
+
+\bibitem{learningstyle}
+Jason Brownlee.
+\newblock A tour of machine learning algorithms, 2013.
+\newblock Accessed: 5 August 2017.
+
+\bibitem{liblinearreport}
+Y.~Zhu C.-Y.~Hsia and Chih-Jen Lin.
+\newblock A study on trust region update rules in newton methods for
+  large-scale linear classification.
+\newblock Technical report, JMLR, 2017.
+
+\bibitem{regulation}
+ERGEG.
+\newblock {\em Smart Metering with a Focus on Electricity Regulation}, 2007.
+\newblock E07-RMF-04-03.
+
+\bibitem{histogram}
+James~J. Filliben and Alan Heckert.
+\newblock Nist/sematech ehandbook of statistical methods.
+\newblock Accessed: 25 August 2017.
+
+\bibitem{cer}
+Commission for Energy~Regulation.
+\newblock General information.
+\newblock Accessed: 24 August 2017.
+
+\bibitem{timeseriesanalysis}
+Gregory C.~Reinsel George E. P.~Box, Gwilym M.~Jenkins and Greta~M. Ljung.
+\newblock {\em Time Series Analysis: Forecasting and Control}.
+\newblock Wiley, 2016.
+
+\bibitem{stationarity}
+Rob~J. Hyndman and George Athanasopoulos.
+\newblock Forecasting: principles and practice, 2012.
+\newblock Accessed: 5 August 2017.
+
+\bibitem{aihorizon}
+Paul Johnson and Matt Beverlin.
+\newblock Machine learning, part ii: Supervised and unsupervised learning.
+\newblock Accessed: 1 September 2017.
+
+\bibitem{betadstr}
+Paul Johnson and Matt Beverlin.
+\newblock Beta distribution, 2013.
+
+\bibitem{mathworkstrend}
+Mathworks.
+\newblock Parametric trend estimation, 2017.
+\newblock Accessed: 4 August 2017.
+
+\bibitem{giwrgis}
+G.~Messinis and A.~Dimeas.
+\newblock Utilizing smart meter data for electricity fraud.
+\newblock In {\em First South East European Region CIGRE Conference}, pages
+  2--4. CIGRE, 2014.
+
+\bibitem{mkhwanazi}
+Mkhwanazi.
+\newblock Electricity as a birthright and the problem of non-payment.
+\newblock In {\em Third Annual South Africa Revenue Protection Conference},
+  1999.
+
+\bibitem{malaysia}
+Kiambang Nik.
+\newblock Tenaga out to short-circuit electricity thefts.
+\newblock 1 1999.
+
+\bibitem{artoftradeoff}
+Micheal~J. North and Charles~M. Macal.
+\newblock {\em Managing Business Complexity: Discovering Strategic Solutions
+  with Agent-Based Modeling and Simulation}.
+\newblock Oxford University Press, New York, 2007.
+\newblock ch. 2, Other angles on Nondeterminism.
+
+\bibitem{miningOracle}
+Oracle.
+\newblock Data mining concepts.
+\newblock Accessed: 24 August 2017.
+
+\bibitem{netherlands}
+J.~F. G.~Cobben P.~Kadurek, J.~Blom and W.L.Kling.
+\newblock Theft detection and smart metering practices and expectations in the
+  netherlands.
+\newblock {\em Innovative Smart Grid Technologies Conference Europe}, pages
+  1--2, 2010.
+\newblock IEEE.
+
+\bibitem{netherland}
+J.~F. G.~Cobben P.~Kadurek, J.~Blom and W.L.Kling.
+\newblock Theft detection and smart metering practices and expectations in the
+  netherlands.
+\newblock In {\em Innovative Smart Grid Technologies Conference Europe},
+  page~1. IEEE, 2010.
+
+\bibitem{libsvmguide}
+Nasim~Arianpoo Paria~Jokar and Victor C.~M. Leung.
+\newblock A practical guide to support vector classification.
+\newblock 7:1--3 12--16, 2003.
+\newblock University of Freiburg.
+
+\bibitem{conspatterns}
+Nasim~Arianpoo Paria~Jokar and Victor C.~M. Leung.
+\newblock Electricity theft detection in ami using customers’ consumption
+  patterns.
+\newblock {\em Innovative Smart Grid Technologies Conference Europe},
+  7:216--226, 2016.
+\newblock IEEE.
+
+\bibitem{liblinearguide}
+Cho-Jui Hsieh Xiang-Rui~Wang Rong-En~Fan, Kai-Wei~Chang and Chih-Jen Lin.
+\newblock Liblinear: A library for large linear classification.
+\newblock {\em Journal of Machine Learning Research}, 9:1871--1874, 2008.
+
+\bibitem{india}
+A.~Naveen S.~De, R.~Anand and S.~Moinuddin.
+\newblock E-metering solution for checking energy thefts and streamlining
+  revenue collection in india.
+\newblock In {\em Transmission and Distribution Conference and Exposition},
+  pages 654--658. IEEE, 2003.
+
+\bibitem{PCAtutorial}
+Jon Shlens.
+\newblock {\em A Tutorial on Principal Component Analysis}.
+\newblock PhD thesis, Princeton University, 1993.
+
+\bibitem{theftanalysis}
+Thomas~B. Smith.
+\newblock Electricity theft: a comparative analysis.
+\newblock {\em Energy Policy}, 32(18):2067--2076, 2004.
+
+\bibitem{tacis}
+TACIS.
+\newblock {\em Improving Residential Electricity Services}, 1998.
+\newblock Tacis Technical Dissemination Project.
+
+\bibitem{Anomaly}
+V.~Kumar V.~Chandola, A.~Banerjee.
+\newblock Anomaly detection: A survey.
+\newblock Technical report, ACM Computing Surveys, 2009.
+
+\bibitem{rawdataNN}
+A.~Siraj V.~Ford and W.~Eberle.
+\newblock Smart grid energy fraud detection using articial neuralcomputational
+  intelligence applications in smart grid (ciasg)transmission and distribution
+  conference and exposition.
+\newblock pages 2--4. IEEE, 2014.
+\selectlanguage{greek}
+\bibitem{haykin}
+Simon Haykin.
+\newblock {\em Νευρωνικά Δίκτυα και Μηχανική
+  Μάθηση}.
+\newblock Παπασωτηρίου, 2010.
+
+
+\bibitem{dehfraud}
+ΔΕΗ.
+\newblock {\em To Κόστος των Ρευματοκλοπών}, 5 2017.
+\newblock Δελτίο τύπου 552017.
+
+\bibitem{energypress}
+Θοδωρής Παναγούλης.
+\newblock «Εγχειρίδιο» από τη ΡΑΕ για την
+  αντιμετώπιση των όλο και περισσότερων
+  ρευματοκλοπών.
+\newblock Accessed: 6 August 2017.
+
+\bibitem{rae}
+ΡΑΕ.
+\newblock {\em Εγχειρίδιο Ρευματοκλοπών σε
+  εφαρμογή της παραγράφου 23 του άρθρου 95 του
+  Κώδικα Διαχείρισης Δικτύου Διαχείρισης
+  Διανομής Ηλεκτρικής Ενέργειας}, 5 2017.
+\newblock Εφημερίδα της κυβερνήσεως της
+  Ελληνικής Δημοκρατίας.
+
 \end{thebibliography}
