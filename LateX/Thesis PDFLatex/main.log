@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/W32TeX) (preloaded format=pdflatex 2017.3.16)  4 SEP 2017 19:37
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/W32TeX) (preloaded format=pdflatex 2017.3.16)  5 SEP 2017 19:58
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1334,6 +1334,12 @@ LaTeX Warning: Label `fig:betadays' multiply defined.
 
 LaTeX Warning: Label `sub@fig:betadays' multiply defined.
 
+
+LaTeX Warning: Label `fig:linearFPRintensity' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:linearFPRintensity' multiply defined.
+
 (./glossary.aux))
 \openout1 = `main.aux'.
 
@@ -1499,7 +1505,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 135--135
 
 
 ] (./main.toc [7] [8]
-LaTeX Info: Redefining \anw@print on input line 157.
+LaTeX Info: Redefining \anw@print on input line 159.
 )
 \tf@toc=\write5
 \openout5 = `main.toc'.
@@ -1514,14 +1520,14 @@ LaTeX Info: Redefining \anw@print on input line 157.
  [11] [12
 
 ] (./main.lot
-LaTeX Info: Redefining \anw@print on input line 96.
-LaTeX Info: Redefining \anw@print on input line 97.
-LaTeX Info: Redefining \anw@print on input line 100.
-LaTeX Info: Redefining \anw@print on input line 101.
- [13]
+LaTeX Info: Redefining \anw@print on input line 98.
+LaTeX Info: Redefining \anw@print on input line 99.
 LaTeX Info: Redefining \anw@print on input line 102.
 LaTeX Info: Redefining \anw@print on input line 103.
+ [13]
 LaTeX Info: Redefining \anw@print on input line 104.
+LaTeX Info: Redefining \anw@print on input line 105.
+LaTeX Info: Redefining \anw@print on input line 106.
 )
 \tf@lot=\write7
 \openout7 = `main.lot'.
@@ -2163,38 +2169,98 @@ LaTeX Warning: Citation `clustercomparison' on page 69 undefined on input line
 338.
 
 [69]
-<../../plots/systems/un_supervised.png, id=306, 289.83281pt x 363.60844pt>
+<../../plots/systems/un_supervised.png, id=306, 588.69937pt x 456.20438pt>
 File: ../../plots/systems/un_supervised.png Graphic file (type png)
 
 <use ../../plots/systems/un_supervised.png>
 Package pdftex.def Info: ../../plots/systems/un_supervised.png used on input li
 ne 354.
-(pdftex.def)             Requested size: 256.08852pt x 284.53444pt.
+(pdftex.def)             Requested size: 256.07317pt x 170.71423pt.
  [70]
 Underfull \vbox (badness 10000) detected at line 376
  []
 
 [71 <../../plots/systems/un_supervised.png>]
+LaTeX Info: Redefining \anw@print on input line 383.
 
-LaTeX Warning: Citation `PCA' on page 72 undefined on input line 392.
+<../../plots/gr_bigres_dr_intensity_un_sup.png, id=316, 421.575pt x 316.18124pt
+>
+File: ../../plots/gr_bigres_dr_intensity_un_sup.png Graphic file (type png)
+ <use ../../plots/gr_bigres_dr_intensity_un_sup.png>
+Package pdftex.def Info: ../../plots/gr_bigres_dr_intensity_un_sup.png used on 
+input line 388.
+(pdftex.def)             Requested size: 199.1695pt x 142.26576pt.
 
-[72]
+Overfull \hbox (28.45557pt too wide) in paragraph at lines 388--389
+[][] 
+ []
 
-LaTeX Warning: Citation `Plotly' on page 73 undefined on input line 413.
+LaTeX Info: Redefining \anw@print on input line 389.
+LaTeX Info: Redefining \anw@print on input line 389.
+LaTeX Info: Redefining \anw@print on input line 389.
+LaTeX Info: Redefining \anw@print on input line 389.
 
-) [73] [74
+<../../plots/gr_bigres_fpr_intensity_un_sup.png, id=317, 421.575pt x 316.18124p
+t>
+File: ../../plots/gr_bigres_fpr_intensity_un_sup.png Graphic file (type png)
+ <use ../../plots/gr_bigres_fpr_intensity_un_sup.png>
+Package pdftex.def Info: ../../plots/gr_bigres_fpr_intensity_un_sup.png used on
+ input line 394.
+(pdftex.def)             Requested size: 199.1695pt x 142.26576pt.
+
+Overfull \hbox (28.45557pt too wide) in paragraph at lines 394--395
+[][] 
+ []
+
+LaTeX Info: Redefining \anw@print on input line 395.
+LaTeX Info: Redefining \anw@print on input line 395.
+LaTeX Info: Redefining \anw@print on input line 395.
+LaTeX Info: Redefining \anw@print on input line 395.
+
+Underfull \vbox (badness 10000) detected at line 416
+ []
+
+<../../plots/confident_predictions.png, id=318, 421.575pt x 316.18124pt>
+File: ../../plots/confident_predictions.png Graphic file (type png)
+
+<use ../../plots/confident_predictions.png>
+Package pdftex.def Info: ../../plots/confident_predictions.png used on input li
+ne 423.
+(pdftex.def)             Requested size: 199.1695pt x 142.26576pt.
+
+Overfull \vbox (217.26001pt too high) has occurred while \output is active []
+
+
+[72 <../../plots/gr_bigres_dr_intensity_un_sup.png (PNG copy)> <../../plots/gr_
+bigres_fpr_intensity_un_sup.png (PNG copy)>]
+<../../plots/systems/semi_supervised.png, id=322, 589.4522pt x 712.16063pt>
+File: ../../plots/systems/semi_supervised.png Graphic file (type png)
+
+<use ../../plots/systems/semi_supervised.png>
+Package pdftex.def Info: ../../plots/systems/semi_supervised.png used on input 
+line 430.
+(pdftex.def)             Requested size: 256.07684pt x 284.52234pt.
+ [73 <../../plots/confident_predictions.png (PNG copy)>]
+
+LaTeX Warning: Citation `PCA' on page 74 undefined on input line 445.
+
+[74 <../../plots/systems/semi_supervised.png>]
+
+LaTeX Warning: Citation `Plotly' on page 75 undefined on input line 466.
+
+) [75] [76
 
 ]
 \textKappa \textepsilon \textphi \acctonos \textalpha \textlambda \textalpha \t
 extiota \textomicron  6.
-(./chapters/chapter06.tex) [75] [76
+(./chapters/chapter06.tex) [77] [78
 
 ]
 \textKappa \textepsilon \textphi \acctonos \textalpha \textlambda \textalpha \t
 extiota \textomicron  7.
-(./chapters/chapter07.tex) [77] [78] (./main.bbl [79
+(./chapters/chapter07.tex) [79] [80] (./main.bbl [81
 
-] [80]) [81] [82
+] [82]) [83] [84
 
 ]
 \textPi \textalpha \textrho \acctonos \textalpha \textrho \texttau \texteta \te
@@ -2229,20 +2295,20 @@ LaTeX Info: Redefining \anw@print on input line 187.
 LaTeX Info: Redefining \anw@print on input line 187.
 LaTeX Info: Redefining \anw@print on input line 187.
 LaTeX Info: Redefining \anw@print on input line 187.
-) [83]
+) [85]
 LaTeX Info: Redefining \anw@print on input line 186.
- [84] [85]
+ [86] [87]
 \openout2 = `glossary.aux'.
 
- (./glossary.tex [86
+ (./glossary.tex [88
 
 
-]) [87] [88
+]) [89] [90
 
 
 ]
 No file main.ind.
-[89] (./main.aux (./abstract.aux) (./glossary.aux))
+[91] (./main.aux (./abstract.aux) (./glossary.aux))
 
 LaTeX Warning: There were undefined references.
 
@@ -2251,10 +2317,10 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 9310 strings out of 493013
- 134808 string characters out of 6136993
- 233828 words of memory out of 5000000
- 12518 multiletter control sequences out of 15000+600000
+ 9336 strings out of 493013
+ 135785 string characters out of 6136993
+ 233877 words of memory out of 5000000
+ 12540 multiletter control sequences out of 15000+600000
  28169 words of font info for 67 fonts, out of 8000000 for 9000
  1143 hyphenation exceptions out of 8191
  59i,12n,94p,2566b,838s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -2291,10 +2357,10 @@ texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb><c:/texlive/2016/texm
 f-dist/fonts/type1/public/cm-super/sfrm1095.pfb><c:/texlive/2016/texmf-dist/fon
 ts/type1/public/cm-super/sfrm1200.pfb><c:/texlive/2016/texmf-dist/fonts/type1/p
 ublic/cm-super/sfti1095.pfb>
-Output written on main.pdf (95 pages, 2020423 bytes).
+Output written on main.pdf (97 pages, 2268642 bytes).
 PDF statistics:
- 491 PDF objects out of 1000 (max. 8388607)
- 323 compressed objects within 4 object streams
+ 503 PDF objects out of 1000 (max. 8388607)
+ 328 compressed objects within 4 object streams
  0 named destinations out of 1000 (max. 500000)
- 146 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 166 words of extra memory for PDF output out of 10000 (max. 10000000)
 

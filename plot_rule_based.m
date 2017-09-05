@@ -11,16 +11,19 @@
 
     %% Fraud Initialization
     % Create Fraud data
+    intensity_vector=0:0.01:1;
+for int_idx=1:length(intensity_vector)
     F_data3D=H;
     Y2D=zeros(size(H,1),size(H,3));
     one_H=zeros(size(H(:,:,1)));
+
 
 % fraud_rate=0.05; % Percentage of consumers who fraud
 fraud_rate=0.1; % Percentage of consumers who fraud
 [normal_idx, fraud_idx] = crossvalind('HoldOut', size(H,3), fraud_rate); % Keep in mind crossval floors the rate
 thiefs=find(fraud_idx==1);
 for i=1:size(thiefs,1)    
-    intensity=1-betarnd(6,3); % beta distribution
+    intensity=1-intensity_vector(1,int_idx); % beta distribution
     dstart=floor(normrnd(size(one_H,1)/2,size(one_H,1)/6.5)); % normal distribution
     while dstart<1 || dstart>(size(one_H,1)-1)
         dstart=floor(normrnd(size(one_H,1)/2,size(one_H,1)/6.5)); % normal distribution
@@ -38,8 +41,8 @@ end
 daily_consumption3D=sum(F_data3D,2);
 daily_consumption=permute(daily_consumption3D,[3 1 2]); % cons x 365 days    
 daily_consumption_t=daily_consumption';    
-prompt=('Apply horizontal normalization?\n 0 w/o norm, 1 with norm [-1,1], 2 with norm [0,1]\n');    
-apply_normalization=input(prompt);   
+ 
+apply_normalization=1;   
 if apply_normalization==0    
     daily_norm_t=daily_consumption_t;   
 elseif apply_normalization==1    
@@ -50,8 +53,8 @@ end
 
 daily_norm=daily_norm_t';
 
-prompt=('Form Clustering.\n 0. K-Means 1. Fuzzy\n');
-form_cluster=input(prompt);
+
+form_cluster=1;
      
 K_clusters=2;    
 max_iters=10;            
@@ -84,22 +87,10 @@ elseif form_cluster==1
         temp_idx=U(i,:)==maxU;
         idx(temp_idx,1)=i;
     end
-elseif form_cluster==2
-    net=selforgmap([K_clusters/2 K_clusters/2]);
-    [net, tr]=train(net, cluster_input');
-    outputs=net(cluster_input'); % K x consumers
-
-    idx=zeros(size(daily_consumption,1),1);
-
-    for i=1:K_clusters
-        idx(logical(outputs(:,i)),1)=i;
-    end
-    idx=idx';
-
 end
 %% Feature extraction
-prompt=('Choose fast or sophisticated features\n0. fast 1. sofisticated (KMEANS) 2. mixed (KMEANS) 3. sofisticated (Fuzzy) 4. sofisticated (SOM) 5. Euclidian\n');
-sophisticated=input(prompt);
+
+sophisticated=5;
 
 ndays=1;
 Y1D=(sum(Y2D)>ndays)';
@@ -165,24 +156,6 @@ elseif sophisticated==5
     neigh_std_cut_per=0.1;
    [X]=sophisticatedFeaturesEucl(F_data3D, av_per_dif, std_per_dif, ...
        av_cut_per, std_cut_per, neigh_av_cut_per, neigh_std_cut_per);
-elseif sophisticated==6
-    av_per_dif=0.7;
-    std_per_dif=0.7;
-    av_cut_per=0.3; % 0.8
-    std_cut_per=0.1;% 0.6
-    neigh_av_cut_per=0.1; % 0.6
-    neigh_std_cut_per=0.1;
-   [X]=sophSOMEuclfeatures(F_data3D, av_per_dif, std_per_dif, ...
-       av_cut_per, std_cut_per, neigh_av_cut_per, neigh_std_cut_per);
-elseif sophisticated==7
-    av_per_dif=0.7;
-    std_per_dif=0.7;
-    av_cut_per=0.3; % 0.8
-    std_cut_per=0.1;% 0.6
-    neigh_av_cut_per=0.1; % 0.6
-    neigh_std_cut_per=0.1;
-   [X]=sophFuzzyEuclfeatures(F_data3D, av_per_dif, std_per_dif, ...
-       av_cut_per, std_cut_per, neigh_av_cut_per, neigh_std_cut_per);
 end
 fprintf('\nFraud Data and features created.\n');
 %% Segment Consumers based on Form    
@@ -235,52 +208,20 @@ fprintf('\nClassification for IDs\n');
 fprintf('| Precision %4.2f | Recall %4.2f | Accuracy %4.2f | F1score %4.2f |\n',precision,recall,accuracy,F1score);
 fprintf('| Actual Fraud %d IDs | Predicted Fraud Right %d IDs | Predicted Fraud Wrong %d IDs |\n',sum(Y==1), tp, fp);
 fprintf(' DR  FPR  BDR  Accuracy F1score\n%4.2f %4.2f %4.2f %4.2f %4.2f\n',recall,in_recall,BDR,accuracy, F1score);
-%% Apply Confidence on results
-if form_cluster==1
-looking_for=100;
-confident_idx=zeros(looking_for,1);
-maxU_indexed=[1:z ; maxU]';
-sort_max=sortrows(maxU_indexed, 2);
-confident=sort_max((end-looking_for+1):end,:);
-confident_idx(:,1)=confident(:,1);
-confident_prediction=ones(looking_for,1);
 
-% This segment doesn't really help get lower FP
-%binary_table_conf=X(confident_idx,3:end)~=0; % how many features
-%binary_vector_conf=sum(binary_table_conf,2)<2; % less than 3 features consider negative
-%%binary_vector=sum(X_small(:,3:end),2)==0;
-%confident_prediction(binary_vector_conf)=0;
-
-right=sum(Y(confident_idx,1)==confident_prediction);
-wrong=sum(Y(confident_idx,1)~=confident_prediction);
-
-tp=sum((confident_prediction==Y(confident_idx,1))&(confident_prediction==1)); % Predicted yes, actual yes
-tn=sum((confident_prediction==Y(confident_idx,1))&(confident_prediction==0)); % Predicted no , actual no 
-fp=sum((confident_prediction==1)&(Y(confident_idx,1)==0)); % Predicted yes, actual no
-fn=sum((confident_prediction==0)&(Y(confident_idx,1)==1)); % Predicted no, actual yes
-
-fprintf('\nLooking for %d, right predicions %d, wrong predictions %d\n', looking_for, right, wrong);
-fprintf('| TP=%d | TN=%d | FP=%d | FN=%d |\n', tp, tn, fp, fn);
-
-for i=1:fraud_rate*z
-    looking_for=i;
-    confident_idx=zeros(looking_for,1);
-    maxU_indexed=[1:z ; maxU]';
-    sort_max=sortrows(maxU_indexed, 2);
-    confident=sort_max((end-looking_for+1):end,:);
-    confident_idx(:,1)=confident(:,1);
-    confident_prediction=ones(looking_for,1);
-
-    % This segment doesn't really help get lower FP
-    %binary_table_conf=X(confident_idx,3:end)~=0; % how many features
-    %binary_vector_conf=sum(binary_table_conf,2)<2; % less than 3 features consider negative
-    %%binary_vector=sum(X_small(:,3:end),2)==0;
-    %confident_prediction(binary_vector_conf)=0;
-
-    right(looking_for,1)=sum(Y(confident_idx,1)==confident_prediction);
-    wrong(i,1)=sum(Y(confident_idx,1)~=confident_prediction);
+result_table(int_idx,:)=[intensity_vector(int_idx) recall in_recall  accuracy BDR F1score];
+fprintf('intensity DR  FPR  Accuracy F1score BDR\n');
+fprintf('%4.2f %4.2f %4.2f %4.2f %4.2f %4.2f\n',intensity, recall,in_recall,accuracy, F1score, BDR);
 end
-plot(1:fraud_rate*z,wrong(:,1));
-xlabel('Απάτες')
-ylabel('Λάθος προβλέψεις')
-end
+%% Printing Segment
+fprintf('intensity DR  FPR  Accuracy F1score BDR\n');
+figure;
+plot(result_table(:,1),result_table(:,2))
+xlabel('Ένταση');
+ylabel('DR');
+hold on;
+figure;
+plot(result_table(:,1),result_table(:,3))
+xlabel('Ένταση');
+ylabel('FPR')
+hold off;
