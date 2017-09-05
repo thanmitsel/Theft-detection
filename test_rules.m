@@ -172,9 +172,10 @@ else
     Y_small=Y_part1; 
 end
 %% Prediction
-pred_big=zeros(size(Y_big));
-%binary_table=X_big(:,3:end)~=0;
-%pred_big=sum(binary_table,2)>=3;
+%pred_big=zeros(size(Y_big));
+binary_table=X_big(:,3:end)~=0;
+pred_big=sum(binary_table,2)>=3;
+
 
 pred_small=ones(size(Y_small));
 binary_table=X_small(:,3:end)~=0; % how many features
