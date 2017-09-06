@@ -1,7 +1,7 @@
   %% Semi-supervised algorithm with 
   %  form cluster
     % pick some z vector 
-    z=2000;
+    z=4500;
     r_cons=randi(size(hh,1),z,1);
     somehh=hh(r_cons,:);
     someID=ID(r_cons,:);
@@ -132,6 +132,24 @@ elseif sophisticated==5
     neigh_av_cut_per=0.1; % 0.6
     neigh_std_cut_per=0.1;
    [X]=sophisticatedFeaturesEucl(F_data3D, av_per_dif, std_per_dif, ...
+       av_cut_per, std_cut_per, neigh_av_cut_per, neigh_std_cut_per);
+elseif sophisticated==6
+    av_per_dif=0.7;
+    std_per_dif=0.7;
+    av_cut_per=0.3; % 0.8
+    std_cut_per=0.1;% 0.6
+    neigh_av_cut_per=0.1; % 0.6
+    neigh_std_cut_per=0.1;
+   [X]=sophSOMEuclfeatures(F_data3D, av_per_dif, std_per_dif, ...
+       av_cut_per, std_cut_per, neigh_av_cut_per, neigh_std_cut_per);
+elseif sophisticated==7
+    av_per_dif=0.7;
+    std_per_dif=0.7;
+    av_cut_per=0.3; % 0.8
+    std_cut_per=0.1;% 0.6
+    neigh_av_cut_per=0.1; % 0.6
+    neigh_std_cut_per=0.1;
+   [X]=sophFuzzyEuclfeatures(F_data3D, av_per_dif, std_per_dif, ...
        av_cut_per, std_cut_per, neigh_av_cut_per, neigh_std_cut_per);
 end
 fprintf('\nFraud Data and features created.\n');

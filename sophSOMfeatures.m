@@ -1,4 +1,4 @@
-function [features]=sophisticatedFeatures(data, av_per_dif, std_per_dif, av_cut_per, std_cut_per, neigh_av_cut_per, neigh_std_cut_per )
+function [features]=sophSOMfeatures(data, av_per_dif, std_per_dif, av_cut_per, std_cut_per, neigh_av_cut_per, neigh_std_cut_per )
 
 max_av_difference3D=zeros(size(data,1),1,size(data,3));
 max_std_difference3D=zeros(size(data,1),1,size(data,3));
