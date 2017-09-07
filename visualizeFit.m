@@ -7,7 +7,7 @@ function visualizeFit(X, mu, sigma2, normalization)
 if normalization==1
     [X1,X2] = meshgrid(-25:.5:25); 
 elseif normalization==2
-    [X1,X2] = meshgrid(-4:.05:4); 
+    [X1,X2] = meshgrid(-0.5:.005:2); 
 end
 Z = multivariateGaussian([X1(:) X2(:)],mu,sigma2);
 Z = reshape(Z,size(X1));

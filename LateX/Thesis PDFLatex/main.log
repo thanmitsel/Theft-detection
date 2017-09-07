@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/W32TeX) (preloaded format=pdflatex 2017.3.16)  6 SEP 2017 20:26
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/W32TeX) (preloaded format=pdflatex 2017.3.16)  8 SEP 2017 00:12
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1508,7 +1508,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 135--135
 
 
 ] (./main.toc [7] [8]
-LaTeX Info: Redefining \anw@print on input line 160.
+LaTeX Info: Redefining \anw@print on input line 162.
 )
 \tf@toc=\write5
 \openout5 = `main.toc'.
@@ -1523,14 +1523,14 @@ LaTeX Info: Redefining \anw@print on input line 160.
  [11] [12
 
 ] (./main.lot
-LaTeX Info: Redefining \anw@print on input line 99.
-LaTeX Info: Redefining \anw@print on input line 100.
-LaTeX Info: Redefining \anw@print on input line 103.
- [13]
-LaTeX Info: Redefining \anw@print on input line 104.
+LaTeX Info: Redefining \anw@print on input line 101.
+LaTeX Info: Redefining \anw@print on input line 102.
 LaTeX Info: Redefining \anw@print on input line 105.
+ [13]
 LaTeX Info: Redefining \anw@print on input line 106.
 LaTeX Info: Redefining \anw@print on input line 107.
+LaTeX Info: Redefining \anw@print on input line 108.
+LaTeX Info: Redefining \anw@print on input line 109.
 )
 \tf@lot=\write7
 \openout7 = `main.lot'.
@@ -2254,29 +2254,24 @@ LaTeX Warning: Citation `PCA' on page 75 undefined on input line 462.
 
 LaTeX Warning: Citation `Plotly' on page 75 undefined on input line 483.
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 486--487
-
- []
-
 [75]
 Underfull \hbox (badness 10000) in paragraph at lines 490--491
 
  []
 
-) [76]
+[76]) [77] [78
+
+]
 \textKappa \textepsilon \textphi \acctonos \textalpha \textlambda \textalpha \t
 extiota \textomicron  6.
-(./chapters/chapter06.tex) [77
-
-] [78
+(./chapters/chapter06.tex) [79] [80
 
 ]
 \textKappa \textepsilon \textphi \acctonos \textalpha \textlambda \textalpha \t
 extiota \textomicron  7.
-(./chapters/chapter07.tex) [79] [80] (./main.bbl [81
+(./chapters/chapter07.tex) [81] [82] (./main.bbl [83
 
-] [82]) [83] [84
+] [84]) [85] [86
 
 ]
 \textPi \textalpha \textrho \acctonos \textalpha \textrho \texttau \texteta \te
@@ -2311,20 +2306,20 @@ LaTeX Info: Redefining \anw@print on input line 187.
 LaTeX Info: Redefining \anw@print on input line 187.
 LaTeX Info: Redefining \anw@print on input line 187.
 LaTeX Info: Redefining \anw@print on input line 187.
-) [85]
+) [87]
 LaTeX Info: Redefining \anw@print on input line 186.
- [86] [87]
+ [88] [89]
 \openout2 = `glossary.aux'.
 
- (./glossary.tex [88
+ (./glossary.tex [90
 
 
-]) [89] [90
+]) [91] [92
 
 
 ]
 No file main.ind.
-[91] (./main.aux (./abstract.aux) (./glossary.aux))
+[93] (./main.aux (./abstract.aux) (./glossary.aux))
 
 LaTeX Warning: There were undefined references.
 
@@ -2373,10 +2368,10 @@ texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb><c:/texlive/2016/texm
 f-dist/fonts/type1/public/cm-super/sfrm1095.pfb><c:/texlive/2016/texmf-dist/fon
 ts/type1/public/cm-super/sfrm1200.pfb><c:/texlive/2016/texmf-dist/fonts/type1/p
 ublic/cm-super/sfti1095.pfb>
-Output written on main.pdf (97 pages, 2274064 bytes).
+Output written on main.pdf (99 pages, 2276586 bytes).
 PDF statistics:
- 503 PDF objects out of 1000 (max. 8388607)
- 328 compressed objects within 4 object streams
+ 509 PDF objects out of 1000 (max. 8388607)
+ 332 compressed objects within 4 object streams
  0 named destinations out of 1000 (max. 500000)
  166 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -1,6 +1,5 @@
-  %% Semi-supervised algorithm with 
-  %  form cluster 
-  % Not right Anomaly detection
+%% Semi supervised algorithm with regular Anomaly Detection
+  %  form cluster based on rule based system
     % pick some z vector 
     z=4500;
     r_cons=randi(size(hh,1),z,1);
@@ -34,6 +33,7 @@ end
 
 % Details 
 [kWh_count, time_count, kWh_rate, time_rate] = frauDetails(H, F_data3D);
+
 %% Form Cluster
 daily_consumption3D=sum(F_data3D,2);
 daily_consumption=permute(daily_consumption3D,[3 1 2]); % cons x 365 days    
@@ -50,24 +50,55 @@ end
 
 daily_norm=daily_norm_t';
 
-% K-Means
-    
+prompt=('Form Clustering.\n 0. K-Means 1. Fuzzy\n');
+form_cluster=input(prompt);
+     
 K_clusters=2;    
-max_iters=10;        
-cluster_input=daily_norm;        
-cost=1000000000;          
-% 5 random initializations        
-for j=1:5            
-    initial_centroids = kMeansInitCentroids(cluster_input, K_clusters);             
-    [temp_cost, temp_centroids, temp_idx] = runkMeans(cluster_input, initial_centroids, max_iters);        
-    if cost>temp_cost % Pick the lowest cost        
-        cost=temp_cost;                
-        centroids=temp_centroids;                
-        idx=temp_idx;            
-    end    
+max_iters=10;            
+cluster_input=daily_norm;
+if form_cluster==0
+    % K-Means   
+    cost=1000000000;          
+    % 5 random initializations        
+    for j=1:5            
+        initial_centroids = kMeansInitCentroids(cluster_input, K_clusters);             
+        [temp_cost, temp_centroids, temp_idx] = runkMeans(cluster_input, initial_centroids, max_iters);        
+        if cost>temp_cost % Pick the lowest cost        
+            cost=temp_cost;                
+            centroids=temp_centroids;                
+            idx=temp_idx;            
+        end    
+    end
+elseif form_cluster==1
+    divider=5;
+    smaller_cluster_input=zeros(size(daily_consumption,1),365/divider);
+    for w=1:365/divider
+        smaller_cluster_input(:,w)=sum(daily_consumption(:,(divider*w-4):divider*w),2);
+    end
+    % Fuzzy C-Means
+    options=[3 NaN NaN 0];
+    [~,U,objfnc] = fcm(cluster_input,K_clusters, options);
+    maxU=max(U);
+    idx=zeros(size(daily_consumption,1),1);
+    for i=1:K_clusters
+        temp_idx=U(i,:)==maxU;
+        idx(temp_idx,1)=i;
+    end
+elseif form_cluster==2
+    net=selforgmap([K_clusters/2 K_clusters/2]);
+    [net, tr]=train(net, cluster_input');
+    outputs=net(cluster_input'); % K x consumers
+
+    idx=zeros(size(daily_consumption,1),1);
+
+    for i=1:K_clusters
+        idx(logical(outputs(:,i)),1)=i;
+    end
+    idx=idx';
+
 end
 %% Feature extraction
-prompt=('Choose fast or sophisticated features\n0. fast 1. sofisticated (KMEANS) 2. mixed (KMEANS) 3. sofisticated (Fuzzy) 4. sofisticated (SOM) 5. Euclidean\n');
+prompt=('Choose fast or sophisticated features\n0. fast 1. sofisticated (KMEANS) 2. mixed (KMEANS) 3. sofisticated (Fuzzy) 4. sofisticated (SOM) 5. Euclidian\n');
 sophisticated=input(prompt);
 
 ndays=1;
@@ -154,121 +185,97 @@ elseif sophisticated==7
        av_cut_per, std_cut_per, neigh_av_cut_per, neigh_std_cut_per);
 end
 fprintf('\nFraud Data and features created.\n');
-%% Fast cluster prediction
-cluster_pred=zeros(size(Y2D,2),1);
-if sum(idx==1)>sum(idx==2) % Cluster 1 is greater (negative results)
-    cluster_pred(idx==2,1)=1;
-    binary_table=X(idx==2,3:end)~=0;
-    binary_vector=sum(binary_table,2)<3;
-    cluster_pred(idx==2,1)=not(binary_vector);
-else % Cluster 2 is greater (negative results)
-    cluster_pred(idx==1,1)=1;
-    binary_table=X(idx==1,3:end)~=0;
-    binary_vector=sum(binary_table,2)<3;
-    cluster_pred(idx==1,1)=not(binary_vector);
+%% Segment Consumers based on Form    
+X_part1=X(idx==1, :);    
+Y_part1=Y(idx==1);    
+X_part2=X(idx==2, :);   
+Y_part2=Y(idx==2);    
+if size(X_part1,1)>size(X_part2,1)      
+    X_big=X_part1;
+    Y_big=Y_part1;
+    X_small=X_part2;
+    Y_small=Y_part2;  
+else 
+    X_big=X_part2;
+    Y_big=Y_part2;
+    X_small=X_part1;
+    Y_small=Y_part1; 
 end
-%% ===  Normalization ===
-prompt=('Apply normalization?\n 0 w/o norm, 1 with norm [-1,1], 2 with norm [0,1]\n');
-apply_normalization=input(prompt);
-if apply_normalization==0
-    X_norm=X;
-elseif apply_normalization==1
-    [X_norm, mu, sigma] = normalizeMinus_Plus(X);
-elseif apply_normalization==2
-    [X_norm,~,~]=normalizeFeatures(X);
-end
+Y_shuffled=[Y_big; Y_small];
+%% Prediction
+pred_big=zeros(size(Y_big));
+%binary_table=X_big(:,3:end)~=0;
+%pred_big=sum(binary_table,2)>=3;
 
+pred_small=ones(size(Y_small));
+binary_table=X_small(:,3:end)~=0; % how many features
+binary_vector=sum(binary_table,2)<3; % less than 3 features consider negative
+%%%binary_vector=sum(X_small(:,3:end),2)==0;
+pred_small(binary_vector)=0;
+
+pred_shuffled=[pred_big; pred_small];
+X_shuffled=[X_big; X_small];
 %% == PCA for Visualization ==
 % Use PCA to project this cloud to 2D for visualization
 % Subtract the mean to use PCA
 prompt=('Apply PCA?\n 0 w/o PCA, 1 with PCA\n');
 apply_pca=input(prompt);
 if apply_pca==0
-    Z=X_norm;
+    X_shuffled=X_shuffled;
 elseif apply_pca==1
     % PCA and project the data to 2D
-    [U, S] = pca(X_norm);
-    Z = projectData(X_norm, U, 2);
+    [U, S] = pca(X_shuffled);
+    X_shuffled = projectData(X_shuffled, U, 2);
 
 
-    plotClass(Z(:,:),Y(:));
+    plotClass(X_shuffled(:,:),Y_shuffled(:));
     title('Classified examples');
 end
+%% Anomaly Detection with random test train
+[train_idx, test_idx]=crossvalind('Holdout', z, 0.3);
+X_train=X_shuffled(train_idx,:);
+[X_train, minval, maxval]=normalizeFeatures(X_train);
+Y_train=Y_shuffled(train_idx,:);
+unsup_pred_train=pred_shuffled(train_idx,:);
+X_test=X_shuffled(test_idx,:);
+[X_test]=normalizeTest(X_test, minval, maxval);
+Y_test=Y_shuffled(test_idx,:);
+unsup_pred_test=pred_shuffled(test_idx,:);
 
-%% Create training and testing set
-% Choose from every consumer sample
-% No normarlization needed here
+%  Estimate my and sigma2
+[mu, sigma2] = estimateGaussian(X_train);
 
-Intr=sum(Y)/size(Y,1);% Probability of Intrusion based on Days
-consumers=size(X,1);
-Kfolds=5;
-binary_test_table=zeros(consumers,Kfolds); % cons x Kfolds
-prediction_Kfolds=zeros(consumers/Kfolds,Kfolds);
-% p | ep | pr | rec | in | acc | F1 | BDR
-result_table=zeros(Kfolds, 8);
-Indices=crossvalind('Kfold', consumers, Kfolds);
-prompt=('Choose fit of Distribution\n0. percent of instances 1. all negative examples\n');
-fit_on=input(prompt);
-for i=1:Kfolds
-    test_idx=(Indices==i); train_idx= ~test_idx;
-    binary_test_table(:,i)=test_idx; 
-    fprintf('\nSegmented Training and Testing.\n');
-    %% Apply anomalyDetection
-    if fit_on==0
-        % Estimate mu sigma2
-        [mu, sigma2] = estimateGaussian(Z(train_idx,:));
-        %  Training set percent of data
-        p = multivariateGaussian(Z(train_idx,:), mu, sigma2);
-    elseif fit_on==1
-        % Estimate mu sigma2
-        [mu, sigma2] = estimateGaussian(Z(Y==0,:));
-        
-        %  Training set  all negative examples
-        p = multivariateGaussian(Z(Y==0,:), mu, sigma2);
-    end
-    
-    %  Cross-validation set
-    pval = multivariateGaussian(Z(test_idx,:), mu, sigma2);
+%  Returns the density of the multivariate normal at each data point (row) 
+%  of X train
+p = multivariateGaussian(X_train, mu, sigma2);
 
-    %  Find the best threshold
-    [epsilon, F1] = selectThreshold(Y(test_idx), pval);
-    prediction=(pval<epsilon);
-    prediction_Kfolds(:,i)=prediction;
-    
-    % Operations between two predictions
-    cluster_pred_test=cluster_pred(test_idx,1);
-    prediction=or(cluster_pred_test, prediction);
-    
-    % Create confusion Matrix
-    % Detection Rate is Recall, False Positive Rate is Inverse recall 
-    [precision, recall, in_recall, accuracy, F1score] = confusionMatrix (Y(test_idx), prediction);
-    BDR=Intr*recall/(Intr*recall+(1-Intr)*in_recall) ; % Bayesian Detection Rate for days
-    result_table(i,:)=[ sum(p < epsilon) epsilon precision recall in_recall accuracy F1score BDR];
-    
-    rouf_id=find(prediction==1);
-    roufianos=someID(rouf_id); % Keeps all the ID that contain intrusion
+
+pval = multivariateGaussian(X_test, mu, sigma2);
+
+[epsilon, F1] = selectThreshold(Y_test, pval);
+
+%  Find the outliers in the training set
+semi_pred_train = (p < epsilon);
+
+% Logic operations
+prompt=('Logic Operation?\n 0 AND, 1 OR\n');
+logic_operation=input(prompt);
+if logic_operation==0
+    prediction=and(semi_pred_train, unsup_pred_train);
+elseif logic_operation==1
+    prediction=or(semi_pred_train, unsup_pred_train);
 end
+
+[precision, recall, in_recall, accuracy, F1score] = confusionMatrix (Y_train, prediction);
+BDR=Intr*recall/(Intr*recall+(1-Intr)*in_recall) ; % Bayesian Detection Rate for days
+fprintf(' DR  FPR Accuracy F1score BDR \n%4.2f %4.2f %4.2f %4.2f %4.2f\n',recall,in_recall,accuracy, F1score,BDR);
+
 if apply_pca==1
    %plot(Z(:,1),Z(:,2), 'bx');
    %axis([0 30 0 30]);
    %xlabel('Principal Component 1');
    %ylabel('Principal Component 2');
-   visualizeFit(Z, mu, sigma2, apply_normalization);
+   visualizeFit(X_train, mu, sigma2, 2);
    xlabel('Principal Component 1');
    ylabel('Principal Component 2');
 end
-
-
-[outliers, epsilon, precision, recall, in_recall, accuracy, F1score, BDR]=MeanResults(result_table);
-
-fprintf('\nBest epsilon found using cross-validation: %e\n', epsilon);
-fprintf('Best F1 on Cross Validation Set:  %f\n', F1);
-fprintf('Based on best F1\nDR=%4.2f FPR=%4.2f on Cross Validation Set\n', recall, in_recall);
-fprintf('# Outliers found: %d\n', outliers);
-
-%% Printing Segment
-fprintf('kWh Rate %4.2fper | Time Rate %4.2fper |\n',kWh_rate,time_rate);
-fprintf('\nClassification for IDs\n');
-fprintf('| Precision %4.2f | Recall %4.2f | Accuracy %4.2f | F1score %4.2f |\n',precision,recall,accuracy,F1score);
-fprintf('| Actual Fraud %d IDs | Predicted Fraud Right %d IDs | Predicted Fraud Wrong %d IDs |\n',sum(Y(test_idx)==1),sum(prediction==1&Y(test_idx)==prediction),sum(prediction==1&Y(test_idx)~=prediction));
-fprintf(' DR  FPR  BDR  Accuracy F1score\n%4.2f %4.2f %4.2f %4.2f %4.2f\n',recall,in_recall,BDR,accuracy, F1score);  
