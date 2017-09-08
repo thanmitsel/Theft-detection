@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/W32TeX) (preloaded format=pdflatex 2017.3.16)  8 SEP 2017 00:12
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/W32TeX) (preloaded format=pdflatex 2017.3.16)  8 SEP 2017 22:45
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1340,9 +1340,6 @@ LaTeX Warning: Label `fig:linearFPRintensity' multiply defined.
 
 LaTeX Warning: Label `sub@fig:linearFPRintensity' multiply defined.
 
-
-LaTeX Warning: Label `tab:testrules' multiply defined.
-
 (./glossary.aux))
 \openout1 = `main.aux'.
 
@@ -1508,7 +1505,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 135--135
 
 
 ] (./main.toc [7] [8]
-LaTeX Info: Redefining \anw@print on input line 162.
+LaTeX Info: Redefining \anw@print on input line 167.
 )
 \tf@toc=\write5
 \openout5 = `main.toc'.
@@ -1522,15 +1519,14 @@ LaTeX Info: Redefining \anw@print on input line 162.
 
  [11] [12
 
-] (./main.lot
-LaTeX Info: Redefining \anw@print on input line 101.
-LaTeX Info: Redefining \anw@print on input line 102.
-LaTeX Info: Redefining \anw@print on input line 105.
- [13]
-LaTeX Info: Redefining \anw@print on input line 106.
-LaTeX Info: Redefining \anw@print on input line 107.
+] (./main.lot [13]
 LaTeX Info: Redefining \anw@print on input line 108.
 LaTeX Info: Redefining \anw@print on input line 109.
+LaTeX Info: Redefining \anw@print on input line 112.
+LaTeX Info: Redefining \anw@print on input line 113.
+LaTeX Info: Redefining \anw@print on input line 114.
+LaTeX Info: Redefining \anw@print on input line 115.
+LaTeX Info: Redefining \anw@print on input line 116.
 )
 \tf@lot=\write7
 \openout7 = `main.lot'.
@@ -2150,12 +2146,7 @@ Overfull \hbox (8.46246pt too wide) in paragraph at lines 286--286
 Underfull \vbox (badness 10000) detected at line 286
  []
 
-[67]
-
-LaTeX Warning: Citation `fuzzyclustering' on page 68 undefined on input line 31
-1.
-
-[68]
+[67] [68]
 Overfull \hbox (2.67462pt too wide) in paragraph at lines 330--331
 []\LGR/cmr/m/n/10.95 Empneusmèno a-pì ta neu-rw-ni-kˆ dÐktua ston e-gkèfa-lo, o
 i auto-organwmènoi qˆr-tec ([]\OT1/cmr/m/n/10.95 SOM[]\LGR/cmr/m/n/10.95 )
@@ -2166,10 +2157,6 @@ Overfull \hbox (2.46661pt too wide) in paragraph at lines 330--331
 \LGR/cmr/m/n/10.95 qrh-si-mo-poio-Ôn èna mh-qa-ni-smì a-nta-gw-ni-smo-Ô kai su-
 ner-ga-sÐac gia na pe-tÔqoun mh-epiblepìmenh
  []
-
-
-LaTeX Warning: Citation `clustercomparison' on page 69 undefined on input line 
-338.
 
 [69]
 <../../plots/systems/un_supervised.png, id=306, 588.69937pt x 456.20438pt>
@@ -2247,31 +2234,177 @@ File: ../../plots/systems/semi_supervised.png Graphic file (type png)
 Package pdftex.def Info: ../../plots/systems/semi_supervised.png used on input 
 line 447.
 (pdftex.def)             Requested size: 256.07684pt x 284.52234pt.
- [74 <../../plots/systems/semi_supervised.png>]
-
-LaTeX Warning: Citation `PCA' on page 75 undefined on input line 462.
-
-
-LaTeX Warning: Citation `Plotly' on page 75 undefined on input line 483.
-
-[75]
+ [74 <../../plots/systems/semi_supervised.png>] [75]
 Underfull \hbox (badness 10000) in paragraph at lines 490--491
 
  []
 
-[76]) [77] [78
+[76]
+Underfull \vbox (badness 10000) detected at line 520
+ []
 
-]
+
+Underfull \vbox (badness 10000) detected at line 534
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [77]
+Underfull \vbox (badness 10000) detected at line 555
+ []
+
+
+Underfull \vbox (badness 10000) detected at line 573
+ []
+
+
+Overfull \hbox (1.76497pt too wide) in paragraph at lines 575--575
+[]\LGR/cmr/bx/n/12 ExereÔnhsh me-Ðw-shc di-ˆsta-shc stouc hmi-epiblepìmenouc al
+-
+ []
+
+[78] <../../plots/gr_class_semi_sup.png, id=343, 1445.4pt x 732.48656pt>
+File: ../../plots/gr_class_semi_sup.png Graphic file (type png)
+
+<use ../../plots/gr_class_semi_sup.png>
+Package pdftex.def Info: ../../plots/gr_class_semi_sup.png used on input line 5
+79.
+(pdftex.def)             Requested size: 455.23724pt x 284.52856pt.
+
+Overfull \hbox (28.4459pt too wide) in paragraph at lines 579--580
+[][] 
+ []
+
+<../../plots/gr_threshold_semi_sup_1.png, id=344, 1445.4pt x 732.48656pt>
+File: ../../plots/gr_threshold_semi_sup_1.png Graphic file (type png)
+
+<use ../../plots/gr_threshold_semi_sup_1.png>
+Package pdftex.def Info: ../../plots/gr_threshold_semi_sup_1.png used on input 
+line 586.
+(pdftex.def)             Requested size: 455.23724pt x 284.52856pt.
+
+Overfull \hbox (284.52332pt too wide) in paragraph at lines 586--587
+[][] 
+ []
+
+LaTeX Info: Redefining \anw@print on input line 587.
+LaTeX Info: Redefining \anw@print on input line 587.
+LaTeX Info: Redefining \anw@print on input line 587.
+LaTeX Info: Redefining \anw@print on input line 587.
+<../../plots/gr_threshold_semi_sup_2.png, id=345, 1445.4pt x 732.48656pt>
+File: ../../plots/gr_threshold_semi_sup_2.png Graphic file (type png)
+
+<use ../../plots/gr_threshold_semi_sup_2.png>
+Package pdftex.def Info: ../../plots/gr_threshold_semi_sup_2.png used on input 
+line 592.
+(pdftex.def)             Requested size: 455.23724pt x 284.52856pt.
+
+Overfull \hbox (284.52332pt too wide) in paragraph at lines 592--593
+[][] 
+ []
+
+LaTeX Info: Redefining \anw@print on input line 593.
+LaTeX Info: Redefining \anw@print on input line 593.
+LaTeX Info: Redefining \anw@print on input line 593.
+LaTeX Info: Redefining \anw@print on input line 593.
+
+Overfull \hbox (6.81606pt too wide) in paragraph at lines 615--615
+ []\LGR/cmr/m/n/10.95 enall[]\OT1/cmr/m/n/10.95 AND| 
+ []
+
+
+Underfull \vbox (badness 10000) detected at line 615
+ []
+
+[79 <../../plots/gr_class_semi_sup.png (PNG copy)>]
+<../../plots/gr_dr_intensity_semi_sup1.png, id=350, 421.575pt x 316.18124pt>
+File: ../../plots/gr_dr_intensity_semi_sup1.png Graphic file (type png)
+
+<use ../../plots/gr_dr_intensity_semi_sup1.png>
+Package pdftex.def Info: ../../plots/gr_dr_intensity_semi_sup1.png used on inpu
+t line 624.
+(pdftex.def)             Requested size: 199.1695pt x 142.26576pt.
+
+Overfull \hbox (28.45557pt too wide) in paragraph at lines 624--625
+[][] 
+ []
+
+LaTeX Info: Redefining \anw@print on input line 625.
+LaTeX Info: Redefining \anw@print on input line 625.
+LaTeX Info: Redefining \anw@print on input line 625.
+LaTeX Info: Redefining \anw@print on input line 625.
+<../../plots/gr_fpr_intensity_semi_sup1.png, id=351, 421.575pt x 316.18124pt>
+File: ../../plots/gr_fpr_intensity_semi_sup1.png Graphic file (type png)
+
+<use ../../plots/gr_fpr_intensity_semi_sup1.png>
+Package pdftex.def Info: ../../plots/gr_fpr_intensity_semi_sup1.png used on inp
+ut line 630.
+(pdftex.def)             Requested size: 199.1695pt x 142.26576pt.
+
+Overfull \hbox (28.45557pt too wide) in paragraph at lines 630--631
+[][] 
+ []
+
+LaTeX Info: Redefining \anw@print on input line 631.
+LaTeX Info: Redefining \anw@print on input line 631.
+LaTeX Info: Redefining \anw@print on input line 631.
+LaTeX Info: Redefining \anw@print on input line 631.
+<../../plots/gr_dr_intensity_semi_sup2.png, id=352, 421.575pt x 316.18124pt>
+File: ../../plots/gr_dr_intensity_semi_sup2.png Graphic file (type png)
+
+<use ../../plots/gr_dr_intensity_semi_sup2.png>
+Package pdftex.def Info: ../../plots/gr_dr_intensity_semi_sup2.png used on inpu
+t line 636.
+(pdftex.def)             Requested size: 199.1695pt x 142.26576pt.
+
+Overfull \hbox (28.45557pt too wide) in paragraph at lines 636--637
+[][] 
+ []
+
+LaTeX Info: Redefining \anw@print on input line 637.
+LaTeX Info: Redefining \anw@print on input line 637.
+LaTeX Info: Redefining \anw@print on input line 637.
+LaTeX Info: Redefining \anw@print on input line 637.
+<../../plots/gr_fpr_intensity_semi_sup2.png, id=353, 421.575pt x 316.18124pt>
+File: ../../plots/gr_fpr_intensity_semi_sup2.png Graphic file (type png)
+
+<use ../../plots/gr_fpr_intensity_semi_sup2.png>
+Package pdftex.def Info: ../../plots/gr_fpr_intensity_semi_sup2.png used on inp
+ut line 642.
+(pdftex.def)             Requested size: 199.1695pt x 142.26576pt.
+
+Overfull \hbox (28.45557pt too wide) in paragraph at lines 642--643
+[][] 
+ []
+
+LaTeX Info: Redefining \anw@print on input line 643.
+LaTeX Info: Redefining \anw@print on input line 643.
+LaTeX Info: Redefining \anw@print on input line 643.
+LaTeX Info: Redefining \anw@print on input line 643.
+
+Overfull \hbox (5.9649pt too wide) in paragraph at lines 652--652
+[]\LGR/cmr/m/n/10.95 Sto pa-rìn ke-fˆlaio ègi-ne mia die-xo-di-k  a-na-z th-sh 
+mh-epiblepìmenwn kai hmi-epiblepìmenwn
+ []
+
+) [80] [81 <../../plots/gr_threshold_semi_sup_1.png (PNG copy)> <../../plots/gr
+_threshold_semi_sup_2.png (PNG copy)>] [82 <../../plots/gr_dr_intensity_semi_su
+p1.png (PNG copy)> <../../plots/gr_fpr_intensity_semi_sup1.png (PNG copy)> <../
+../plots/gr_dr_intensity_semi_sup2.png (PNG copy)> <../../plots/gr_fpr_intensit
+y_semi_sup2.png (PNG copy)>]
 \textKappa \textepsilon \textphi \acctonos \textalpha \textlambda \textalpha \t
 extiota \textomicron  6.
-(./chapters/chapter06.tex) [79] [80
+(./chapters/chapter06.tex) [83
+
+] [84
 
 ]
 \textKappa \textepsilon \textphi \acctonos \textalpha \textlambda \textalpha \t
 extiota \textomicron  7.
-(./chapters/chapter07.tex) [81] [82] (./main.bbl [83
+(./chapters/chapter07.tex) [85] [86] (./main.bbl [87
 
-] [84]) [85] [86
+] [88]) [89] [90
 
 ]
 \textPi \textalpha \textrho \acctonos \textalpha \textrho \texttau \texteta \te
@@ -2306,33 +2439,30 @@ LaTeX Info: Redefining \anw@print on input line 187.
 LaTeX Info: Redefining \anw@print on input line 187.
 LaTeX Info: Redefining \anw@print on input line 187.
 LaTeX Info: Redefining \anw@print on input line 187.
-) [87]
+) [91]
 LaTeX Info: Redefining \anw@print on input line 186.
- [88] [89]
+ [92] [93]
 \openout2 = `glossary.aux'.
 
- (./glossary.tex [90
+ (./glossary.tex [94
 
 
-]) [91] [92
+]) [95] [96
 
 
 ]
 No file main.ind.
-[93] (./main.aux (./abstract.aux) (./glossary.aux))
-
-LaTeX Warning: There were undefined references.
-
+[97] (./main.aux (./abstract.aux) (./glossary.aux))
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 9336 strings out of 493013
- 135785 string characters out of 6136993
- 233986 words of memory out of 5000000
- 12540 multiletter control sequences out of 15000+600000
- 28169 words of font info for 67 fonts, out of 8000000 for 9000
+ 9395 strings out of 493013
+ 137768 string characters out of 6136993
+ 234763 words of memory out of 5000000
+ 12593 multiletter control sequences out of 15000+600000
+ 27823 words of font info for 66 fonts, out of 8000000 for 9000
  1143 hyphenation exceptions out of 8191
  59i,12n,94p,2566b,838s stack positions out of 5000i,500n,10000p,200000b,80000s
 {c:/texlive/2016/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}<c:/tex
@@ -2350,28 +2480,27 @@ onts/type1/public/amsfonts/cm/cmr6.pfb><c:/texlive/2016/texmf-dist/fonts/type1/
 public/amsfonts/cm/cmr8.pfb><c:/texlive/2016/texmf-dist/fonts/type1/public/amsf
 onts/cm/cmsy10.pfb><c:/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/c
 msy6.pfb><c:/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><
-c:/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb><c:/texliv
-e/2016/texmf-dist/fonts/type1/public/cbfonts/grmc1095.pfb><c:/texlive/2016/texm
-f-dist/fonts/type1/public/cbfonts/grmc1200.pfb><c:/texlive/2016/texmf-dist/font
-s/type1/public/cbfonts/grmc2074.pfb><c:/texlive/2016/texmf-dist/fonts/type1/pub
-lic/cbfonts/grmi1095.pfb><c:/texlive/2016/texmf-dist/fonts/type1/public/cbfonts
-/grmn1000.pfb><c:/texlive/2016/texmf-dist/fonts/type1/public/cbfonts/grmn1095.p
-fb><c:/texlive/2016/texmf-dist/fonts/type1/public/cbfonts/grmn1200.pfb><c:/texl
-ive/2016/texmf-dist/fonts/type1/public/cbfonts/grmo1095.pfb><c:/texlive/2016/te
-xmf-dist/fonts/type1/public/cbfonts/grxc1200.pfb><c:/texlive/2016/texmf-dist/fo
-nts/type1/public/cbfonts/grxn1095.pfb><c:/texlive/2016/texmf-dist/fonts/type1/p
-ublic/cbfonts/grxn1200.pfb><c:/texlive/2016/texmf-dist/fonts/type1/public/cbfon
-ts/grxn1440.pfb><c:/texlive/2016/texmf-dist/fonts/type1/public/cbfonts/grxn1728
-.pfb><c:/texlive/2016/texmf-dist/fonts/type1/public/cbfonts/grxn2074.pfb><c:/te
-xlive/2016/texmf-dist/fonts/type1/public/cbfonts/grxn2488.pfb><c:/texlive/2016/
-texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb><c:/texlive/2016/texm
-f-dist/fonts/type1/public/cm-super/sfrm1095.pfb><c:/texlive/2016/texmf-dist/fon
-ts/type1/public/cm-super/sfrm1200.pfb><c:/texlive/2016/texmf-dist/fonts/type1/p
-ublic/cm-super/sfti1095.pfb>
-Output written on main.pdf (99 pages, 2276586 bytes).
+c:/texlive/2016/texmf-dist/fonts/type1/public/cbfonts/grmc1095.pfb><c:/texlive/
+2016/texmf-dist/fonts/type1/public/cbfonts/grmc1200.pfb><c:/texlive/2016/texmf-
+dist/fonts/type1/public/cbfonts/grmc2074.pfb><c:/texlive/2016/texmf-dist/fonts/
+type1/public/cbfonts/grmi1095.pfb><c:/texlive/2016/texmf-dist/fonts/type1/publi
+c/cbfonts/grmn1000.pfb><c:/texlive/2016/texmf-dist/fonts/type1/public/cbfonts/g
+rmn1095.pfb><c:/texlive/2016/texmf-dist/fonts/type1/public/cbfonts/grmn1200.pfb
+><c:/texlive/2016/texmf-dist/fonts/type1/public/cbfonts/grmo1095.pfb><c:/texliv
+e/2016/texmf-dist/fonts/type1/public/cbfonts/grxc1200.pfb><c:/texlive/2016/texm
+f-dist/fonts/type1/public/cbfonts/grxn1095.pfb><c:/texlive/2016/texmf-dist/font
+s/type1/public/cbfonts/grxn1200.pfb><c:/texlive/2016/texmf-dist/fonts/type1/pub
+lic/cbfonts/grxn1440.pfb><c:/texlive/2016/texmf-dist/fonts/type1/public/cbfonts
+/grxn1728.pfb><c:/texlive/2016/texmf-dist/fonts/type1/public/cbfonts/grxn2074.p
+fb><c:/texlive/2016/texmf-dist/fonts/type1/public/cbfonts/grxn2488.pfb><c:/texl
+ive/2016/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb><c:/texlive/
+2016/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb><c:/texlive/2016/texmf
+-dist/fonts/type1/public/cm-super/sfrm1200.pfb><c:/texlive/2016/texmf-dist/font
+s/type1/public/cm-super/sfti1095.pfb>
+Output written on main.pdf (103 pages, 2504937 bytes).
 PDF statistics:
- 509 PDF objects out of 1000 (max. 8388607)
- 332 compressed objects within 4 object streams
+ 525 PDF objects out of 1000 (max. 8388607)
+ 338 compressed objects within 4 object streams
  0 named destinations out of 1000 (max. 500000)
- 166 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 201 words of extra memory for PDF output out of 10000 (max. 10000000)
 

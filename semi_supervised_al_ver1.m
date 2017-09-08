@@ -229,7 +229,6 @@ elseif apply_pca==1
 
 
     plotClass(X_shuffled(:,:),Y_shuffled(:));
-    title('Classified examples');
 end
 %% Anomaly Detection with random test train
 [train_idx, test_idx]=crossvalind('Holdout', z, 0.3);
@@ -267,7 +266,7 @@ elseif logic_operation==1
 end
 
 [precision, recall, in_recall, accuracy, F1score] = confusionMatrix (Y_train, prediction);
-BDR=Intr*recall/(Intr*recall+(1-Intr)*in_recall) ; % Bayesian Detection Rate for days
+BDR=fraud_rate*recall/(fraud_rate*recall+(1-fraud_rate)*in_recall) ; % Bayesian Detection Rate for days
 fprintf(' DR  FPR Accuracy F1score BDR \n%4.2f %4.2f %4.2f %4.2f %4.2f\n',recall,in_recall,accuracy, F1score,BDR);
 
 if apply_pca==1
@@ -276,6 +275,9 @@ if apply_pca==1
    %xlabel('Principal Component 1');
    %ylabel('Principal Component 2');
    visualizeFit(X_train, mu, sigma2, 2);
-   xlabel('Principal Component 1');
-   ylabel('Principal Component 2');
+   xlabel('Κύριο Συστατικό 1');
+   ylabel('Κύριο Συστατικό 2');
+   title('Όρια Ανίχνευσης Ανωμαλιών');
+   %xlabel('Principal Component 1');
+   %ylabel('Principal Component 2');
 end

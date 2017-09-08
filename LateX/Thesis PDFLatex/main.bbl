@@ -1,5 +1,11 @@
 \begin{thebibliography}{10}
-\selectlanguage{english}
+
+\bibitem{clustercomparison}
+Osama~Abu Abbas.
+\newblock Comparisons between data clustering algorithms.
+\newblock pages 3--4, 2008.
+\newblock Yarmouk University.
+
 \bibitem{reduceloss}
 P.~Antmann.
 \newblock Reducing technical and non-technical losses in the power sector.
@@ -45,6 +51,12 @@ Gregory C.~Reinsel George E. P.~Box, Gwilym M.~Jenkins and Greta~M. Ljung.
 \newblock {\em Time Series Analysis: Forecasting and Control}.
 \newblock Wiley, 2016.
 
+\bibitem{haykin}
+Simon Haykin.
+\newblock {\em Νευρωνικά Δίκτυα και Μηχανική
+  Μάθηση}.
+\newblock Παπασωτηρίου, Αθήνα, 2010.
+
 \bibitem{stationarity}
 Rob~J. Hyndman and George Athanasopoulos.
 \newblock Forecasting: principles and practice, 2012.
@@ -75,6 +87,12 @@ Mkhwanazi.
 \newblock Electricity as a birthright and the problem of non-payment.
 \newblock In {\em Third Annual South Africa Revenue Protection Conference},
   1999.
+
+\bibitem{PCA}
+Andrew Ng.
+\newblock Principal components analysis.
+\newblock CS229 Lecture notes, 7 2014.
+\newblock Stanford University.
 
 \bibitem{malaysia}
 Kiambang Nik.
@@ -122,6 +140,11 @@ Nasim~Arianpoo Paria~Jokar and Victor C.~M. Leung.
   7:216--226, 2016.
 \newblock IEEE.
 
+\bibitem{Plotly}
+Plotly.
+\newblock Principal component analysis in python.
+\newblock Accessed: 4 September 2017.
+
 \bibitem{liblinearguide}
 Cho-Jui Hsieh Xiang-Rui~Wang Rong-En~Fan, Kai-Wei~Chang and Chih-Jen Lin.
 \newblock Liblinear: A library for large linear classification.
@@ -160,18 +183,20 @@ A.~Siraj V.~Ford and W.~Eberle.
   intelligence applications in smart grid (ciasg)transmission and distribution
   conference and exposition.
 \newblock pages 2--4. IEEE, 2014.
-\selectlanguage{greek}
-\bibitem{haykin}
-Simon Haykin.
-\newblock {\em Νευρωνικά Δίκτυα και Μηχανική
-  Μάθηση}.
-\newblock Παπασωτηρίου, 2010.
-
 
 \bibitem{dehfraud}
 ΔΕΗ.
 \newblock {\em To Κόστος των Ρευματοκλοπών}, 5 2017.
 \newblock Δελτίο τύπου 552017.
+
+\bibitem{fuzzyclustering}
+Αντώνης Νείρου.
+\newblock Ανάπτυξη μεθόδων ασαφούς
+  συσταδοποίησης για τη μοντελοποίηση
+  νευρωνικών δικτύων συναρτήσεων ακτινικής
+  βάσης.
+\newblock pages 54--59, 2011.
+\newblock Πανεπιστήμιο Αιγαίου.
 
 \bibitem{energypress}
 Θοδωρής Παναγούλης.

@@ -1,4 +1,4 @@
-%% Semi supervised algorithm with a twisted Anomaly Detection
+%% Semi supervised algorithm with regular Anomaly Detection
   %  form cluster based on rule based system
     % pick some z vector 
     z=4500;
@@ -11,6 +11,8 @@
 
     %% Fraud Initialization
     % Create Fraud data
+    intensity_vector=0:0.01:1;
+    for int_idx=1:length(intensity_vector)
     F_data3D=H;
     Y2D=zeros(size(H,1),size(H,3));
     one_H=zeros(size(H(:,:,1)));
@@ -20,7 +22,7 @@ fraud_rate=0.1; % Percentage of consumers who fraud
 [normal_idx, fraud_idx] = crossvalind('HoldOut', size(H,3), fraud_rate); % Keep in mind crossval floors the rate
 thiefs=find(fraud_idx==1);
 for i=1:size(thiefs,1)    
-    intensity=1-betarnd(6,3); % beta distribution
+    intensity=1-intensity_vector(1,int_idx); % beta distribution
     dstart=floor(normrnd(size(one_H,1)/2,size(one_H,1)/6.5)); % normal distribution
     while dstart<1 || dstart>(size(one_H,1)-1)
         dstart=floor(normrnd(size(one_H,1)/2,size(one_H,1)/6.5)); % normal distribution
@@ -38,8 +40,8 @@ end
 daily_consumption3D=sum(F_data3D,2);
 daily_consumption=permute(daily_consumption3D,[3 1 2]); % cons x 365 days    
 daily_consumption_t=daily_consumption';    
-prompt=('Apply horizontal normalization?\n 0 w/o norm, 1 with norm [-1,1], 2 with norm [0,1]\n');    
-apply_normalization=input(prompt);   
+
+apply_normalization=1;   
 if apply_normalization==0    
     daily_norm_t=daily_consumption_t;   
 elseif apply_normalization==1    
@@ -50,8 +52,8 @@ end
 
 daily_norm=daily_norm_t';
 
-prompt=('Form Clustering.\n 0. K-Means 1. Fuzzy\n');
-form_cluster=input(prompt);
+
+form_cluster=0;
      
 K_clusters=2;    
 max_iters=10;            
@@ -98,8 +100,7 @@ elseif form_cluster==2
 
 end
 %% Feature extraction
-prompt=('Choose fast or sophisticated features\n0. fast 1. sofisticated (KMEANS) 2. mixed (KMEANS) 3. sofisticated (Fuzzy) 4. sofisticated (SOM) 5. Euclidian\n');
-sophisticated=input(prompt);
+sophisticated=5;
 
 ndays=1;
 Y1D=(sum(Y2D)>ndays)';
@@ -185,21 +186,6 @@ elseif sophisticated==7
        av_cut_per, std_cut_per, neigh_av_cut_per, neigh_std_cut_per);
 end
 fprintf('\nFraud Data and features created.\n');
-%% == PCA for Visualization ==
-% Use PCA to project this cloud to 2D for visualization
-% Subtract the mean to use PCA
-prompt=('Apply PCA?\n 0 w/o PCA, 1 with PCA\n');
-apply_pca=input(prompt);
-if apply_pca==0
-    X=X;
-elseif apply_pca==1
-    % PCA and project the data to 2D
-    [U, S] = pca(X);
-    X = projectData(X, U, 2);
-
-
-    plotClass(X(:,:),Y(:));
-end
 %% Segment Consumers based on Form    
 X_part1=X(idx==1, :);    
 Y_part1=Y(idx==1);    
@@ -216,7 +202,7 @@ else
     X_small=X_part1;
     Y_small=Y_part1; 
 end
-
+Y_shuffled=[Y_big; Y_small];
 %% Prediction
 pred_big=zeros(size(Y_big));
 %binary_table=X_big(:,3:end)~=0;
@@ -227,68 +213,71 @@ binary_table=X_small(:,3:end)~=0; % how many features
 binary_vector=sum(binary_table,2)<3; % less than 3 features consider negative
 %%%binary_vector=sum(X_small(:,3:end),2)==0;
 pred_small(binary_vector)=0;
+
+pred_shuffled=[pred_big; pred_small];
+X_shuffled=[X_big; X_small];
+%% == PCA for Visualization ==
+% Use PCA to project this cloud to 2D for visualization
+% Subtract the mean to use PCA
+
+apply_pca=0;
+if apply_pca==0
+    X_shuffled=X_shuffled;
+elseif apply_pca==1
+    % PCA and project the data to 2D
+    [U, S] = pca(X_shuffled);
+    X_shuffled = projectData(X_shuffled, U, 2);
+
+
+    plotClass(X_shuffled(:,:),Y_shuffled(:));
+end
 %% Anomaly Detection with random test train
-%First segmentation for training
-[train_idx, remain_idx]=crossvalind('Holdout', size(X_big,1),0.3);
-X_train=X_big(train_idx,:);
+[train_idx, test_idx]=crossvalind('Holdout', z, 0.3);
+X_train=X_shuffled(train_idx,:);
 [X_train, minval, maxval]=normalizeFeatures(X_train);
-X_remain=X_big(remain_idx,:);
-Y_remain=Y_big(remain_idx,:);
-pred_big_remain=pred_big(remain_idx,:);
-
-%Second segmentation for test and cross validation
-pred_shuffled=[pred_big_remain; pred_small];
-X_shuffled=[X_remain; X_small];
-[X_shuffled]=normalizeTest(X_shuffled, minval, maxval);
-Y_shuffled=[Y_remain; Y_small];
-
-[test_idx, val_idx]=crossvalind('Holdout', size(X_shuffled,1), 0.5);
+Y_train=Y_shuffled(train_idx,:);
+unsup_pred_train=pred_shuffled(train_idx,:);
 X_test=X_shuffled(test_idx,:);
+[X_test]=normalizeTest(X_test, minval, maxval);
 Y_test=Y_shuffled(test_idx,:);
 unsup_pred_test=pred_shuffled(test_idx,:);
-X_val=X_shuffled(val_idx,:);
-Y_val=Y_shuffled(val_idx,:);
-unsup_pred_val=pred_shuffled(val_idx,:);
 
-[train_idx, remain_idx]=crossvalind('Holdout', size(X_big,1),0.5);
-
-%  Estimate mu and sigma2
+%  Estimate my and sigma2
 [mu, sigma2] = estimateGaussian(X_train);
 
 %  Returns the density of the multivariate normal at each data point (row) 
-%  of X val
-p = multivariateGaussian(X_val, mu, sigma2);
+%  of X train
+p = multivariateGaussian(X_train, mu, sigma2);
 
 
-ptest = multivariateGaussian(X_test, mu, sigma2);
+pval = multivariateGaussian(X_test, mu, sigma2);
 
-[epsilon, F1] = selectThreshold(Y_test, ptest);
+[epsilon, F1] = selectThreshold(Y_test, pval);
 
 %  Find the outliers in the training set
-semi_pred_val = (p < epsilon);
+semi_pred_train = (p < epsilon);
 
 % Logic operations
-prompt=('Logic Operation?\n 0 AND, 1 OR\n');
-logic_operation=input(prompt);
+
+logic_operation=0;
 if logic_operation==0
-    prediction=and(semi_pred_val, unsup_pred_val);
+    prediction=and(semi_pred_train, unsup_pred_train);
 elseif logic_operation==1
-    prediction=or(semi_pred_val, unsup_pred_val);
+    prediction=or(semi_pred_train, unsup_pred_train);
 end
 
-[precision, recall, in_recall, accuracy, F1score] = confusionMatrix (Y_val, prediction);
+[precision, recall, in_recall, accuracy, F1score] = confusionMatrix (Y_train, prediction);
 BDR=fraud_rate*recall/(fraud_rate*recall+(1-fraud_rate)*in_recall) ; % Bayesian Detection Rate for days
-fprintf(' DR  FPR Accuracy F1score BDR \n%4.2f & %4.2f  & %4.2f & %4.2f & %4.2f\n',recall,in_recall,accuracy, F1score,BDR);
-
-if apply_pca==1
-   %plot(Z(:,1),Z(:,2), 'bx');
-   %axis([0 30 0 30]);
-   %xlabel('Principal Component 1');
-   %ylabel('Principal Component 2');
-   visualizeFit(X_train, mu, sigma2, 2);
-   xlabel('Κύριο Συστατικό 1');
-   ylabel('Κύριο Συστατικό 2');
-   title('Όρια Ανίχνευσης Ανωμαλιών');
-   %xlabel('Principal Component 1');
-   %ylabel('Principal Component 2');
-end
+fprintf(' DR  FPR Accuracy F1score BDR \n%4.2f %4.2f %4.2f %4.2f %4.2f\n',recall,in_recall,accuracy, F1score,BDR);
+result_table(int_idx,:)=[intensity_vector(int_idx) recall in_recall  accuracy BDR F1score];
+    end
+    figure;
+plot(result_table(:,1),result_table(:,2))
+xlabel('Ένταση');
+ylabel('DR');
+hold on;
+figure;
+plot(result_table(:,1),result_table(:,3))
+xlabel('Ένταση');
+ylabel('FPR')
+hold off;

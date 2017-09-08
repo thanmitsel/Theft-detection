@@ -11,6 +11,8 @@
 
     %% Fraud Initialization
     % Create Fraud data
+    intensity_vector=0:0.01:1;
+for int_idx=1:length(intensity_vector)
     F_data3D=H;
     Y2D=zeros(size(H,1),size(H,3));
     one_H=zeros(size(H(:,:,1)));
@@ -20,7 +22,7 @@ fraud_rate=0.1; % Percentage of consumers who fraud
 [normal_idx, fraud_idx] = crossvalind('HoldOut', size(H,3), fraud_rate); % Keep in mind crossval floors the rate
 thiefs=find(fraud_idx==1);
 for i=1:size(thiefs,1)    
-    intensity=1-betarnd(6,3); % beta distribution
+    intensity=1-intensity_vector(1,int_idx); % beta distribution
     dstart=floor(normrnd(size(one_H,1)/2,size(one_H,1)/6.5)); % normal distribution
     while dstart<1 || dstart>(size(one_H,1)-1)
         dstart=floor(normrnd(size(one_H,1)/2,size(one_H,1)/6.5)); % normal distribution
@@ -38,8 +40,7 @@ end
 daily_consumption3D=sum(F_data3D,2);
 daily_consumption=permute(daily_consumption3D,[3 1 2]); % cons x 365 days    
 daily_consumption_t=daily_consumption';    
-prompt=('Apply horizontal normalization?\n 0 w/o norm, 1 with norm [-1,1], 2 with norm [0,1]\n');    
-apply_normalization=input(prompt);   
+apply_normalization=1;   
 if apply_normalization==0    
     daily_norm_t=daily_consumption_t;   
 elseif apply_normalization==1    
@@ -50,8 +51,8 @@ end
 
 daily_norm=daily_norm_t';
 
-prompt=('Form Clustering.\n 0. K-Means 1. Fuzzy\n');
-form_cluster=input(prompt);
+
+form_cluster=0;
      
 K_clusters=2;    
 max_iters=10;            
@@ -98,8 +99,7 @@ elseif form_cluster==2
 
 end
 %% Feature extraction
-prompt=('Choose fast or sophisticated features\n0. fast 1. sofisticated (KMEANS) 2. mixed (KMEANS) 3. sofisticated (Fuzzy) 4. sofisticated (SOM) 5. Euclidian\n');
-sophisticated=input(prompt);
+sophisticated=5;
 
 ndays=1;
 Y1D=(sum(Y2D)>ndays)';
@@ -188,8 +188,7 @@ fprintf('\nFraud Data and features created.\n');
 %% == PCA for Visualization ==
 % Use PCA to project this cloud to 2D for visualization
 % Subtract the mean to use PCA
-prompt=('Apply PCA?\n 0 w/o PCA, 1 with PCA\n');
-apply_pca=input(prompt);
+apply_pca=0;
 if apply_pca==0
     X=X;
 elseif apply_pca==1
@@ -268,8 +267,8 @@ ptest = multivariateGaussian(X_test, mu, sigma2);
 semi_pred_val = (p < epsilon);
 
 % Logic operations
-prompt=('Logic Operation?\n 0 AND, 1 OR\n');
-logic_operation=input(prompt);
+
+logic_operation=0;
 if logic_operation==0
     prediction=and(semi_pred_val, unsup_pred_val);
 elseif logic_operation==1
@@ -279,16 +278,15 @@ end
 [precision, recall, in_recall, accuracy, F1score] = confusionMatrix (Y_val, prediction);
 BDR=fraud_rate*recall/(fraud_rate*recall+(1-fraud_rate)*in_recall) ; % Bayesian Detection Rate for days
 fprintf(' DR  FPR Accuracy F1score BDR \n%4.2f & %4.2f  & %4.2f & %4.2f & %4.2f\n',recall,in_recall,accuracy, F1score,BDR);
-
-if apply_pca==1
-   %plot(Z(:,1),Z(:,2), 'bx');
-   %axis([0 30 0 30]);
-   %xlabel('Principal Component 1');
-   %ylabel('Principal Component 2');
-   visualizeFit(X_train, mu, sigma2, 2);
-   xlabel('Κύριο Συστατικό 1');
-   ylabel('Κύριο Συστατικό 2');
-   title('Όρια Ανίχνευσης Ανωμαλιών');
-   %xlabel('Principal Component 1');
-   %ylabel('Principal Component 2');
+result_table(int_idx,:)=[intensity_vector(int_idx) recall in_recall  accuracy BDR F1score];
 end
+figure;
+plot(result_table(:,1),result_table(:,2))
+xlabel('Ένταση');
+ylabel('DR');
+hold on;
+figure;
+plot(result_table(:,1),result_table(:,3))
+xlabel('Ένταση');
+ylabel('FPR')
+hold off;
