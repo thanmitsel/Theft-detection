@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/W32TeX) (preloaded format=pdflatex 2017.3.16)  8 SEP 2017 22:45
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/W32TeX) (preloaded format=pdflatex 2017.3.16)  13 SEP 2017 15:31
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1505,7 +1505,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 135--135
 
 
 ] (./main.toc [7] [8]
-LaTeX Info: Redefining \anw@print on input line 167.
+LaTeX Info: Redefining \anw@print on input line 174.
 )
 \tf@toc=\write5
 \openout5 = `main.toc'.
@@ -1517,16 +1517,16 @@ LaTeX Info: Redefining \anw@print on input line 167.
 \tf@lof=\write6
 \openout6 = `main.lof'.
 
- [11] [12
+ [11] [12] (./main.lot [13
 
-] (./main.lot [13]
-LaTeX Info: Redefining \anw@print on input line 108.
-LaTeX Info: Redefining \anw@print on input line 109.
-LaTeX Info: Redefining \anw@print on input line 112.
-LaTeX Info: Redefining \anw@print on input line 113.
-LaTeX Info: Redefining \anw@print on input line 114.
-LaTeX Info: Redefining \anw@print on input line 115.
-LaTeX Info: Redefining \anw@print on input line 116.
+]
+LaTeX Info: Redefining \anw@print on input line 119.
+LaTeX Info: Redefining \anw@print on input line 120.
+LaTeX Info: Redefining \anw@print on input line 123.
+LaTeX Info: Redefining \anw@print on input line 124.
+LaTeX Info: Redefining \anw@print on input line 125.
+LaTeX Info: Redefining \anw@print on input line 126.
+LaTeX Info: Redefining \anw@print on input line 127.
 )
 \tf@lot=\write7
 \openout7 = `main.lot'.
@@ -1567,6 +1567,10 @@ Overfull \hbox (1.8372pt too wide) in paragraph at lines 34--34
 \textKappa \textepsilon \textphi \acctonos \textalpha \textlambda \textalpha \t
 extiota \textomicron  3.
 (./chapters/chapter03.tex
+
+LaTeX Warning: Citation `rawdataNN' on page 27 undefined on input line 3.
+
+
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [27]
@@ -2062,7 +2066,14 @@ Package pdftex.def Info: ../../plots/ROC35.png used on input line 253.
 ]
 \textKappa \textepsilon \textphi \acctonos \textalpha \textlambda \textalpha \t
 extiota \textomicron  5.
-(./chapters/chapter05.tex [59] [60] [61] [62]
+(./chapters/chapter05.tex
+
+LaTeX Warning: Citation `Anomaly' on page 59 undefined on input line 3.
+
+
+LaTeX Warning: Citation `Anomaly' on page 59 undefined on input line 4.
+
+[59] [60] [61] [62]
 Underfull \vbox (badness 10000) detected at line 77
  []
 
@@ -2234,7 +2245,11 @@ File: ../../plots/systems/semi_supervised.png Graphic file (type png)
 Package pdftex.def Info: ../../plots/systems/semi_supervised.png used on input 
 line 447.
 (pdftex.def)             Requested size: 256.07684pt x 284.52234pt.
- [74 <../../plots/systems/semi_supervised.png>] [75]
+ [74 <../../plots/systems/semi_supervised.png>]
+
+LaTeX Warning: Citation `Anomaly' on page 75 undefined on input line 485.
+
+[75]
 Underfull \hbox (badness 10000) in paragraph at lines 490--491
 
  []
@@ -2395,16 +2410,31 @@ p1.png (PNG copy)> <../../plots/gr_fpr_intensity_semi_sup1.png (PNG copy)> <../
 y_semi_sup2.png (PNG copy)>]
 \textKappa \textepsilon \textphi \acctonos \textalpha \textlambda \textalpha \t
 extiota \textomicron  6.
-(./chapters/chapter06.tex) [83
+(./chapters/chapter06.tex [83
 
-] [84
-
-]
+] [84] [85]) [86]
 \textKappa \textepsilon \textphi \acctonos \textalpha \textlambda \textalpha \t
 extiota \textomicron  7.
-(./chapters/chapter07.tex) [85] [86] (./main.bbl [87
+(./chapters/chapter07.tex [87
 
-] [88]) [89] [90
+]
+Underfull \vbox (badness 10000) detected at line 21
+ []
+
+<../../plots/comparison_systems.png, id=379, 421.575pt x 316.18124pt>
+File: ../../plots/comparison_systems.png Graphic file (type png)
+
+<use ../../plots/comparison_systems.png>
+Package pdftex.def Info: ../../plots/comparison_systems.png used on input line 
+28.
+(pdftex.def)             Requested size: 256.07967pt x 170.72084pt.
+)
+Underfull \vbox (badness 5622) has occurred while \output is active []
+
+ [88 <../../plots/comparison_systems.png (PNG copy)>] [89] [90] (./main.bbl [91
+
+] [92])
+[93] [94
 
 ]
 \textPi \textalpha \textrho \acctonos \textalpha \textrho \texttau \texteta \te
@@ -2439,30 +2469,33 @@ LaTeX Info: Redefining \anw@print on input line 187.
 LaTeX Info: Redefining \anw@print on input line 187.
 LaTeX Info: Redefining \anw@print on input line 187.
 LaTeX Info: Redefining \anw@print on input line 187.
-) [91]
+) [95]
 LaTeX Info: Redefining \anw@print on input line 186.
- [92] [93]
+ [96] [97]
 \openout2 = `glossary.aux'.
 
- (./glossary.tex [94
+ (./glossary.tex [98
 
 
-]) [95] [96
+]) [99] [100
 
 
 ]
 No file main.ind.
-[97] (./main.aux (./abstract.aux) (./glossary.aux))
+[101] (./main.aux (./abstract.aux) (./glossary.aux))
+
+LaTeX Warning: There were undefined references.
+
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 9395 strings out of 493013
- 137768 string characters out of 6136993
- 234763 words of memory out of 5000000
- 12593 multiletter control sequences out of 15000+600000
- 27823 words of font info for 66 fonts, out of 8000000 for 9000
+ 9406 strings out of 493013
+ 138034 string characters out of 6136993
+ 234880 words of memory out of 5000000
+ 12602 multiletter control sequences out of 15000+600000
+ 28169 words of font info for 67 fonts, out of 8000000 for 9000
  1143 hyphenation exceptions out of 8191
  59i,12n,94p,2566b,838s stack positions out of 5000i,500n,10000p,200000b,80000s
 {c:/texlive/2016/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}<c:/tex
@@ -2480,27 +2513,28 @@ onts/type1/public/amsfonts/cm/cmr6.pfb><c:/texlive/2016/texmf-dist/fonts/type1/
 public/amsfonts/cm/cmr8.pfb><c:/texlive/2016/texmf-dist/fonts/type1/public/amsf
 onts/cm/cmsy10.pfb><c:/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/c
 msy6.pfb><c:/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><
-c:/texlive/2016/texmf-dist/fonts/type1/public/cbfonts/grmc1095.pfb><c:/texlive/
-2016/texmf-dist/fonts/type1/public/cbfonts/grmc1200.pfb><c:/texlive/2016/texmf-
-dist/fonts/type1/public/cbfonts/grmc2074.pfb><c:/texlive/2016/texmf-dist/fonts/
-type1/public/cbfonts/grmi1095.pfb><c:/texlive/2016/texmf-dist/fonts/type1/publi
-c/cbfonts/grmn1000.pfb><c:/texlive/2016/texmf-dist/fonts/type1/public/cbfonts/g
-rmn1095.pfb><c:/texlive/2016/texmf-dist/fonts/type1/public/cbfonts/grmn1200.pfb
-><c:/texlive/2016/texmf-dist/fonts/type1/public/cbfonts/grmo1095.pfb><c:/texliv
-e/2016/texmf-dist/fonts/type1/public/cbfonts/grxc1200.pfb><c:/texlive/2016/texm
-f-dist/fonts/type1/public/cbfonts/grxn1095.pfb><c:/texlive/2016/texmf-dist/font
-s/type1/public/cbfonts/grxn1200.pfb><c:/texlive/2016/texmf-dist/fonts/type1/pub
-lic/cbfonts/grxn1440.pfb><c:/texlive/2016/texmf-dist/fonts/type1/public/cbfonts
-/grxn1728.pfb><c:/texlive/2016/texmf-dist/fonts/type1/public/cbfonts/grxn2074.p
-fb><c:/texlive/2016/texmf-dist/fonts/type1/public/cbfonts/grxn2488.pfb><c:/texl
-ive/2016/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb><c:/texlive/
-2016/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb><c:/texlive/2016/texmf
--dist/fonts/type1/public/cm-super/sfrm1200.pfb><c:/texlive/2016/texmf-dist/font
-s/type1/public/cm-super/sfti1095.pfb>
-Output written on main.pdf (103 pages, 2504937 bytes).
+c:/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb><c:/texliv
+e/2016/texmf-dist/fonts/type1/public/cbfonts/grmc1095.pfb><c:/texlive/2016/texm
+f-dist/fonts/type1/public/cbfonts/grmc1200.pfb><c:/texlive/2016/texmf-dist/font
+s/type1/public/cbfonts/grmc2074.pfb><c:/texlive/2016/texmf-dist/fonts/type1/pub
+lic/cbfonts/grmi1095.pfb><c:/texlive/2016/texmf-dist/fonts/type1/public/cbfonts
+/grmn1000.pfb><c:/texlive/2016/texmf-dist/fonts/type1/public/cbfonts/grmn1095.p
+fb><c:/texlive/2016/texmf-dist/fonts/type1/public/cbfonts/grmn1200.pfb><c:/texl
+ive/2016/texmf-dist/fonts/type1/public/cbfonts/grmo1095.pfb><c:/texlive/2016/te
+xmf-dist/fonts/type1/public/cbfonts/grxc1200.pfb><c:/texlive/2016/texmf-dist/fo
+nts/type1/public/cbfonts/grxn1095.pfb><c:/texlive/2016/texmf-dist/fonts/type1/p
+ublic/cbfonts/grxn1200.pfb><c:/texlive/2016/texmf-dist/fonts/type1/public/cbfon
+ts/grxn1440.pfb><c:/texlive/2016/texmf-dist/fonts/type1/public/cbfonts/grxn1728
+.pfb><c:/texlive/2016/texmf-dist/fonts/type1/public/cbfonts/grxn2074.pfb><c:/te
+xlive/2016/texmf-dist/fonts/type1/public/cbfonts/grxn2488.pfb><c:/texlive/2016/
+texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb><c:/texlive/2016/texm
+f-dist/fonts/type1/public/cm-super/sfrm1095.pfb><c:/texlive/2016/texmf-dist/fon
+ts/type1/public/cm-super/sfrm1200.pfb><c:/texlive/2016/texmf-dist/fonts/type1/p
+ublic/cm-super/sfti1095.pfb>
+Output written on main.pdf (107 pages, 2542747 bytes).
 PDF statistics:
- 525 PDF objects out of 1000 (max. 8388607)
- 338 compressed objects within 4 object streams
+ 542 PDF objects out of 1000 (max. 8388607)
+ 349 compressed objects within 4 object streams
  0 named destinations out of 1000 (max. 500000)
- 201 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 206 words of extra memory for PDF output out of 10000 (max. 10000000)
 

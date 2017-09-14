@@ -6,34 +6,34 @@ A level-1 auxiliary file: abstract.aux
 A level-1 auxiliary file: glossary.aux
 Database file #1: references.bib
 Warning--entry type for "mathworkstrend" isn't style-file defined
---line 38 of file references.bib
+--line 40 of file references.bib
 Warning--entry type for "stationarity" isn't style-file defined
---line 54 of file references.bib
+--line 56 of file references.bib
 Warning--entry type for "learningstyle" isn't style-file defined
---line 110 of file references.bib
+--line 112 of file references.bib
 Warning--entry type for "cer" isn't style-file defined
---line 127 of file references.bib
+--line 129 of file references.bib
 Warning--entry type for "miningOracle" isn't style-file defined
---line 142 of file references.bib
+--line 146 of file references.bib
 Warning--entry type for "histogram" isn't style-file defined
---line 149 of file references.bib
+--line 153 of file references.bib
 Warning--entry type for "betadstr" isn't style-file defined
---line 156 of file references.bib
-I was expecting a `,' or a `}'---line 160 of file references.bib
+--line 160 of file references.bib
+I was expecting a `,' or a `}'---line 164 of file references.bib
  :     
  :     url           = {http://pj.freefaculty.org/guides/stat/Distributions/DistributionWriteups/Beta/Beta.pdf},
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
 Warning--entry type for "aihorizon" isn't style-file defined
---line 208 of file references.bib
+--line 221 of file references.bib
 Warning--entry type for "Plotly" isn't style-file defined
---line 230 of file references.bib
-Repeated entry---line 245 of file references.bib
+--line 245 of file references.bib
+Repeated entry---line 260 of file references.bib
  : @online{aihorizon
  :                  ,
 I'm skipping whatever remains of this entry
 Warning--entry type for "energypress" isn't style-file defined
---line 271 of file references.bib
+--line 286 of file references.bib
 Too many commas in name 1 of "Rong-En Fan, Kai-Wei Chang, Cho-Jui Hsieh, Xiang-Rui Wang and Chih-Jen Lin" for entry liblinearguide
 while executing---line 1049 of file plain.bst
 Warning--empty journal in clustercomparison
@@ -43,45 +43,45 @@ Too many commas in name 1 of "Rong-En Fan, Kai-Wei Chang, Cho-Jui Hsieh, Xiang-R
 while executing---line 1090 of file plain.bst
 Warning--empty booktitle in rawdataNN
 Warning--empty journal in fuzzyclustering
-You've used 36 entries,
+You've used 37 entries,
             2118 wiz_defined-function locations,
-            676 strings with 8746 characters,
-and the built_in function-call counts, 9429 in all, are:
-= -- 935
-> -- 318
-< -- 9
-+ -- 135
-- -- 94
-* -- 447
-:= -- 1538
-add.period$ -- 120
-call.type$ -- 36
-change.case$ -- 153
+            680 strings with 8883 characters,
+and the built_in function-call counts, 9808 in all, are:
+= -- 974
+> -- 331
+< -- 10
++ -- 140
+- -- 98
+* -- 467
+:= -- 1595
+add.period$ -- 124
+call.type$ -- 37
+change.case$ -- 158
 chr.to.int$ -- 0
-cite$ -- 41
-duplicate$ -- 405
-empty$ -- 870
-format.name$ -- 94
-if$ -- 2088
+cite$ -- 42
+duplicate$ -- 424
+empty$ -- 905
+format.name$ -- 98
+if$ -- 2179
 int.to.chr$ -- 0
-int.to.str$ -- 36
-missing$ -- 21
-newline$ -- 189
-num.names$ -- 64
-pop$ -- 242
+int.to.str$ -- 37
+missing$ -- 22
+newline$ -- 194
+num.names$ -- 66
+pop$ -- 250
 preamble$ -- 1
-purify$ -- 123
+purify$ -- 127
 quote$ -- 0
-skip$ -- 300
+skip$ -- 313
 stack$ -- 0
-substring$ -- 421
-swap$ -- 87
-text.length$ -- 9
+substring$ -- 438
+swap$ -- 94
+text.length$ -- 10
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 138
+type$ -- 142
 warning$ -- 5
-while$ -- 85
-width$ -- 38
-write$ -- 387
+while$ -- 89
+width$ -- 39
+write$ -- 399
 (There were 4 error messages)

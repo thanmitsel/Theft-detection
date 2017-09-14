@@ -1,5 +1,5 @@
 \begin{thebibliography}{10}
-
+\selectlanguage{english}
 \bibitem{clustercomparison}
 Osama~Abu Abbas.
 \newblock Comparisons between data clustering algorithms.
@@ -31,6 +31,11 @@ Y.~Zhu C.-Y.~Hsia and Chih-Jen Lin.
   large-scale linear classification.
 \newblock Technical report, JMLR, 2017.
 
+\bibitem{anonymization}
+Costas Efthymiou and Georgios Kalogridis.
+\newblock Smart grid privacy via anonymization of smart metering data.
+\newblock In {\em Smart Grid Communications}, pages 2--4. IEEE, 2010.
+
 \bibitem{regulation}
 ERGEG.
 \newblock {\em Smart Metering with a Focus on Electricity Regulation}, 2007.
@@ -50,12 +55,6 @@ Commission for Energy~Regulation.
 Gregory C.~Reinsel George E. P.~Box, Gwilym M.~Jenkins and Greta~M. Ljung.
 \newblock {\em Time Series Analysis: Forecasting and Control}.
 \newblock Wiley, 2016.
-
-\bibitem{haykin}
-Simon Haykin.
-\newblock {\em Νευρωνικά Δίκτυα και Μηχανική
-  Μάθηση}.
-\newblock Παπασωτηρίου, Αθήνα, 2010.
 
 \bibitem{stationarity}
 Rob~J. Hyndman and George Athanasopoulos.
@@ -171,18 +170,12 @@ Thomas~B. Smith.
 TACIS.
 \newblock {\em Improving Residential Electricity Services}, 1998.
 \newblock Tacis Technical Dissemination Project.
-
-\bibitem{Anomaly}
-V.~Kumar V.~Chandola, A.~Banerjee.
-\newblock Anomaly detection: A survey.
-\newblock Technical report, ACM Computing Surveys, 2009.
-
-\bibitem{rawdataNN}
-A.~Siraj V.~Ford and W.~Eberle.
-\newblock Smart grid energy fraud detection using articial neuralcomputational
-  intelligence applications in smart grid (ciasg)transmission and distribution
-  conference and exposition.
-\newblock pages 2--4. IEEE, 2014.
+\selectlanguage{greek}
+\bibitem{haykin}
+Simon Haykin.
+\newblock {\em Νευρωνικά Δίκτυα και Μηχανική
+  Μάθηση}.
+\newblock Παπασωτηρίου, Αθήνα, 2010.
 
 \bibitem{dehfraud}
 ΔΕΗ.
