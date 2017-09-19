@@ -54,8 +54,9 @@ T=size(daily_consumption,2);
 figure; hold on;
 for i=1:K_clusters
     ax1=subplot(K_clusters/2,2,i);
-    daily_cluster=daily_consumption(idx_form==i,:);
-    plot(daily_cluster(2,:));
+    %daily_cluster=daily_consumption(idx_form==i,:);
+    %plot(daily_cluster(2,:));
+    plot(centroids(i,:));
     h1 = gca;
     h1.XLim = [0,T];
     str=sprintf('Παράδειγμα Κατανάλωσης Συστάδας %d',i);
@@ -95,8 +96,9 @@ T=size(daily_consumption,2);
 figure; hold on;
 for i=1:K_clusters
     ax1=subplot(K_clusters/2,2,i);
-    daily_cluster=daily_consumption(idx==i,:);
-    plot(daily_cluster(2,:));
+    %daily_cluster=daily_consumption(idx==i,:);
+    %plot(daily_cluster(2,:));
+    plot(centroids(i,:));
     h1 = gca;
     h1.XLim = [0,T];
     str=sprintf('Παράδειγμα Κατανάλωσης Συστάδας %d',i);

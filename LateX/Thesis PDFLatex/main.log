@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/W32TeX) (preloaded format=pdflatex 2017.3.16)  17 SEP 2017 18:38
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/W32TeX) (preloaded format=pdflatex 2017.3.16)  19 SEP 2017 19:29
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1505,7 +1505,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 135--135
 
 
 ] (./main.toc [7] [8]
-LaTeX Info: Redefining \anw@print on input line 174.
+LaTeX Info: Redefining \anw@print on input line 176.
 )
 \tf@toc=\write5
 \openout5 = `main.toc'.
@@ -1520,13 +1520,13 @@ LaTeX Info: Redefining \anw@print on input line 174.
  [11] [12] (./main.lot [13
 
 ]
-LaTeX Info: Redefining \anw@print on input line 119.
-LaTeX Info: Redefining \anw@print on input line 120.
-LaTeX Info: Redefining \anw@print on input line 123.
-LaTeX Info: Redefining \anw@print on input line 124.
+LaTeX Info: Redefining \anw@print on input line 121.
+LaTeX Info: Redefining \anw@print on input line 122.
 LaTeX Info: Redefining \anw@print on input line 125.
 LaTeX Info: Redefining \anw@print on input line 126.
 LaTeX Info: Redefining \anw@print on input line 127.
+LaTeX Info: Redefining \anw@print on input line 128.
+LaTeX Info: Redefining \anw@print on input line 129.
 )
 \tf@lot=\write7
 \openout7 = `main.lot'.
@@ -1583,12 +1583,7 @@ LaTeX Info: Redefining \anw@print on input line 44.
 LaTeX Info: Redefining \anw@print on input line 44.
 LaTeX Info: Redefining \anw@print on input line 44.
 
-Underfull \hbox (badness 2173) in paragraph at lines 44--44
-[]\LGR/cmr/m/n/10 (aþ) |Su-sta-do-po-Ðh-sh me ka-
- []
-
-
-Overfull \hbox (49.92763pt too wide) in paragraph at lines 52--64
+Overfull \hbox (68.76778pt too wide) in paragraph at lines 52--64
 [][] 
  []
 
@@ -1603,414 +1598,401 @@ Underfull \hbox (badness 2229) in paragraph at lines 64--64
 
 LaTeX Info: Redefining \anw@print on input line 70.
 LaTeX Info: Redefining \anw@print on input line 70.
-
-<../../plots/Consumption_Analysis/gr_cluster_form.png, id=136, 1445.4pt x 732.4
+[28]
+<../../plots/Consumption_Analysis/gr_cluster_form.png, id=139, 1445.4pt x 732.4
 8656pt>
 File: ../../plots/Consumption_Analysis/gr_cluster_form.png Graphic file (type p
 ng)
  <use ../../plots/Consumption_Analysis/gr_cluster_form.png>
 Package pdftex.def Info: ../../plots/Consumption_Analysis/gr_cluster_form.png u
-sed on input line 74.
+sed on input line 75.
 (pdftex.def)             Requested size: 512.13914pt x 284.52856pt.
 
-Overfull \hbox (85.34781pt too wide) in paragraph at lines 74--75
+Overfull \hbox (85.34781pt too wide) in paragraph at lines 75--76
  [][] 
  []
 
-[28] [29 <../../plots/Consumption_Analysis/gr_cluster_form.png (PNG copy)>]
+[29 <../../plots/Consumption_Analysis/gr_cluster_form.png (PNG copy)>]
 <../../plots/Consumption_Analysis/gr_cluster_cons_level.png, id=144, 1445.4pt x
  732.48656pt>
 File: ../../plots/Consumption_Analysis/gr_cluster_cons_level.png Graphic file (
 type png)
  <use ../../plots/Consumption_Analysis/gr_cluster_cons_level.png>
 Package pdftex.def Info: ../../plots/Consumption_Analysis/gr_cluster_cons_level
-.png used on input line 89.
+.png used on input line 90.
 (pdftex.def)             Requested size: 512.13914pt x 284.52856pt.
 
-Overfull \hbox (85.34781pt too wide) in paragraph at lines 89--90
+Overfull \hbox (85.34781pt too wide) in paragraph at lines 90--91
  [][] 
  []
 
 [30 <../../plots/Consumption_Analysis/gr_cluster_cons_level.png (PNG copy)>]
-LaTeX Info: Redefining \anw@print on input line 112.
-LaTeX Info: Redefining \anw@print on input line 112.
-LaTeX Info: Redefining \anw@print on input line 112.
-LaTeX Info: Redefining \anw@print on input line 112.
-
 [31]
-<../../plots/Consumption_Analysis/gr_hist_mean_days.png, id=152, 1445.4pt x 732
-.48656pt>
+<../../plots/Consumption_Analysis/gr_hist_mean_days.png, id=152, 1927.2pt x 976
+.64874pt>
 File: ../../plots/Consumption_Analysis/gr_hist_mean_days.png Graphic file (type
  png)
  <use ../../plots/Consumption_Analysis/gr_hist_mean_days.png>
 Package pdftex.def Info: ../../plots/Consumption_Analysis/gr_hist_mean_days.png
- used on input line 118.
-(pdftex.def)             Requested size: 256.05855pt x 142.25868pt.
+ used on input line 116.
+(pdftex.def)             Requested size: 256.07324pt x 142.2587pt.
 
-Overfull \hbox (42.66289pt too wide) in paragraph at lines 118--119
+Overfull \hbox (85.35931pt too wide) in paragraph at lines 116--117
 [][] 
  []
 
-LaTeX Info: Redefining \anw@print on input line 119.
-LaTeX Info: Redefining \anw@print on input line 119.
-LaTeX Info: Redefining \anw@print on input line 119.
-LaTeX Info: Redefining \anw@print on input line 119.
+LaTeX Info: Redefining \anw@print on input line 117.
+LaTeX Info: Redefining \anw@print on input line 117.
+LaTeX Info: Redefining \anw@print on input line 117.
+LaTeX Info: Redefining \anw@print on input line 117.
 
-<../../plots/Consumption_Analysis/gr_hist_std_days.png, id=153, 1445.4pt x 732.
-48656pt>
+<../../plots/Consumption_Analysis/gr_hist_std_days.png, id=153, 1927.2pt x 976.
+64874pt>
 File: ../../plots/Consumption_Analysis/gr_hist_std_days.png Graphic file (type 
 png)
  <use ../../plots/Consumption_Analysis/gr_hist_std_days.png>
 Package pdftex.def Info: ../../plots/Consumption_Analysis/gr_hist_std_days.png 
-used on input line 124.
-(pdftex.def)             Requested size: 256.05855pt x 142.25868pt.
+used on input line 122.
+(pdftex.def)             Requested size: 256.07324pt x 142.2587pt.
 
-Overfull \hbox (42.66289pt too wide) in paragraph at lines 124--125
+Overfull \hbox (85.35931pt too wide) in paragraph at lines 122--123
 [][] 
  []
 
-LaTeX Info: Redefining \anw@print on input line 125.
-LaTeX Info: Redefining \anw@print on input line 125.
-LaTeX Info: Redefining \anw@print on input line 125.
-LaTeX Info: Redefining \anw@print on input line 125.
+LaTeX Info: Redefining \anw@print on input line 123.
+LaTeX Info: Redefining \anw@print on input line 123.
+LaTeX Info: Redefining \anw@print on input line 123.
+LaTeX Info: Redefining \anw@print on input line 123.
 
-<../../plots/Consumption_Analysis/gr_hist_mean_year.png, id=154, 1445.4pt x 732
-.48656pt>
+<../../plots/Consumption_Analysis/gr_hist_mean_year.png, id=154, 1927.2pt x 976
+.64874pt>
 File: ../../plots/Consumption_Analysis/gr_hist_mean_year.png Graphic file (type
  png)
  <use ../../plots/Consumption_Analysis/gr_hist_mean_year.png>
 Package pdftex.def Info: ../../plots/Consumption_Analysis/gr_hist_mean_year.png
- used on input line 131.
-(pdftex.def)             Requested size: 256.05855pt x 142.25868pt.
+ used on input line 129.
+(pdftex.def)             Requested size: 256.07324pt x 142.2587pt.
 
-Overfull \hbox (42.66289pt too wide) in paragraph at lines 131--132
+Overfull \hbox (85.35931pt too wide) in paragraph at lines 129--130
 [][] 
  []
 
-LaTeX Info: Redefining \anw@print on input line 132.
-LaTeX Info: Redefining \anw@print on input line 132.
-LaTeX Info: Redefining \anw@print on input line 132.
-LaTeX Info: Redefining \anw@print on input line 132.
+LaTeX Info: Redefining \anw@print on input line 130.
+LaTeX Info: Redefining \anw@print on input line 130.
+LaTeX Info: Redefining \anw@print on input line 130.
+LaTeX Info: Redefining \anw@print on input line 130.
 
-<../../plots/Consumption_Analysis/gr_hist_std_year.png, id=155, 1445.4pt x 732.
-48656pt>
+<../../plots/Consumption_Analysis/gr_hist_std_year.png, id=155, 1927.2pt x 976.
+64874pt>
 File: ../../plots/Consumption_Analysis/gr_hist_std_year.png Graphic file (type 
 png)
  <use ../../plots/Consumption_Analysis/gr_hist_std_year.png>
 Package pdftex.def Info: ../../plots/Consumption_Analysis/gr_hist_std_year.png 
-used on input line 137.
-(pdftex.def)             Requested size: 256.05855pt x 142.25868pt.
+used on input line 135.
+(pdftex.def)             Requested size: 256.07324pt x 142.2587pt.
 
-Overfull \hbox (42.66289pt too wide) in paragraph at lines 137--138
+Overfull \hbox (85.35931pt too wide) in paragraph at lines 135--136
 [][] 
  []
 
-LaTeX Info: Redefining \anw@print on input line 138.
-LaTeX Info: Redefining \anw@print on input line 138.
-LaTeX Info: Redefining \anw@print on input line 138.
-LaTeX Info: Redefining \anw@print on input line 138.
+LaTeX Info: Redefining \anw@print on input line 136.
+LaTeX Info: Redefining \anw@print on input line 136.
+LaTeX Info: Redefining \anw@print on input line 136.
+LaTeX Info: Redefining \anw@print on input line 136.
 
-Overfull \hbox (13.2647pt too wide) in paragraph at lines 117--141
+Underfull \hbox (badness 10000) in paragraph at lines 115--139
 [][]  []
  []
 
+LaTeX Info: Redefining \anw@print on input line 143.
+LaTeX Info: Redefining \anw@print on input line 143.
+LaTeX Info: Redefining \anw@print on input line 143.
+LaTeX Info: Redefining \anw@print on input line 143.
+[32 <../../plots/Consumption_Analysis/gr_hist_mean_days.png> <../../plots/Consu
+mption_Analysis/gr_hist_std_days.png> <../../plots/Consumption_Analysis/gr_hist
+_mean_year.png> <../../plots/Consumption_Analysis/gr_hist_std_year.png>]
 
-Overfull \hbox (13.2647pt too wide) in paragraph at lines 117--141
-[]  [] 
- []
+LaTeX Warning: Command \textBeta invalid in math mode on input line 151.
 
+LaTeX Info: Redefining \anw@print on input line 153.
+LaTeX Info: Redefining \anw@print on input line 153.
+LaTeX Info: Redefining \anw@print on input line 153.
+LaTeX Info: Redefining \anw@print on input line 153.
 
-<../../plots/Consumption_Analysis/beta_days_plot.png, id=156, 421.575pt x 316.1
+<../../plots/Consumption_Analysis/beta_days_plot.png, id=159, 421.575pt x 316.1
 8124pt>
 File: ../../plots/Consumption_Analysis/beta_days_plot.png Graphic file (type pn
 g)
  <use ../../plots/Consumption_Analysis/beta_days_plot.png>
 Package pdftex.def Info: ../../plots/Consumption_Analysis/beta_days_plot.png us
-ed on input line 147.
+ed on input line 157.
 (pdftex.def)             Requested size: 199.1695pt x 142.26576pt.
-LaTeX Info: Redefining \anw@print on input line 148.
-LaTeX Info: Redefining \anw@print on input line 148.
-LaTeX Info: Redefining \anw@print on input line 148.
-LaTeX Info: Redefining \anw@print on input line 148.
-LaTeX Info: Redefining \anw@print on input line 148.
-LaTeX Info: Redefining \anw@print on input line 148.
-LaTeX Info: Redefining \anw@print on input line 148.
-LaTeX Info: Redefining \anw@print on input line 148.
+LaTeX Info: Redefining \anw@print on input line 158.
+LaTeX Info: Redefining \anw@print on input line 158.
+LaTeX Info: Redefining \anw@print on input line 158.
+LaTeX Info: Redefining \anw@print on input line 158.
+LaTeX Info: Redefining \anw@print on input line 158.
+LaTeX Info: Redefining \anw@print on input line 158.
+LaTeX Info: Redefining \anw@print on input line 158.
+LaTeX Info: Redefining \anw@print on input line 158.
 
-<../../plots/Consumption_Analysis/beta_year_plot.png, id=157, 421.575pt x 316.1
+<../../plots/Consumption_Analysis/beta_year_plot.png, id=160, 421.575pt x 316.1
 8124pt>
 File: ../../plots/Consumption_Analysis/beta_year_plot.png Graphic file (type pn
 g)
  <use ../../plots/Consumption_Analysis/beta_year_plot.png>
 Package pdftex.def Info: ../../plots/Consumption_Analysis/beta_year_plot.png us
-ed on input line 153.
+ed on input line 163.
 (pdftex.def)             Requested size: 199.1695pt x 142.26576pt.
-LaTeX Info: Redefining \anw@print on input line 154.
-LaTeX Info: Redefining \anw@print on input line 154.
-LaTeX Info: Redefining \anw@print on input line 154.
-LaTeX Info: Redefining \anw@print on input line 154.
-LaTeX Info: Redefining \anw@print on input line 154.
-LaTeX Info: Redefining \anw@print on input line 154.
-LaTeX Info: Redefining \anw@print on input line 154.
-LaTeX Info: Redefining \anw@print on input line 154.
+LaTeX Info: Redefining \anw@print on input line 164.
+LaTeX Info: Redefining \anw@print on input line 164.
+LaTeX Info: Redefining \anw@print on input line 164.
+LaTeX Info: Redefining \anw@print on input line 164.
+LaTeX Info: Redefining \anw@print on input line 164.
+LaTeX Info: Redefining \anw@print on input line 164.
+LaTeX Info: Redefining \anw@print on input line 164.
+LaTeX Info: Redefining \anw@print on input line 164.
 
-Overfull \hbox (13.2647pt too wide) in paragraph at lines 146--157
+Overfull \hbox (13.2647pt too wide) in paragraph at lines 156--167
 [][]  [] 
  []
 
-[32 <../../plots/Consumption_Analysis/gr_hist_mean_days.png (PNG copy)> <../../
-plots/Consumption_Analysis/gr_hist_std_days.png (PNG copy)> <../../plots/Consum
-ption_Analysis/gr_hist_mean_year.png (PNG copy)> <../../plots/Consumption_Analy
-sis/gr_hist_std_year.png (PNG copy)>]
-
-LaTeX Warning: Command \textBeta invalid in math mode on input line 167.
-
-LaTeX Info: Redefining \anw@print on input line 169.
-LaTeX Info: Redefining \anw@print on input line 169.
-LaTeX Info: Redefining \anw@print on input line 169.
-LaTeX Info: Redefining \anw@print on input line 169.
-LaTeX Info: Redefining \anw@print on input line 174.
-LaTeX Info: Redefining \anw@print on input line 174.
-LaTeX Info: Redefining \anw@print on input line 174.
-LaTeX Info: Redefining \anw@print on input line 174.
+LaTeX Info: Redefining \anw@print on input line 176.
+LaTeX Info: Redefining \anw@print on input line 176.
+LaTeX Info: Redefining \anw@print on input line 176.
+LaTeX Info: Redefining \anw@print on input line 176.
 [33 <../../plots/Consumption_Analysis/beta_days_plot.png (PNG copy)> <../../plo
 ts/Consumption_Analysis/beta_year_plot.png (PNG copy)>]
-<../../plots/Trend_estimation/quadratic_Trend_ALL.png, id=168, 1445.4pt x 732.4
-8656pt>
-File: ../../plots/Trend_estimation/quadratic_Trend_ALL.png Graphic file (type p
-ng)
- <use ../../plots/Trend_estimation/quadratic_Trend_ALL.png>
-Package pdftex.def Info: ../../plots/Trend_estimation/quadratic_Trend_ALL.png u
-sed on input line 198.
-(pdftex.def)             Requested size: 512.13914pt x 341.42981pt.
+<../../plots/Trend_estimation/gr_quadratic_Trend_ALL.png, id=168, 1927.2pt x 97
+6.64874pt>
+File: ../../plots/Trend_estimation/gr_quadratic_Trend_ALL.png Graphic file (typ
+e png)
+ <use ../../plots/Trend_estimation/gr_quadratic_Trend_ALL.png>
+Package pdftex.def Info: ../../plots/Trend_estimation/gr_quadratic_Trend_ALL.pn
+g used on input line 199.
+(pdftex.def)             Requested size: 512.1465pt x 284.53229pt.
 
-Overfull \hbox (85.34781pt too wide) in paragraph at lines 198--199
+Overfull \hbox (85.35516pt too wide) in paragraph at lines 199--200
  [][] 
  []
 
-[34 <../../plots/Trend_estimation/quadratic_Trend_ALL.png (PNG copy)>] [35]
-[36]
-<../../plots/Trend_estimation/seasonal_1.png, id=178, 1445.4pt x 732.48656pt>
+[34]
+<../../plots/Trend_estimation/seasonal_1.png, id=172, 1445.4pt x 732.48656pt>
 File: ../../plots/Trend_estimation/seasonal_1.png Graphic file (type png)
 
 <use ../../plots/Trend_estimation/seasonal_1.png>
 Package pdftex.def Info: ../../plots/Trend_estimation/seasonal_1.png used on in
-put line 226.
+put line 221.
 (pdftex.def)             Requested size: 512.13914pt x 284.52856pt.
 
-Overfull \hbox (85.34781pt too wide) in paragraph at lines 226--227
+Overfull \hbox (85.34781pt too wide) in paragraph at lines 221--222
  [][] 
  []
 
-<../../plots/Trend_estimation/seasonal_2.png, id=179, 1445.4pt x 732.48656pt>
+<../../plots/Trend_estimation/seasonal_2.png, id=174, 1927.2pt x 976.64874pt>
 File: ../../plots/Trend_estimation/seasonal_2.png Graphic file (type png)
 
 <use ../../plots/Trend_estimation/seasonal_2.png>
 Package pdftex.def Info: ../../plots/Trend_estimation/seasonal_2.png used on in
-put line 232.
-(pdftex.def)             Requested size: 512.13914pt x 284.52856pt.
+put line 227.
+(pdftex.def)             Requested size: 512.1465pt x 284.53229pt.
 
-Overfull \hbox (85.34781pt too wide) in paragraph at lines 232--233
+Overfull \hbox (85.35516pt too wide) in paragraph at lines 227--228
  [][] 
  []
 
-<../../plots/Trend_estimation/seasonal_3.png, id=180, 1445.4pt x 732.48656pt>
+<../../plots/Trend_estimation/seasonal_3.png, id=175, 1927.2pt x 976.64874pt>
 File: ../../plots/Trend_estimation/seasonal_3.png Graphic file (type png)
 
 <use ../../plots/Trend_estimation/seasonal_3.png>
 Package pdftex.def Info: ../../plots/Trend_estimation/seasonal_3.png used on in
-put line 238.
-(pdftex.def)             Requested size: 512.13914pt x 284.52856pt.
+put line 233.
+(pdftex.def)             Requested size: 512.1465pt x 284.53229pt.
 
-Overfull \hbox (85.34781pt too wide) in paragraph at lines 238--239
+Overfull \hbox (85.35516pt too wide) in paragraph at lines 233--234
  [][] 
  []
 
-<../../plots/Trend_estimation/seasonal_4.png, id=181, 1445.4pt x 732.48656pt>
+<../../plots/Trend_estimation/seasonal_4.png, id=176, 1927.2pt x 976.64874pt>
 File: ../../plots/Trend_estimation/seasonal_4.png Graphic file (type png)
 
 <use ../../plots/Trend_estimation/seasonal_4.png>
 Package pdftex.def Info: ../../plots/Trend_estimation/seasonal_4.png used on in
-put line 244.
-(pdftex.def)             Requested size: 512.13914pt x 284.52856pt.
+put line 239.
+(pdftex.def)             Requested size: 512.1465pt x 284.53229pt.
 
-Overfull \hbox (85.34781pt too wide) in paragraph at lines 244--245
+Overfull \hbox (85.35516pt too wide) in paragraph at lines 239--240
  [][] 
  []
 
+[35 <../../plots/Trend_estimation/gr_quadratic_Trend_ALL.png>]
 
-Underfull \vbox (badness 2042) has occurred while \output is active []
+LaTeX Warning: Text page 36 contains only floats.
 
- [37 <../../plots/Trend_estimation/seasonal_1.png (PNG copy)> <../../plots/Tren
-d_estimation/seasonal_2.png (PNG copy)>]
+[36 <../../plots/Trend_estimation/seasonal_1.png> <../../plots/Trend_estimation
+/seasonal_2.png>]
 
-LaTeX Warning: Text page 38 contains only floats.
+LaTeX Warning: Text page 37 contains only floats.
 
-[38 <../../plots/Trend_estimation/seasonal_3.png (PNG copy)> <../../plots/Trend
-_estimation/seasonal_4.png (PNG copy)>]
-<../../plots/Trend_estimation/seasonal_month_ALL.png, id=189, 1445.4pt x 732.48
-656pt>
+[37 <../../plots/Trend_estimation/seasonal_3.png> <../../plots/Trend_estimation
+/seasonal_4.png>]
+<../../plots/Trend_estimation/seasonal_month_ALL.png, id=188, 1927.2pt x 976.64
+874pt>
 File: ../../plots/Trend_estimation/seasonal_month_ALL.png Graphic file (type pn
 g)
  <use ../../plots/Trend_estimation/seasonal_month_ALL.png>
 Package pdftex.def Info: ../../plots/Trend_estimation/seasonal_month_ALL.png us
-ed on input line 261.
-(pdftex.def)             Requested size: 512.13914pt x 341.42981pt.
+ed on input line 257.
+(pdftex.def)             Requested size: 512.1465pt x 284.53229pt.
 
-Overfull \hbox (85.34781pt too wide) in paragraph at lines 261--262
+Overfull \hbox (85.35516pt too wide) in paragraph at lines 257--258
  [][] 
  []
 
-
-<../../plots/Trend_estimation/Deseasonalized_ALL.png, id=190, 1445.4pt x 732.48
-656pt>
+[38]
+<../../plots/Trend_estimation/Deseasonalized_ALL.png, id=192, 1927.2pt x 976.64
+874pt>
 File: ../../plots/Trend_estimation/Deseasonalized_ALL.png Graphic file (type pn
 g)
  <use ../../plots/Trend_estimation/Deseasonalized_ALL.png>
 Package pdftex.def Info: ../../plots/Trend_estimation/Deseasonalized_ALL.png us
-ed on input line 269.
-(pdftex.def)             Requested size: 512.13914pt x 341.42981pt.
+ed on input line 275.
+(pdftex.def)             Requested size: 512.1465pt x 284.53229pt.
 
-Overfull \hbox (85.34781pt too wide) in paragraph at lines 269--270
+Overfull \hbox (85.35516pt too wide) in paragraph at lines 275--276
  [][] 
  []
 
-[39]
-<../../plots/Trend_estimation/Deseasonalized_month_ALL.png, id=194, 1445.4pt x 
-732.48656pt>
+
+<../../plots/Trend_estimation/Deseasonalized_month_ALL.png, id=193, 1927.2pt x 
+976.64874pt>
 File: ../../plots/Trend_estimation/Deseasonalized_month_ALL.png Graphic file (t
 ype png)
  <use ../../plots/Trend_estimation/Deseasonalized_month_ALL.png>
 Package pdftex.def Info: ../../plots/Trend_estimation/Deseasonalized_month_ALL.
-png used on input line 277.
-(pdftex.def)             Requested size: 512.13914pt x 341.42981pt.
+png used on input line 282.
+(pdftex.def)             Requested size: 512.1465pt x 284.53229pt.
 
-Overfull \hbox (85.34781pt too wide) in paragraph at lines 277--278
+Overfull \hbox (85.35516pt too wide) in paragraph at lines 282--283
  [][] 
  []
 
+[39 <../../plots/Trend_estimation/seasonal_month_ALL.png>]
 
-<../../plots/Trend_estimation/irregular_component_all.png, id=195, 1445.4pt x 7
+LaTeX Warning: Text page 40 contains only floats.
+
+[40 <../../plots/Trend_estimation/Deseasonalized_ALL.png> <../../plots/Trend_es
+timation/Deseasonalized_month_ALL.png>]
+<../../plots/Trend_estimation/irregular_component_all.png, id=200, 1445.4pt x 7
 32.48656pt>
 File: ../../plots/Trend_estimation/irregular_component_all.png Graphic file (ty
 pe png)
  <use ../../plots/Trend_estimation/irregular_component_all.png>
 Package pdftex.def Info: ../../plots/Trend_estimation/irregular_component_all.p
-ng used on input line 286.
+ng used on input line 291.
 (pdftex.def)             Requested size: 512.13914pt x 284.52856pt.
 
-Overfull \hbox (85.34781pt too wide) in paragraph at lines 286--287
+Overfull \hbox (85.34781pt too wide) in paragraph at lines 291--292
  [][] 
  []
 
-[40 <../../plots/Trend_estimation/seasonal_month_ALL.png (PNG copy)>]
-<../../plots/Trend_estimation/irregular_component_month_all.png, id=199, 1445.4
-pt x 732.48656pt>
+[41 <../../plots/Trend_estimation/irregular_component_all.png>]
+<../../plots/Trend_estimation/irregular_component_month_all.png, id=205, 1927.2
+pt x 976.64874pt>
 File: ../../plots/Trend_estimation/irregular_component_month_all.png Graphic fi
 le (type png)
 
 <use ../../plots/Trend_estimation/irregular_component_month_all.png>
 Package pdftex.def Info: ../../plots/Trend_estimation/irregular_component_month
-_all.png used on input line 294.
-(pdftex.def)             Requested size: 512.13914pt x 284.52856pt.
+_all.png used on input line 299.
+(pdftex.def)             Requested size: 512.1465pt x 284.53229pt.
 
-Overfull \hbox (85.34781pt too wide) in paragraph at lines 294--295
+Overfull \hbox (85.35516pt too wide) in paragraph at lines 299--300
  [][] 
  []
 
-
-Underfull \vbox (badness 4832) has occurred while \output is active []
-
- [41 <../../plots/Trend_estimation/Deseasonalized_ALL.png (PNG copy)>] [42 <../
-../plots/Trend_estimation/Deseasonalized_month_ALL.png (PNG copy)>]
-
-LaTeX Warning: Text page 43 contains only floats.
-
-[43 <../../plots/Trend_estimation/irregular_component_all.png (PNG copy)> <../.
-./plots/Trend_estimation/irregular_component_month_all.png (PNG copy)>]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [44]
-[45] <../../plots/type1.png, id=217, 421.575pt x 316.18124pt>
-File: ../../plots/type1.png Graphic file (type png)
-
-<use ../../plots/type1.png>
-Package pdftex.def Info: ../../plots/type1.png used on input line 345.
-(pdftex.def)             Requested size: 199.1695pt x 142.26576pt.
-LaTeX Info: Redefining \anw@print on input line 346.
-LaTeX Info: Redefining \anw@print on input line 346.
-LaTeX Info: Redefining \anw@print on input line 346.
-LaTeX Info: Redefining \anw@print on input line 346.
-
-<../../plots/type2_1.png, id=218, 421.575pt x 316.18124pt>
-File: ../../plots/type2_1.png Graphic file (type png)
-
-<use ../../plots/type2_1.png>
-Package pdftex.def Info: ../../plots/type2_1.png used on input line 350.
-(pdftex.def)             Requested size: 199.1695pt x 142.26576pt.
-LaTeX Info: Redefining \anw@print on input line 351.
-LaTeX Info: Redefining \anw@print on input line 351.
-LaTeX Info: Redefining \anw@print on input line 351.
-LaTeX Info: Redefining \anw@print on input line 351.
-
-<../../plots/type3.png, id=219, 421.575pt x 316.18124pt>
-File: ../../plots/type3.png Graphic file (type png)
-
-<use ../../plots/type3.png>
-Package pdftex.def Info: ../../plots/type3.png used on input line 355.
-(pdftex.def)             Requested size: 199.1695pt x 142.26576pt.
-LaTeX Info: Redefining \anw@print on input line 356.
-LaTeX Info: Redefining \anw@print on input line 356.
-LaTeX Info: Redefining \anw@print on input line 356.
-LaTeX Info: Redefining \anw@print on input line 356.
-
-<../../plots/type4.png, id=220, 421.575pt x 316.18124pt>
-File: ../../plots/type4.png Graphic file (type png)
-
-<use ../../plots/type4.png>
-Package pdftex.def Info: ../../plots/type4.png used on input line 360.
-(pdftex.def)             Requested size: 199.1695pt x 142.26576pt.
-LaTeX Info: Redefining \anw@print on input line 361.
-LaTeX Info: Redefining \anw@print on input line 361.
-LaTeX Info: Redefining \anw@print on input line 361.
-LaTeX Info: Redefining \anw@print on input line 361.
-
-Overfull \hbox (13.2647pt too wide) in paragraph at lines 344--363
-[][]  []
- []
-
-
-Overfull \hbox (13.2647pt too wide) in paragraph at lines 344--363
-[]  [] 
- []
-
-
-<../../plots/Consumption_Analysis/beta_6_3.png, id=221, 421.575pt x 316.18124pt
+[42 <../../plots/Trend_estimation/irregular_component_month_all.png>] [43]
+<../../plots/Consumption_Analysis/beta_6_3.png, id=214, 421.575pt x 316.18124pt
 >
 File: ../../plots/Consumption_Analysis/beta_6_3.png Graphic file (type png)
  <use ../../plots/Consumption_Analysis/beta_6_3.png>
 Package pdftex.def Info: ../../plots/Consumption_Analysis/beta_6_3.png used on 
-input line 369.
+input line 343.
 (pdftex.def)             Requested size: 256.07967pt x 170.72084pt.
-) [46 <../../plots/type1.png (PNG copy)> <../../plots/type2_1.png (PNG copy)> <
-../../plots/type3.png (PNG copy)> <../../plots/type4.png (PNG copy)>] [47 <../.
-./plots/Consumption_Analysis/beta_6_3.png (PNG copy)>] [48
+ [44]
+<../../plots/type1.png, id=218, 421.575pt x 316.18124pt>
+File: ../../plots/type1.png Graphic file (type png)
 
-]
+<use ../../plots/type1.png>
+Package pdftex.def Info: ../../plots/type1.png used on input line 356.
+(pdftex.def)             Requested size: 199.1695pt x 142.26576pt.
+LaTeX Info: Redefining \anw@print on input line 357.
+LaTeX Info: Redefining \anw@print on input line 357.
+LaTeX Info: Redefining \anw@print on input line 357.
+LaTeX Info: Redefining \anw@print on input line 357.
+
+<../../plots/type2_1.png, id=219, 421.575pt x 316.18124pt>
+File: ../../plots/type2_1.png Graphic file (type png)
+
+<use ../../plots/type2_1.png>
+Package pdftex.def Info: ../../plots/type2_1.png used on input line 361.
+(pdftex.def)             Requested size: 199.1695pt x 142.26576pt.
+LaTeX Info: Redefining \anw@print on input line 362.
+LaTeX Info: Redefining \anw@print on input line 362.
+LaTeX Info: Redefining \anw@print on input line 362.
+LaTeX Info: Redefining \anw@print on input line 362.
+
+<../../plots/type3.png, id=220, 421.575pt x 316.18124pt>
+File: ../../plots/type3.png Graphic file (type png)
+
+<use ../../plots/type3.png>
+Package pdftex.def Info: ../../plots/type3.png used on input line 366.
+(pdftex.def)             Requested size: 199.1695pt x 142.26576pt.
+LaTeX Info: Redefining \anw@print on input line 367.
+LaTeX Info: Redefining \anw@print on input line 367.
+LaTeX Info: Redefining \anw@print on input line 367.
+LaTeX Info: Redefining \anw@print on input line 367.
+
+<../../plots/type4.png, id=221, 421.575pt x 316.18124pt>
+File: ../../plots/type4.png Graphic file (type png)
+
+<use ../../plots/type4.png>
+Package pdftex.def Info: ../../plots/type4.png used on input line 371.
+(pdftex.def)             Requested size: 199.1695pt x 142.26576pt.
+LaTeX Info: Redefining \anw@print on input line 372.
+LaTeX Info: Redefining \anw@print on input line 372.
+LaTeX Info: Redefining \anw@print on input line 372.
+LaTeX Info: Redefining \anw@print on input line 372.
+
+Overfull \hbox (13.2647pt too wide) in paragraph at lines 355--374
+[][]  []
+ []
+
+
+Overfull \hbox (13.2647pt too wide) in paragraph at lines 355--374
+[]  [] 
+ []
+
+) [45 <../../plots/Consumption_Analysis/beta_6_3.png (PNG copy)>] [46 <../../pl
+ots/type1.png (PNG copy)> <../../plots/type2_1.png (PNG copy)> <../../plots/typ
+e3.png (PNG copy)> <../../plots/type4.png (PNG copy)>]
 \textKappa \textepsilon \textphi \acctonos \textalpha \textlambda \textalpha \t
 extiota \textomicron  4.
-(./chapters/chapter04.tex [49] [50]
-LaTeX Info: Redefining \anw@print on input line 34.
+(./chapters/chapter04.tex [47
 
-Overfull \hbox (26.95244pt too wide) in paragraph at lines 83--94
+] [48]
+LaTeX Info: Redefining \anw@print on input line 79.
+ [49]
+Overfull \hbox (14.09485pt too wide) in paragraph at lines 89--100
  [][] 
  []
 
-[51]
+
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [52]
-Overfull \hbox (10.27637pt too wide) in paragraph at lines 134--135
+ [50]
+[51]
+Overfull \hbox (10.27637pt too wide) in paragraph at lines 141--142
 \LGR/cmr/m/n/10.95 kì prìblh-ma gia ta mh-diaqwrÐsima prìtu-pa. Do-jèntoc tou d
 e-Ðg-ma-toc ek-pa-Ðdeu-shc $\OMS/cmsy/m/n/10.95 f\OT1/cmr/m/n/10.95 (\OT1/cmr/b
 x/n/10.95 x[]\OML/cmm/m/it/10.95 ; y[]\OT1/cmr/m/n/10.95 )\OMS/cmsy/m/n/10.95 g
@@ -2018,77 +2000,77 @@ x/n/10.95 x[]\OML/cmm/m/it/10.95 ; y[]\OT1/cmr/m/n/10.95 )\OMS/cmsy/m/n/10.95 g
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 134--135
+Underfull \hbox (badness 10000) in paragraph at lines 141--142
 
  []
 
-[53] [54]
+[52] [53]
 <../../plots/gr_bigres_dr_intensity.png, id=252, 421.575pt x 316.18124pt>
 File: ../../plots/gr_bigres_dr_intensity.png Graphic file (type png)
 
 <use ../../plots/gr_bigres_dr_intensity.png>
 Package pdftex.def Info: ../../plots/gr_bigres_dr_intensity.png used on input l
-ine 190.
+ine 197.
 (pdftex.def)             Requested size: 199.1695pt x 142.26576pt.
 
-Overfull \hbox (28.45557pt too wide) in paragraph at lines 190--191
+Overfull \hbox (28.45557pt too wide) in paragraph at lines 197--198
 [][] 
  []
 
-LaTeX Info: Redefining \anw@print on input line 191.
-LaTeX Info: Redefining \anw@print on input line 191.
-LaTeX Info: Redefining \anw@print on input line 191.
-LaTeX Info: Redefining \anw@print on input line 191.
+LaTeX Info: Redefining \anw@print on input line 198.
+LaTeX Info: Redefining \anw@print on input line 198.
+LaTeX Info: Redefining \anw@print on input line 198.
+LaTeX Info: Redefining \anw@print on input line 198.
 <../../plots/gr_bigres_fpr_intensity.png, id=253, 421.575pt x 316.18124pt>
 File: ../../plots/gr_bigres_fpr_intensity.png Graphic file (type png)
 
 <use ../../plots/gr_bigres_fpr_intensity.png>
 Package pdftex.def Info: ../../plots/gr_bigres_fpr_intensity.png used on input 
-line 196.
+line 203.
 (pdftex.def)             Requested size: 199.1695pt x 142.26576pt.
 
-Overfull \hbox (28.45557pt too wide) in paragraph at lines 196--197
+Overfull \hbox (28.45557pt too wide) in paragraph at lines 203--204
 [][] 
  []
 
-LaTeX Info: Redefining \anw@print on input line 197.
-LaTeX Info: Redefining \anw@print on input line 197.
-LaTeX Info: Redefining \anw@print on input line 197.
-LaTeX Info: Redefining \anw@print on input line 197.
-[55]
-Underfull \hbox (badness 10000) in paragraph at lines 216--217
+LaTeX Info: Redefining \anw@print on input line 204.
+LaTeX Info: Redefining \anw@print on input line 204.
+LaTeX Info: Redefining \anw@print on input line 204.
+LaTeX Info: Redefining \anw@print on input line 204.
+[54]
+Underfull \hbox (badness 10000) in paragraph at lines 223--224
 
  []
 
-[56 <../../plots/gr_bigres_dr_intensity.png (PNG copy)> <../../plots/gr_bigres_
+[55 <../../plots/gr_bigres_dr_intensity.png (PNG copy)> <../../plots/gr_bigres_
 fpr_intensity.png (PNG copy)>]
 <../../plots/ROC50_1.png, id=261, 421.575pt x 316.18124pt>
 File: ../../plots/ROC50_1.png Graphic file (type png)
 
 <use ../../plots/ROC50_1.png>
-Package pdftex.def Info: ../../plots/ROC50_1.png used on input line 223.
+Package pdftex.def Info: ../../plots/ROC50_1.png used on input line 230.
 (pdftex.def)             Requested size: 398.34544pt x 284.546pt.
 
 <../../plots/ROC35.png, id=262, 421.575pt x 316.18124pt>
 File: ../../plots/ROC35.png Graphic file (type png)
 
 <use ../../plots/ROC35.png>
-Package pdftex.def Info: ../../plots/ROC35.png used on input line 253.
+Package pdftex.def Info: ../../plots/ROC35.png used on input line 260.
 (pdftex.def)             Requested size: 398.34544pt x 284.546pt.
-) [57] [58 <../../plots/ROC50_1.png (PNG copy)>]
-[59 <../../plots/ROC35.png (PNG copy)>] [60
-
-]
+) [56] [57 <../../plots/ROC50_1.png (PNG copy)>]
+[58 <../../plots/ROC35.png (PNG copy)>]
 \textKappa \textepsilon \textphi \acctonos \textalpha \textlambda \textalpha \t
 extiota \textomicron  5.
 (./chapters/chapter05.tex
 
-LaTeX Warning: Citation `Anomaly' on page 61 undefined on input line 3.
+LaTeX Warning: Citation `Anomaly' on page 59 undefined on input line 3.
 
 
-LaTeX Warning: Citation `Anomaly' on page 61 undefined on input line 4.
+LaTeX Warning: Citation `Anomaly' on page 59 undefined on input line 4.
 
-[61] [62] [63] [64]
+[59
+
+] [60] [61] [62]
 Underfull \vbox (badness 10000) detected at line 77
  []
 
@@ -2096,7 +2078,7 @@ Underfull \vbox (badness 10000) detected at line 77
 Underfull \vbox (badness 10000) detected at line 93
  []
 
-[65]
+[63]
 Underfull \vbox (badness 10000) detected at line 106
  []
 
@@ -2112,7 +2094,7 @@ Underfull \vbox (badness 10000) detected at line 132
 Underfull \vbox (badness 10000) detected at line 144
  []
 
-[66]
+[64]
 Underfull \vbox (badness 10000) detected at line 160
  []
 
@@ -2124,7 +2106,7 @@ Underfull \vbox (badness 10000) detected at line 172
 Underfull \vbox (badness 10000) detected at line 185
  []
 
-[67]
+[65]
 Underfull \vbox (badness 10000) detected at line 201
  []
 
@@ -2144,7 +2126,7 @@ Underfull \vbox (badness 10000) detected at line 245
 Overfull \vbox (16.80148pt too high) has occurred while \output is active []
 
 
-[68]
+[66]
 Overfull \hbox (1.84155pt too wide) in paragraph at lines 268--268
  []\LGR/cmr/m/n/10.95 Qarakt.| 
  []
@@ -2172,7 +2154,7 @@ Overfull \hbox (8.46246pt too wide) in paragraph at lines 286--286
 Underfull \vbox (badness 10000) detected at line 286
  []
 
-[69] [70]
+[67] [68]
 Overfull \hbox (2.67462pt too wide) in paragraph at lines 331--332
 []\LGR/cmr/m/n/10.95 Empneusmèno a-pì ta neu-rw-ni-kˆ dÐktua ston e-gkèfa-lo, o
 i auto-organwmènoi qˆr-tec ([]\OT1/cmr/m/n/10.95 SOM[]\LGR/cmr/m/n/10.95 )
@@ -2184,15 +2166,15 @@ Overfull \hbox (2.46661pt too wide) in paragraph at lines 331--332
 ner-ga-sÐac gia na pe-tÔqoun mh-epiblepìmenh
  []
 
-[71]
-<../../plots/systems/un_supervised.png, id=312, 588.69937pt x 456.20438pt>
+[69]
+<../../plots/systems/un_supervised.png, id=309, 588.69937pt x 456.20438pt>
 File: ../../plots/systems/un_supervised.png Graphic file (type png)
 
 <use ../../plots/systems/un_supervised.png>
 Package pdftex.def Info: ../../plots/systems/un_supervised.png used on input li
 ne 355.
 (pdftex.def)             Requested size: 256.07317pt x 170.71423pt.
- [72]
+ [70]
 Underfull \vbox (badness 10000) detected at line 377
  []
 
@@ -2201,8 +2183,8 @@ LaTeX Info: Redefining \anw@print on input line 384.
 Overfull \vbox (204.87415pt too high) has occurred while \output is active []
 
 
-[73 <../../plots/systems/un_supervised.png>]
-<../../plots/gr_bigres_dr_intensity_un_sup.png, id=323, 421.575pt x 316.18124pt
+[71 <../../plots/systems/un_supervised.png>]
+<../../plots/gr_bigres_dr_intensity_un_sup.png, id=318, 421.575pt x 316.18124pt
 >
 File: ../../plots/gr_bigres_dr_intensity_un_sup.png Graphic file (type png)
  <use ../../plots/gr_bigres_dr_intensity_un_sup.png>
@@ -2219,7 +2201,7 @@ LaTeX Info: Redefining \anw@print on input line 390.
 LaTeX Info: Redefining \anw@print on input line 390.
 LaTeX Info: Redefining \anw@print on input line 390.
 
-<../../plots/gr_bigres_fpr_intensity_un_sup.png, id=324, 421.575pt x 316.18124p
+<../../plots/gr_bigres_fpr_intensity_un_sup.png, id=319, 421.575pt x 316.18124p
 t>
 File: ../../plots/gr_bigres_fpr_intensity_un_sup.png Graphic file (type png)
  <use ../../plots/gr_bigres_fpr_intensity_un_sup.png>
@@ -2239,7 +2221,7 @@ LaTeX Info: Redefining \anw@print on input line 396.
 Underfull \vbox (badness 10000) detected at line 417
  []
 
-<../../plots/confident_predictions.png, id=325, 421.575pt x 316.18124pt>
+<../../plots/confident_predictions.png, id=320, 421.575pt x 316.18124pt>
 File: ../../plots/confident_predictions.png Graphic file (type png)
 
 <use ../../plots/confident_predictions.png>
@@ -2250,26 +2232,26 @@ ne 425.
 Overfull \vbox (215.22559pt too high) has occurred while \output is active []
 
 
-[74 <../../plots/gr_bigres_dr_intensity_un_sup.png (PNG copy)> <../../plots/gr_
-bigres_fpr_intensity_un_sup.png (PNG copy)>] [75 <../../plots/confident_predict
+[72 <../../plots/gr_bigres_dr_intensity_un_sup.png (PNG copy)> <../../plots/gr_
+bigres_fpr_intensity_un_sup.png (PNG copy)>] [73 <../../plots/confident_predict
 ions.png (PNG copy)>]
-<../../plots/systems/semi_supervised.png, id=332, 589.4522pt x 712.16063pt>
+<../../plots/systems/semi_supervised.png, id=328, 589.4522pt x 712.16063pt>
 File: ../../plots/systems/semi_supervised.png Graphic file (type png)
 
 <use ../../plots/systems/semi_supervised.png>
 Package pdftex.def Info: ../../plots/systems/semi_supervised.png used on input 
 line 448.
 (pdftex.def)             Requested size: 256.07684pt x 284.52234pt.
- [76 <../../plots/systems/semi_supervised.png>]
+ [74 <../../plots/systems/semi_supervised.png>]
 
-LaTeX Warning: Citation `Anomaly' on page 77 undefined on input line 486.
+LaTeX Warning: Citation `Anomaly' on page 75 undefined on input line 486.
 
-[77]
+[75]
 Underfull \hbox (badness 10000) in paragraph at lines 491--492
 
  []
 
-[78]
+[76]
 Underfull \vbox (badness 10000) detected at line 521
  []
 
@@ -2280,7 +2262,7 @@ Underfull \vbox (badness 10000) detected at line 535
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [79]
+ [77]
 Underfull \vbox (badness 10000) detected at line 556
  []
 
@@ -2294,7 +2276,7 @@ Overfull \hbox (1.76497pt too wide) in paragraph at lines 576--576
 -
  []
 
-[80] <../../plots/gr_class_semi_sup.png, id=350, 1445.4pt x 732.48656pt>
+[78] <../../plots/gr_class_semi_sup.png, id=345, 1445.4pt x 732.48656pt>
 File: ../../plots/gr_class_semi_sup.png Graphic file (type png)
 
 <use ../../plots/gr_class_semi_sup.png>
@@ -2306,7 +2288,7 @@ Overfull \hbox (28.4459pt too wide) in paragraph at lines 580--581
 [][] 
  []
 
-<../../plots/gr_threshold_semi_sup_1.png, id=351, 1445.4pt x 732.48656pt>
+<../../plots/gr_threshold_semi_sup_1.png, id=346, 1445.4pt x 732.48656pt>
 File: ../../plots/gr_threshold_semi_sup_1.png Graphic file (type png)
 
 <use ../../plots/gr_threshold_semi_sup_1.png>
@@ -2322,7 +2304,7 @@ LaTeX Info: Redefining \anw@print on input line 588.
 LaTeX Info: Redefining \anw@print on input line 588.
 LaTeX Info: Redefining \anw@print on input line 588.
 LaTeX Info: Redefining \anw@print on input line 588.
-<../../plots/gr_threshold_semi_sup_2.png, id=352, 1445.4pt x 732.48656pt>
+<../../plots/gr_threshold_semi_sup_2.png, id=347, 1445.4pt x 732.48656pt>
 File: ../../plots/gr_threshold_semi_sup_2.png Graphic file (type png)
 
 <use ../../plots/gr_threshold_semi_sup_2.png>
@@ -2347,8 +2329,8 @@ Overfull \hbox (6.81606pt too wide) in paragraph at lines 616--616
 Underfull \vbox (badness 10000) detected at line 616
  []
 
-[81 <../../plots/gr_class_semi_sup.png (PNG copy)>]
-<../../plots/gr_dr_intensity_semi_sup1.png, id=356, 421.575pt x 316.18124pt>
+[79 <../../plots/gr_class_semi_sup.png (PNG copy)>]
+<../../plots/gr_dr_intensity_semi_sup1.png, id=352, 421.575pt x 316.18124pt>
 File: ../../plots/gr_dr_intensity_semi_sup1.png Graphic file (type png)
 
 <use ../../plots/gr_dr_intensity_semi_sup1.png>
@@ -2364,7 +2346,7 @@ LaTeX Info: Redefining \anw@print on input line 626.
 LaTeX Info: Redefining \anw@print on input line 626.
 LaTeX Info: Redefining \anw@print on input line 626.
 LaTeX Info: Redefining \anw@print on input line 626.
-<../../plots/gr_fpr_intensity_semi_sup1.png, id=357, 421.575pt x 316.18124pt>
+<../../plots/gr_fpr_intensity_semi_sup1.png, id=353, 421.575pt x 316.18124pt>
 File: ../../plots/gr_fpr_intensity_semi_sup1.png Graphic file (type png)
 
 <use ../../plots/gr_fpr_intensity_semi_sup1.png>
@@ -2380,7 +2362,7 @@ LaTeX Info: Redefining \anw@print on input line 632.
 LaTeX Info: Redefining \anw@print on input line 632.
 LaTeX Info: Redefining \anw@print on input line 632.
 LaTeX Info: Redefining \anw@print on input line 632.
-<../../plots/gr_dr_intensity_semi_sup2.png, id=358, 421.575pt x 316.18124pt>
+<../../plots/gr_dr_intensity_semi_sup2.png, id=354, 421.575pt x 316.18124pt>
 File: ../../plots/gr_dr_intensity_semi_sup2.png Graphic file (type png)
 
 <use ../../plots/gr_dr_intensity_semi_sup2.png>
@@ -2396,7 +2378,7 @@ LaTeX Info: Redefining \anw@print on input line 638.
 LaTeX Info: Redefining \anw@print on input line 638.
 LaTeX Info: Redefining \anw@print on input line 638.
 LaTeX Info: Redefining \anw@print on input line 638.
-<../../plots/gr_fpr_intensity_semi_sup2.png, id=359, 421.575pt x 316.18124pt>
+<../../plots/gr_fpr_intensity_semi_sup2.png, id=355, 421.575pt x 316.18124pt>
 File: ../../plots/gr_fpr_intensity_semi_sup2.png Graphic file (type png)
 
 <use ../../plots/gr_fpr_intensity_semi_sup2.png>
@@ -2418,25 +2400,25 @@ Overfull \hbox (5.9649pt too wide) in paragraph at lines 653--653
 mh-epiblepìmenwn kai hmi-epiblepìmenwn
  []
 
-) [82] [83 <../../plots/gr_threshold_semi_sup_1.png (PNG copy)> <../../plots/gr
-_threshold_semi_sup_2.png (PNG copy)>] [84 <../../plots/gr_dr_intensity_semi_su
+) [80] [81 <../../plots/gr_threshold_semi_sup_1.png (PNG copy)> <../../plots/gr
+_threshold_semi_sup_2.png (PNG copy)>] [82 <../../plots/gr_dr_intensity_semi_su
 p1.png (PNG copy)> <../../plots/gr_fpr_intensity_semi_sup1.png (PNG copy)> <../
 ../plots/gr_dr_intensity_semi_sup2.png (PNG copy)> <../../plots/gr_fpr_intensit
 y_semi_sup2.png (PNG copy)>]
 \textKappa \textepsilon \textphi \acctonos \textalpha \textlambda \textalpha \t
 extiota \textomicron  6.
-(./chapters/chapter06.tex [85
+(./chapters/chapter06.tex [83
 
-] [86] [87]) [88]
+] [84] [85]) [86]
 \textKappa \textepsilon \textphi \acctonos \textalpha \textlambda \textalpha \t
 extiota \textomicron  7.
-(./chapters/chapter07.tex [89
+(./chapters/chapter07.tex [87
 
 ]
 Underfull \vbox (badness 10000) detected at line 21
  []
 
-<../../plots/comparison_systems.png, id=385, 421.575pt x 316.18124pt>
+<../../plots/comparison_systems.png, id=381, 421.575pt x 316.18124pt>
 File: ../../plots/comparison_systems.png Graphic file (type png)
 
 <use ../../plots/comparison_systems.png>
@@ -2446,10 +2428,10 @@ Package pdftex.def Info: ../../plots/comparison_systems.png used on input line
 )
 Underfull \vbox (badness 5622) has occurred while \output is active []
 
- [90 <../../plots/comparison_systems.png (PNG copy)>] [91] [92] (./main.bbl [93
+ [88 <../../plots/comparison_systems.png (PNG copy)>] [89] [90] (./main.bbl [91
 
-] [94])
-[95] [96
+] [92])
+[93] [94
 
 ]
 \textPi \textalpha \textrho \acctonos \textalpha \textrho \texttau \texteta \te
@@ -2484,20 +2466,20 @@ LaTeX Info: Redefining \anw@print on input line 187.
 LaTeX Info: Redefining \anw@print on input line 187.
 LaTeX Info: Redefining \anw@print on input line 187.
 LaTeX Info: Redefining \anw@print on input line 187.
-) [97]
+) [95]
 LaTeX Info: Redefining \anw@print on input line 186.
- [98] [99]
+ [96] [97]
 \openout2 = `glossary.aux'.
 
- (./glossary.tex [100
+ (./glossary.tex [98
 
 
-]) [101] [102
+]) [99] [100
 
 
 ]
 No file main.ind.
-[103] (./main.aux (./abstract.aux) (./glossary.aux))
+[101] (./main.aux (./abstract.aux) (./glossary.aux))
 
 LaTeX Warning: There were undefined references.
 
@@ -2507,8 +2489,8 @@ LaTeX Warning: There were multiply-defined labels.
  ) 
 Here is how much of TeX's memory you used:
  9407 strings out of 493013
- 138046 string characters out of 6136993
- 234894 words of memory out of 5000000
+ 138061 string characters out of 6136993
+ 234893 words of memory out of 5000000
  12603 multiletter control sequences out of 15000+600000
  28169 words of font info for 67 fonts, out of 8000000 for 9000
  1143 hyphenation exceptions out of 8191
@@ -2546,10 +2528,10 @@ texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb><c:/texlive/2016/texm
 f-dist/fonts/type1/public/cm-super/sfrm1095.pfb><c:/texlive/2016/texmf-dist/fon
 ts/type1/public/cm-super/sfrm1200.pfb><c:/texlive/2016/texmf-dist/fonts/type1/p
 ublic/cm-super/sfti1095.pfb>
-Output written on main.pdf (109 pages, 2543492 bytes).
+Output written on main.pdf (107 pages, 2608917 bytes).
 PDF statistics:
- 550 PDF objects out of 1000 (max. 8388607)
- 355 compressed objects within 4 object streams
+ 544 PDF objects out of 1000 (max. 8388607)
+ 349 compressed objects within 4 object streams
  0 named destinations out of 1000 (max. 500000)
  206 words of extra memory for PDF output out of 10000 (max. 10000000)
 
