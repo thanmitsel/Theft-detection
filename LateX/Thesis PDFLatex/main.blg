@@ -10,30 +10,32 @@ Warning--entry type for "mathworkstrend" isn't style-file defined
 Warning--entry type for "stationarity" isn't style-file defined
 --line 56 of file references.bib
 Warning--entry type for "learningstyle" isn't style-file defined
---line 112 of file references.bib
+--line 104 of file references.bib
 Warning--entry type for "cer" isn't style-file defined
---line 129 of file references.bib
+--line 121 of file references.bib
 Warning--entry type for "miningOracle" isn't style-file defined
---line 146 of file references.bib
+--line 130 of file references.bib
 Warning--entry type for "histogram" isn't style-file defined
---line 153 of file references.bib
+--line 137 of file references.bib
 Warning--entry type for "betadstr" isn't style-file defined
---line 160 of file references.bib
-I was expecting a `,' or a `}'---line 164 of file references.bib
+--line 144 of file references.bib
+I was expecting a `,' or a `}'---line 148 of file references.bib
  :     
  :     url           = {http://pj.freefaculty.org/guides/stat/Distributions/DistributionWriteups/Beta/Beta.pdf},
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
 Warning--entry type for "aihorizon" isn't style-file defined
---line 221 of file references.bib
+--line 205 of file references.bib
 Warning--entry type for "Plotly" isn't style-file defined
---line 245 of file references.bib
-Repeated entry---line 260 of file references.bib
+--line 229 of file references.bib
+Repeated entry---line 244 of file references.bib
  : @online{aihorizon
  :                  ,
 I'm skipping whatever remains of this entry
 Warning--entry type for "energypress" isn't style-file defined
---line 286 of file references.bib
+--line 270 of file references.bib
+Warning--I didn't find a database entry for "artoftradeoff"
+Warning--I didn't find a database entry for "rawdataNN"
 Too many commas in name 1 of "Rong-En Fan, Kai-Wei Chang, Cho-Jui Hsieh, Xiang-Rui Wang and Chih-Jen Lin" for entry liblinearguide
 while executing---line 1049 of file plain.bst
 Warning--empty journal in clustercomparison
@@ -41,47 +43,46 @@ Warning--empty journal in malaysia
 Warning--empty journal in libsvmguide
 Too many commas in name 1 of "Rong-En Fan, Kai-Wei Chang, Cho-Jui Hsieh, Xiang-Rui Wang and Chih-Jen Lin" for entry liblinearguide
 while executing---line 1090 of file plain.bst
-Warning--empty booktitle in rawdataNN
 Warning--empty journal in fuzzyclustering
-You've used 37 entries,
+You've used 35 entries,
             2118 wiz_defined-function locations,
-            680 strings with 8883 characters,
-and the built_in function-call counts, 9808 in all, are:
-= -- 974
-> -- 331
-< -- 10
-+ -- 140
-- -- 98
-* -- 467
-:= -- 1595
-add.period$ -- 124
-call.type$ -- 37
-change.case$ -- 158
+            673 strings with 8474 characters,
+and the built_in function-call counts, 9173 in all, are:
+= -- 911
+> -- 305
+< -- 9
++ -- 130
+- -- 90
+* -- 435
+:= -- 1492
+add.period$ -- 116
+call.type$ -- 35
+change.case$ -- 149
 chr.to.int$ -- 0
-cite$ -- 42
-duplicate$ -- 424
-empty$ -- 905
-format.name$ -- 98
-if$ -- 2179
+cite$ -- 39
+duplicate$ -- 394
+empty$ -- 850
+format.name$ -- 90
+if$ -- 2035
 int.to.chr$ -- 0
-int.to.str$ -- 37
-missing$ -- 22
-newline$ -- 194
-num.names$ -- 66
-pop$ -- 250
+int.to.str$ -- 35
+missing$ -- 19
+newline$ -- 183
+num.names$ -- 62
+pop$ -- 234
 preamble$ -- 1
-purify$ -- 127
+purify$ -- 119
 quote$ -- 0
-skip$ -- 313
+skip$ -- 293
 stack$ -- 0
-substring$ -- 438
-swap$ -- 94
-text.length$ -- 10
+substring$ -- 416
+swap$ -- 87
+text.length$ -- 9
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 142
-warning$ -- 5
-while$ -- 89
-width$ -- 39
-write$ -- 399
+type$ -- 136
+warning$ -- 4
+while$ -- 83
+width$ -- 37
+write$ -- 375
 (There were 4 error messages)

@@ -8,13 +8,13 @@
 \end{itemize}
 
 \begin{center}
-\begin{longtabu}  to 0.8\textwidth { | X[c] || X[c] | X[c] | X[c] | X[c] | X[c] |  }
+\begin{longtabu}  to 0.8\textwidth { | c || c | c | c | c | c |  }
  \hline
-επιβλ. & \en{DR}  & \en{FPR} & \en{Accuracy} & \en{F1} &  \en{BDR} \\
+Σύστημα & \en{DR}  & \en{FPR} & \en{Accuracy} & \en{F1} &  \en{BDR} \\
  \hline
-ολ. & 80.87 & 1.54 & 96.96 & 81.94 & 0.85 \\
-μη & 86.44	& 5.43 & 93.76 & 73.47 & 0.64\\
-ημί & 71.09 & 2.00 & 95.49 & 74.64 & 0.80\\
+επιβλεπόμενο & 80.87 & 1.54 & 96.96 & 81.94 & 0.85 \\
+μη-επιβλεπόμενο & 86.44	& 5.43 & 93.76 & 73.47 & 0.64\\
+ημί-επιβλεπόμενο & 71.09 & 2.00 & 95.49 & 74.64 & 0.80\\
 \hline
 \caption{Σύγκριση συστημάτων}
 \label{tab:comparesystems}
@@ -23,7 +23,7 @@
 
 Για την οπτικοποίηση αυτών των παρατηρήσεων δημιουργήθηκε ένα γράφημα δίνοντας βάση στο \en{Accuracy}, \en{F1 score} και \en{BDR}. Καθίσταται λοιπόν σαφές πως η ημι-επιβλεπόμενη μάθηση βρίσκεται ακριβώς ανάμεσα στις επιδόσεις και στη χρηστικότητα του επιβλεπόμενου και μη-επιβλεπόμενου συστήματος.
 
-\begin{figure}
+\begin{figure}[ht!]
 \centering
  \includegraphics[width=90mm, height=60mm]{../../plots/comparison_systems.png}
  \caption{Σύγκριση συστημάτων}

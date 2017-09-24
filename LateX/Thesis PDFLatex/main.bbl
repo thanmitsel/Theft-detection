@@ -98,13 +98,6 @@ Kiambang Nik.
 \newblock Tenaga out to short-circuit electricity thefts.
 \newblock 1 1999.
 
-\bibitem{artoftradeoff}
-Micheal~J. North and Charles~M. Macal.
-\newblock {\em Managing Business Complexity: Discovering Strategic Solutions
-  with Agent-Based Modeling and Simulation}.
-\newblock Oxford University Press, New York, 2007.
-\newblock ch. 2, Other angles on Nondeterminism.
-
 \bibitem{miningOracle}
 Oracle.
 \newblock Data mining concepts.
@@ -170,9 +163,14 @@ Thomas~B. Smith.
 TACIS.
 \newblock {\em Improving Residential Electricity Services}, 1998.
 \newblock Tacis Technical Dissemination Project.
+
+\bibitem{Anomaly}
+V.~Kumar V.~Chandola, A.~Banerjee.
+\newblock Anomaly detection: A survey.
+\newblock Technical report, ACM Computing Surveys, 2009.
 \selectlanguage{greek}
 \bibitem{haykin}
-Simon Haykin.
+\en{Simon Haykin}.
 \newblock {\em Νευρωνικά Δίκτυα και Μηχανική
   Μάθηση}.
 \newblock Παπασωτηρίου, Αθήνα, 2010.
@@ -196,7 +194,7 @@ Simon Haykin.
 \newblock «Εγχειρίδιο» από τη ΡΑΕ για την
   αντιμετώπιση των όλο και περισσότερων
   ρευματοκλοπών.
-\newblock Accessed: 6 August 2017.
+\newblock \en{Accessed: 6 August 2017}.
 
 \bibitem{rae}
 ΡΑΕ.
