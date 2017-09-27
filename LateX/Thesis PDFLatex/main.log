@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2017.9.20)  26 SEP 2017 16:47
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2017.9.20)  27 SEP 2017 12:00
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2259,7 +2259,9 @@ LaTeX Info: Redefining \anw@print on input line 650.
 LaTeX Info: Redefining \anw@print on input line 650.
 LaTeX Info: Redefining \anw@print on input line 650.
 LaTeX Info: Redefining \anw@print on input line 650.
-[82]
+[82
+
+]
 Overfull \hbox (5.9649pt too wide) in paragraph at lines 659--659
 []\LGR/cmr/m/n/10.95 Sto pa-rìn ke-fˆlaio ègi-ne mia die-xo-di-k  a-na-z th-sh 
 mh-epiblepìmenwn kai hmi-epiblepìmenwn
@@ -2389,7 +2391,7 @@ usr/share/texlive/texmf-dist/fonts/type1/public/cbfonts/grxn2488.pfb></usr/shar
 e/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share
 /texmf/fonts/type1/public/cm-super/sfrm1095.pfb></usr/share/texmf/fonts/type1/p
 ublic/cm-super/sfrm1200.pfb>
-Output written on main.pdf (111 pages, 2609197 bytes).
+Output written on main.pdf (111 pages, 2609236 bytes).
 PDF statistics:
  554 PDF objects out of 1000 (max. 8388607)
  356 compressed objects within 4 object streams
