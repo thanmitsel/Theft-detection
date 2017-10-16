@@ -296,7 +296,7 @@
 }
 
 \approval{
-    Εγκρίθηκε από την τριμελή εξεταστική επιτροπή την 666 Οκτωβρίου 2017.
+    Εγκρίθηκε από την τριμελή εξεταστική επιτροπή την 24 Οκτωβρίου 2017.
     \begin{tabbing}
     aaaaaaaaaaaaaaaaaaaaaaaaaaaa\=aaaaaaaaaaaaaaaaaaaaaa\=\kill
     \textit{(Υπογραφή)}\>   \textit{(Υπογραφή)}\>  \textit{(Υπογραφή)}\\\\\\
