@@ -28,7 +28,7 @@ if x==2 % else simulation with hours
     h=somehh;
 end
 
-fraud_rate=0.1; % Percentage of consumers who fraud
+fraud_rate=0.5; % Percentage of consumers who fraud
 if attack_type==3
     [F_data3D, Y2D, f_data2D]=simulateType3Fraud(H,h,fraud_rate);
     % Details 
